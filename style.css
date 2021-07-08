@@ -24,16 +24,14 @@
     background-color: black;
 }
 .pixel {
-    padding: 5px;
+    width: 40px;
+    height: 40px;
     border: solid 1px;
     display: inline-block;
     background-color: white;
     margin-right: 0px;
-    float: right;
+    float: left;
 }
  div {
      display: inline-block;
- }
- ul {
-     display: ;
  }
