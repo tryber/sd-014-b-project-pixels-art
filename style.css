@@ -14,12 +14,26 @@ body {
 .black {
   background-color: black;
 }
+
 .green {
   background-color: green;
 }
+
 .blue {
   background-color: blue;
 }
+
 .yellow {
   background-color: yellow;
+}
+
+#pixel-board {
+  display: inline-block;
+}
+
+.pixel {  
+  height: 100px;
+  width: 100px;
+  border: solid 1px white;
+  background-color: white;
 }
