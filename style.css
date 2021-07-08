@@ -1,0 +1,53 @@
+.color {
+    margin: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    padding: 25px;
+    
+}
+
+.black {
+    background-color: black;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.pixel {
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    
+    background-color: white;
+}
+
+#pixel-board {
+    margin-top: 30px;
+    
+}
+
+#bla {
+    background-color: black;
+}
+
+#blu {
+    background-color: blue;
+}
+
+#gre {
+    background-color: green;
+}
+
+#re {
+    background-color: red;
+}
