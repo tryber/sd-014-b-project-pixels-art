@@ -5,6 +5,10 @@
   border: 1px solid black;
 }
 
+.pixel {
+  background-color: white;
+}
+
 #title {
   margin: 0 auto;
 }
@@ -18,17 +22,22 @@
 }
 
 #cornFlowerBox {
-  background-color: #4C5270;
+  background-color: #4c5270;
 }
 
 #hotPinkBox {
-  background-color: #F652A0;
+  background-color: #f652a0;
 }
 
 #cyanBox {
-  background-color: #36EEE0;
+  background-color: #36eee0;
 }
 
 #tiffanyblueBox {
-  background-color: #BCECE0;
+  background-color: #bcece0;
+}
+
+#pixel-board {
+  width: 25px;
+  height: 25px;
 }
