@@ -39,12 +39,15 @@ function createColorPalette() {
 
 function createPixelBoard() {
   const pixelBoard = document.getElementById('pixel-board');
+  const input = document.getElementById('board-size');
+  const value = input.value || 5;
 
-  for (let index = 0; index < 5; index += 1) {
+  pixelBoard.innerHTML = '';
+
+  for (let index = 0; index < value; index += 1) {
     const line = document.createElement('div');
     line.className = 'line';
-
-    for (let subIndex = 0; subIndex < 5; subIndex += 1) {
+    for (let subIndex = 0; subIndex < value; subIndex += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixel.addEventListener('click', paint);
@@ -66,7 +69,17 @@ function newBoard() {
 createColorPalette();
 createPixelBoard();
 
-document.getElementById('clear-board').addEventListener('click', newBoard);
+const clearButton = document.getElementById('clear-board');
+const generateButton = document.getElementById('generate-board');
+clearButton.addEventListener('click', newBoard);
+generateButton.addEventListener('click', () => {
+  const input = document.getElementById('board-size');
+  if (!input.value) {
+    alert('Board inválido!');
+  } else {
+    createPixelBoard();
+  }
+});
 
 /*
   Descrição da function randomHexColorGenerator():
@@ -78,12 +91,15 @@ document.getElementById('clear-board').addEventListener('click', newBoard);
   Linha 14: Declaro uma variável que eu possa modificar contento apenas a string com a cerquilha. Essa variável vai receber mais caracteres;
   Linha 15: Declaro um for loop com limite de 6 ações para atender ao formato de uma cor em hexadecimal;
   Linha 16: Nessa linha eu digo para pegar um caractere aleatório de hexCharacters. O Math.floor é para transformar em inteiro levando em
-            consideração o piso. Math.random gera um valor aleatório e, quando multiplicado por 16, ele incluí 0 e excluí 16. Como eu tenho
-            Math.floor sendo executado, esse número vai de 0 à 15. Esse é intervalo de índices da string hexCharacters. O charAt vai usar esse
-            valor para selecionar o caractere da string hexCharacters;
+            consideração o piso. Math.random gera um valor aleatório e, quando multiplicado por 16, ele incluí 0 e excluí 16 (15.9999...).
+            Como eu tenho Math.floor sendo executado, esse número vai de 0 à 15. Esse é intervalo de índices da string hexCharacters.
+            O charAt vai usar esse valor para selecionar o caractere da string hexCharacters;
   Linha 17: Fecho a execução do for;
   Linha 18: Retorno hexColorCode, pois vou precisar desse retorno para definir as cores na função createColorPalette.
+*/
 
-  Referência acerca do charAt e geração de caracteres aleatórios a partir de uma string:
+/*
+  Referências:
+  Acerca do charAt() e geração de caracteres aleatórios a partir de uma string:
   https://www.webtutorial.com.br/funcao-para-gerar-uma-string-aleatoria-random-com-caracteres-especificos-em-javascript/
 */

@@ -8,7 +8,9 @@
 
 #pixel-board {
   border: 1px solid black;
-  width: 210px;
+  min-height: 40px;
+  min-width: 40px;
+  width: fit-content;
 }
 
 .line {
