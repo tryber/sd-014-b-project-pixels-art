@@ -63,9 +63,26 @@ function clearClass() { // função de remoção (usada dentro do loop inicial d
 const pixelArray = document.querySelectorAll('.pixel'); // pixel sao os elementos do board de pixels a ser criado
 
 for (let i = 0; i < pixelArray.length; i += 1) { // passa por todos elementos do araray contendo os valores pixel
-  pixelArray[i].addEventListener("click", addColorPixel);
+  pixelArray[i].addEventListener('click', addColorPixel);
   function addColorPixel(event) { // função de adcionar cor aos pixels (o evento target é o pixel clicado (com a class selected))
     const backColor = document.querySelector('.selected').style.backgroundColor; // armazena a variavel da cor de fundo do elemento que foi criado
     event.target.style.backgroundColor = backColor; // o evento target (o que foi cliclado receb a cor do selected)
   }
 }
+
+// Requisito 9
+const clickClear = document.querySelector('.button-section'); // seleciona o local de append child 
+const buttonClear = document.createElement('button');
+buttonClear.innerHTML = 'Limpar';
+clickClear.appendChild(buttonClear);
+buttonClear.setAttribute('id', 'clear-board'); // define atributes, dá o id
+// eslint-disable-next-line no-use-before-define
+buttonClear.addEventListener('click', clearBox);
+
+function clearBox() {
+  const allPixels = document.querySelectorAll('td'); // seleciona todos elementos do estilo (elementos que vao disparar a função)
+  for (let i = 0; i < allPixels.length; i += 1) { // faz o loop por todos elementos de pixel 
+    allPixels[i].style.backgroundColor = 'white';
+  }
+}
+  
