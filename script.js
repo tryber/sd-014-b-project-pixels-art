@@ -24,3 +24,10 @@ function paintPixel(pixel){
   // a linha acima basicamente atribui a variavel style todo o css referente ao elemento passado como parametro, no caso selectedColor
   pixel.target.style.backgroundColor = style.backgroundColor // atribuindo a cor selecionada à cor de fundo do pixel clicado
 }
+
+let btnClearPixels = document.getElementById('clear-board')
+btnClearPixels.addEventListener('click', function() {
+  for(let pixel of pixels){
+    pixel.style.backgroundColor = 'white'
+  }
+})
