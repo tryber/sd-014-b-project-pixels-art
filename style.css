@@ -1,8 +1,22 @@
-td{
+.color{
     width: 50px;
     height: 50px;
-    background-color: aqua;
     border: solid black 1px;
     display:table-cell;
     padding: 10px;
+}
+#pixel-boar tr{
+    display: table-row;
+}
+.pixel{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: solid black 1px;
+    display: table-cell;
+}
+#pixel-board{
+    margin-top: 20px;
+    border-spacing: 0;
+    border-collapse: collapse;
 }
