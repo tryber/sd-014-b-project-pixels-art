@@ -20,3 +20,24 @@
 .green {
     background-color: green
 }
+
+#pixel-board {
+    display: table;
+    margin-top: 20px;
+    
+}
+
+.line{ 
+    display: table-row; 
+
+}
+
+.pixel{ 
+    display: table-cell;
+    border: 1px solid black;
+    width: 100px;
+    height: 5em;
+    background-color: white;
+ }
+
+ 
