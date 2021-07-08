@@ -13,7 +13,6 @@ for (let i = 0; i < pixelLine.length; i += 1) {
   }
 }
 
-
 let blackPalete = document.querySelector('#black');
 let redPalete = document.querySelector('#red');
 let bluePalete = document.querySelector('#blue');
@@ -51,4 +50,19 @@ function changeSelectYellow() {
   bluePalete.classList.remove('selected');
   yellowPalete.classList.add('selected');
 }
+let pixel = document.querySelector('#pixel-board');
+pixel.addEventListener('click', colorPixel);
+function colorPixel(event) {
+  const paleteColor = document.querySelector('.selected').id;
+  event.target.style.backgroundColor = paleteColor;
+};
+
+let clearButton = document.getElementById('clear-board');
+let whitePixels = document.querySelectorAll('.pixel');
+clearButton.addEventListener('click', clearPixels);
+function clearPixels() {
+  for (let i = 0; i < whitePixels.length; i += 1) {
+    whitePixels[i].style.backgroundColor = 'white';
+  };
+};
 
