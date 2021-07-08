@@ -1,0 +1,28 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+.color{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  display: inline-block;
+  border: 1px solid #000000;
+}
+
+.color-1{
+  background-color: #000000;
+}
+
+.color-2{
+  background-color: #00473e;
+}
+
+.color-3{
+  background-color: #faae2b;
+}
+
+.color-4{
+  background-color: #fa5246;
+}
