@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 21px;
+
+
+}
+.title{
+
+}
+
+.color{
+    border: 1px solid rgb(0, 0, 0);
+    display: inline-block;
+    
+}
+div.color:nth-of-type(2){
+   background-color:black; 
+    
+}
+div.color:nth-of-type(3){
+    background-color: blue;
+
+}
+div.color:nth-of-type(4){
+    background-color: yellow;
+}
+div.color:nth-of-type(5){
+    background-color: red;
+}
