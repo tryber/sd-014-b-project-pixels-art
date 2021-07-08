@@ -1,3 +1,5 @@
+let pegaPreto = document.getElementsByClassName('color');
+pegaPreto[0].classList.add('selected');
 function criaGrid() {
   const alturaGrid = 5;
   const larguraGrid = 5;
@@ -13,10 +15,36 @@ function criaGrid() {
   }
 }
 criaGrid();
-let pegaCor = document.querySelector('.selected');
+const pegaPixel = document.querySelectorAll('.pixel');
 const grid = document.getElementById('pixel-board');
-grid.addEventListener('click', function (event) {
-  if (event.target.nodeName === 'TD') {
-    event.target.style.backgroundColor = 'black';
-  }
-});
+
+for (let i = 0; i < pegaPixel.length; i++) {
+  pegaPixel[i].addEventListener('click', function () {
+    let selecaoCor = document.querySelector('.selected');
+    if (
+      pegaPixel[i].style.backgroundColor !== selecaoCor.style.backgroundColor
+    ) {
+      pegaPixel[i].style.backgroundColor = selecaoCor.style.backgroundColor;
+    }
+  });
+}
+/*grid.addEventListener(
+  'click',
+  function (event) {
+    console.log(event);
+    if (event.target.classList.contains('pixel')) {
+      event.target.style.backgroundColor = selecaoCor.style.backgroundColor;
+    }
+  },
+  false
+);*/
+
+const pegaCores = document.querySelectorAll('.color');
+for (i = 0; i < pegaCores.length; i++) {
+  const corSelecionada = pegaCores[i];
+  corSelecionada.addEventListener('click', function () {
+    const ultimaSelecionada = document.querySelector('.selected');
+    ultimaSelecionada.classList.remove('selected');
+    corSelecionada.classList.add('selected');
+  });
+}

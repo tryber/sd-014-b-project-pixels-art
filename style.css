@@ -7,21 +7,7 @@
   width: 150px;
   display: flex;
 }
-.black {
-  background-color: black;
-  width: 50px;
-  height: 50px;
-}
-.blue {
-  background-color: blue;
-}
 
-.pink {
-  background-color: pink;
-}
-.brown {
-  background-color: brown;
-}
 #pixel-board,
 tr,
 td {
