@@ -12,17 +12,24 @@
   height: 40px;
   border: 1px solid black
 }
-/* uso de display: table conforme visto em: https://www.w3schools.com/cssref/pr_class_display.asp & https://css-tricks.com/almanac/properties/d/display/ & https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+
+/* uso de display: table conforme visto em:
+https://www.w3schools.com/cssref/pr_class_display.asp &
+https://css-tricks.com/almanac/properties/d/display/ &
+https://developer.mozilla.org/en-US/docs/Web/CSS/display */
 
 #palette1 {
   background-color: black;
 }
+
 #palette2 {
   background-color: green;
 }
+
 #palette3 {
   background-color: yellow;
 }
+
 #palette4 {
   background-color: blue;
 }
@@ -45,6 +52,7 @@
   background-color: white;
   border: 1px solid black;
 }
+
 .pixel {
   display: table-cell;
   width: 40px;
