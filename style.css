@@ -4,3 +4,18 @@
   border: 1px solid black;
   display: inline-block;
 }
+
+#pixel-board{
+  border: 1px solid black;
+  width: 230px;
+  height: 246px
+}
+
+.pixel{
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  margin: 2px;
+  background-color: white;
+}
