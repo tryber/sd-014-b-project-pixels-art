@@ -1,12 +1,18 @@
 window.onload = function () {
     const colors = document.querySelectorAll('.color');
     
+    //Percorre as divs com as cores
     for (let key of colors) {
+        let color = key;
+        //Recupera o valor da propriedade background-color
         const getProp = window.getComputedStyle(key, null).getPropertyValue('background-color');
 
         if (getProp === 'rgb(0, 0, 0)') {
-            key.classList.add('selected');
+            color.classList.add('selected');
         }
+
+        //Adiciona o evento de click em todas as box de cores
+        color.addEventListener('click', selectColor);
     };
 }
 
@@ -32,3 +38,20 @@ function generatePixels() {
 }
 
 generatePixels();
+
+function selectColor(evento) {
+    const colors = document.querySelectorAll('.color');
+    const colorClicked = evento.target;
+    
+    for (let key of colors) {
+        let color = key;
+
+        let searchSelectedColor = color.classList.contains('selected');
+        
+        if (searchSelectedColor === true) {
+            color.classList.remove('selected');
+        }
+    }
+
+    colorClicked.classList.add('selected');
+}
