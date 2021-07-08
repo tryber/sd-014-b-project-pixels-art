@@ -1,0 +1,32 @@
+/* {
+    margin: 0;
+    padding: 0;
+    display: inlineblock;
+}*/
+body {
+    
+}
+main #color-palette {
+    //border: 1px black solid;
+    display: flex;
+    width: 430px;
+    justify-content: space-between;
+}
+main #color-palette .color {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+main #color-palette .black {
+    background: black;
+}
+main #color-palette .yellow {
+    background: yellow;
+}
+main #color-palette .red {
+    background: red;
+}
+
+main #color-palette .blue {
+    background: blue;
+}
