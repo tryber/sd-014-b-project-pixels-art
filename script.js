@@ -1,6 +1,12 @@
 const colorsPalette = document.getElementsByClassName('color');
-console.log(colorsPalette);
 const colors = ['black','red','green', 'blue'];
+
+window.onload = function(){
+    colorsPalette[0].classList.add('selected');
+    
+
+}
+
 
 setColorsInPalette();
 
