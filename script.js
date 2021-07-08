@@ -32,8 +32,20 @@ blue.addEventListener('click', function () {
 
 document.querySelectorAll('.pixel').forEach(box => {
     box.addEventListener('click', function (event) {
-        event.target.style.backgroundColor = document.querySelector(".selected").style.backgroundColor
-
+        event.target.style.backgroundColor = document.querySelector(".selected").style.backgroundColor;
+        console.log("alou silvio");
+        //pinta os pixels de outras cores
     })
 })
+
+document.querySelector('#clear-board').addEventListener('click', function () {
+    
+    let pixel = document.querySelectorAll('.pixel')
+    pixel.forEach(pixel => {
+        pixel.style.backgroundColor = "white";
+    });
+
+    // let pixel = document.querySelectorAll('.pixel')
+    // pixel.style.backgroundColor = "white";
+});
 }
