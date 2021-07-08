@@ -2,16 +2,10 @@ body{
     margin: 15px;
 }
 
-#color-palette
-#color-palette * {
-    box-sizing: border-box;
-}
-
 #color-palette table{
     font-family: sans-serif;
     display: table-cell;
     display: inline-block;
-    gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     border: 1px solid black;
     width: 50px;
@@ -19,18 +13,18 @@ body{
     margin: 1px;
 }
 
-#black{
+.black{
     background-color: black;
 }
 
-#green{
+.green{
     background-color: green;
 }
 
-#purpĺe{
-    background-color: purple;
+.red{
+    background-color:red;
 }
 
-#blue{
+.blue{
     background-color: blue;
 }
