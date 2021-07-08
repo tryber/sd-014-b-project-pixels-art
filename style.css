@@ -6,6 +6,7 @@
 
 body {
   text-align: center;
+  margin: 0;
 }
 
 .color {
@@ -15,22 +16,6 @@ body {
   height: 78px;
 }
 
-#black {
-  background-color: black;
-}
-
-#red {
-  background-color: red;
-}
-
-#blue {
-  background-color: blue;
-}
-
-#green {
-  background-color: green;
-}
-
 #color-palette {
   display: inline-flex;
   justify-content: space-around;
@@ -38,8 +23,24 @@ body {
   width: 50%;
 }
 
+#black {
+  background-color: black;
+}
+
+#color1 {
+  background-color: red;
+}
+
+#color2 {
+  background-color: blue;
+}
+
+#color3 {
+  background-color: green;
+}
+
 td {
-  border: 1px black solid;
+  border: 1px black solid;  
   display: table-cell;
   height: 40px;
   width: 40px;
@@ -47,12 +48,7 @@ td {
   text-align: center;
 }
 
-table {
-  display: flex;
-  justify-content: center;
-}
-
-#clear-board {
+button {
   cursor: grab;
   padding: 15px;
   border-radius: 10px;
@@ -61,4 +57,9 @@ table {
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+#table {
+  display: flex;
+  justify-content: center;
 }
