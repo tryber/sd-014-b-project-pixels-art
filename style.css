@@ -29,8 +29,8 @@ margin-bottom: 20px;
 }
 /* paleta */
 .pixel {
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     background-color: white;
     border: solid 1px black;
     display: inline-block;
