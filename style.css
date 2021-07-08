@@ -1,0 +1,35 @@
+#title {
+    text-align: center;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#color-palette {
+    display: flex;
+    justify-content: center;
+}
+
+.color {
+    border: 1px solid #000000;
+    width: 30px;
+    height: 30px;  
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.black {
+    background-color: black;
+}
