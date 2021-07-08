@@ -25,3 +25,11 @@ function colorizePixel(event) {
 for(let pixel of pixels) {
     pixel.addEventListener('click', colorizePixel);
 }
+
+function clearBoard() {
+    for(let pixel of pixels) {
+        pixel.style.backgroundColor = 'white';
+    }
+}
+
+document.querySelector('#clear-board').addEventListener('click', clearBoard);
