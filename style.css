@@ -30,3 +30,35 @@ body {
 #green {
   background-color: green;
 }
+
+#color-palette {
+  display: inline-flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 50%;
+}
+
+td {
+  border: 1px black solid;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  text-align: center;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+}
+
+#clear-board {
+  cursor: grab;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
