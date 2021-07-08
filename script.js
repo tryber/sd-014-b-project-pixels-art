@@ -71,3 +71,35 @@ function colorSeletectedInitial(color) {
     if (bgColor === setColorInitial) colors[index].classList.add('selected');
   }
 }
+
+// Difinir class selected
+function handleChangeTech(event) {
+  const techElement = document.querySelector('.selected');
+  techElement.classList.remove('selected');
+  event.target.classList.add('selected');
+}
+const divsColors = document.querySelectorAll('.color');
+for (let index = 0; index < divsColors.length; index += 1) {
+  const divsIndex = divsColors[index];
+  divsIndex.addEventListener('click', handleChangeTech);
+}
+
+// function handleChangeSelected(event) {
+//   const colorElement = document.querySelectorAll('.color');
+//   for (let index = 0; index < colorElement.length; index += 1) {
+//     const colorList = colorElement[index].classList;
+//     for (let sIndex = 0; sIndex < colorList.length; sIndex += 1) {
+//       if (colorList[sIndex] === 'selected') {
+//         colorList[sIndex].classList.remove('selected');
+//       } else {
+//         event.target.classList.add('selected');
+//       }
+//     }
+//   }
+
+//   // input.value = '';
+// }
+
+// const palette = document.querySelector('.color');
+
+// palette.addEventListener('click', handleChangeSelected);
