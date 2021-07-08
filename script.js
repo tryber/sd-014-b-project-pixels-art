@@ -21,3 +21,24 @@ const color4 = document.getElementsByClassName("color")[3].style.border = " 1px 
 const blue = document.querySelector("#blue").style.backgroundColor = "blue";
 const bluePadding = document.querySelector("#blue").style.padding = "60px 60px";
 
+// Requisito 4
+
+const table = document.querySelector('#pixel-board'); // seleciona a table pelo id
+function pixelTable() {
+  const rowsAndColumns = 5; // define o número de linhas e colunas 
+  for (let i = 0; i < rowsAndColumns; i += 1) {
+    const pixelsRow = document.createElement('tr'); // cria elemento de linha no pai
+    table.appendChild(pixelsRow); // adiciona as linhas ao pai (pixel-board)
+    for (let j = 0; j < rowsAndColumns; j += 1) {  // loop cria elementos ate o valor definido
+      const pixel = document.createElement('td'); // cria elemento de coluna 
+      pixel.classList.add('pixel');
+      pixelsRow.appendChild(pixel);
+    }
+  }
+}
+pixelTable();
+
+// Quesito 6
+const selectClass1 = document.getElementsByClassName('color')[0];
+selectClass1.classList.add('selected');
+
