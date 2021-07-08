@@ -1,6 +1,17 @@
 .color {
     display: inline-block;
-    border-style: solid; 
+    border-style: solid;
     border-color: black;
     border-width: 1px;
+}
+
+#pixel-board {
+    border: solid 1px;
+}
+
+.pixel {
+    border: solid 1px;
+    padding: 20px;
+    background-color: white;
+    border-color: black;
 }
