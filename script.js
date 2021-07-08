@@ -18,20 +18,6 @@
            board.appendChild(line);
            }
         
-
-         
- 
-
-          /* let line = document.getElementsByTagName('tr')
-           for(index = 0; index <= line.length; index += 1){
-               let square = document.createElement('td')
-               square.className = "pixel";
-               line[index].appendChild(square);
-
-           }
-     */
-
-
  
 
 }
