@@ -1,0 +1,24 @@
+h1 {
+    color: chartreuse;
+}
+
+.color {
+
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+
+}
+
+#black {
+    background-color: black;
+}
+#orange {
+    background-color: orange;
+}
+#blue{
+    background-color: blue;
+}
+#pink{
+    background-color: pink;
+}
