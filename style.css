@@ -32,3 +32,15 @@
   height: 40px;
   background-color: white;
 }
+
+#table {
+  display: table;
+}
+.tr {
+  display: table-row;
+}
+.td {
+  display: table-cell;
+  width: 40px;
+  height: 40px;
+}
