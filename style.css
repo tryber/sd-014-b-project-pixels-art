@@ -5,8 +5,8 @@
     border: solid 1px black;
 }
 
-.blue{
-    background-color: blue;
+.black{
+    background-color: black;
 }
 
 .red{
@@ -19,4 +19,22 @@
 
 .green{
     background-color: green;
+}
+
+#pixel-board{
+    display: table;
+    border: solid 1px black;
+}
+
+.line{
+    display: table-row;
+    
+}
+
+.pixel{
+    display:table-cell ;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: solid 1px black;
 }
