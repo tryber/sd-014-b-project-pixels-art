@@ -12,9 +12,9 @@ const select = () => {
 };
 
 const paint = () => {
-  const paintBox = document.querySelector('#pixel-board');
+  const painting = document.querySelector('#pixel-board');
 
-  paintBox.addEventListener('click', (e) => {
+  painting.addEventListener('click', (e) => {
     e.target.style.backgroundColor =
       document.querySelector('.selected').style.backgroundColor;
   });

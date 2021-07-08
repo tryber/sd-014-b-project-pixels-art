@@ -14,18 +14,18 @@ h1 {
   height: 40px;
   cursor: pointer;
 }
-.black {
+.color.black {
   background-color: black;
 }
-.orange {
+.color.orange {
   background-color: orange;
 }
 
-.grey {
-  background-color: grey;
+.color.grey {
+  background-color: grey;g
 }
 
-.ciano {
+.color.ciano {
   background-color: rgb(98, 143, 180);
 }
 #pixel-board {
@@ -60,3 +60,4 @@ h1 {
   text-align: center;
   cursor: pointer;
 }
+.selected{}
