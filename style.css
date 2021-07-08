@@ -1,85 +1,81 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-}
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
-  background-color: aliceblue;
-}
-
-h1 {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-p {
-  display: flex;
-  justify-content: center;
-  margin-top: 0.2rem;
-  font-size: 0.6rem;
-}
-
-.container {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-button {
-  background: #429ff6;
-  margin-top: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 2rem;
-  padding-right: 2.2rem;
-  border-radius: 10rem;
-  font-size: 0.6rem;
-  color: aliceblue;
-}
-
-#color-pallete {
-  margin-top: 1rem;
-  width: 8rem;
-  height: 2rem;
-}
-
-#pixel-board {
-  display: table;
-  margin-top: 2rem;
-}
-
-.pixel {
-  display: table-cell;
-  border: 1px solid black;
-  width: 40px;
-  height: 40px;
-  background: white;
+  background-color: #7983ff;
 }
 
 .color {
+  width: 2rem;
+  height: 2rem;
   border: 1px solid black;
-  box-shadow: 0px 2px 2px 0px black;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-.color:nth-child(1) {
-  background: black;
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border: 1px solid black;
+  margin-right: 1px;
 }
 
-.color:nth-child(2) {
-  background: yellow;
+#pixel-board {
+  margin-top: 20px;
+  width: 215px;
+  height: 225px;
+  display: block;
 }
 
-.color:nth-child(3) {
-  background: aliceblue;
+#clear-board {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+  position: relative;
+  background: #7983ff;
+  padding: 1rem 4rem;
+  font-size: 0.8rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 2px solid black;
+  box-shadow: 2px 2px 9px black;
 }
 
-.color:nth-child(4) {
-  background: red;
+#clear-board span {
+  position: relative;
+}
+
+#clear-board:before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, purple, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+#clear-board:hover:before {
+  --size: 200px;
+}
+
+.zoom {
+  background-color: green;
+  transition: transform 0.2s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(
+    1.5
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
