@@ -1,0 +1,23 @@
+.color {
+    margin: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    padding: 25px;
+}
+
+.black {
+    background-color: black;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
