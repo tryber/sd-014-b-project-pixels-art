@@ -4,3 +4,17 @@
     padding: 30px;
     margin-right: 10px;
 }
+#color-palette{
+    margin-bottom: 15px;
+}
+div.pixel{
+    border:  1px solid black;
+    display: inline-block;
+    padding: 30px;
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+#pixel-board{
+    margin-right: 500px;
+}
