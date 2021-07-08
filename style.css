@@ -3,21 +3,25 @@
   padding: 0;
 }
 
-.color{
+.color {
   border: 1px solid black;
   width: 25px;
   height: 25px;
   display: inline-block;
 }
-#blue{
-background-color: blue;
+
+#blue {
+  background-color: blue;
 }
-#pink{
-background-color: pink;
+
+#pink {
+  background-color: pink;
 }
-#green{
-background-color: green;
+
+#green {
+  background-color: green;
 }
-#purple{
-background-color: purple;
+
+#purple {
+  background-color: purple;
 }
