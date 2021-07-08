@@ -53,8 +53,8 @@ h1 {
 }
 
 #clear-board {
-  display: flex;
-  font-weight: 600;
   text-align: center;
   cursor: pointer;
+  margin: auto;
+  margin-bottom: 20px;
 }
