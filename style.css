@@ -19,3 +19,21 @@
 .roxo {
     background-color: purple;
 }
+
+.preto {
+    background-color: black;
+}
+.pixel {
+    padding: 5px;
+    border: solid 1px;
+    display: inline-block;
+    background-color: blue;
+    margin-right: 0px;
+    float: right;
+}
+ div {
+     display: inline-block;
+ }
+ ul {
+     display: ;
+ }
