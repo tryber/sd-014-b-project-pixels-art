@@ -2,11 +2,13 @@ const firstDiv = document.getElementById('black');
 const secondDiv = document.getElementById('yellow');
 const thirdDiv = document.getElementById('red');
 const forDiv = document.getElementById('blue');
+const botao = document.getElementById('clear-board')
 
-let box = document.querySelector('#pixel-board');
-    box.addEventListener("click",printColor);
-
-
+    for(let cont=0;cont <=24; cont+=1){
+        let box = document.querySelectorAll('.pixel');
+        box[cont].addEventListener("click",printColor);
+    }
+    
 
 function selectColor(event){
     let color = document.querySelector('.selected');
@@ -21,8 +23,21 @@ forDiv.addEventListener("click",selectColor)
 
 
 function printColor(event){
-    let boxprinted = document.querySelector('.selected')
+    let box = document.querySelector('.selected')
         
-    event.target.style.backgroundColor = boxprinted.id;
+    event.target.style.backgroundColor = box.id;
 }
+
+function resetColor(){
+    
+    let boxPrinted = document.querySelectorAll('.pixel')
+    for (let cont = 0; cont <=24;cont+=1){
+    boxPrinted[cont].style.backgroundColor = 'white';
+} 
+}
+
+botao.addEventListener("click",resetColor);
+
+
+
 
