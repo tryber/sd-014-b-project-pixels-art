@@ -1,5 +1,10 @@
+body{
+
+    margin:5%;
+}
 #color-palette{
 color:aliceblue;
+margin-bottom: 20px;
 
 }
 .color {
@@ -7,6 +12,8 @@ color:aliceblue;
     height: 100px;
     display: inline-block;
     border: solid 1px black;
+    margin-inline: 5px; 
+    /* espaçamento entre os quadrados */
 }
 #black-box{
     background-color:black;
@@ -19,4 +26,13 @@ color:aliceblue;
 }
 #blue-box{
     background-color: blue;
+}
+/* paleta */
+.pixel {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: solid 1px black;
+    display: inline-block;
+
 }
