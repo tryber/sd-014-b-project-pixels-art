@@ -1,0 +1,18 @@
+.color{
+    border: solid black  1px;
+    border-radius: 30px;
+    width: 100px;
+    height: 100px;
+}
+#black{
+    background-color: black;
+}
+#red{
+    background-color: red;
+}
+#green{
+    background-color: green;
+}
+#blue{
+    background-color: blue;
+}
