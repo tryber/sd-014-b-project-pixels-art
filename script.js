@@ -25,12 +25,13 @@ const bluePadding = document.querySelector("#blue").style.padding = "60px 60px";
 
 const table = document.querySelector('#pixel-board'); // seleciona a table pelo id
 function pixelTable() {
-  const rowsAndColumns = 5; // define o número de linhas e colunas 
+  table.innerHTML = ''; // inicia uma matrix zerada para ser preenchida nos loops
+  const rowsAndColumns = 5; // define o número de linhas e colunas
   for (let i = 0; i < rowsAndColumns; i += 1) {
     const pixelsRow = document.createElement('tr'); // cria elemento de linha no pai
     table.appendChild(pixelsRow); // adiciona as linhas ao pai (pixel-board)
-    for (let j = 0; j < rowsAndColumns; j += 1) {  // loop cria elementos ate o valor definido
-      const pixel = document.createElement('td'); // cria elemento de coluna 
+    for (let j = 0; j < rowsAndColumns; j += 1) { // loop cria elementos ate o valor definido
+      const pixel = document.createElement('td'); // cria elemento de coluna
       pixel.classList.add('pixel');
       pixelsRow.appendChild(pixel);
     }
@@ -110,7 +111,7 @@ buttonResize.appendChild(clickResize);
 
 const inputValue = document.querySelector('#board-size'); // variável para armazenar o valor do input 
 function defineTableSize() {
-  table.innerHTML = ''; // Exercicio 4 (recupera o valor e define uma matriz null para fazer os loops de add) let table = document.querySelector('#pixel-board'); // seleciona a table pelo id
+  table.innerHTML = ''; // Exercicio 4 (recupera o valor de table e define uma matriz null para fazer os loops de add) let table = document.querySelector('#pixel-board'); // seleciona a table pelo id
   for (let i = 0; i < inputValue.value; i += 1) { // os loops entao vao se realizar com base no valor do input
     const newPixelsRow = document.createElement('tr'); // os loops criam as rows e columns e adicionam na table inicial (vazia)
     table.appendChild(newPixelsRow);
@@ -136,10 +137,10 @@ clickResize.addEventListener('click', boardNullAlert);
 function maxTableSize() { // essa função vai restringir a criação de blocos de pixel
   table.innerHTML = '';
   const maxInput = 50; // define o valor máximo de entrada possível
-  for (let index = 0; index < maxInput; index += 1) {
+  for (let i = 0; i < maxInput; i += 1) {
     const pixelsRow = document.createElement('tr'); 
     table.appendChild(pixelsRow);
-    for (let index1 = 0; index1 < maxInput; index1 += 1) {
+    for (let j = 0; j < maxInput; j += 1) {
       const pixel = document.createElement('td');
       pixel.classList.add('pixel');
       pixelsRow.appendChild(pixel);
@@ -147,15 +148,16 @@ function maxTableSize() { // essa função vai restringir a criação de blocos 
     }
   }
 }
-clickResize.addEventListener('click', boardLimitSize); // adciona ao botão mais um evento e função (a função de restringir o valor máximo)
+// adciona ao botão mais um evento e função (a função de restringir o valor máximo)
 // função criada para emitir alerta -> se o clique for com os valores de max e min emite alerta
 function boardLimitSize() {
   if (inputSize.value < 5) { // cria uma restrição de valor de maximo e mínimo 
     alert('Board inválido!');
-    return pixelTable(); // invoca novamente a função inicial de construçao do board
+    pixelTable()// invoca novamente a função inicial de construçao do board
   }
   if (inputSize.value > 50) {
     alert('Board inválido!');
     maxTableSize(); // retorna o valor máximo que é maxInput = 50 para a criação da matrix
   }
 }
+clickResize.addEventListener('click', boardLimitSize); 
