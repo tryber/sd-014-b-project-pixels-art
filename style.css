@@ -2,8 +2,13 @@ body {
     
 }
 
-p {
-    margin-bottom: -10px;
+#instructions {
+   margin-bottom: -10px;
+   font-size: 30px;
+   color: red;
+   margin-left: 500px;
+   position: relative;
+   top: 250px;
 }
 
 h2 {
@@ -14,7 +19,7 @@ h2 {
 }
 
 main {
-    background-image: url('pixel2.jpg');
+    background-image: url('pixelBackground.jpg');
     background-size: 1390px;
     transition: scale 2s; 
 }
@@ -24,7 +29,6 @@ main {
     font-weight: 200;
    text-align: center;
     color: white;
-  
     padding: 10px 10px;
     background-color: black;
 }
@@ -35,7 +39,9 @@ main {
 
 .palette-list li {
     display: inline-flex;
-    
+    margin-top: 290px; 
+    position: relative;
+    margin-left: 50px;
 
 }
 

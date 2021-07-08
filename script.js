@@ -1,16 +1,16 @@
 // Requisito 1
-const header = document.createElement('h1');
-header.innerText = 'Paleta de Cores';
-header.id = 'title';
-document.getElementById('mainContent').appendChild(header);
+// const header = document.createElement('h1');
+// header.innerText = 'Paleta de Cores';
+// header.id = 'title';
+// document.body.appendChild(header);
 
 // Requisitos 2 e 3
-const color1 = document.getElementsByClassName("color")[0].style.border = " 1px solid black"; // Até rePadding é o exercício 2 
-const black = document.querySelector("#black").style.backgroundColor = "black";
-const blackPadding = document.querySelector("#black").style.padding = "60px 60px";
+const color1 = document.getElementsByClassName("color")[0].style.border = ' 1px solid black'; // Até rePadding é o exercício 2 
+const black = document.querySelector("#black").style.backgroundColor = 'black';
+const blackPadding = document.querySelector('#black').style.padding = '60px 60px';
 
-const color2 = document.getElementsByClassName("color")[1].style.border = " 1px solid black";
-const green = document.querySelector("#green").style.backgroundColor = "green";
+const color2 = document.getElementsByClassName("color")[1].style.border = ' 1px solid black';
+const green = document.querySelector("#green").style.backgroundColor = 'green';
 const greenPadding = document.querySelector("#green").style.padding = "60px 60px"
 
 const color3 = document.getElementsByClassName("color")[2].style.border = " 1px solid black";
@@ -40,14 +40,17 @@ pixelTable();
 
 // Requisito 6
 const selectClass1 = document.getElementsByClassName('color')[0];
-selectClass1.classList.add('selected'); 
+selectClass1.classList.add('selected');
 
 // Requisito 7  referencia https://stackoverflow.com/questions/50883690/remove-class-from-one-element-while-adding-that-class-to-another-element-using
 
 const colorsArray = document.querySelectorAll('.color'); // selector all cria uma array com todos elementos com a classe "color"
 for (let i = 0; i < colorsArray.length; i += 1) {
+  // eslint-disable-next-line no-use-before-define
   colorsArray[i].addEventListener('click', addClassColors); // cria um evento de click para todos os elementos do array [colors]
+  // eslint-disable-next-line no-inner-declarations
   function addClassColors(event) { // cria uma funçao para adicionar classe a elemento clicado (no array);
+    // eslint-disable-next-line no-use-before-define
     clearClass(); // invoca a função de remoção para proxima seleção;
     event.target.classList.add('selected'); // seleciona o target (elemento clicado e adciona a classe "selected")
   } // a classe "colors" são as cores primárias(paleta)
@@ -64,8 +67,10 @@ const pixelArray = document.querySelectorAll('.pixel'); // pixel sao os elemento
 
 for (let i = 0; i < pixelArray.length; i += 1) { // passa por todos elementos do araray contendo os valores pixel
   pixelArray[i].addEventListener('click', addColorPixel);
+  // eslint-disable-next-line no-inner-declarations
   function addColorPixel(event) { // função de adcionar cor aos pixels (o evento target é o pixel clicado (com a class selected))
     const backColor = document.querySelector('.selected').style.backgroundColor; // armazena a variavel da cor de fundo do elemento que foi criado
+    // eslint-disable-next-line no-param-reassign
     event.target.style.backgroundColor = backColor; // o evento target (o que foi cliclado receb a cor do selected)
   }
 }
@@ -76,8 +81,6 @@ const buttonClear = document.createElement('button');
 buttonClear.innerHTML = 'Limpar';
 clickClear.appendChild(buttonClear);
 buttonClear.setAttribute('id', 'clear-board'); // define atributes, dá o id
-// eslint-disable-next-line no-use-before-define
-buttonClear.addEventListener('click', clearBox);
 
 function clearBox() {
   const allPixels = document.querySelectorAll('td'); // seleciona todos elementos do estilo (elementos que vao disparar a função)
@@ -85,6 +88,8 @@ function clearBox() {
     allPixels[i].style.backgroundColor = 'white';
   }
 }
+buttonClear.addEventListener('click', clearBox);
+
 // requisito 10 referencia https://github.com/tryber/sd-013-b-project-pixels-art/blob/guihtryb-project-pixels-art/script.js
 const input = document.querySelector('.size-button'); // seleciona o local de append child 
 const inputSize = document.createElement('input'); // cria elemento de input
@@ -100,7 +105,7 @@ clickResize.type = 'submit'; // The button is a submit button (submits form-data
 clickResize.id = 'generate-board';
 clickResize.innerText = 'VQV';
 buttonResize.appendChild(clickResize);
-clickResize.addEventListener('click', defineTableSize);
+
 
 const inputValue = document.querySelector('#board-size'); // variável para armazenar o valor do input 
 function defineTableSize() {
@@ -116,14 +121,15 @@ function defineTableSize() {
     }
   }
 } // a função de selecionar (add class selected) roda antes dessa independente
+clickResize.addEventListener('click', defineTableSize); // aqui adiciona mais um evento ao botão VQV (no final serão 3)
 
-clickResize.addEventListener('click', boardNullAlert); // aqui adiciona mais um evento ao botão VQV (no final serão 3)
 function boardNullAlert() { // essa função emite alerta se a intrada do input for nula e o botão VQV
   if (inputSize.value == '') { // input valor nulo
     alert('Board Inválido!');
     pixelTable(); // aqui invoca a função de construção do board de pixel feita no quesito 4
   }
 }
+clickResize.addEventListener('click', boardNullAlert);
 
 // Requisito 11
 function maxTableSize() { // essa função vai restringir a criação de blocos de pixel
