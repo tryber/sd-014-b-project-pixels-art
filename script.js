@@ -38,7 +38,24 @@ function pixelTable() {
 }
 pixelTable();
 
-// Quesito 6
+// Requisito 6
 const selectClass1 = document.getElementsByClassName('color')[0];
 selectClass1.classList.add('selected'); 
 
+// Requisito 7  referencia https://stackoverflow.com/questions/50883690/remove-class-from-one-element-while-adding-that-class-to-another-element-using
+
+const colorsArray = document.querySelectorAll('.color'); // selector all cria uma array com todos elementos com a classe "color"
+for (let i = 0; i < colorsArray.length; i += 1) {
+  colorsArray[i].addEventListener('click', addClassColors); // cria um evento de click para todos os elementos do array [colors]
+  // eslint-disable-next-line no-inner-declarations
+  function addClassColors(event) { // cria uma funçao para adicionar classe a elemento clicado (no array);
+    clearClass(); // invoca a função de remoção para proxima seleção;
+    event.target.classList.add('selected'); // seleciona o target (elemento clicado e adciona a classe "selected")
+  } // a classe "colors" são as cores primárias(paleta)
+}
+
+function clearClass() { // função de remoção (usada dentro do loop inicial de seleção para remover pos outro item selecionado)
+  for (let i = 0; i < colorsArray.length; i += 1) { // faz o loop dentro dos elementos com a classe color
+    colorsArray[i].classList.remove('selected');
+  }
+}
