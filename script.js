@@ -1,11 +1,12 @@
 const pixelBoard = document.querySelector('#pixel-board')
 const clearButton = document.querySelector('#clear-board');
 const createCanvasButton = document.querySelector('#generate-board');
+const colorToPick = ["#1b998b", "#ed217c", "#2d3047", "#fffd82", "#ff9b71", "#d8cfaf", "#e6b89c", "#ed9390", "#f374ae", "#32533d", "#042a2b", "#5eb1bf", "#54f2f2", "#f4e04d", "#f3752b", "#a20021"]; 
 const colors = ['black'];
 const minPixelBoard = 5;
 const maxPixelBoard = 50;
-
 const colorsPalette = document.getElementsByClassName('color');
+
 generateColors();
 setColorsInPalette();
 
@@ -17,8 +18,14 @@ createInitialPixelBoard();
 
 function generateColors() {
     for (let i = 0; i < 4; i += 1) {
-        let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
-        colors.push(randomColor);
+        let randomIndex = Math.floor(Math.random() * (colorToPick.length - 0) + 0);
+        let randomColor = colorToPick[randomIndex];
+        if (colors.includes(randomColor)){
+            randomIndex = Math.floor(Math.random() * (colorToPick.length - 0) + 0);
+            randomColor = colorToPick[randomIndex];
+        } 
+            colors.push(randomColor);
+            console.log(colors);
     }
 }
 
@@ -27,7 +34,6 @@ function setColorsInPalette() {
         let color = colorsPalette[i];
         color.style.backgroundColor = colors[i];
         color.addEventListener('click', setSelectedColor);
-        console.log(colors[i]);
     }
     colorsPalette[0].classList.add('selected');
 }
