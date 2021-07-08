@@ -1,37 +1,34 @@
-header {
-  background-color: grey;
-  color: black;
-  font-family: fantasy;
-}
-#title {
-  display: flex;
+h1 {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #color-palette {
-  height: 200px;
   display: flex;
+  align-items: center;
   justify-content: center;
+  height: 80px;
 }
 .color {
-  margin-right: 4px;
-  width: 45px;
-  height: 45px;
+  margin-right: 6px;
+  width: 40px;
+  height: 40px;
 }
 .black {
   background-color: black;
 }
-.orange {
+.red {
   background-color: orange;
 }
-.grey {
+
+.green {
   background-color: grey;
 }
-.ciano {
+
+.blue {
   background-color: rgb(98, 143, 180);
 }
-
 #pixel-board {
   display: table;
-  border-collapse: collapse;
   margin: 0 auto;
 }
 
