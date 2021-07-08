@@ -1,7 +1,12 @@
+body {
+  margin: auto;
+  background-color: rgb(206, 206, 255);
+}
+
 .color {
   border: black solid 1px;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
 }
 
 #red {
@@ -20,3 +25,14 @@
   background-color: green;
 }
 
+.pixel {
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+#pixel-board {
+  border-spacing: 0;
+}
