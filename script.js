@@ -67,7 +67,6 @@ function clearClass() { // função de remoção (usada dentro do loop inicial d
 const pixelArray = document.querySelectorAll('.pixel'); // pixel sao os elementos do board de pixels a ser criado
 
 for (let i = 0; i < pixelArray.length; i += 1) { // passa por todos elementos do araray contendo os valores pixel
-  pixelArray[i].addEventListener('click', addColorPixel);
   // eslint-disable-next-line no-inner-declarations
   function addColorPixel(event) { // função de adcionar cor aos pixels (o evento target é o pixel clicado (com a class selected))
     const backColor = document.querySelector('.selected').style.backgroundColor; // armazena a variavel da cor de fundo do elemento que foi criado
@@ -75,7 +74,7 @@ for (let i = 0; i < pixelArray.length; i += 1) { // passa por todos elementos do
     event.target.style.backgroundColor = backColor; // o evento target (o que foi cliclado receb a cor do selected)
   }
 }
-
+pixelArray[i].addEventListener('click', addColorPixel);
 // Requisito 9
 const clickClear = document.querySelector('.button-section'); // seleciona o local de append child 
 const buttonClear = document.createElement('button');
@@ -160,4 +159,4 @@ function boardLimitSize() {
     maxTableSize(); // retorna o valor máximo que é maxInput = 50 para a criação da matrix
   }
 }
-clickResize.addEventListener('click', boardLimitSize); 
+clickResize.addEventListener('click', boardLimitSize);
