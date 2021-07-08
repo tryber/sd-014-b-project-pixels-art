@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.color {
+  border: black solid 1px;
+  display: inline-block;
+}
+
+#black {
+  background-color: black;
+}
+
+#orange {
+  background-color: #f14902;
+}
+
+#cream {
+  background-color: #f6e7d8;
+}
+
+#yellow {
+  background-color: #fff547;
+}
