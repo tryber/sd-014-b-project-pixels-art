@@ -37,3 +37,6 @@
  div {
      display: inline-block;
  }
+#clear-board {
+    display: block;
+}

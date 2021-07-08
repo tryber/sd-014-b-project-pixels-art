@@ -80,11 +80,21 @@ function addEventPixels(){
     }
 }
 
+function apagar() {
+    let tabela = document.querySelector('div').querySelectorAll('li');
+    for (let pixel of tabela){
+        pixel.className = 'pixel';
+        pixel.style.backgroundColor = 'white';
+    }
+}
+
+let button = document.querySelector('button');
 var colors = document.querySelectorAll('.color');
 criaPixels(5,5);
 colors[0].classList.add('selected'); // seleciona o preto.
 criarEventosPaletaDeCores();
 addEventPixels();
+button.addEventListener('click', apagar);
 
 
 
