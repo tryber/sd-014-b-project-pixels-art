@@ -1,0 +1,32 @@
+#title {
+    
+} 
+
+#color-palette {
+    
+}
+
+.color {
+    padding: 2%;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+}
+
+.black {
+    background-color: black;
+}
+
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.teal {
+    background-color: teal;
+}
+
+
