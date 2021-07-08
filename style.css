@@ -25,12 +25,12 @@
 .pixel {
   background: white;
   border: 1px black solid;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
 }
 
 #pixel-board {
   border: solid 1px black;
-  width: 510px;
+  width: 210px;
 }
