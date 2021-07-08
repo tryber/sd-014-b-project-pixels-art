@@ -4,18 +4,21 @@ body {
 
 #instructions {
    margin-bottom: -10px;
-   font-size: 30px;
-   color: red;
-   margin-left: 500px;
+   font-size: 25px;
+   color: rgb(14, 13, 13);
+   margin-left: 350px;
    position: relative;
    top: 250px;
+   font-weight: bold;
 }
 
 h2 {
-    color: rgb(12, 11, 11);
+    color: rgb(231, 241, 241);
     font-size: 20px;
     font-weight: bold;
-    
+    box-sizing: content-box;
+
+    background-color: black;
 }
 
 main {
@@ -76,9 +79,12 @@ td, th {
 }
 
 .size-button {
+    position: relative;
     text-align: left;
     font-size: 30px;  
-    margin-bottom: 20px;
+    top: -200 px
+   
+  
 }
 
 
@@ -101,6 +107,8 @@ td, th {
 #board-size {
     font-size: 25px;
     border: 4px solid rgb(32, 235, 13);
+    position: relative;
+    
 }
 
 #clear-board {

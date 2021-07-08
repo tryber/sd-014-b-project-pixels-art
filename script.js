@@ -124,7 +124,7 @@ function defineTableSize() {
 clickResize.addEventListener('click', defineTableSize); // aqui adiciona mais um evento ao botão VQV (no final serão 3)
 
 function boardNullAlert() { // essa função emite alerta se a intrada do input for nula e o botão VQV
-  if (inputSize.value == '') { // input valor nulo
+  if (inputSize.value === '') { // input valor nulo
     alert('Board Inválido!');
     pixelTable(); // aqui invoca a função de construção do board de pixel feita no quesito 4
   }
@@ -150,8 +150,8 @@ clickResize.addEventListener('click', boardLimitSize); // adciona ao botão mais
 // função criada para emitir alerta -> se o clique for com os valores de max e min emite alerta
 function boardLimitSize() {
   if (inputSize.value < 5) { // cria uma restrição de valor de maximo e mínimo
-    alert('Board inválido!');
     pixelTable(); // invoca novamente a função inicial de construçao do board
+    alert('Board inválido!');
   }
   if (inputSize.value > 50) {
     alert('Board inválido!');
