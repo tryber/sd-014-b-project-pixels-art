@@ -29,3 +29,13 @@
   margin-bottom: 1px;
 }
 
+#clear-board {
+  background-color: whitesmoke;
+  width: 60px;
+  height: 20px;
+  border: solid 1px;
+  margin-bottom: 1px;
+  text-align: center;
+  left: auto;
+  right: auto;
+}

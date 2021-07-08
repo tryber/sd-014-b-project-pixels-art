@@ -39,16 +39,16 @@ function addSelected (event){
 function paintColor(event){
   for (index = 0; index < 24; index += 1){
 
-  if (document.getElementsByClassName('selected')[index] === document.querySelector('#black')){
+  if (document.getElementsByClassName('selected')[0] === document.querySelector('#black')){
    event.target.style.backgroundColor = 'black'
   }
-  if (document.getElementsByClassName('selected')[index] === document.querySelector('#red')){
+  if (document.getElementsByClassName('selected')[0] === document.querySelector('#red')){
     event.target.style.backgroundColor = 'red'
    }
-   if (document.getElementsByClassName('selected')[index] === document.querySelector('#blue')){
+   if (document.getElementsByClassName('selected')[0] === document.querySelector('#blue')){
     event.target.style.backgroundColor = 'blue'
    }
-   if (document.getElementsByClassName('selected')[index] === document.querySelector('#yellow')){
+   if (document.getElementsByClassName('selected')[0] === document.querySelector('#yellow')){
     event.target.style.backgroundColor = 'yellow'
    }
   }
@@ -61,3 +61,14 @@ for (index = 0; index < 25; index += 1){
   document.querySelectorAll('.pixel')[index].addEventListener('click', paintColor)
 }
 
+let pixel = document.querySelectorAll('.pixel')
+let resetBtn = document.querySelector('#clear-board')
+function reset (){
+for (index = 0; index < 25; index += 1){
+
+ if (pixel[index] =! document.querySelector('#white')){
+  pixel[index].style.backgroundColor = 'white'
+}
+}
+}
+resetBtn.addEventListener('click', reset)
