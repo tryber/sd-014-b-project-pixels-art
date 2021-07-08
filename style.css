@@ -19,12 +19,13 @@
   display: inline-block;
   width: 125px;
   height: 100px;
-  border-style: solid;
+  border: 1px solid black;
+  
   
 }
 
 #first {
-    background-color: teal;
+    background-color: black;
     margin-right: 12px;
 
 }
