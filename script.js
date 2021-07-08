@@ -15,3 +15,5 @@ for (let index = 0; index < pixel.length; index += 1) {
 }
 
 document.getElementById("pixel-board").style.marginLeft = "10px";
+
+document.getElementById("black").classList.add("selected");
