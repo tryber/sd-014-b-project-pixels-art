@@ -14,4 +14,17 @@ function createPixelBoard() {
   }
 }
 
+function colorSelector(event) {
+  document.querySelector('.selected').classList.remove('selected');
+  event.target.classList.add('selected');
+}
+
+function turnPaletteSelectable() {
+  const colors = document.getElementsByClassName('color');
+  for (const color of colors) {
+    color.addEventListener('click', colorSelector);
+  }
+}
+
 createPixelBoard();
+turnPaletteSelectable();
