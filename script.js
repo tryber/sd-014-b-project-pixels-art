@@ -1,7 +1,10 @@
 window.onload = function (){
   const coresPalet = document.getElementById('color-palette').children;
-  const pixelArt = document.getElementsByClassName('pixel');  
-  console.log(pixelArt);   
+  const pixelArt = document.getElementsByClassName('pixel'); 
+  const clearBtn = document.getElementById('clear-board');
+  const pixelBoard = document.getElementById('pixel-board');
+
+  clearBtn.addEventListener('click', clearPixels);
   // Função que adiciona a classe SELECTED na cor selecionada e remove da outra.
   function selectColor (event){
     // 1° passo um Loop em todas as cores e removo a classe de todos
@@ -29,7 +32,11 @@ window.onload = function (){
   for (let index = 0; index < coresPalet.length; index += 1) {
     coresPalet[index].addEventListener('click', selectColor);
   }
-
+  function clearPixels () {
+    for (let index = 0; index < pixelArt.length; index += 1) {
+      pixelArt[index].style.backgroundColor = 'white';
+    }
+  }
 };
 
 

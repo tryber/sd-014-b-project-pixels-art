@@ -16,10 +16,6 @@
   border: 1px solid black;
 }
 
-/* #color-palette .selected {
-  border: 5px solid black;
-} */
-
 #color-palette #black {
   background: black;
 }
@@ -34,6 +30,10 @@
 
 #color-palette #blue {
   background: blue;
+}
+
+#clear-board {
+  margin-top: 20px;
 }
 
 #pixel-board {
