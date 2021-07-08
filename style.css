@@ -1,28 +1,28 @@
 .color {
-    border: 1px solid black;
-    margin: 2px;
-    display: inline-block;
-    width: 100px;
-    height: 100px;
+  border: 1px solid black;
+  margin: 2px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
 }
 #black {
-    background-color: black;
+  background-color: black;
 }
 #orange {
-    background-color: orange;
+  background-color: orange;
 }
 #blue {
-    background-color: blue;
+  background-color: blue;
 }
 #green {
-    background-color: green;
+  background-color: green;
 }
 
 .pixel {
-    border: 1px solid black;
-    margin: 2px;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-color: white;
+  border: 1px solid black;
+  margin: 2px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: white;
 }
