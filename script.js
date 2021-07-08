@@ -15,6 +15,9 @@ function colors (colorDesired) {
   let divSelection = document.querySelector('#color-palette')
   let divCreation = document.createElement('div')
   divCreation.classList.add('color')
+  if (colorDesired === 'black') {
+    divCreation.classList.add('selected')
+  }
   divCreation.id = colorDesired
   divSelection.appendChild(divCreation)
 }
