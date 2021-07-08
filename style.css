@@ -1,0 +1,19 @@
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+#title {
+  border: solid;
+  text-align: center;
+  font-size: 40px;
+  font-style: italic;
+}
+
+.color {
+  margin:40px 50px 20px 20px;
+  padding: 20px;
+  width: 80px;
+  height: 80px;
+  border: solid 1px;
+  display:inline-block;
+}
