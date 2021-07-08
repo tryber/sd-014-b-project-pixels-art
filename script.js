@@ -52,11 +52,18 @@ window.onload = function () {
   generateCellsButton.addEventListener('click', function buttonEvent() {
     let input = document.querySelector('#board-size');
     let inputValue = input.value
-    if (inputValue > 0 && inputValue < 50){
-    generatePixelCells(inputValue);
-    } else if (inputValue='null') {
+    if (input.value == '') {
+      alert("Board Inválido!")
+    } else if (inputValue > 5 && inputValue <= 50) {
+      generatePixelCells(inputValue);
+    } else if (inputValue <= 5) {
+      generatePixelCells(5)
+    } else if (inputValue >= 50) {
+      generatePixelCells(50)
+    } else if (input.value == null) {
       alert("Board Inválido!")
     }
+    input.value = ''
   });
 
 }
