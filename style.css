@@ -1,0 +1,25 @@
+body {
+  background-color: #54546e;
+  color: aliceblue;
+  text-align: center;
+}
+
+.color {
+  display: inline-block;
+  border: solid 1px black;
+  height: 100px;
+  width: 100px;
+}
+
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.yellow {
+  background-color: yellow;
+}
