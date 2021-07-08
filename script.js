@@ -1,7 +1,9 @@
+/* eslint-disable func-names */
+/* eslint-disable no-param-reassign */
 /* eslint-disable max-lines-per-function */
 window.onload = function () {
   const sectionPalette = document.getElementById('color-palette');
-  const clearButton = document.getElementById('clear-board');  
+  const clearButton = document.getElementById('clear-board');
   for (let i = 1; i <= 4; i += 1) {
     const divPalette = document.createElement('div');
     divPalette.className = 'color';
@@ -15,19 +17,19 @@ window.onload = function () {
     divsPalette[i].style.backgroundColor = colors[i];
     divsPalette[i].id = divsIds[i];
   }
-  divsPalette[0].classList.add('selected');  
+  divsPalette[0].classList.add('selected');
   const miniFrame = document.querySelectorAll('td');
   for (let i = 0; i < miniFrame.length; i += 1) {
     miniFrame[i].className = 'pixel';
   }
-  clearButton.addEventListener('click', function clearBoard() {
+  clearButton.addEventListener('click', () => {
     for (let i = 0; i < miniFrame.length; i += 1) {
-      miniFrame[i].style.backgroundColor = 'white';      
+      miniFrame[i].style.backgroundColor = 'white';
     }
   });
 
-  function changeSelectedPalette (event) {
-    let selectedElement = document.querySelector('.selected');
+  function changeSelectedPalette(event) {
+    const selectedElement = document.querySelector('.selected');
     selectedElement.classList.remove('selected');
     event.target.classList.add('selected');
   }
@@ -42,11 +44,11 @@ window.onload = function () {
   fourthPalette.addEventListener('click', changeSelectedPalette);
 
   function coloringFrame() {
-    let table = document.getElementById('pixel-board');
-    table.addEventListener('click',function (event) {
-      let selectedElement = document.querySelector('.selected');
+    const table = document.getElementById('pixel-board');
+    table.addEventListener('click', (event) => {
+      const selectedElement = document.querySelector('.selected');
       event.target.style.backgroundColor = selectedElement.style.backgroundColor;
     });
   }
   coloringFrame();
-}
+};
