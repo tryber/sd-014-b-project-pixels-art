@@ -145,6 +145,7 @@
     padding: 0px;
     margin: 0px;
     border-collapse: collapse;
+    width: 200px;
 }
 
 .tr {
@@ -153,10 +154,12 @@
 }
 
 .pixel {
-    display: table-cell;npm
+    display: table-cell;
     padding: 0px;
     height: 40px;
     width: 40px;
     border: #000000 solid 1px;
     margin: 0px;
+    box-sizing: border-box;
+    background-color: white;
 }
