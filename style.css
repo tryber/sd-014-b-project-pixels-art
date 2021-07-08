@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+}
+
+#color-palette {
+  padding: 15px;
+  margin: auto;
+  width: 80%;
+}
+
+#color-palette ul {
+  padding: 0;
+  margin: auto;
+  width: 270px;
+}
+
+#color-palette ol {
+  margin: 5px;
+  border: solid 1px black;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+}
+
+#title {
+  text-align: center;
+}
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
