@@ -42,13 +42,49 @@ function selectColorAndRemove(event){                    // Apartir da variavel 
 } 
 };
 
+function criarEventosPaletaDeCores(){
+    for (let index = 0; index <= 3; index += 1){
+        colors[index].addEventListener('click', selectColorAndRemove);
+    }; 
+}
 
-let colors = document.querySelectorAll('.color');
+function addEventPixels(){
+    let div = document.querySelector('div');
+    let pixels = div.querySelectorAll('li');
+    // let cor = colors.
+    for(let pixel of pixels){
+        pixel.addEventListener('click', function () {
+        let corAtual = 'null'
+        for (let index = 0; index <= 3; index += 1){
+            if (colors[index].classList[2] === "selected"){
+                let corAtual = colors[index].classList[1];
+                if (corAtual === 'preto'){
+                    pixel.style.backgroundColor = 'black';
+                }
+                if (corAtual === 'azul'){
+                    pixel.style.backgroundColor = 'blue';
+                }
+                if (corAtual === 'roxo'){
+                    pixel.style.backgroundColor = 'purple';
+                }
+                if (corAtual === 'vermelho'){
+                    pixel.style.backgroundColor = 'red';
+                }
+                pixel.classList.remove('pixel')
+                pixel.classList.add(corAtual);
+                pixel.classList.add('pixel');
+                console.log(colors[index].classList[1]);
+            }  
+        }
+        });
+    }
+}
+
+var colors = document.querySelectorAll('.color');
 criaPixels(5,5);
 colors[0].classList.add('selected'); // seleciona o preto.
-for (let index = 0; index <= 3; index += 1){
-    colors[index].addEventListener('click', selectColorAndRemove);
-};
+criarEventosPaletaDeCores();
+addEventPixels();
 
 
 
