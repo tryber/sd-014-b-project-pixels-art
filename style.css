@@ -1,0 +1,18 @@
+.color {
+    border: 1px black;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+#color1 {
+    background-color: green;
+}
+#color2 {
+    background-color: aqua;
+}
+#color3 {
+    background-color: darkred;
+}
+#color4 {
+    background-color: lawngreen;
+}
