@@ -1,6 +1,14 @@
+h1{
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+}
+
 #color-palette {
   display: flex;
-  margin-top: 15px;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: center;
 }
 
 .color{
@@ -12,3 +20,27 @@
   margin-right: 5px;
 }
 
+#pixel-board {
+  display: table;
+  padding: 38px;
+  align-items: center;
+  justify-content: center;
+  border-spacing: 0px;
+  text-align: center;
+}
+
+.tr {
+  display: table-row;
+  padding: 38px;
+  height: 38px;
+  border: black solid 1px;
+}
+
+.pixel {
+  display: table-cell;
+  padding: 1px;
+  width: 38px;
+  height: 38px;
+  border: black solid 1px;
+  color: white;
+}
