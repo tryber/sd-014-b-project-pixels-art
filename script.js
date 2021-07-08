@@ -53,12 +53,36 @@ paletteColors();
 
 // pixelsTabel();
 
-// Requisito 6: Criar função que coloque a classe selected na cor que é clicada.
+// Requisito 6: 
+document.querySelectorAll('.color')[0].className = 'color selected'
 
-function blackColor (){
-  let blackPalette = document.querySelectorAll('.color')[0];
-  blackPalette.className = 'color selected'
+// Requisito 7: Criar função que coloque a classe selected na cor que é clicada.
+// Criar uma variavel pra receber qual cor está selecionada (let previousColor)
+// Criar variável pra receber qual cor foi clicada (let selectedColor)
+// Toda vez que tem um click, altera a classe de previousColor pra 'color'
+// Setar a classe de selectedColor pra 'color selected'
+
+function addListenerColor (){
+
+  let colors = document.querySelectorAll('.color');
+
+  for (i = 0; i < colors.length; i += 1){
+    colors[i].addEventListener('click', changeClass);
+    // console.log(colors)
+  }
+
+  function changeClass (event){
+    let previousColor = document.querySelector('.selected');
+    // console.log(previousColor);
+    previousColor.className = 'color'
+    event.target.className = 'color selected'
+  }
 }
 
-blackColor();
+addListenerColor();
 
+// Requisito 8: 
+
+function addListenerPixel (){
+
+}
