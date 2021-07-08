@@ -8,6 +8,10 @@ table {
   border: 1px solid black;
 }
 
+.black {
+  background-color: black;
+}
+
 .pink {
   background-color: rgb(255, 198, 255);
 }
