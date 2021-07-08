@@ -5,19 +5,19 @@
   display: inline-block;
 }
 
-.black {
+#black {
   background-color: black;
 }
 
-.purple {
+#purple {
   background-color: purple;
 }
 
-.green {
+#green {
   background-color: green;
 }
 
-.orange {
+#orange {
   background-color: orange;
 }
 

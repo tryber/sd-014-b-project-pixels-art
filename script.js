@@ -1,3 +1,4 @@
+// *Requisito 7*
 // function changeClass() {
 //   let pathColor = document.querySelectorAll('.color');
 //   for (let content of pathColor) {
@@ -27,3 +28,13 @@ function changeClass() {
     })   
   }
 }; changeClass();
+
+// *Requisito 8*
+function paintBlocks() {
+  var pixelBlocks = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixelBlocks.length; index += 1) {
+    pixelBlocks[index].addEventListener('click', function () {
+      document.querySelectorAll('.pixel')[index].style.backgroundColor = document.querySelector('.selected').id;
+    })
+  }
+}; paintBlocks();
