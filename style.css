@@ -19,7 +19,11 @@
 }
 
 #pixel-board {
-    margin-top: 20px;
+    margin-top: 10px;
     border-spacing: 0;
     border-collapse: collapse;
+}
+
+#clear-board{
+    margin-top: 10px;
 }

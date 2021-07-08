@@ -4,6 +4,7 @@ const colors = ['black', 'red', 'green', 'blue'];
 setColorsInPalette();
 
 let selectedColor = document.querySelector('.selected');
+let clearButton = document.querySelector('#clear-board');
 
 function setColorsInPalette() {
     for (let i = 0; i < colorsPalette.length; i += 1){
@@ -37,4 +38,14 @@ function fillColorInPixel(event){
     pixel.style.backgroundColor = color;
 
 }
+
+function clearBoard(){
+    let pixels = document.querySelectorAll('.pixel');
+    for (let i = 0; i < pixels.length; i += 1){
+        let pixel = pixels[i];
+        pixel.style.backgroundColor = 'white';
+    }
+}
+
+clearButton.addEventListener('click', clearBoard);
 
