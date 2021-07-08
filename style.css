@@ -28,3 +28,15 @@ div.color:nth-of-type(4){
 div.color:nth-of-type(5){
     background-color: red;
 }
+div.pixel{
+    background-color: rgb(255, 255, 255);
+    width: 40px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+}
+#pixel-board{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    
+}
