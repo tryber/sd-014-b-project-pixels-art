@@ -4,36 +4,28 @@ Flexbox: https://www.w3schools.com/css/css3_flexbox.asp
 Javascript Arrow Functions: https://www.w3schools.com/js/js_arrow_function.asp/
 */
 //refs: Ajudas do meu colega, Glauco.
-
-//essa função seleciona cores, remove e muda as cores da classe selected
-
+//seleciona a palheta, aidicona um evento, seleciona a classe selected, no clique, remove do antigo e adiciona no novo.
 const select = () => {
-  const change = document.querySelector('#color-palette');
-
-  change.addEventListener('click', (e) => {
-    const selected = document.querySelector('.selected');
-    selected.classList.remove('selected');
-    e.target.classList.add('selected');
-  });
+  document
+    .querySelector('#color-palette')
+    .addEventListener('click', async (e) => {
+      document.querySelector('.selected').classList.remove('selected');
+      e.target.classList.add('selected');
+    });
 };
-
-//essa função adiciona uma background color ao "target" do click
+//com a função paint pegamos a cor selecionada na select e aplicamos no item do pixel-board.
 const paint = () => {
-  const painting = document.querySelector('#pixel-board');
-
-  painting.addEventListener('click', (e) => {
+  document.querySelector('#pixel-board').addEventListener('click', (e) => {
     e.target.style.backgroundColor =
       document.querySelector('.selected').style.backgroundColor;
   });
 };
-
-//essa função limpa tudo https://www.codegrepper.com/code-examples/javascript/javascript+change+color+for+class+name
+//essa função limpa tudo - ref: https://www.codegrepper.com/code-examples/javascript/javascript+change+color+for+class+name
 const clear = () => {
-  const totalDeleteLesgoTrybers = document.querySelector('#clear-board');
-  totalDeleteLesgoTrybers.addEventListener('click', () => {
+  document.querySelector('#clear-board').addEventListener('click', () => {
     const pxl = document.querySelectorAll('.pixel');
-    for (let index = 0; index < pxl.length; index += 1) {
-      pxl[index].style.backgroundColor = 'white';
+    for (let i = 0; i < 25; i += 1) {
+      pxl[i].style.backgroundColor = 'white';
     }
   });
 };
