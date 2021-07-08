@@ -16,6 +16,10 @@
   border: 1px solid black;
 }
 
+#color-palette .selected {
+  border: 5px solid black;
+}
+
 #color-palette #black {
   background: black;
 }
@@ -47,5 +51,5 @@
   width: 40px;
   height: 40px;
   border: 1px solid black;
-  background: #fff;
+  background: white;
 }
