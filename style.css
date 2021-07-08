@@ -36,6 +36,3 @@
     height: 40px;
     border: 1px solid black 
 }
-.selected {
-    transform: translatey(-5px);
-}
