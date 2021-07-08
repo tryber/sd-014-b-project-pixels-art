@@ -1,3 +1,7 @@
+/*
+Sessão Paleta de Cores
+*/
+
 .color {
   border: 1px solid black;
 }
@@ -28,4 +32,26 @@
   height: 50px;
   display: inline-block;
   background-color: cyan;
+}
+
+/*
+Sessão Matriz Pixels
+*/
+
+#pixel-board {
+  display: table;
+  border-spacing: 1px;
+  background-color: black;
+  border: 1px solid black;
+}
+
+.pixels {
+  display: table-row;
+}
+
+.pixel {
+  display: table-cell;
+  background-color: white;
+  width: 5px;
+  height: 5px;
 }
