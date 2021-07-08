@@ -1,0 +1,34 @@
+#title {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#color-palette {
+ text-align: center;
+ padding-top: 20px;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+.um {
+  background-color: black;
+}
+
+.dois {
+  background-color: red;
+}
+
+.tres {
+  background-color: blue;
+}
+
+.quatro {
+  background-color: green;
+}
+
+
