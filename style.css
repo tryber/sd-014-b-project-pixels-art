@@ -6,7 +6,7 @@
 }
 
 .selected {
-  
+
 }
 
 .tr {
@@ -15,8 +15,8 @@
 
 .pixel {
   background-color: white;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border: 1px solid black;
   display: table-cell;
 }
