@@ -73,6 +73,12 @@ function changeSelectedColorBlue () {
   document.querySelector('#blue').className = 'color selected';
 }
 
+document.querySelector('#clear-board').addEventListener('click', () =>{
+  for(pixel of document.querySelectorAll('.td')){
+    pixel.style.backgroundColor = 'white';
+  }
+});
+
 window.onload = function () {
   createPixelBoard();
   addListener();
