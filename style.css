@@ -1,40 +1,40 @@
-div #black{
-  display: inline-block;
-  background-color: black;
-  width: 100px;
-  height: 100px;
-  border:  1px solid black;
+div #black {
+  display : inline-block;
+  background-color : black;
+  width : 100px;
+  height : 100px;
+  border :  1px solid black;
 }
 
-div #blue{
-  display: inline-block;
-  background-color: rgb(65, 112, 199);
-  width: 100px;
-  height: 100px;
-  border:  1px solid black;
+div #blue { 
+  display : inline-block;
+  background-color : rgb(65, 112, 199);
+  width : 100px;
+  height : 100px;
+  border :  1px solid black;
 }
 
-div #red{
+div #red {
   display: inline-block;
   background-color: rgb(212, 8, 8);
-  width: 100px;
-  height: 100px;
-  border:  1px solid black;
+  width : 100px;
+  height : 100px;
+  border :  1px solid black;
 }
 
-div #green{
-  display: inline-block;
+div #green {
+  display : inline-block;
   background-color: rgb(48, 133, 32);
-  width: 100px;
-  height: 100px;
-  border:  1px solid black;
+  width : 100px;
+  height : 100px;
+  border :  1px solid black;
 }
 
-td, tr{
-  border: 1px solid black;
-  width: 40px;
-  height: 40px;
-  background-color: white;
+td, tr {
+  border : 1px solid black;
+  width : 40px;
+  height : 40px;
+  background-color : white;
 
 }
 
