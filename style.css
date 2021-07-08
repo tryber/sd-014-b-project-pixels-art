@@ -11,6 +11,9 @@ h1 {
 
 #color-palette {
   margin: auto;
+  display: table;
+  box-shadow: 10px 5px 5px black;
+  border: 5px solid black;
 }
 
 #table-color {
@@ -26,29 +29,29 @@ h1 {
 }
 
 #black {
-    background-color: black;
-    width: 100px;
-    height: 100px;
-    display: inline-block;
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
 }
 #blue {
-    background-color: blue;
-    width: 100px;
-    height: 100px;
-    display: inline-block;
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
 }
 
 #yellow {
-    background-color: yellow;
-    width: 100px;
-    height: 100px;
-    display: inline-block;
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
 }
 
 #red {
-    background-color: red;
-    width: 100px;
-    height: 100px;
-    display: inline-block;
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
 }
 
