@@ -1,0 +1,50 @@
+.table{
+  display: table;
+  border: 1px solid black; 
+  background-color: black;
+}
+
+.pixel{
+  display: table-cell;
+  background-color: white;
+  width: 40px;
+  height: 40px;  
+  border: 1px solid black;
+}
+
+.tr{
+  display: table-row;
+  
+}
+
+#pixel-board{  
+  margin-top: 100px;  
+}
+
+
+.color{
+  float: left;
+  width: 40px;
+  height: 40px;  
+  border: 1px solid black;   
+}
+
+.color1{
+  background-color: black;
+}
+
+.color2{
+  background-color:#b28972;
+}
+
+.color3{
+  background-color: #d1928a;
+}
+
+.color4{
+  background-color: #9da4b5;
+}
+
+.selected {
+  border-radius: 10px;
+}
