@@ -21,6 +21,11 @@ function colors (colorDesired) {
   divCreation.id = colorDesired
   divSelection.appendChild(divCreation)
 }
+function swapClass(evnt) {
+  let classSelection = document.querySelector('.selected');// procuro a class tech
+  classSelection.classList.remove('selected');//removo a class tech
+  evnt.target.classList.add('selected');//adiciono a class tech ao elemento que eu cliquei
+}
 
 h1Creation()
 paletteCreation()
@@ -28,3 +33,4 @@ colors('black')
 colors('yellow')
 colors('red')
 colors('green')
+document.querySelector('#color-palette').addEventListener('click', swapClass)
