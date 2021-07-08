@@ -1,15 +1,4 @@
 // Selecting each color palette.
-const colors = document.querySelectorAll('.color');
-
-colors[0].setAttribute('style', 'background-color: black');
-colors[1].setAttribute('style', 'background-color: green');
-colors[2].setAttribute('style', 'background-color: yellow');
-colors[3].setAttribute('style', 'background-color: pink');
-colors[0].setAttribute('classe', 'selected');
-
-const lineUser = 5;
-const columnUser = 5;
-
 function createLine(number) {
   for (let col = 1; col <= number; col += 1) {
     const divLine = document.createElement('div');
@@ -18,6 +7,7 @@ function createLine(number) {
   }
 }
 
+// Preenchendo as colunas do pixel-board.
 function fillCells(cells, paramLines) {
   for (let line = 0; line < paramLines.length; line += 1) {
     for (let col = 1; col <= cells; col += 1) {
@@ -28,6 +18,19 @@ function fillCells(cells, paramLines) {
   }
 }
 
-createLine(lineUser);
-const lines = document.querySelectorAll('.tr');
-fillCells(columnUser, lines);
+window.onload = function load() {
+  const colors = document.querySelectorAll('.color');
+
+  colors[0].setAttribute('style', 'background-color: black');
+  colors[1].setAttribute('style', 'background-color: green');
+  colors[2].setAttribute('style', 'background-color: yellow');
+  colors[3].setAttribute('style', 'background-color: pink');
+  colors[0].setAttribute('class', 'selected');
+
+  const lineUser = 5;
+  const columnUser = 5;
+
+  createLine(lineUser);
+  const lines = document.querySelectorAll('.tr');
+  fillCells(columnUser, lines);
+};
