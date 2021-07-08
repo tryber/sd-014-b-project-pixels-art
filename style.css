@@ -5,22 +5,6 @@
   height: 100px;
 }
 
-#black {
-  background-color: black;
-}
-
-#orange-red {
-  background-color: orangered;
-}
-
-#blue {
-  background-color: blue;
-}
-
-#green {
-  background-color: green;
-}
-
 #pixel-board {
   display: table;
   padding-top: 20px;
