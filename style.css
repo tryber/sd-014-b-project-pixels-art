@@ -1,24 +1,17 @@
-.color-palette {
-    background: red
+.title {
+    text-align: center;
+}
+
+
+.color  {
+        height: 50px;
+        width: 50px;
+        padding: 20px;
+    background: black;
     display: inline-block;
     line-height: 50px;
     text-align: center;
     vertical-align: top;
-    height: 50px;
-    width: 50px;
+   border 1px solid black;
   }
   
-  .width-and-height {
-    height: 50px;
-    width: 50px;
-  }
-  .padding {
-      padding: 20px;
-  }
-  .margin {
-      30px;
-  }
-  .border {
-      5px solid black;;
-
-  }
