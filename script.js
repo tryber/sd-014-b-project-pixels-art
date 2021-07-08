@@ -9,12 +9,10 @@ function putColors () {
       color.style.backgroundColor = 'black';
       color.classList.add('selected');
     } else if (colorsPallet[1] === color) {
-      color.style.backgroundColor = 'yellow';
-    } else if (colorsPallet[2] === color) {
       color.style.backgroundColor = 'red';
-    } else if (colorsPallet[3] === color) {
+    } else if (colorsPallet[2] === color) {
       color.style.backgroundColor = 'green';
-    } else if (colorsPallet[4] === color) {
+    } else if (colorsPallet[3] === color) {
       color.style.backgroundColor = 'blue';
     }
   }
@@ -36,7 +34,6 @@ function createPixelBoard () {
 
 function addListener () {
   document.querySelector('#black').addEventListener('click', changeSelectedColorBlack);
-  document.querySelector('#yellow').addEventListener('click', changeSelectedColorYellow);
   document.querySelector('#red').addEventListener('click', changeSelectedColorRed);
   document.querySelector('#green').addEventListener('click', changeSelectedColorGreen);
   document.querySelector('#blue').addEventListener('click', changeSelectedColorBlue);

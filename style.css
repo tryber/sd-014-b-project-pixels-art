@@ -11,10 +11,16 @@
 
 .tr {
   display: table-row;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(0, 0, 0);
 }
 
 .td {
   display: table-cell;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(0, 0, 0);
 }
 
 .pixel {
