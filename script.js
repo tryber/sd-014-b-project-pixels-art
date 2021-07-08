@@ -1,4 +1,4 @@
-// Função para criar o pixel-board
+// Função para criar o pixel-board - Requisito #4
 const pixelBoard = document.querySelector('#pixel-board');
 
 function pixelBoardCreat(lines, columns) {
@@ -17,3 +17,8 @@ function pixelLinesCreat(lines) {
   }
 }
 pixelLinesCreat(5);
+
+// Requisito #6
+const paletaDeCores = document.querySelectorAll('.color');
+const blackColor = document.querySelector('#first-color');
+blackColor.classList.add('selected');
