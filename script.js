@@ -1,3 +1,9 @@
+// eslint-disable-next-line func-names
+window.onload = function () {
+  const getPixelBlack = document.querySelectorAll('.color')[0];
+  getPixelBlack.classList.add('selected');
+};
+
 function createPixels() {
   const getTable = document.querySelector('#pixel-board');
   for (let index = 1; index <= 5; index += 1) {
