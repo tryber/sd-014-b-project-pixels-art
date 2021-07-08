@@ -31,3 +31,9 @@ window.onload = function () {
     }
 }
 
+let pixelBoard = document.querySelector('#pixel-board');
+
+pixelBoard.addEventListener('click', function (event) {
+    let alreadySelected = document.querySelector('.selected').style.backgroundColor;
+    event.target.style.backgroundColor = alreadySelected;
+})
