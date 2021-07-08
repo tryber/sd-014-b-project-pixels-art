@@ -1,0 +1,19 @@
+.color {
+    display: inline-block;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+#vermelho {
+    background-color: red;
+}
+#amarelo {
+    background-color: yellow;
+}
+#azul {
+    background-color: blue;
+}
+#verde {
+    background-color: green;
+}
+
