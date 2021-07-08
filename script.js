@@ -5,6 +5,3 @@ document.querySelector('#title').innerHTML = "Paleta de Cores";
 //console.log(document.querySelector('.color'))
 document.querySelector('.color').style.backgroundColor = 'black';
 
-//Requisito 4:
-document.querySelectorAll('.pixel').style.backgroundColor = 'blue';
-//console.log(document.querySelectorAll('.pixel'));
