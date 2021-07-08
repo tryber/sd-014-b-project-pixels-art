@@ -1,3 +1,20 @@
 body {
   margin: 0;
 }
+
+.color{
+  margin: 30px;
+}
+
+#color-palette {
+  margin: 0;
+}
+
+.color {
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
