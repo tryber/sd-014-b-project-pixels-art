@@ -41,5 +41,18 @@
 }
 
 #clear-board {
-	margin: 0px 0px 50px 30px
+	margin: 0px 0px 10px 30px
+}
+#board-size {
+	margin: 0px 10px 40px;
+	width: 300px;
+	float: inline-start;
+}
+
+#generate-board {
+	float: inline-end;
+}
+
+.paragraph {
+	margin: 70px 0px 20px
 }
