@@ -21,3 +21,11 @@
 .blue {
     background-color: blue;
 }
+
+#pixel-board {
+    background-color: white;
+}
+
+.pixel {
+    background-color: white;
+}
