@@ -84,5 +84,15 @@ addListenerColor();
 // Requisito 8: 
 
 function addListenerPixel (){
+  let pixels = document.querySelectorAll('.pixel');
+  console.log(pixels);
+  for (i = 0; i < pixels.length; i += 1){
+    pixels[i].addEventListener('click', changeColor);
+  }
 
+  function changeColor (event){
+    event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor
+  }
 }
+
+addListenerPixel();
