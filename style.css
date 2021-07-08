@@ -1,21 +1,13 @@
 * {
-  margin: 0;  
-}
-
-body {
-  background-color: white;
+  margin: 0;
+  background-color: #fff1e6;
 }
 
 #color-palette {
-  padding: 15px;
-  margin: auto;
-  width: 80%;
-}
-
-#color-palette ul {
   padding: 0;
   margin: auto;
   width: 270px;
+  padding: 15px;
 }
 
 #color-palette ol {
@@ -27,9 +19,17 @@ body {
   padding: 0;
 }
 
+header {
+  margin-top: 20px;
+}
+
 #title {
   text-align: center;
-  background-color: white;
+  padding: 10px;
+  margin: auto;
+  background-color: #eddcd2;
+  width: 25%;
+  border-radius: 20px;
 }
 
 #black {
@@ -46,4 +46,26 @@ body {
 
 #yellow {
   background-color: yellow;
+}
+
+table {
+  display: table;
+  margin: auto;
+  width: 300px;
+  border-spacing: 0;
+  border-collapse: inherit;
+}
+tr {
+  display: table-row;  
+}
+td {
+  display: table-cell;  
+  width: 50px;
+  height: 50px;
+  border: #000000 solid 1px; 
+  padding: 0; 
+}
+
+.pixel {
+  background-color: white;
 }
