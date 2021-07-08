@@ -1,0 +1,117 @@
+#title {
+    text-align: center;
+}
+
+#color-palette {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#color-palette div {
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+}
+
+.black {
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.castleton-green {
+    background-color: #003D2E;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.spanish-viridian {
+    background-color: rgb(0,127,95);
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.spanish-green {
+    background-color: rgb(43, 147, 72);
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.green-ryb {
+    background-color: rgb(85, 166, 48);
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.apple-green {
+    background-color: rgb(128, 185, 24);
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.android-green {
+    background-color: rgb(170, 204, 0);
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.bitter-lemon {
+    background-color: rgb(191, 210, 0);
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline;
+}
+
+.pear {
+    background-color: rgb(212, 215, 0);
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.titanium-yellow {
+    background-color: rgb(221, 223, 0);
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.xanthic {
+    background-color: rgb(238, 239, 32);
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.maximum-yellow {
+    background-color: rgb(255, 255, 63); 
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+}
