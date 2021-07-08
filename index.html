@@ -5,10 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Tiago Ponce - Pixel Art!</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <h1 id='title'>Paleta de Cores</h1>
 
+    <div class='paleta-de-cores'>
+        <!-- Tabela de 1 linha e 4 colunas criado dinamicamente no javascript -->
+    </div>
+
+    <script>
+
+        // cria a tabela de 1 linha e 4 colunas
+        for (let i = 0 ; i < 1 ; i += 1) {
+
+
+            const addressDiv = document.querySelector('.paleta-de-cores');
+
+            let createTable = document.createElement('table');
+
+            createTable.id = "color-palette";
+
+            addressDiv.appendChild(createTable);
+
+            const addressTable = document.getElementById('color-palette');
+
+            let createTr = document.createElement('tr');
+
+            createTr.className = 'tr-table';
+
+            addressTable.appendChild(createTr);
+
+            let cores = [
+                'black',
+                'green',
+                'orange',
+                'purple'
+            ]
+
+
+            for (let j = 0 ; j < 4 ; j += 1) {
+                const addressTr = document.querySelector('.tr-table');
+                
+                let createTd = document.createElement('td');
+
+                createTd.className = 'color';
+
+                addressTr.appendChild(createTd);
+
+                createTable.rows[i].cells[j].bgColor = cores[j];
+
+            }
+        }
+
+    </script>
 </body>
 </html>

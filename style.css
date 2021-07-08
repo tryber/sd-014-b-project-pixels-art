@@ -1,0 +1,17 @@
+.color {
+    padding: 10px;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+    
+}
+
+
+#title {
+    text-align: center;
+}
+
+#color-palette {
+    margin-left: auto;
+    margin-right: auto;
+}
