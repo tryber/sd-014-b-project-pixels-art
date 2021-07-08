@@ -1,6 +1,8 @@
 .color {
     display: inline-block;
     border: solid 1px;
+    width: 20px;
+    height: 20px;
 
 }
 
