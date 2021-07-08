@@ -10,6 +10,8 @@ function pickColor(event) {
   event.target.classList.add('selected');
 }
 
+const pixelsArray = document.querySelectorAll('.pixel');
+
 function resetPixels() {
   for (let index = 0; index < pixelsArray.length; index += 1) {
     pixelsArray[index].style.removeProperty('background-color');
@@ -21,7 +23,6 @@ const cornBox = document.getElementById('cornFlowerBox');
 const hotBox = document.getElementById('hotPinkBox');
 const tiffanyBox = document.getElementById('tiffanyBlueBox');
 const cleaningbutton = document.getElementById('clear-board');
-const pixelsArray = document.querySelectorAll('.pixel');
 
 blackBox.addEventListener('click', pickColor);
 cornBox.addEventListener('click', pickColor);
