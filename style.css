@@ -5,16 +5,16 @@
   border: 1px solid black;
 }
 
-#black {
+.black {
   background-color: black;
 }
-#yellow {
+.yellow {
   background-color: yellow;
 }
-#red {
+.red {
   background-color: red;
 }
-#green {
+.green {
   background-color: green;
 }
 
