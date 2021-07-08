@@ -1,13 +1,15 @@
-.color{
+.color {
     width: 41px;
     height: 41px;
     border: solid black 1px;
-    display:table-cell;
+    display: table-cell;
 }
-#pixel-boar tr{
+
+#pixel-boar tr {
     display: table-row;
 }
-.pixel{
+
+.pixel {
     width: 41px;
     height: 41px;
     background-color: white;
@@ -15,7 +17,8 @@
     padding: 0px;
     border: solid black 1px;
 }
-#pixel-board{
+
+#pixel-board {
     margin-top: 20px;
     border-spacing: 0;
     border-collapse: collapse;
