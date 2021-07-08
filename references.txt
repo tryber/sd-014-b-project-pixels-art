@@ -1,0 +1,12 @@
+ 
+https://css-tricks.com/complete-guide-table-element/
+https://css-tricks.com/fun-times-css-pixel-art/
+https://stackoverflow.com/questions/50883690/remove-class-from-one-element-while-adding-that-class-to-another-element-using
+https://www.w3schools.com/tags/att_button_type.asp
+https://en.wikibooks.org/wiki/JavaScript/Changing_elements
+https://github.com/tryber/sd-013-b-project-pixels-art/blob/guihtryb-project-pixels-art/script.js
+https://www.techiedelight.com/dynamically-generate-input-type-button-javascript/
+https://github.com/tryber/sd-013-b-project-pixels-art/blob/mariana-nogueira-project-pixels-art/script.js
+https://github.com/tryber/sd-013-b-project-pixels-art/blob/guihtryb-project-pixels-art/script.js
+https://www.w3schools.com/css/css3_transitions.asp
+https://developer.mozilla.org/en-US/docs/Web/CSS/scale  
