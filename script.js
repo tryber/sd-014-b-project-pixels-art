@@ -1,3 +1,11 @@
+function generateRandomColor() {
+  const r = Math.random() * 255;
+  const g = Math.random() * 255;
+  const b = Math.random() * 255;
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 function createPalette() {
   let numberOfColors = 4;
   let colorPalette = document.querySelector('#color-palette');
@@ -16,14 +24,6 @@ function createPalette() {
 }
 
 createPalette();
-
-function generateRandomColor() {
-  let r = Math.random() * 255;
-  let g = Math.random() * 255;
-  let b = Math.random() * 255;
-
-  return `rgb(${r}, ${g}, ${b})`;
-}
 
 function createPixelBoard() {
   let pixelBoard = document.querySelector('#pixel-board');
@@ -65,3 +65,15 @@ let pixels = document.querySelectorAll('.pixel');
 for (let index = 0; index < pixels.length; index += 1) {
   pixels[index].addEventListener('click', changePixelColor);
 }
+
+let paletteContainer = document.querySelector('#palette-container');
+let clearBtn = document.createElement('button');
+clearBtn.innerText = 'Limpar';
+clearBtn.id = 'clear-board';
+paletteContainer.appendChild(clearBtn);
+
+clearBtn.addEventListener('click', function () {
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  }
+});
