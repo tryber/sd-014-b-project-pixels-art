@@ -20,3 +20,19 @@
 .orange {
   background-color: orange;
 }
+
+tr {
+  width: 60px;
+  height: 60px;
+  border: 1px black solid;
+}
+
+td {
+  width: 60px;
+  height: 60px;
+  border: 1px black solid;
+}
+
+.pixel {
+  background-color: white;
+}
