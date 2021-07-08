@@ -3,3 +3,11 @@
   display: inline-block;
   border: solid 1px black;
 }
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline;
+}
