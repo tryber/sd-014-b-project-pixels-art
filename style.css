@@ -33,8 +33,8 @@
 
 .pixel {
   border: solid 1px black;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 #pixel-board {
