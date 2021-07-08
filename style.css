@@ -28,3 +28,14 @@
 #cor4 {
   background-color: black;
 }
+
+table {
+    border: solid black 1px;
+    align-self: center;
+}
+td {
+  background-color:white;
+  border: solid black 1px;
+  width: 40px;
+  height: 40px;
+}
