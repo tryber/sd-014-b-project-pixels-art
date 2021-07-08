@@ -3,6 +3,7 @@ function createPixels(){
 
   let pixels = document.createElement('div');
   pixels.classList.add('pixel')
+  pixels.classList.add(index)
   document.querySelector('#pixel-board').appendChild(pixels)
   if (index == 4){
     let quebra = document.createElement('div')
@@ -23,3 +24,18 @@ function createPixels(){
 }
 }
 createPixels()
+
+function addSelected (event){
+  document.querySelector('.selected').classList.remove('selected')
+  event.target.classList.add('selected')
+}
+
+
+  document.querySelector('#black').addEventListener('click', addSelected)
+  document.querySelector('#red').addEventListener('click', addSelected)
+  document.querySelector('#blue').addEventListener('click', addSelected)
+  document.querySelector('#yellow').addEventListener('click', addSelected)
+
+
+
+
