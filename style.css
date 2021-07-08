@@ -1,4 +1,14 @@
+body {
+    text-align: center;
+}
 .color {
+    display: inline-block;
+    width: 8%;
+    height: 85px;
+    margin-right: 10px;
+}
+
+.pixel {
     display: inline-block;
     width: 8%;
     height: 85px;
