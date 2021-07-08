@@ -34,8 +34,8 @@
 
 .pixel {
 	display: table-cell;
-	width: 100px;
-	height: 100px;
+	width: 40px;
+	height: 40px;
 	background-color: white;
-  outline: solid 1px black;
+  border: solid 1px black;
 }
