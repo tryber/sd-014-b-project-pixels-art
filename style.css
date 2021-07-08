@@ -1,5 +1,5 @@
 body {
-    background-color: beige;
+    background-color: #EDEDF4;
 }
 
 .color {
@@ -28,6 +28,12 @@ body {
     border-collapse: collapse;
 }
 
-#clear-board{
+#clear-board {
     margin-top: 10px;
+}
+
+#board-size {
+    margin-left: 30px;
+    width: 50px;
+    text-align: center;
 }
