@@ -1,6 +1,7 @@
 // eslint-disable-next-line func-names
 window.onload = function () {
   resetColorPixel();
+  colorSeletectedInitial('black');
 };
 // Criar div com as paletas de cores.
 
@@ -57,5 +58,16 @@ function resetColorPixel() {
   const pixel = document.getElementsByClassName('pixel');
   for (let index = 0; index < pixel.length; index += 1) {
     pixel[index].style.backgroundColor = 'white';
+  }
+}
+
+// Definir cor preto Inicial.
+
+function colorSeletectedInitial(color) {
+  const colors = document.querySelectorAll('.color');
+  const setColorInitial = color;
+  for (let index = 0; index < colors.length; index += 1) {
+    const bgColor = colors[index].style.backgroundColor;
+    if (bgColor === setColorInitial) colors[index].classList.add('selected');
   }
 }
