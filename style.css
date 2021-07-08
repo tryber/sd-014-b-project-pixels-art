@@ -1,0 +1,19 @@
+header {
+  text-align: center;
+  border: 1px solid black;
+}
+
+#color-palette {
+  padding: 10px 0px 10px 0px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+ 
+}
+
+.color {
+  margin: 0px 10px 0px 10px;
+  border: 1px solid black;
+  height: 75px;
+  width: 75px;
+}
