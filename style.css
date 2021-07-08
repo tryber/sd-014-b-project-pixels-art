@@ -41,7 +41,7 @@
 }
 
 #clear-board {
-	margin: 0px 0px 10px 30px
+	margin: 0px 0px 10px 30px;
 }
 #board-size {
 	margin: 0px 10px 40px;
@@ -54,5 +54,5 @@
 }
 
 .paragraph {
-	margin: 70px 0px 20px
+	margin: 70px 0px 20px;
 }

@@ -13,7 +13,8 @@ window.onload = function () {
 
   tablePixel.addEventListener('click', function changePixelColor(event) {
     let colorClassSelected = document.querySelector('.selected');
-    event.target.style.backgroundColor = colorClassSelected.id;
+    let color = getComputedStyle(colorClassSelected)
+    event.target.style.backgroundColor = color.backgroundColor;
     console.log(colorClassSelected.id);
   });
 
@@ -51,20 +52,30 @@ window.onload = function () {
 
   generateCellsButton.addEventListener('click', function buttonEvent() {
     let input = document.querySelector('#board-size');
-    let inputValue = input.value
+    let inputValue = input.value;
     if (input.value == '') {
-      alert("Board Inválido!")
+      alert("Board Inválido!");
     } else if (inputValue > 5 && inputValue <= 50) {
       generatePixelCells(inputValue);
     } else if (inputValue <= 5) {
-      generatePixelCells(5)
+      generatePixelCells(5);
     } else if (inputValue >= 50) {
-      generatePixelCells(50)
+      generatePixelCells(50);
     } else if (input.value == null) {
-      alert("Board Inválido!")
+      alert("Board Inválido!");
     }
     input.value = ''
   });
+
+  function generateRandomColors() {
+    let colorPaletteArray = document.getElementsByClassName('color')
+    for (let index = 1; index < colorPaletteArray.length; index +=1) {
+      colorPaletteArray[index].style.backgroundColor = `rgb(${Math.trunc(Math.random() * (255))}, ${Math.trunc(Math.random() * (255))},${Math.trunc(Math.random() * (255))})`
+    }
+  }
+  generateRandomColors();
+
+
 
 }
 
