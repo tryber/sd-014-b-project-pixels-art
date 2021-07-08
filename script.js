@@ -5,6 +5,7 @@ colors[0].setAttribute('style', 'background-color: black');
 colors[1].setAttribute('style', 'background-color: green');
 colors[2].setAttribute('style', 'background-color: yellow');
 colors[3].setAttribute('style', 'background-color: pink');
+colors[0].setAttribute('classe', 'selected');
 
 const lineUser = 5;
 const columnUser = 5;
