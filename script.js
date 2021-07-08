@@ -1,24 +1,40 @@
-const select = () => {
-  const reset = () => {
-    const colorSelected = document.querySelector('.selected');
-    colorSelected.classList.remove('selected');
-  };
-  const changeColor = document.querySelector('#color-palette');
+window.onload = function () {
+  let colorsPallete = document.querySelectorAll('.color');
 
-  changeColor.addEventListener('click', (e) => {
-    reset();
-    e.target.classList.add('selected');
-  });
+  for (let element of colorsPallete) {
+    if (colorsPallete[0] === element) {
+      element.style.backgroundColor = 'black';
+      element.classList.add('selected');
+    } else if (colorsPallete[1] === element) {
+      element.style.backgroundColor = 'red';
+    } else if (colorsPallete[2] === element) {
+      element.style.backgroundColor = 'blue';
+    } else if (colorsPallete[3] === element) {
+      element.style.backgroundColor = 'green';
+    }
+    element.addEventListener('click', function (event) {
+      //adiciona a classe 'selected' ao elemento clicado, e retira de outro que esteja com a classe
+      for (let i = 0; i < colorsPallete.length; i += 1) {
+        colorsPallete[i].classList.remove('selected');
+        event.target.classList.add('selected');
+      }
+    });
+  }
+
+  let pixelBoard = document.querySelector('#pixel-board');
+
+  for (let i = 1; i <= 25; i += 1) {
+    pixel.classList.add('pixel');
+    pixelBoard.appendChild(pixel);
+  }
 };
 
-const paint = () => {
-  const painting = document.querySelector('#pixel-board');
-
-  painting.addEventListener('click', (e) => {
-    e.target.style.backgroundColor =
-      document.querySelector('.selected').style.backgroundColor;
-  });
-};
+let pixelBoard = document.querySelector('#pixel-board');
+pixelBoard.addEventListener('click', function (event) {
+  let alreadySelected =
+    document.querySelector('.selected').style.backgroundColor;
+  event.target.style.backgroundColor = alreadySelected;
+});
 
 const clear = () => {
   const totalDeleteLesgoTrybers = document.querySelector('#clear-board');
@@ -31,6 +47,4 @@ const clear = () => {
   });
 };
 
-select();
-paint();
 clear();
