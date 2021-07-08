@@ -1,7 +1,8 @@
 .color {
     border: 1px solid black;
-    margin: 10px;
-    padding: 40px;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
 }
 .black{
@@ -21,9 +22,9 @@
 }
 #pixel-board {
     display: table;
-    border-spacing: 1px;
     border: 1px solid black;
     background-color: black;
+    margin: 5px;
 }
 .row {
     display: table-row;
@@ -31,6 +32,8 @@
 .pixel {
     display: table-cell;
     background-color: white;
-    padding: 40px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black
     
 }
