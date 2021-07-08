@@ -8,3 +8,9 @@ function criaPixel(quant) {
   }
 }
 criaPixel(25);
+
+function firstBlack() {
+  let color1 = document.querySelector('#cor1');
+  color1.classList.add('selected');
+}
+firstBlack();
