@@ -5,19 +5,19 @@
  height: 170px;
 }
 
-#black {
+.black {
  background-color: black;
 }
 
-#darkBlue {
+.darkBlue {
  background-color: #1b1f3b;
 }
 
-#purple {
+.purple {
  background-color: #b14aed;
 }
 
-#pink {
+.pink {
  background-color: #c874d9;
 }
 
