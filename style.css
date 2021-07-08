@@ -1,0 +1,105 @@
+body {
+    
+}
+
+p {
+    margin-bottom: -10px;
+}
+
+h2 {
+    color: rgb(12, 11, 11);
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+main {
+    background-image: url('pixel2.jpg');
+    background-size: 1390px;
+    transition: scale 2s; 
+}
+
+#title { 
+    font-size: 80px;
+    font-weight: 200;
+   text-align: center;
+    color: white;
+  
+    padding: 10px 10px;
+    background-color: black;
+}
+
+.color {
+    color: brown;
+}
+
+.palette-list li {
+    display: inline-flex;
+    
+
+}
+
+td, th {
+    border: 1px solid rgb(2, 25, 99);
+    padding: 40px;
+  }
+
+.pixel {
+   width: 40px;
+   height: 40px;
+   border: 1px solid black;
+}    
+
+#footer {
+    font-size: 20px;
+    padding: 20px 20px;
+    border: 2px solid black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.palette-list {
+    text-align: center;
+}
+
+.button-section {
+    text-align: left;
+    font-size: 20px;  
+    margin-bottom: 0px;
+}
+
+.size-button {
+    text-align: left;
+    font-size: 30px;  
+    margin-bottom: 20px;
+}
+
+
+.pixelTable {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border: 3px solid black;
+    background-color: white;
+}
+
+#generate-board {
+    font-size: 25px;
+    color: rgb(14, 0, 0);
+    background-color: yellow;
+    font-weight: bold;
+    border: 4px solid rgb(32, 235, 13);
+}
+
+#board-size {
+    font-size: 25px;
+    border: 4px solid rgb(32, 235, 13);
+}
+
+#clear-board {
+    font-size: 25px;
+    background-color: yellow;
+    font-weight: bold;
+    border: 4px solid rgb(32, 235, 13);
+}
