@@ -1,17 +1,15 @@
 header {
   background-color: grey;
   color: black;
-  text-align: center;
   font-family: fantasy;
 }
 #title {
   display: flex;
 }
 #color-palette {
+  height: 200px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 55px;
 }
 .color {
   margin-right: 4px;
@@ -29,4 +27,23 @@ header {
 }
 .ciano {
   background-color: rgb(98, 143, 180);
+}
+
+#pixel-board {
+  display: table;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.tr {
+  display: table-row;
+}
+
+.pixel {
+  display: table-cell;
+  box-sizing: content-box;
+  border: 1px solid black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
 }
