@@ -1,37 +1,41 @@
-.color{
-    border: 1px solid black;
-    height: 40px;
-    width: 40px;
-    display: inline-block;
+.color {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
 }
 
-.color-palette{
-    display: block; 
+.color-palette {
+  display: block;
 }
 
 .pboard {
-    display: table-column;
+  display: table-column;
 }
 
 .b {
-    display: table-cell;
-    height: 40px;
-    width: 40px;
-    border: 1px solid black;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
 }
 
 #custom {
-    width: 100px;
-    height: 20px;
-    resize: none;;
+  width: 100px;
+  height: 20px;
+  resize: none;
 }
 
 #botao {
-    width: 4.5em;
-    width: 4.5em;
+  width: 4.5em;
+  height: 1.5em;
 }
 
-.secao{
-    display: block;
-    margin-bottom: 10px;
+.secao {
+  display: block;
+  margin-bottom: 10px;
+}
+
+table {
+  size: 25px;
 }
