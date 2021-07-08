@@ -1,0 +1,41 @@
+.color {
+	border: solid 1px black;
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+	margin: 2px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.black {
+	background-color: black;
+}
+
+.red {
+	background-color: red;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.springgreen {
+	background-color: springgreen;
+}
+
+#pixel-board {
+	display: table;
+}
+
+.tr {
+	display: table-row;
+}
+
+.pixel {
+	display: table-cell;
+	width: 100px;
+	height: 100px;
+	background-color: white;
+  outline: solid 1px black;
+}
