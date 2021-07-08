@@ -3,14 +3,13 @@
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
+  background-color: aliceblue;
 }
 
 h1 {
@@ -30,29 +29,40 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
-table {
-  justify-content: center;
-  align-items: center;
+button {
   margin-top: 1rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 10rem;
+  font-size: 0.6rem;
 }
 
 #color-pallete {
-  width: 5rem;
-  height: 1.5rem;
+  margin-top: 1rem;
+  width: 8rem;
+  height: 2rem;
 }
 
-.pixel-board {
-  width: 5rem;
-  height: 5rem;
+#pixel-board {
+  display: table;
+  margin-top: 2rem;
+}
+
+.pixel {
+  display: table-cell;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
 }
 
 .color {
   border: 1px solid black;
   box-shadow: 0px 2px 2px 0px black;
-  width: 10%;
-  height: 10%;
 }
 
 .color:nth-child(1) {
@@ -69,10 +79,4 @@ table {
 
 .color:nth-child(4) {
   background: red;
-}
-
-td {
-  border: 1px solid black;
-  width: 10%;
-  height: 10%;
 }

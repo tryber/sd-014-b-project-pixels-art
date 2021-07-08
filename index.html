@@ -8,12 +8,11 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <h1 id="title">Paleta de Cores</h1>
-      <p id="funcionamento">
-        Clique duas vezes em um item para marcá-lo como completo
-      </p>
-    </div>
+    <h1 id="title">Paleta de Cores</h1>
+    <p id="funcionamento">
+      Clique duas vezes em um item para marcá-lo como completo
+    </p>
+    <button id="clear-board">Limpar</button>
     <div class="container">
       <table id="color-pallete">
         <tr>
@@ -25,7 +24,7 @@
       </table>
     </div>
     <div class="container">
-      <table class="pixel-board">
+      <table id="pixel-board">
         <tr>
           <td class="pixel"></td>
           <td class="pixel"></td>
@@ -63,5 +62,6 @@
         </tr>
       </table>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
