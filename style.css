@@ -26,3 +26,13 @@
 .color-4{
   background-color: #fa5246;
 }
+
+#pixel-board{
+  border: 1px solid black;
+}
+
+.pixel{
+  border: 1px solid black;
+  padding: 50px;
+  background-color: #ffffff;
+}
