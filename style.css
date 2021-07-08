@@ -3,6 +3,8 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #7983ff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: aliceblue;
 }
 
 .color {
@@ -25,8 +27,8 @@ body {
 
 #pixel-board {
   margin-top: 20px;
-  width: 215px;
-  height: 225px;
+  width: 14rem;
+  height: 14rem;
   display: block;
 }
 
