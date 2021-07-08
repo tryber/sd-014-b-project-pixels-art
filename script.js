@@ -10,4 +10,4 @@ window.onload = function () {
       document.querySelector('#color-palette').appendChild(divs);
     }
   }
-}
+};
