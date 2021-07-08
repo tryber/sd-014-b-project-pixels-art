@@ -22,27 +22,38 @@ function createPalette(){
   let colorArray=['color1','color2','color3','color4']
   for(index=0; index<4; index +=1 ){
     const row=document.createElement('div');
+    if(index==0){
     row.className='color';
-    row.classList.add(colorArray[index]);
+    row.classList.add(colorArray[index]); 
+    row.classList.add('selected');   
     rowPalette.appendChild(row);
+    }
+    else{
+    row.className='color';
+    row.classList.add(colorArray[index]);       
+    rowPalette.appendChild(row);
+    }
+    
   }  
+
 }
 createPalette()
 
-function selectedColor(){  
-  let color = document.querySelectorAll('color');
-  let select = 'selected';
+const color1 = document.getElementsByClassName('.color1')
+const color2 = document.getElementsByClassName('.color2')
+const color3 = document.getElementsByClassName('.color3')
+const color4 = document.querySelector('.color4')
 
-  color.addEventListener('click', function(event){
-    for(index=0; index <color.length; index +=1){
-      if(color[index].innerHTML!= select){
-        event.target.className = select;        
-      }
-      else {
-        event.target.className = 'color'
-      }
-    }
-  })   
-  
+function selectedColor(event){
+  const color = document.querySelector('.selected');
+  color.classList.remove('selected');
+  event.target.classList.add('selected');
 }
+
+color1.addEventListener('click', selectedColor);
+color2.addEventListener('click', selectedColor);
+color3.addEventListener('click', selectedColor);
+color4.addEventListener('click', selectedColor); 
+
 selectedColor()
+

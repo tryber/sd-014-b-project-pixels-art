@@ -46,5 +46,8 @@
 }
 
 .selected {
-  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid red;
+  border-radius: 2px;
 }
