@@ -1,5 +1,5 @@
 #color-palette { 
-  display:flex;
+  display: flex;
 }
 .color {
   width: 50px;
@@ -19,7 +19,7 @@
   border-width: 1px;
 }
 #blue {
-  background-color:blue;
+  background-color: blue;
   width: 50px;
   height: 50px;
   display: inline-block;
@@ -28,7 +28,7 @@
   border-width: 1px;
 }
 #red {
-  background-color:red;
+  background-color: red; 
   width: 50px;
   height: 50px;
   display: inline-block;
@@ -58,7 +58,7 @@
   display:table-cell;
   padding:5px;
   width: 150px;
-  border:black solid 1px;
+  border: black solid 1px;
   margin: 5px;
 }
 .pixel {
