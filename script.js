@@ -1,3 +1,7 @@
+window.onload = function () {
+
+
+
 const title = document.querySelector('#title');
 title.innerHTML = 'Paleta de Cores';
 
@@ -9,3 +13,4 @@ function setColor() {
   colorPalette[3].style.backgroundColor = 'Red';
 }
 setColor();
+}
