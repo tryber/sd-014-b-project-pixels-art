@@ -25,7 +25,7 @@ body {
 }
 
 .pixel {
-  border: solid 1px;
+  border: solid 1px black;
   height: 40px;
   width: 40px;
   background-color: white;
