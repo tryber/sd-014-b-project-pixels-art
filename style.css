@@ -20,29 +20,14 @@ h1 {
   cursor: pointer;
   border: 1px solid black;
 }
-.black {
-  background-color: black;
-}
-.orange {
-  background-color: orange;
-}
 
-.grey {
-  background-color: grey;
-}
-
-.pink {
-  background-color: pink;
-}
 #pixel-board {
   display: table;
   margin: 0 auto;
 }
-
 .tr {
   display: table-row;
 }
-
 .pixel {
   display: table-cell;
   box-sizing: content-box;
@@ -51,7 +36,6 @@ h1 {
   width: 39px;
   height: 39px;
 }
-
 #clear-board {
   text-align: center;
   cursor: pointer;
