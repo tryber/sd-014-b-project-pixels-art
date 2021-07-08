@@ -1,6 +1,7 @@
 window.onload = () => {
   const selectBlack = document.querySelector('.black');
   selectBlack.classList.add('selected');
+  setPixelColor('black');
 };
 
 function createPixel(value) {
@@ -14,6 +15,7 @@ function createPixel(value) {
 createPixel(5 ** 2);
 
 function setPixelColor(color) {
+  console.log(color);
   document.addEventListener('click', (event) => {
     if (event.target.classList.contains('pixel')) {
       event.target.style.backgroundColor = `${color}`;
