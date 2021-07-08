@@ -1,7 +1,9 @@
+#title {
+  font-family: Arial, Helvetica, sans-serif;
+}
 #colorpalette {
   display: table;
-  border-spacing: 1px;
-  background-color: black;
+  border-spacing: 5px;
   border: 1px solid black;
 }
 .color {
@@ -28,10 +30,19 @@
 .selected {
 }
 
+#clear-board {
+  padding: 5px;
+  background-color: steelblue;
+  border: 1px solid steelblue;
+  color: white;
+  margin: 25px;
+}
+
 #pixel-board {
   display: table;
   padding: 2px;
-  background-color: slategray;
+  border-spacing: 1px;
+  background-color: white;
   border: 1px solid black;
 }
 .pixel {
