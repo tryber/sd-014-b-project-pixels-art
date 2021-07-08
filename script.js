@@ -40,5 +40,5 @@ pixelTable();
 
 // Quesito 6
 const selectClass1 = document.getElementsByClassName('color')[0];
-selectClass1.classList.add('selected');
+selectClass1.classList.add('selected'); 
 
