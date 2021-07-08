@@ -1,0 +1,31 @@
+#color-palette1 {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background: black;
+}
+
+#color-palette2 {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background: tomato;
+}
+
+#color-palette3 {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background: yellow;
+}
+
+#color-palette4 {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background: blue;
+}
+
+div {
+  display: inline-block;
+}
