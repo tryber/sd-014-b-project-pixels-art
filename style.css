@@ -33,13 +33,15 @@ p {
 }
 
 button {
+  background: #429ff6;
   margin-top: 1rem;
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   padding-left: 2rem;
-  padding-right: 2rem;
+  padding-right: 2.2rem;
   border-radius: 10rem;
   font-size: 0.6rem;
+  color: aliceblue;
 }
 
 #color-pallete {
@@ -58,6 +60,7 @@ button {
   border: 1px solid black;
   width: 40px;
   height: 40px;
+  background: white;
 }
 
 .color {
