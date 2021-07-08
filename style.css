@@ -4,8 +4,8 @@
     padding: 40px;
     display: inline-block;
 }
-.red {
-    background-color: red;
+.black{
+    background-color: black;
 }
 .purple {
     background-color: purple;
@@ -15,4 +15,7 @@
 }
 .yellow {
     background-color: yellow;
+}
+#color-palette {
+    display: inline-block;
 }
