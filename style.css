@@ -7,20 +7,19 @@ h1 {
   width: 100px;
   height: 100px;
   display: inline-block;
-  
-}
+  }
 
 #color-palette {
-  margin: auto;
-  
+  margin: auto; 
 }
 
 #pixel-board {
-    margin: auto;
+  margin: auto;
 }
 
 .pixel {
-    border: solid black 1px;
-    width: 40px;
-    height: 40px;
+  border: solid black 1px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
 }

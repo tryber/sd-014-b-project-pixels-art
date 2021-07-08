@@ -9,5 +9,3 @@ function setColor() {
   colorPalette[3].style.backgroundColor = 'Red';
 }
 setColor();
-
-
