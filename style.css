@@ -1,0 +1,42 @@
+#color-palette {
+    /* border: 3px solid black; */
+    height: 93px;
+    width: 500px;
+    text-align: center;
+    
+}
+
+.color {
+    border: 3px solid black;
+    color: white;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+#vermelho {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+#preto {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+}
+
+#verde {
+    background-color: green;
+    width: 100px;
+    height: 100px;
+}
+
+#azul {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+
+#title {
+    padding-left: 120px;
+}
