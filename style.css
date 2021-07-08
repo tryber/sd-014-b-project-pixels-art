@@ -28,16 +28,16 @@ h1{
 
 .tr {
   display: table-row;
-  padding: 36px;
-  height: 36px;
+  padding: 40px;
+  height: 40px;
   border: black solid 1px;
 }
 
 .pixel {
   display: table-cell;
   padding: 1px;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border: black solid 1px;
-  color: white;
+  background-color: white;
 }
