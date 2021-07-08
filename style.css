@@ -5,8 +5,12 @@
   border: 1px solid black;
 }
 
-.tr{ 
-  display: table-row; 
+.selected {
+  background-color: black;
+}
+
+.tr {
+  display: table-row;
 }
 
 .pixel {
@@ -35,10 +39,6 @@
 
 #hotPinkBox {
   background-color: #f652a0;
-}
-
-#cyanBox {
-  background-color: #36eee0;
 }
 
 #tiffanyblueBox {
