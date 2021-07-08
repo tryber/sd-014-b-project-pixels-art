@@ -1,3 +1,4 @@
+/* Requisito 7 */
 let black = document.querySelector('.black');
 let blue = document.querySelector('.blue');
 let red = document.querySelector('.red');
@@ -35,3 +36,24 @@ function greenSelected() {
     red.classList.remove('selected')
     green.classList.add('selected')
 }
+
+/* Requisito 8 */
+function pintarCor(event) {
+    if (document.querySelector('.selected') === document.querySelector('#black')){
+        event.target.style.backgroundColor = 'black'
+    }
+    if (document.querySelector('.selected') === document.querySelector('#blue')){
+        event.target.style.backgroundColor = 'blue'
+    }
+    if (document.querySelector('.selected') === document.querySelector('#red')){
+        event.target.style.backgroundColor = 'red'
+    }
+    if (document.querySelector('.selected') === document.querySelector('#green')){
+        event.target.style.backgroundColor = 'green'
+    }   
+}
+
+for (index = 0; index < 25; index += 1) {
+    document.querySelectorAll('.pixel')[index].addEventListener('click', pintarCor)
+}
+        
