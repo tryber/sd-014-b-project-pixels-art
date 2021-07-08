@@ -36,12 +36,11 @@ function generatePixels() {
         };
     };
 }
-
 generatePixels();
 
-function selectColor(evento) {
+function selectColor(event) {
     const colors = document.querySelectorAll('.color');
-    const colorClicked = evento.target;
+    const colorClicked = event.target;
     
     for (let key of colors) {
         let color = key;
@@ -54,4 +53,34 @@ function selectColor(evento) {
     }
 
     colorClicked.classList.add('selected');
+}
+
+function addEventClickPixels() {
+    const listPixels = document.querySelectorAll('.pixel');
+    for (let key of listPixels) {
+        let pixel = key;
+
+        pixel.addEventListener('click', fillPixel);
+    };
+}
+addEventClickPixels();
+
+function fillPixel(event) {
+    const colors = document.querySelectorAll('.color');
+    let pixel = event.target;
+
+    //Percorre o array de cores
+    for (let key of colors) {
+        let color = key;
+        
+        //Verifica se a cor esta selecionada
+        let searchSelectedColor = color.classList.contains('selected');
+
+        if (searchSelectedColor === true) {
+            //Captura a cor do elemento
+            const getColor = window.getComputedStyle(key, null).getPropertyValue('background-color');
+            
+            pixel.style.backgroundColor = getColor;
+        };
+    };
 }
