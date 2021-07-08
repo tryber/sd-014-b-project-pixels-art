@@ -1,0 +1,32 @@
+body {
+  text-align: center;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+#pixel-board {
+  margin: auto;
+  display: table;
+  padding-top: 20px;
+}
+
+.line {
+  display: table-row;
+}
+
+.pixel {
+  background-color: white;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+}
+
+#reset-colors-button {
+  margin-top: 20px;
+}
