@@ -1,0 +1,30 @@
+.color {
+  display: inline-block;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+}
+
+#first-color {
+  background-color: black;
+}
+
+#second-color {
+  background-color: red;
+}
+
+#third-color {
+  background-color: purple;
+}
+
+#fourth-color {
+  background-color: seagreen;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
