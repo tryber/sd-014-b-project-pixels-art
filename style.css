@@ -31,9 +31,9 @@ body {
   display: inline-block;
 }
 
-.pixel {  
-  height: 100px;
-  width: 100px;
-  border: solid 1px white;
+.pixel {
+  height: 40px;
+  width: 40px;
+  border: solid 1px black;
   background-color: white;
 }
