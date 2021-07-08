@@ -17,3 +17,19 @@ function createPixels() {
   }
 }
 createPixels();
+
+function addClickColors() {
+  const getTableColors = document.querySelectorAll('.color');
+  for (let index = 0; index < getTableColors.length; index += 1) {
+    getTableColors[index].addEventListener('click', (event) => {
+      event.target.classList.add('selected');
+      const itemSelected = getTableColors[index];
+      for (let secondIndex = 0; secondIndex < getTableColors.length; secondIndex += 1) {
+        if (getTableColors[secondIndex] !== itemSelected) {
+          getTableColors[secondIndex].classList.remove('selected');
+        }
+      }
+    });
+  }
+}
+addClickColors();
