@@ -1,0 +1,32 @@
+header {
+  background-color: grey;
+  color: black;
+  text-align: center;
+  font-family: fantasy;
+}
+#title {
+  display: flex;
+}
+#color-palette {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+}
+.color {
+  margin-right: 4px;
+  width: 45px;
+  height: 45px;
+}
+.black {
+  background-color: black;
+}
+.orange {
+  background-color: orange;
+}
+.grey {
+  background-color: grey;
+}
+.ciano {
+  background-color: rgb(98, 143, 180);
+}
