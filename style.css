@@ -6,26 +6,26 @@
   width: 50px;
   height: 50px;
   display: inline-block;
-  background-color: cyan;
+  background-color: black;
 }
 
 .magenta {
   width: 50px;
   height: 50px;
   display: inline-block;
-  background-color: magenta;
+  background-color: yellow;
 }
 
 .yellow {
   width: 50px;
   height: 50px;
   display: inline-block;
-  background-color: yellow;
+  background-color: magenta;
 }
 
 .green {
   width: 50px;
   height: 50px;
   display: inline-block;
-  background-color: green;
+  background-color: cyan;
 }
