@@ -12,19 +12,15 @@ function addBlocks() {
 }
 addBlocks();
 
-function defineBlackColor(color) {
-  const colorBlack = document.querySelectorAll('.pixel');
-  for (let i = 0; i < colorBlack.length; i += 1) {
-    colorBlack[i].style.backgroundColor = color;
-    colorBlack[i].className += ' selected';
-  }
-}
-defineBlackColor('black');
+window.onload = function () {
+  const colorInitial = document.querySelector('.colorBlack');
+  colorInitial.classList.add('selected');
+};
 
 function selectColor() {
   const colorSelected = document.querySelectorAll('.color');
   for (let i = 0; i < colorSelected.length; i += 1) {
-    colorSelected[i].addEventListener('click', function () {
+    colorSelected[i].addEventListener('click', function() {
       if (!colorSelected[i].classList.contains('selected')) {
         for (let index = 0; index < colorSelected.length; index += 1) {
           colorSelected[index].classList.contains('selected');
@@ -32,9 +28,9 @@ function selectColor() {
             colorSelected[index].classList.remove('selected');
           }
         }
-        colorSelected[i].classList.add('selected');            
+        colorSelected[i].classList.add('selected');
       } else colorSelected[i].classList.remove('selected');
-    })
+    });
   }
 }
 selectColor();
