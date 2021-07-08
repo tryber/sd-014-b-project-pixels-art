@@ -1,0 +1,31 @@
+    #title{
+        color: blue;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .color{
+        border: solid black 1px;
+        width: 60px;
+        height: 60px;
+        margin: 20px;
+        box-align: center;
+        display: inline-block;
+    }
+
+    #cor1{
+        background-color: black;
+        margin-left: 480px;
+    }
+
+    #cor2{
+        background-color: yellow;
+    }
+
+    #cor3{
+        background-color: green;
+    }
+
+    #cor4{
+        background-color: blue;
+    }
