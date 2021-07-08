@@ -8,19 +8,19 @@
 	margin-bottom: 30px;
 }
 
-.black {
+#black {
 	background-color: black;
 }
 
-.red {
+#red {
 	background-color: red;
 }
 
-.blue {
+#blue {
 	background-color: blue;
 }
 
-.springgreen {
+#springgreen {
 	background-color: springgreen;
 }
 
