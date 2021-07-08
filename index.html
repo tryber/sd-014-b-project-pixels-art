@@ -8,12 +8,36 @@
   <title>Pixel Art by RSTD</title>
 </head>
 <body>
-  <div class="body-space">
-  <h1 id="title">Paleta de Cores</h1>
-  <input id="board-size" type="text" placeholder="Insira o tamanho desejado da matriz de pixels">
-  <button id="generate-board">Clique aqui</button>
-
-  <button id="clear-board">Limpar</button>
+  <div class="body-container">
+  <header>
+    <h1 id="title">Paleta de Cores</h1>
+  </header>
+  <nav>
+    <div class="body-container">
+      <table id="color-palette">
+        <tr>
+          <td class="color-selected"></td>
+          <td class="color"></td>
+          <td class="color"></td>
+          <td class="color"></td>
+        </tr>
+      </table>
+    </div>
+  </nav>
+  <main>
+    <table id="pixel-board">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <input id="board-size" type="text" placeholder="Insira o tamanho desejado da matriz de pixels">
+    <button id="generate-board">Clique aqui</button>
+    <button id="clear-board">Limpar</button>
+  </main>
 </div>
   <script src="script.js"></script>
 </body>
