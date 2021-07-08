@@ -1,5 +1,19 @@
+button {
+    background-color: whitesmoke;
+    border-color: black;
+    border-radius: 4px;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+}
+
+.selected {
+    background-color: black;
+}
+
 table, td, th {
   border: 1px solid black;
+  color: rgba(255,255,255)
 }
 
 table {
@@ -8,5 +22,10 @@ table {
   width:200px;
   height:50px;
   margin-block-end: 50px;
+  margin-block-start: 50px;
 }
 
+#pixel-board {
+    width: 200px;
+    height: 200px;
+}
