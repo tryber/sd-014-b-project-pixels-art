@@ -9,7 +9,7 @@
 .color {
     padding: 2%;
     border-style: solid;
-    border-width: 1px;
+    border-width: 1px, black;
     display: inline-block;
 }
 
@@ -29,4 +29,24 @@
     background-color: teal;
 }
 
+tr {
+    display: table-row;
+    padding: 5px;
+}
 
+#pixel-board {
+    display: table;
+    padding: 5px;
+}
+
+.pixel {
+    background-color: white;
+    border-style: solid;
+    border: 1px, black;
+    display: table-cell;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    border: #000000 solid 1px;
+    margin: 5px;
+}
