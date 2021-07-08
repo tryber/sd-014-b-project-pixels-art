@@ -96,6 +96,7 @@ const input = document.querySelector('.size-button'); // seleciona o local de ap
 const inputSize = document.createElement('input'); // cria elemento de input
 inputSize.type = 'number';
 inputSize.id = 'board-size';
+inputSize.min = '1';
 inputSize.min = '5'; // define min e max da entrada do input (isso cria input interativo)
 inputSize.max = '50';
 input.appendChild(inputSize);
