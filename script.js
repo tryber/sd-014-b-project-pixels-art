@@ -1,30 +1,36 @@
-function selectColor() {
+const select = () => {
+  const reset = () => {
+    const colorSelected = document.querySelector('.selected');
+    colorSelected.classList.remove('selected');
+  };
   const changeColor = document.querySelector('#color-palette');
 
   changeColor.addEventListener('click', (e) => {
-    clearSelected();
+    reset();
     e.target.classList.add('selected');
   });
-}
+};
 
 const paint = () => {
-  const painting = document.getElementById('pixel-board');
+  const paintBox = document.querySelector('#pixel-board');
 
-  painting.addEventListener('click', (event) => {
-    event.target.style.backgroundColor =
+  paintBox.addEventListener('click', (e) => {
+    e.target.style.backgroundColor =
       document.querySelector('.selected').style.backgroundColor;
   });
 };
 
 const clear = () => {
-  const clearAll = document.getElementById('clear-board');
-  clearAll.addEventListener('click', () => {
-    const selectpxl = document.getElementsByClassName('pixel');
-    for (let index = 0; index < selectpxl.length; index += 1) {
-      selectpxl[index].style.backgroundColor = 'white';
+  const totalDeleteLesgoTrybers = document.querySelector('#clear-board');
+
+  totalDeleteLesgoTrybers.addEventListener('click', () => {
+    const pxl = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pxl.length; index += 1) {
+      pxl[index].style.backgroundColor = 'white';
     }
   });
 };
 
+select();
 paint();
 clear();

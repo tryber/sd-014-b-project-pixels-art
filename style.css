@@ -9,22 +9,23 @@ h1 {
   height: 80px;
 }
 .color {
-  margin-right: 6px;
+  margin-right: 3px;
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 .black {
   background-color: black;
 }
-.red {
+.orange {
   background-color: orange;
 }
 
-.green {
+.grey {
   background-color: grey;
 }
 
-.blue {
+.ciano {
   background-color: rgb(98, 143, 180);
 }
 #pixel-board {
@@ -43,4 +44,19 @@ h1 {
   background-color: white;
   width: 40px;
   height: 40px;
+  cursor: pointer;
+}
+.wrapper {
+  display: flex;
+  padding-bottom: 1em;
+  justify-content: center;
+}
+
+#clear-board {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
 }
