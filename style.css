@@ -16,9 +16,9 @@
   border: 1px solid black;
 }
 
-#color-palette .selected {
+/*#color-palette .selected {
   border: 5px solid black;
-}
+}*/
 
 #color-palette #black {
   background: black;

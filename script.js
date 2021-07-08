@@ -1,20 +1,24 @@
 window.onload = function() {
   let coresPalet = document.getElementById('color-palette').children
 
-  console.log(coresPalet);
-
+  //Cria um Loop para adicionar um listener em todos as cores da Paleta de cores.
   for (index = 0; index < coresPalet.length; index += 1) {
-    coresPalet[index].addEventListener('click', add);
+    coresPalet[index].addEventListener('click', selectColor);
   };
   
-  function add (event, selected) {
+  //Função que adiciona a classe SELECTED na cor selecionada e remove da outra.
+  function selectColor (event, selected) {
+    //1° passo um Loop em todas as cores e removo a classe de todos
+    for (index in coresPalet) {
+      if (coresPalet[index].classList) {
+        coresPalet[index].classList.remove('selected');
+      }
+    }
+    //2° adiciono a classe novamente apenas na cor que recebeu o clique.
     if (event.target.classList) {
       event.target.classList.add('selected');
-      } else if (!hasClass(event, 'selected')) {
-          event.target.selected += " " + 'selected';
       }
-  }
-  
+  }  
 }
 
   /*function selecionaCor (event, selected) {
@@ -61,9 +65,7 @@ window.onload = function() {
         }
     }
   }
-  */
-
-function remove (event, selected) {
+  function remove (event, selected) {
   if (event.target.classList) {
     event.target.classList.remove('selected');
   } else if (hasClass(event.target, selected)) {
@@ -71,3 +73,5 @@ function remove (event, selected) {
       event.target.selected = event.target.selected.replace(reg, ' ');
   }
 }
+  */
+
