@@ -21,12 +21,12 @@ body {
 #pixel-board {
   margin:auto;
   margin-top: 40px;
-  width: 50%;
   border-collapse: collapse;
 }
 
 .pixel {
   border: solid 1px;
-  height: 100px;
-  width: 100px;
+  height: 40px;
+  width: 40px;
+  background-color: white;
 }
