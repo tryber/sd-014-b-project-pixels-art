@@ -8,20 +8,14 @@ body {
 }
 
 #title {
-  text-align: center;
   font-weight: 500;
   padding-left: 9px;
 }
 
-#color-palette {
-  margin-left: 41%;
-}
-
 .color {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   display: inline-block;
-  background-color: rgb(14, 13, 13);
   margin-left: 10px;
   border: 1px solid black;
 }

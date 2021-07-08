@@ -9,3 +9,19 @@ function createDivColors(quantidadeColors) {
   }
 }
 createDivColors(4);
+
+// Colocar color na paletas de cores.
+
+function addColor(colors) {
+  const divColor = document.getElementsByClassName('color');
+  for (let index = 0; index < divColor.length; index += 1) {
+    const divIndex = divColor[index];
+    for (let sIndex = 0; sIndex < colors.length; sIndex += 1) {
+      const colorIndex = colors[index];
+      divIndex.style.backgroundColor = colorIndex;
+      divIndex.classList.add(`color-${colorIndex}`);
+    }
+  }
+}
+
+addColor(['black', 'red', 'blue', 'green']);
