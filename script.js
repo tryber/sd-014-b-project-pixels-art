@@ -36,6 +36,28 @@ function addSelected (event){
   document.querySelector('#blue').addEventListener('click', addSelected)
   document.querySelector('#yellow').addEventListener('click', addSelected)
 
+function paintColor(event){
+  for (index = 0; index < 24; index += 1){
+
+  if (document.getElementsByClassName('selected')[index] === document.querySelector('#black')){
+   event.target.style.backgroundColor = 'black'
+  }
+  if (document.getElementsByClassName('selected')[index] === document.querySelector('#red')){
+    event.target.style.backgroundColor = 'red'
+   }
+   if (document.getElementsByClassName('selected')[index] === document.querySelector('#blue')){
+    event.target.style.backgroundColor = 'blue'
+   }
+   if (document.getElementsByClassName('selected')[index] === document.querySelector('#yellow')){
+    event.target.style.backgroundColor = 'yellow'
+   }
+  }
+}
 
 
+
+for (index = 0; index < 25; index += 1){
+
+  document.querySelectorAll('.pixel')[index].addEventListener('click', paintColor)
+}
 
