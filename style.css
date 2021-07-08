@@ -10,3 +10,18 @@
   height: 40px;
   background-color: white;
 }
+
+#clear-board {
+  padding: 5px;
+  margin: 8px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 25%;
+  background-color: lime;
+}
+
+#clear-board:hover {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}

@@ -16,9 +16,9 @@ color.classList.add('selected');
 
 const pixels = document.querySelectorAll('.pixel');
 
-for (let index = 0; index < pixels.length; index++) {
+for (let index = 0; index < pixels.length; index += 1) {
   pixels[index].addEventListener('click', function (event) {
-    let colorSelect = document.querySelector('.selected').style.background;
+    const colorSelect = document.querySelector('.selected').style.background;
     event.target.setAttribute('style', 'background:' + colorSelect);
   });
 }
@@ -35,3 +35,18 @@ for (let index = 0; index < divColors.length; index += 1) {
   const div = divColors[index];
   div.addEventListener('click', selectedChange);
 }
+
+const button = document.createElement('button');
+button.innerText = "Limpar";
+button.setAttribute('id', 'clear-board');
+const selectDiv = document.querySelector('div');
+selectDiv.appendChild(button);
+
+const selectButton = document.querySelector('#clear-board');
+
+selectButton.addEventListener('click', function (event) {
+  for (let index = 0; index < pixels.length; index +=1) {
+    const pixel = pixels[index];
+    pixel.removeAttribute('style');
+  }
+});
