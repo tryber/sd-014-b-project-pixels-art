@@ -1,0 +1,1 @@
+document.querySelector('#title').innerHTML = "Paleta de Cores";
