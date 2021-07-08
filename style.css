@@ -1,4 +1,27 @@
-.body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap') ;
+
+body {
   width: 1366px;
   height: 768px;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  background-color: rgb(223, 223, 211);
+}
+
+#title {
+  text-align: center;
+  font-weight: 500;
+  padding-left: 9px;
+}
+
+#color-palette {
+  margin-left: 41%;
+}
+
+.color {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: rgb(14, 13, 13);
+  margin-left: 10px;
+  border: 1px solid black;
 }
