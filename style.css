@@ -1,0 +1,24 @@
+#colorpalette {
+  display: table;
+  border-spacing: 1px;
+  background-color: black;
+  border: 1px solid black;
+}
+.color {
+  display: table-cell;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black
+}
+#palette1 {
+  background-color: black;
+}
+#palette2 {
+  background-color: green;
+}
+#palette3 {
+  background-color: yellow;
+}
+#palette4 {
+  background-color: blue;
+}
