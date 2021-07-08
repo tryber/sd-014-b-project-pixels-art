@@ -1,0 +1,21 @@
+.color {
+    display: inline-block;
+    border: solid 1px;
+
+}
+
+.amarelo {
+    background-color: yellow;
+}
+
+.azul {
+    background-color: blue;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.roxo {
+    background-color: purple;
+}
