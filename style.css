@@ -14,19 +14,19 @@ h1 {
   height: 40px;
   cursor: pointer;
 }
-.color.black {
+.black {
   background-color: black;
 }
-.color.orange {
+.orange {
   background-color: orange;
 }
 
-.color.grey {
-  background-color: grey;g
+.grey {
+  background-color: grey;
 }
 
-.color.ciano {
-  background-color: rgb(98, 143, 180);
+.pink {
+  background-color: pink;
 }
 #pixel-board {
   display: table;
@@ -60,4 +60,3 @@ h1 {
   text-align: center;
   cursor: pointer;
 }
-.selected{}
