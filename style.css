@@ -1,0 +1,45 @@
+#color-palette { 
+ display: flex;
+}
+.color {
+  border: 1px solid  black;
+  width: 80px;
+  height: 80px;
+  margin-left: 30px;
+}
+#green {
+  background-color: green;
+}
+#blue {
+  background-color: blue;
+}
+#red {
+  background-color: red;
+}
+#black {
+  background-color: black;
+}
+#pixel-board {
+  display: grid;
+  grid: auto-flow / repeat(5, auto);
+  justify-content: center;
+  display: table;
+  padding: 5px;
+}
+.h1 {
+  position: center;
+}
+#title {
+  width: 300px;
+  height: 50px;
+  background-color: bisque;
+  color: black;
+  position: center;
+}
+.td {
+  display: table-cell;
+  padding: 5px;
+  width: 150px;
+  border: #000000 solid 1px;
+  margin: 5px;
+}
