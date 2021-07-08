@@ -16,9 +16,22 @@
   background-color: blue;
 }
 
-.gray {
-  background-color: gray;
+.pink {
+  background-color: pink;
 }
 .brown {
   background-color: brown;
+}
+#pixel-board,
+tr,
+td {
+  border: 1px solid black;
+}
+tr {
+  height: 40px;
+  width: 40;
+}
+td {
+  width: 40px;
+  height: 40px;
 }
