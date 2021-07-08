@@ -13,18 +13,7 @@
     border: solid 1px black;
     margin: 0px;
 }
-#black-color {
-    background-color: black;
-}
-#first-color {
-    background-color: red;
-}
-#second-color {
-    background-color: green;
-}
-#third-color {
-    background-color: blue;
-}
+
 .pixel {
     background-color: white;
     border: solid 1px black;
