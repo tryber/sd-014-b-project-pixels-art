@@ -1,3 +1,13 @@
+// Requisito 2: Adiciona a classe color à paleta de cores
+function addColorClass (){
+  let paletaDeCores = document.querySelector('#color-palette').children;
+  for (i=0; i < paletaDeCores.length; i += 1) {
+    paletaDeCores[i].className = 'color'
+  }
+}
+
+addColorClass();
+
 // Requisito 3: Seta as cores da paleta
 function paletteColors (){
   let paletteDivs = document.querySelectorAll('.color');
