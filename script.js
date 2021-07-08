@@ -37,3 +37,11 @@ pixelBoard.addEventListener('click', function (event) {
     let alreadySelected = document.querySelector('.selected').style.backgroundColor;
     event.target.style.backgroundColor = alreadySelected;
 })
+
+let clearButton = document.getElementById('clear-board');
+
+clearButton.addEventListener('click', function () {
+    for (element of pixelBoard.children) {
+        element.style.backgroundColor = 'white';
+    }
+})
