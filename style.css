@@ -14,7 +14,7 @@
   background-color: black;
 }
 
-.color {
+.color , .pixel {
   border: solid 1px black;
   width: 80px;
   height: 80px;
