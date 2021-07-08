@@ -25,7 +25,6 @@ const bluePadding = document.querySelector("#blue").style.padding = "60px 60px";
 
 const table = document.querySelector('#pixel-board'); // seleciona a table pelo id
 function pixelTable() {
-  table.innerHTML = ''; // define a table inicial para depois criar os elementos nos loop
   const rowsAndColumns = 5; // define o número de linhas e colunas 
   for (let i = 0; i < rowsAndColumns; i += 1) {
     const pixelsRow = document.createElement('tr'); // cria elemento de linha no pai
@@ -95,9 +94,9 @@ buttonClear.addEventListener('click', clearBox);
 // requisito 10 referencia https://github.com/tryber/sd-013-b-project-pixels-art/blob/guihtryb-project-pixels-art/script.js
 const input = document.querySelector('.size-button'); // seleciona o local de append child 
 const inputSize = document.createElement('input'); // cria elemento de input
-inputSize.type = 'number' min = '1';
+inputSize.type = 'number';
 inputSize.id = 'board-size';
-inputSize.min = '5'; // define min e max da entrada do input (isso cria input interativo)
+inputSize.min = '1'; // define min e max da entrada do input (isso cria input interativo)
 inputSize.max = '50';
 input.appendChild(inputSize);
 
@@ -151,9 +150,9 @@ function maxTableSize() { // essa função vai restringir a criação de blocos 
 clickResize.addEventListener('click', boardLimitSize); // adciona ao botão mais um evento e função (a função de restringir o valor máximo)
 // função criada para emitir alerta -> se o clique for com os valores de max e min emite alerta
 function boardLimitSize() {
-  if (inputSize.value < 5) { // cria uma restrição de valor de maximo e mínimo
+  if (inputSize.value < 5) { // cria uma restrição de valor de maximo e mínimo 
     alert('Board inválido!');
-    pixelTable(); // invoca novamente a função inicial de construçao do board
+    return pixelTable(); // invoca novamente a função inicial de construçao do board
   }
   if (inputSize.value > 50) {
     alert('Board inválido!');
