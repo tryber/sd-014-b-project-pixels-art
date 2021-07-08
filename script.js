@@ -1,9 +1,8 @@
-let td1 = document.querySelector('tr').children[0];
-let td2 = document.querySelector('tr').children[1];
-let td3 = document.querySelector('tr').children[2];
-let td4 = document.querySelector('tr').children[3];
+let colors = ['background: rgb(0, 0, 0)', 'background: rgb(252, 163, 17)', 'background: rgb(229, 229, 229)', 'background: rgb(125, 231, 85)'];
 
-td1.style.backgroundColor = 'rgb(125, 231, 85)';
-td2.style.backgroundColor = 'rgb(51, 200, 170)';
-td3.style.backgroundColor = 'rgb(189, 85, 211)';
-td4.style.backgroundColor = 'rgb(52, 20, 89)';
+const trChindren = document.querySelector('tr').children;
+for (let index = 0; index < trChindren.length; index += 1) {
+  let td = trChindren[index];
+  let color = colors[index];
+  td.setAttribute('style', color);
+}
