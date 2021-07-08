@@ -1,6 +1,6 @@
  window.onload = function colorsPalet(){
     let board = document.getElementById('pixel-board');
-
+    let clearButton = document.getElementById('clear-board');
     function generatePalet(){     
         let palet = document.getElementById('color-palette'); 
         for(let index = 1; index <= 4; index += 1){   
@@ -64,11 +64,19 @@
         event.target.style.backgroundColor = colorSelected.id;        
           
         }
-            
- board.addEventListener('click', paintingBoard);
 
+    function clearBoard(){
+        let boardItems = document.querySelectorAll('.pixel');
+        for(let keys of boardItems){
+         keys.style.backgroundColor = 'white';
+        board.style.backgroundColor = "white";
+        }
+    }        
+ board.addEventListener('click', paintingBoard);
+ clearButton.addEventListener('click', clearBoard);        
 
    
+
 
  generateBoard();
  generatePalet();    

@@ -17,7 +17,10 @@
 }
 
 #pixel-board{
-    max-width: 600px;
-    max-height: 500px;
+    max-width: 510px;
+    max-height: 525px;
     
+}
+#clear-board{
+    margin-bottom: 20px;
 }
