@@ -1,19 +1,36 @@
 .colorRed {
-    background: red;
+  background: red;
 }
 
 .colorBlack {
-    background: black;
+  background: black;
 }
 
 .colorBlue {
-    background: blue;
+  background: blue;
 }
 
 .colorYellow {
-    background: yellow;
+  background: yellow;
 }
 
 .color {
-    border: solid 1px black;
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  text-align: center;
+}
+
+.pixel {
+  background: white;
+  border: 1px black solid;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+#pixel-board {
+  border: solid 1px black;
+  width: 510px;
 }
