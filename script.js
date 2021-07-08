@@ -13,3 +13,5 @@ let pixel = document. querySelectorAll("#pixel-board td")
 for (let index = 0; index < pixel.length; index += 1) {
   pixel[index].classList.add("pixel");
 }
+
+document.getElementById("pixel-board").style.marginLeft = "10px";
