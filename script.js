@@ -1,5 +1,6 @@
 window.onload = function (){
 
+//Criação dos quadrados com cada um com sua cor
   let colorPalette = document.getElementById('color-palette');
 
   let colorBlack = document.createElement('div');
@@ -21,4 +22,20 @@ window.onload = function (){
   colorYellow.className = "color"
   colorYellow.style.backgroundColor = "#E6BF5E";
   colorPalette.appendChild(colorYellow);
+
+//Criação da tabela
+
+  let pixelBoard = document.getElementById('pixel-board');
+  let largura = 5;
+  let altura = 5;
+  
+  for (let index = 0; index < altura; index += 1){
+    for (let index = 0; index < largura; index += 1){
+      let pixels = document.createElement('div');
+      pixels.className = "pixel";
+      pixelBoard.appendChild(pixels);    
+    }
+  }
+  
 }
+  
