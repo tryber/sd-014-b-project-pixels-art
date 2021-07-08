@@ -10,4 +10,5 @@ window.onload = () => {
   createPixel(5 ** 2);
 
   const selectBlack = document.querySelector('.black');
+  selectBlack.classList.add('selected');
 };
