@@ -39,16 +39,16 @@ criaPixelBoard();
 
 // Faz a primeira cor do elemento ter a classe selected
 
-const takeElementColor = document.querySelector('.color');
 
 function makeSelected() {
+    let takeElementColor = document.querySelector('.color');
     takeElementColor.classList.add('selected');
 }
 makeSelected();
 
 //-----------------------------------------------------------------------------
 
-// Faz quando clicar na cor ela ser selecionada
+// Faz a cor clicada ter a classe selected
 
 const keepAllColor = document.querySelectorAll('.color');
 
@@ -63,4 +63,18 @@ for (let index = 0; index < keepAllColor.length; index += 1) {
     })
 }
 
+//---------------------------------------------------------------------------------
+
+// 
+const pixelToColor = document.querySelectorAll('.pixel');
+
+
+for (let index = 0; index < pixelToColor.length; index += 1){
+pixelToColor[index].addEventListener('click', function(){
+    let selectedElement = document.querySelector('.selected');
+    pixelToColor[index].style.backgroundColor = selectedElement.style.backgroundColor;
+    })
+}
+
+//---------------------------------------------------------------------------------------
 

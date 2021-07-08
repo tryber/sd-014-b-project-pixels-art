@@ -8,9 +8,18 @@ body {
     margin-right: 10px;
 }
 
+.color:hover {
+    height: 90px;
+    width: 9%;
+}
+
 .pixel {
     display: inline-block;
     width: 40px;
     height: 40px;
     margin-right: 10px;
+}
+
+#color-palette {
+    margin-bottom: 15px;
 }
