@@ -1,8 +1,12 @@
+window.onload = function getBlackColor() {
+  const getBlack = document.querySelector('#black');
+  getBlack.classList.add('selected');
+};
+
 const pixelTableSize = 5;
 
 function createPixelBoard() {
   const getBody = document.querySelector('body');
-  console.log(getBody);
   const pixelBoard = document.createElement('section');
   pixelBoard.id = 'pixel-board';
   getBody.appendChild(pixelBoard);
@@ -14,15 +18,30 @@ createPixelBoard();
 
 function createPixels() {
   for (let index = 0; index < pixelTableSize; index += 1) {
-    let boardLine = document.createElement('div');
+    const boardLine = document.createElement('div');
     boardLine.className = 'board-line';
     document.querySelector('#pixel-board').appendChild(boardLine);
     for (let secondIndex = 1; secondIndex <= pixelTableSize; secondIndex += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
-      document.querySelectorAll('.board-line')[index].appendChild(pixel);    
+      document.querySelectorAll('.board-line')[index].appendChild(pixel);
     }
-  }  
+  }
 }
 
 createPixels();
+
+const getColor = document.querySelectorAll('.color');
+for (let index = 0; index <= getColor.length - 1; index += 1) {
+  let selectedColor = getColor[index].addEventListener('click', selectColor);
+}
+
+function selectColor(event) {
+  event.target.classList.add('selected');
+  for (let index = 0; index <= getColor.length - 1; index += 1) {
+    let otherColor = getColor[index];
+    if (otherColor !== event.target) {
+      otherColor.classList.remove('selected');
+    }
+  }
+}
