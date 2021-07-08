@@ -1,5 +1,4 @@
-const cor = ['black'];
-
+const color = ['black'];
 const palette = document.getElementById('color-palette');
 const board = document.getElementById('pixel-board');
 
@@ -9,13 +8,13 @@ function rgbR() {
 }
 
 for (let i = 0; i < 3; i += 1) {
-  cor.push(rgbR());
+  color.push(rgbR());
 }
 
-for (let i = 0; i < cor.length; i += 1) {
+for (let i = 0; i < color.length; i += 1) {
   const blu = document.createElement('div');
   blu.classList = 'color';
-  blu.style.backgroundColor = cor[i];
+  blu.style.backgroundColor = color[i];
   palette.appendChild(blu);
 }
 
@@ -26,10 +25,29 @@ function tamanho(cell) {
     board.appendChild(pixel);
     for (let index = 0; index < cell; index += 1) {
       const pixel2 = document.createElement('td');
-      pixel2.classList = ('pboard b');
+      pixel2.classList = ('pboard pixel');
       board.appendChild(pixel2);
     }
   }
 }
 
 tamanho(5);
+
+palette.firstChild.className.add('selected');
+
+// https://gomakethings.com/attaching-multiple-
+// elements-to-a-single-event-listener-in-vanilla-js/
+document.body.addEventListener('click', (event) => {
+  if (event.target.className === 'cor') {
+    document.querySelector('.selected').classList.remove('selected');
+    event.target.classList.add('selected');
+  }
+});
+
+document.body.addEventListener('click', (event) => {
+  if (event.target.className === 'pixel') {
+    const selectedBG = document.queryselector('selected').style.backgroundColor;
+    // eslint-disable-next-line no-param-reassign
+    event.target.style.backgroundColor = selectedBG;
+  }
+});
