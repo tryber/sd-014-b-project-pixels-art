@@ -1,0 +1,32 @@
+
+.color{
+  display: inline-block;
+  border: black solid 1px;
+  width: 100px;
+  height: 100px;
+
+}
+
+.red{
+  background-color: red;
+}
+
+.green{
+  background-color: green;
+}
+
+.pink{
+  background-color: rgb(219, 51, 155);
+}
+
+.blue{
+  background-color: blue;
+}
+
+#title{
+  text-align: center;
+}
+
+#color-palette{
+  text-align: center;
+}
