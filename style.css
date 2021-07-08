@@ -1,11 +1,11 @@
 .color {
-    border: 1px black;
+    border: 1px black solid;
     width: 150px;
     height: 150px;
     display: inline-block;
 }
 #color1 {
-    background-color: black;
+    background-color:black;
 }
 #color2 {
     background-color: aqua;
