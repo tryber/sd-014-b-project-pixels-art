@@ -4,7 +4,7 @@ window.onload = function (){
   let colorPalette = document.getElementById('color-palette');
 
   let colorBlack = document.createElement('div');
-  colorBlack.className = "color"
+  colorBlack.className = "color selected"
   colorBlack.style.backgroundColor = "black";
   colorPalette.appendChild(colorBlack);
 
