@@ -32,6 +32,33 @@ function paletteColors (){
 }
 
 paletteColors();
-// Fim do Requisito 3
 
+// Requisito 4: Cria um quadrado de pixels 5x5
+// section #pixels
+// adicionar uma linha com 5 divs
+// adicionar essa linha 5 vezes
+// alterar espaçamento e estilo com CSS
+// function pixelsTabel (){
+//   let sectionPixels = document.querySelector('#pixel-board');
+//   let pixelDiv = document.createElement('div');
+//   let pixelsLine = [];
+
+//   for (i = 0; i < 5; i +=1) {
+//     pixelsLine.push(sectionPixels.appendChild(pixelDiv));
+//     pixelsLine[i].className = 'pixel';
+//     console.log(pixelsLine)
+//   }  
+
+// }
+
+// pixelsTabel();
+
+// Requisito 6: Criar função que coloque a classe selected na cor que é clicada.
+
+function blackColor (){
+  let blackPalette = document.querySelectorAll('.color')[0];
+  blackPalette.className = 'color selected'
+}
+
+blackColor();
 
