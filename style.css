@@ -1,22 +1,37 @@
 .color {
-    width: 60px;
-    height: 60px;
-    border: 1px solid black;
-    display: inline-block;
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  display: inline-block;
 }
 
 #black {
-    background-color: black;
+  background-color: black;
 }
 
 #red {
-    background-color: red;
+  background-color: red;
 }
 
 #blue {
-    background-color: blue;
+  background-color: blue;
 }
 
 #green {
-    background-color: green;
+  background-color: green;
+}
+
+/* Os displays table-cell e table foram feitos com a ajuda da resposta no seguinte link https://stackoverflow.com/questions/29229523/how-and-why-to-use-display-table-cell-css  */
+
+.pixel {
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  display: table-cell;
+}
+
+#pixel-board {
+  display: table;
+  padding: 0px;
+  border: 1px solid black;      
 }
