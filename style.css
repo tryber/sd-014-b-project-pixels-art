@@ -7,27 +7,90 @@
 * {
   margin: 0;
   padding: 0;
+ 
 }
 
 /* Manipulação de elementos principais */
+
+body {
+  background-color: #FFF6EA);
+}
 
 .body-space {
   display: block;
   width: 800px;
   height: auto;
-  background-color: rgb(255, 246, 234);
+  text-align: center;
 }
 
 h1 {
   font-family: 'Crete Round', serif;
   font-size: 3em;
-  color: rgb(53, 53, 53);
+  color: #84D182;
+  margin-top: 100px%;
 
 }
 
 button, input {
   font-family: 'Prompt', sans-serif;
   padding: 10px;
+}
+
+/* Gerado pelo Button Generator por ser ágil, código customizado por mim */
+#generate-board {
+  font-size: 1.5em;
+  box-shadow:inset 0px 1px 0px 0px #d9f5f0;
+  background:linear-gradient(to bottom, #A7CCC5 5%, #80a19b 100%);
+  border-radius:6px;
+  border:1px solid #22ad94;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bold;
+  padding:12px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #85a39e;
+}
+#generate-board:hover {
+  background:linear-gradient(to bottom, #80a19b 5%, #A7CCC5 100%);
+  background-color:#A7CCC5;
+}
+
+#generate-board:active {
+  position:relative;
+  top:1px;
+}
+
+#clear-board {
+  font-size: 1.5em;
+  box-shadow:inset 0px 1px 0px 0px #FFC8B2;
+  background:linear-gradient(to bottom, #D28478 5%, #D1A382 100%);
+  border-radius:6px;
+  border:1px solid #FFA091;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bold;
+  padding:12px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #85a39e;
+}
+
+#clear-board:hover {
+  background:linear-gradient(to bottom, #D1A382 5%, #D28478 100%);
+  background-color:#D28478;
+}
+
+#clear-board:active {
+  position:relative;
+  top:1px;
+}
+
+#board-size {
+  border-radius: 15px;
+  border-color: rgb(161, 161, 161);
 }
 
 
