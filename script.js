@@ -1,6 +1,6 @@
 const colorsPalette = document.getElementsByClassName('color');
 console.log(colorsPalette);
-const colors = ['red', 'blue', 'yellow', 'green'];
+const colors = ['black','red','green', 'blue'];
 
 setColorsInPalette();
 
