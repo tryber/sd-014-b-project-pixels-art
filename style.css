@@ -26,38 +26,33 @@ ul {
 }
 
 #black {
-  background-color: rgb(0, 0, 0);
-  transition: all .5s;
+  background-color: black;
+  transition: all 0.5s;
 }
 
 #red {
   background-color: rgb(254, 0, 0);
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 #blue {
   background-color: rgb(16, 97, 255);
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 #green {
   background-color: rgb(33, 182, 77);
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-#black:hover,
-#red:hover,
-#blue:hover,
-#green:hover {
+#black:hover , #red:hover , #blue:hover , #green:hover {
   cursor: pointer;
   border-radius: 50%;
 }
+
 .color {
-  display: inline-block;
+  display: table-cell;
   width: 62px;
   height: 62px;
-  text-align: center;
-  vertical-align: middle;
-  display: table-cell;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid black;
 }
