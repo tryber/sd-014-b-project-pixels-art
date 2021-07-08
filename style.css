@@ -3,7 +3,7 @@
   gap: 15px;
 }
 
-.color {
+.color , .pixel {
   border: 1px solid black;
   height: 40px;
   width: 40px;
@@ -23,4 +23,14 @@
 
 .green {
   background-color: green;
+}
+
+#pixel-board {
+  display: grid;
+  grid: auto-flow / repeat(5, auto);
+  justify-content: center;
+}
+
+.pixel {
+  background-color: white;
 }
