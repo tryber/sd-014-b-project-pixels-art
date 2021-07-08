@@ -40,3 +40,23 @@
 #title {
     padding-left: 120px;
 }
+
+#pixel-board {
+    margin-top: 20px;
+    margin-left: 40px;
+    border: 3px solid black;
+    width: 405px;
+    height: 350px;
+}
+
+.pixel {
+    background-color: white;
+    padding-inline-end: 10px;
+    display: inline-block;
+    border: 1px solid;
+    height: 60px;
+    width: 60px;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+
