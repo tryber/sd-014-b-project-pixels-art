@@ -1,0 +1,44 @@
+#title {
+  background-color: black;
+  color: whitesmoke;
+  padding-top: 40px;
+  padding-left: 250px;
+  height: 120px;
+  margin-top: 0px;
+  font-size: 3em;
+  
+}
+
+#color-palette {
+  margin-top: 15px;    
+  text-align: center;
+  height: 110px;
+} 
+
+.color {
+  display: inline-block;
+  width: 125px;
+  height: 100px;
+  border-style: solid;
+  
+}
+
+#first {
+    background-color: teal;
+    margin-right: 12px;
+
+}
+
+#secund {
+    background-color: violet;
+    margin-right: 12px;
+}
+
+#third {
+    background-color: yellow;
+    margin-right: 12px;
+}
+
+#fourth {
+    background-color: tomato;
+}
