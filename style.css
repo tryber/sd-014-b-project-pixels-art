@@ -1,0 +1,77 @@
+#color-palette {
+  background-color: rgba(255, 255, 255, 0.541);
+  width: 220px;
+  align-items: center;
+  margin: 5% 3%;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+body {
+  background-image: url('/background.jpg');
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.404);
+  backdrop-filter: blur(5px);
+  box-shadow: 1px 1px 10px black;
+  text-shadow: 1px 2px 1px white;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10% 40%;
+  width: 20%;
+  text-align: center;
+  font-family: serif;
+  position: fixed;
+}
+
+.color {
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+}
+
+.color:hover {
+  display: inline-block;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  box-shadow: 1px 1px 10px rgb(71, 255, 47);
+}
+
+#black {
+  background-color: black;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#red {
+  background-color: red;
+}
+
+#pixel-board {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  width: 210px;
+  margin: 5% 8%;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+/* Display Grid consultado em https://developer.mozilla.org/pt-BR/docs/Web/CSS/
+grid-template-columns#fromHistory
+"repeat" consultado em  https://developer.mozilla.org/en-US/docs/Web/CSS/repeat()
+#fromHistory */
