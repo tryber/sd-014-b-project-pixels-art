@@ -1,0 +1,29 @@
+.color {
+    width: 80px;
+    height: 70px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.pixel {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid black;
+    margin-right: 1px;
+}
+
+#pixel-board {
+    margin-top: 20px;
+    width: 215px;
+    height: 225px;
+    display: block;
+    border: 2px solid black;
+}
+
+#clear-board {
+    margin-top: 10px;
+    width: 70px;
+    height: 20px;
+}
