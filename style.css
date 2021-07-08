@@ -56,3 +56,22 @@ ul {
   height: 62px;
   border: 1px solid black;
 }
+
+/**
+* Consultei o stite w3schools para formatar o estilo da tabela
+* Link: https://www.w3schools.com/html/html_tables.asp
+*/
+
+#pixel-board {
+  margin-left: 437px;
+  border-collapse: collapse;
+}
+
+.pixel {
+  border: 1px solid black;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
