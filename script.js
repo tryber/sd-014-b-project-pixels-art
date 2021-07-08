@@ -1,5 +1,4 @@
-window.onload = function() {
-  const pixelBoard = document.getElementById('pixel-board');
+window.onload = function () {
   const pixelLine = document.querySelectorAll('.pixel-line');
 
   for (let i = 0; i < pixelLine.length; i += 1) {
@@ -9,4 +8,12 @@ window.onload = function() {
       pixel.className = 'pixel';
     };
   };
+
+  let blackPixel = document.getElementById("black");
+  blackPixel.classList.add('selected');
+
+
+
+
+
 };
