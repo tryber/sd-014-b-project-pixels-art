@@ -3,13 +3,13 @@ window.onload = function () {
 
     for (element of colorsPallete) {
         if (colorsPallete[0] == element) {
-            element.style.backgroundColor = 'red';
+            element.style.backgroundColor = 'black';
         } else if (colorsPallete[1] == element) {
-            element.style.backgroundColor = 'blue';
+            element.style.backgroundColor = 'red';
         } else if (colorsPallete[2] == element) {
-            element.style.backgroundColor = 'yellow';
+            element.style.backgroundColor = 'blue';
         } else if (colorsPallete[3] == element) {
-            element.style.backgroundColor = 'purple';
+            element.style.backgroundColor = 'green';
         }
     }
 }
