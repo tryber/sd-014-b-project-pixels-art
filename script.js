@@ -1,7 +1,7 @@
 window.onload = function () {
-    let selectBlack = document.getElementsByClassName('color')[0];
-    selectBlack.classList.add ='selected';
-}
+  const selectBlack = document.getElementsByClassName('color')[0];
+  selectBlack.classList.add('selected');
+};
 const title = document.querySelector('#title');
 title.innerHTML = 'Paleta de Cores';
 
@@ -11,5 +11,10 @@ function setColor() {
   colorPalette[1].style.backgroundColor = 'Blue';
   colorPalette[2].style.backgroundColor = 'Yellow';
   colorPalette[3].style.backgroundColor = 'Red';
-};
+}
 setColor();
+
+function selectColor () {
+    const palettColors = document.querySelectorAll('.color');
+    
+}

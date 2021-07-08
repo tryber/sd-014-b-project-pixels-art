@@ -1,20 +1,20 @@
 h1 {
-   text-align: center;
+  text-align: center;
 }
 
 .color {
   border: solid black 1px;
   width: 100px;
   height: 100px;
-  display: inline-block;  
+  display: inline-block;
 }
 
 #color-palette {
-  margin: auto; 
+  margin: auto;
 }
 
 #table-color {
-margin: auto;
+  margin: auto;
 }
 
 
