@@ -19,3 +19,18 @@ body {
   margin-left: 10px;
   border: 1px solid black;
 }
+
+#pixel-board {
+  display: table;
+  padding: 5px;
+}
+.pixel-tr {
+  display: table-row;
+  padding: 5px;
+}
+.pixel {
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+}
