@@ -22,13 +22,11 @@ body {
   margin:auto;
   margin-top: 40px;
   width: 50%;
-  
-
+  border-collapse: collapse;
 }
 
 .pixel {
   border: solid 1px;
   height: 100px;
   width: 100px;
-  background-color: white;
 }
