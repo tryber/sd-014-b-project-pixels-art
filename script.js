@@ -48,3 +48,10 @@ for (i = 0; i < pegaCores.length; i++) {
     corSelecionada.classList.add('selected');
   });
 }
+
+const botaoLimpa = document.getElementById('clear-board');
+botaoLimpa.addEventListener('click', function () {
+  for (let i = 0; i < pegaPixel.length; i++) {
+    pegaPixel[i].style.backgroundColor = 'white';
+  }
+});
