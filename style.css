@@ -1,5 +1,5 @@
 body {
-  background-color: #646F4b;  
+  background-color: #646f4b;
 }
 
 section {
@@ -8,7 +8,7 @@ section {
   margin-right: 30%;
 }
 
-#title {  
+#title {
   margin-left: 35%;
   margin-right: 35%;
   text-align: center;
@@ -19,7 +19,7 @@ section {
   background-color: #28586b;
 }
 
-#color-palette {  
+#color-palette {
   text-align: center;
 }
 
@@ -36,7 +36,7 @@ section {
   display: block;
   padding: 10px;
   margin: auto;
-  background-color: #DDF45b;
+  background-color: #ddf45b;
   border-radius: 20px;
   color: #28586b;
   border: 1px solid black;
@@ -46,7 +46,7 @@ section {
   margin-bottom: 30px;
 }
 
-#pixel-board {  
+#pixel-board {
   border: 1px solid black;
   display: block;
   max-width: fit-content;
@@ -59,4 +59,3 @@ section {
   border: 1px solid black;
   background-color: white;
 }
-
