@@ -63,15 +63,13 @@ ul {
 */
 
 #pixel-board {
-  margin-left: 437px;
+  margin-left: 400px;
   border-collapse: collapse;
 }
 
 .pixel {
   border: 1px solid black;
-  width: 25px;
-  height: 25px;
-  margin: 0;
-  padding: 0;
+  width: 41px;
+  height: 41px;
   background-color: white;
 }
