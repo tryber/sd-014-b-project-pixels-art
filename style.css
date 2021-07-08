@@ -1,0 +1,21 @@
+.blue-color {
+  background-color: blue;
+}
+
+.yellow-color {
+  background-color: yellow;
+}
+
+.green-color {
+  background-color: green;
+}
+
+.black-color {
+  background-color: black;
+}
+
+.color {
+  border: solid 1px black;
+  width: 80px;
+  height: 80px;
+}
