@@ -4,6 +4,7 @@ window.onload = function () {
     for (let element of colorsPallete) {
         if (colorsPallete[0] === element) {
             element.style.backgroundColor = 'black';
+            element.classList.add('selected')
         } else if (colorsPallete[1] === element) {
             element.style.backgroundColor = 'red';
         } else if (colorsPallete[2] === element) {
