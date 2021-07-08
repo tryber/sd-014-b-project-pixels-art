@@ -1,0 +1,50 @@
+.box {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.selected {
+
+}
+
+.tr {
+  display: table-row;
+}
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  display: table-cell;
+}
+
+#title {
+  margin: 0 auto;
+}
+
+#color-palette {
+  margin: 0 auto;
+}
+
+#blackBox {
+  background-color: black;
+}
+
+#cornFlowerBox {
+  background-color: #4c5270;
+}
+
+#hotPinkBox {
+  background-color: #f652a0;
+}
+
+#tiffanyBlueBox {
+  background-color: #bcece0;
+}
+
+#pixel-board {
+  display: table;
+}
