@@ -35,3 +35,16 @@ function criaPixelBoard() {
 }
 criaPixelBoard();
 
+//--------------------------------------------------------------------------
+
+// Faz a primeira cor do elemento ter a classe selected
+
+const takeElementColor = document.querySelector('.color');
+
+function makeSelected() {
+    takeElementColor.classList.add('selected');
+}
+makeSelected();
+
+//-----------------------------------------------------------------------------
+
