@@ -5,29 +5,28 @@
 } */
 
 #color-palette {
-    //border: 1px black solid;
-    display: flex;
-    width: 430px;
-    justify-content: space-between;
+  display: flex;
+  width: 430px;
+  justify-content: space-between;
 }
 
 #color-palette .color {
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
 }
 #color-palette #black {
-    background: black;
+  background: black;
 }
 
 #color-palette #yellow {
-    background: yellow;
+  background: yellow;
 }
 
 #color-palette #red {
-    background: red;
+  background: red;
 }
 
 #color-palette #blue {
-    background: blue;
+  background: blue;
 }
