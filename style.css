@@ -4,6 +4,7 @@
     border-width: 1px;
     border-color: black;
     padding: 25px;
+    
 }
 
 .black {
@@ -21,3 +22,17 @@
 .green {
     background-color: green;
 }
+
+.pixel {
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    
+    background-color: white;
+}
+
+#pixel-board {
+    margin-top: 30px;
+    
+}
+
