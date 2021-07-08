@@ -1,23 +1,27 @@
 window.onload = function () {
   let c = document.querySelectorAll('.color');
 
-  for (let i of c) {
-    if (c[0] === i) {
-      i.style.backgroundColor = 'black';
-      i.classList.add('selected');
-    } else if (c[1] === i) {
-      i.style.backgroundColor = 'grey';
-    } else if (c[2] === i) {
-      i.style.backgroundColor = 'orange';
-    } else if (c[3] === i) {
-      i.style.backgroundColor = 'pink';
+  //define as cores da paleta de cores.
+  for (let idx of c) {
+    if (c[0] === idx) {
+      idx.style.backgroundColor = 'black';
+      idx.classList.add('selected');
+    }
+    if (c[1] === idx) {
+      idx.style.backgroundColor = 'grey';
+    }
+    if (c[2] === idx) {
+      idx.style.backgroundColor = 'orange';
+    }
+    if (c[3] === idx) {
+      idx.style.backgroundColor = 'pink';
     }
     addEventListener('click', function (event) {
-      //percorre removendo todos os selecionados e selciona o seu
-      {
-        classList.remove('selected');
+      //percorre removendo todos. Adiciona ao seu selecionado
+      for (let idx = 0; idx < c.length; idx += 1) {
+        c[idx].classList.remove('selected');
         event.target.classList.add('selected');
-        for (let i = 1; i <= 25; i += 1) {
+        for (let idx = 1; idx <= 25; idx += 1) {
           pixel.classList.add('pixel');
         }
       }
