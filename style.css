@@ -1,3 +1,7 @@
+body {
+  text-align: center;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
@@ -6,6 +10,7 @@
 }
 
 #pixel-board {
+  margin: auto;
   display: table;
   padding-top: 20px;
 }
