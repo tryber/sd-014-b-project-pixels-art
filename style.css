@@ -1,0 +1,25 @@
+table {
+  display: inline-block;
+  width: 85px;
+  height: 85px;
+}
+
+#color-palette {
+  border: 1px solid black;
+}
+
+.pink {
+  background-color: rgb(255, 198, 255);
+}
+
+.purple {
+  background-color: rgb(189, 178, 255);
+}
+
+.marineBlue {
+  background-color: rgb(160, 196, 255);
+}
+
+.skyBlue {
+  background-color: rgb(155, 246, 255);
+}
