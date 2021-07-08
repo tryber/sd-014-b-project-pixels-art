@@ -25,6 +25,11 @@ function setColor(event){
     let getBgColor = window.getComputedStyle(getColor).getPropertyValue("background-color")
     event.target.style.backgroundColor = getBgColor
 }
+
+
+
+
+
 /* Rerencias 
 https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
 
