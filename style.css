@@ -1,0 +1,45 @@
+.color {
+  border: solid black 1px;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
+
+#pixel-board {
+  display: table;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
+}
+
+.pixel {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  border: solid black 1px;
+}
+
+#black {
+  background-color: black;
+}
+
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#yellow {
+  background-color: yellow;
+}
