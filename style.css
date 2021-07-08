@@ -33,18 +33,18 @@
 }
 
 #pixel-board {
-    display: table;
-    border: 1px solid black;
-    margin-top: 20px;
+  display: table;
+  border: 1px solid black;
+  margin-top: 20px;
 }
 
 .pixel-board-row {
-    diplay: table-row;
+  display: table-row;
 }
 
 .pixel {
-    display: table-cell;
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
+  display: table-cell;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
 }
