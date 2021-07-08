@@ -1,11 +1,11 @@
 body {
-  height:auto;
+  height: auto;
   padding: 30px;
-  color:rgb(207, 206, 206);
-  font-size:20px;
-  text-align:center;
-  background-color:black;
-  background-image: linear-gradient(to right,rgba(255, 255, 255, 0.041),rgba(255, 255, 255, 0.185),rgba(255, 255, 255, 0.185),rgba(255, 255, 255, 0.041));
+  color: rgb(207, 206, 206);
+  font-size: 20px;
+  text-align: center;
+  background-color: black;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.041), rgba(255, 255, 255, 0.185), rgba(255, 255, 255, 0.185), rgba(255, 255, 255, 0.041));
 }
 
 main {
