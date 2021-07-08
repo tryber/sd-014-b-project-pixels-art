@@ -17,3 +17,18 @@ body {
   border: solid 1px;
   display:inline-block;
 }
+
+#pixel-board {
+  margin:auto;
+  margin-top: 40px;
+  width: 50%;
+  
+
+}
+
+.pixel {
+  border: solid 1px;
+  height: 100px;
+  width: 100px;
+  background-color: white;
+}
