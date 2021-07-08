@@ -6,11 +6,11 @@ window.onload = function () {
       element.style.backgroundColor = 'black';
       element.classList.add('selected');
     } else if (colorsPallete[1] === element) {
-      element.style.backgroundColor = 'red';
+      element.style.backgroundColor = 'grey';
     } else if (colorsPallete[2] === element) {
-      element.style.backgroundColor = 'blue';
+      element.style.backgroundColor = 'orange';
     } else if (colorsPallete[3] === element) {
-      element.style.backgroundColor = 'green';
+      element.style.backgroundColor = 'pink';
     }
     element.addEventListener('click', function (event) {
       for (let i = 0; i < colorsPallete.length; i += 1) {
