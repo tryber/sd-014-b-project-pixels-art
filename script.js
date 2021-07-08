@@ -28,36 +28,8 @@ clearButton.addEventListener('click', function () {
 
 const sizeButton = document.querySelector('#generate-board');
 
-sizeButton.addEventListener('click', function () {
-  let sizeNumber = document.querySelector('#board-size').value
-  let size;
-  console.log(parseFloat(sizeNumber))
-  if (parseFloat(sizeNumber) < 5) {
-    size = '5px';
-    for (const pixel of pixels) {
-      pixel.style.width = size;
-      pixel.style.height = size;
-      pixel.classList.remove(pixel.classList[1]);
-      pixel.classList.add('white');
-    }
-  } else if (parseFloat(sizeNumber) > 50) {
-    size = '50px';
-    for (const pixel of pixels) {
-      pixel.style.width = size;
-      pixel.style.height = size;
-      pixel.classList.remove(pixel.classList[1]);
-      pixel.classList.add('white');
-    }
-  } else if (sizeNumber === "") {
-      alert('Board inválido!');
-  } else {
-    sizeNumber = document.querySelector('#board-size').value
-    size = sizeNumber+ 'px';
-    for (const pixel of pixels) {
-      pixel.style.width = size;
-      pixel.style.height = size;
-      pixel.classList.remove(pixel.classList[1]);
-      pixel.classList.add('white');
-    }
-  }
-});
+
+
+
+
+

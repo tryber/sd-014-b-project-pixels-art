@@ -20,7 +20,7 @@
         </section>
         <section id='buttons'>
             <button id="clear-board">Limpar</button>
-            <input type="number" max="50" min="5" id="board-size">
+            <input  oninput="validity.valid||(value='');" type="number" max="50" min="5" id="board-size"> 
             <button id="generate-board">VQV</button>
         </section>
     </header>
