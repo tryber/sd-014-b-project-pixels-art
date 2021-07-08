@@ -1,16 +1,19 @@
+//refs: Ajudas do meu colega, Glauco.
+
+//essa função seleciona cores, remove e muda as cores da classe selected
 const select = () => {
   const reset = () => {
-    const colorSelected = document.querySelector('.selected');
-    colorSelected.classList.remove('selected');
+    const selected = document.querySelector('.selected');
+    selected.classList.remove('selected');
   };
-  const changeColor = document.querySelector('#color-palette');
-
-  changeColor.addEventListener('click', (e) => {
+  const change = document.querySelector('#color-palette');
+  change.addEventListener('click', (e) => {
     reset();
     e.target.classList.add('selected');
   });
 };
 
+//essa função adiciona uma background color ao "target" do click
 const paint = () => {
   const painting = document.querySelector('#pixel-board');
 
@@ -20,13 +23,13 @@ const paint = () => {
   });
 };
 
+//essa função limpa tudo
 const clear = () => {
-  const totalDeleteLesgoTrybers = document.querySelector('#clear-board');
-
-  totalDeleteLesgoTrybers.addEventListener('click', () => {
+  const del = document.querySelector('#clear-board');
+  del.addEventListener('click', () => {
     const pxl = document.querySelectorAll('.pixel');
-    for (let index = 0; index < pxl.length; index += 1) {
-      pxl[index].style.backgroundColor = 'white';
+    for (let i = 0; i < pxl.length; i++) {
+      pxl[i].style.backgroundColor = 'white';
     }
   });
 };

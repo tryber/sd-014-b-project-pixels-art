@@ -22,15 +22,11 @@ h1 {
 }
 
 #pixel-board {
-  display: table;
-  margin: 0 auto;
-}
-.tr {
+  margin: auto;
   display: table-row;
 }
 .pixel {
   display: table-cell;
-  box-sizing: content-box;
   border: 1px solid black;
   background-color: white;
   width: 42px;
