@@ -39,3 +39,7 @@
 	background-color: white;
   border: solid 1px black;
 }
+
+#clear-board {
+	margin: 0px 0px 50px 30px
+}
