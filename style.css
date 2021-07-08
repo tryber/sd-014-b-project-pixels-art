@@ -19,3 +19,18 @@
 #color-palette {
     display: inline-block;
 }
+#pixel-board {
+    display: table;
+    border-spacing: 1px;
+    border: 1px solid black;
+    background-color: black;
+}
+.row {
+    display: table-row;
+}
+.pixel {
+    display: table-cell;
+    background-color: white;
+    padding: 40px;
+    
+}
