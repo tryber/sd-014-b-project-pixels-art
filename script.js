@@ -19,18 +19,16 @@ function putColors () {
 }
 
 function createPixelBoard () {
-  for (let index = 0; index < 5; index += 1){
-    let tableRow = document.createElement('div');
-    tableRow.className = 'pixel tr';
-    document.querySelector('#pixel-board').appendChild(tableRow);
-    for (let indexB = 0; indexB < 5; indexB += 1){
-      let tableCell = document.createElement('div');
-      tableCell.className = 'pixel td'
-      document.querySelectorAll('.tr')[index].appendChild(tableCell);
-    }
-  }
+  let pixelBoard = document.querySelector('#pixel-board');
 
+  for (let i = 0; i < 25; i += 1) {
+    let pixel = document.createElement('div');
+    pixel.classList.add('pixel');
+    pixelBoard.appendChild(pixel);
+  }
 }
+
+
 
 function addListener () {
   document.querySelector('#black').addEventListener('click', changeSelectedColorBlack);
@@ -45,7 +43,7 @@ paint.addEventListener('click', (event) => {
 });
 
 function clearSelectedColor () {
-  for(let index = 0; index < 5; index += 1){
+  for(let index = 0; index < 4; index += 1){
     document.querySelectorAll('.color')[index].className = 'color';
   }
 }
@@ -71,7 +69,7 @@ function changeSelectedColorBlue () {
 }
 
 document.querySelector('#clear-board').addEventListener('click', () =>{
-  for(pixel of document.querySelectorAll('.td')){
+  for(pixel of document.querySelectorAll('.pixel')){
     pixel.style.backgroundColor = 'white';
   }
 });
