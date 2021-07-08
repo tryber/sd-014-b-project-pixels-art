@@ -30,11 +30,19 @@ function changeClass() {
 }; changeClass();
 
 // *Requisito 8*
+const pixelBlocks = document.querySelectorAll('.pixel');
 function paintBlocks() {
-  var pixelBlocks = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixelBlocks.length; index += 1) {
     pixelBlocks[index].addEventListener('click', function () {
       document.querySelectorAll('.pixel')[index].style.backgroundColor = document.querySelector('.selected').id;
     })
   }
 }; paintBlocks();
+
+// *Requisito 9*
+
+document.querySelector('#clear-board').addEventListener('click', function () {
+  for (let index = 0; index < pixelBlocks.length; index += 1) {
+    pixelBlocks[index].style.backgroundColor = 'white';
+  }
+})
