@@ -1,5 +1,5 @@
  window.onload = function colorsPalet(){
- 
+    let board = document.getElementById('pixel-board');
 
     function generatePalet(){     
         let palet = document.getElementById('color-palette'); 
@@ -11,9 +11,13 @@
         let paletItem = document.querySelectorAll('.color');
         paletItem[0].style.backgroundColor = "black";
         paletItem[0].classList.add('selected');
+        paletItem[0].id = "black";
         paletItem[1].style.backgroundColor = "red";
+        paletItem[1].id = "red";
         paletItem[2].style.backgroundColor = "blue";
+        paletItem[2].id = "blue";
         paletItem[3].style.backgroundColor = "green";
+        paletItem[3].id = "green";
     }    
 
     function generateBoard(){
@@ -55,10 +59,21 @@
               
            
     }     
+    function paintingBoard(event){        
+        let colorSelected = document.querySelector('.selected');
+        event.target.style.backgroundColor = colorSelected.id;        
+          
+        }
+            
+ board.addEventListener('click', paintingBoard);
+
+
+   
 
  generateBoard();
  generatePalet();    
  selectColor();
+ 
 
 
 }
