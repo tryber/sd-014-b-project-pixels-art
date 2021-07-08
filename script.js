@@ -85,4 +85,43 @@ function clearBox() {
     allPixels[i].style.backgroundColor = 'white';
   }
 }
+// requisito 10 referencia https://github.com/tryber/sd-013-b-project-pixels-art/blob/guihtryb-project-pixels-art/script.js
+const input = document.querySelector('.size-button'); // seleciona o local de append child 
+const inputSize = document.createElement('input'); // cria elemento de input
+inputSize.type = 'number';
+inputSize.id = 'board-size';
+inputSize.min = '5'; // define min e max da entrada do input (isso cria input interativo)
+inputSize.max = '50';
+input.appendChild(inputSize);
+
+const buttonResize = document.querySelector('.size-button');
+const clickResize = document.createElement('button');
+clickResize.type = 'submit'; // The button is a submit button (submits form-data)
+clickResize.id = 'generate-board';
+clickResize.innerText = 'VQV';
+buttonResize.appendChild(clickResize);
+clickResize.addEventListener('click', defineTableSize);
+
+const inputValue = document.querySelector('#board-size'); // variável para armazenar o valor do input 
+function defineTableSize() {
+  table.innerHTML = ''; // Exercicio 4 (recupera o valor e define uma matriz null para fazer os loops de add) let table = document.querySelector('#pixel-board'); // seleciona a table pelo id
+  for (let i = 0; i < inputValue.value; i += 1) { // os loops entao vao se realizar com base no valor do input
+    const newPixelsRow = document.createElement('tr'); // os loops criam as rows e columns e adicionam na table inicial (vazia)
+    table.appendChild(newPixelsRow);
+    for (let j = 0; j < inputValue.value; j += 1) {
+      const newPixelsColums = document.createElement('td');
+      newPixelsColums.classList.add('pixel');
+      newPixelsRow.appendChild(newPixelsColums);
+      newPixelsColums.addEventListener('click', addColorPixel); // aqui invoca a função definida no exercício 8 de adicionar a cor ao elemento selected
+    }
+  }
+} // a função de selecionar (add class selected) roda antes dessa independente
+
+clickResize.addEventListener('click', boardNullAlert); // aqui adiciona mais um evento ao botão VQV (no final serão 3)
+function boardNullAlert() { // essa função emite alerta se a intrada do input for nula e o botão VQV
+  if (inputSize.value == '') { // input valor nulo
+    alert('Board Inválido!');
+    pixelTable(); // aqui invoca a função de construção do board de pixel feita no quesito 4
+  }
+} 
   
