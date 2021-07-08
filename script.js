@@ -1,11 +1,12 @@
-const colorsPalette = document.getElementsByClassName('color');
 const pixelBoard = document.querySelector('#pixel-board')
 const clearButton = document.querySelector('#clear-board');
 const createCanvasButton = document.querySelector('#generate-board');
-const colors = ['black', 'red', 'green', 'blue'];
+const colors = ['black'];
 const minPixelBoard = 5;
 const maxPixelBoard = 50;
 
+const colorsPalette = document.getElementsByClassName('color');
+generateColors();
 setColorsInPalette();
 
 let selectedColor = document.querySelector('.selected');
@@ -13,11 +14,20 @@ let boardValue = 0;
 
 createInitialPixelBoard();
 
+
+function generateColors() {
+    for (let i = 0; i < 4; i += 1) {
+        let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+        colors.push(randomColor);
+    }
+}
+
 function setColorsInPalette() {
     for (let i = 0; i < colorsPalette.length; i += 1){
         let color = colorsPalette[i];
         color.style.backgroundColor = colors[i];
         color.addEventListener('click', setSelectedColor);
+        console.log(colors[i]);
     }
     colorsPalette[0].classList.add('selected');
 }
