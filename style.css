@@ -16,16 +16,17 @@
 #verde {
     background-color: green;
 }
-#pixel-board{
+#pixel-board {
     border:1px solid black;
     margin: 0px;
     line-height: 0px;
-    width: 500px;
+    width: 210px;
 }
-.pixel{
+.pixel {
+    border: solid 1px black;
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     background-color: white;
 }
 
