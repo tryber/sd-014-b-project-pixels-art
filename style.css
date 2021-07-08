@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Uchen', serif;
+}
+
+/**********
+----- Seção dos Conteúdos -----
+**********/
+
+/**********
+----- Paleta de Cores -----
+**********/
+
+#color-palette {
+    border: 1px solid red;
+    display: table;
+    border-collapse:separate;
+    border-spacing: 10px;
+}
+
+.color {
+    display: table-cell;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.box-yellow {
+    background: #F0CC3A;
+}
+
+.box-green {
+    background: #25be58;
+}
+
+.box-blue {
+    background: #4950F5;
+}
+
+.box-red {
+    background: #F0332E;
+}
