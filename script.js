@@ -46,7 +46,7 @@ function createPixelBoard() {
 createPixelBoard();
 
 function selectColor(event) {
-  let selectedColor = document.querySelector('.selected');
+  const selectedColor = document.querySelector('.selected');
   selectedColor.classList.remove('selected');
   event.target.classList.add('selected');
 }
@@ -54,4 +54,14 @@ function selectColor(event) {
 let colors = document.getElementsByClassName('color');
 for (let index = 0; index < colors.length; index += 1) {
   colors[index].addEventListener('click', selectColor);
+}
+
+function changePixelColor(event) {
+  const selectedColor = document.querySelector('.selected').style.backgroundColor;
+  event.target.style.backgroundColor = selectedColor;
+}
+
+let pixels = document.querySelectorAll('.pixel');
+for (let index = 0; index < pixels.length; index += 1) {
+  pixels[index].addEventListener('click', changePixelColor);
 }
