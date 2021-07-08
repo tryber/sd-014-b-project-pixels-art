@@ -10,6 +10,8 @@
   height: 40px;
   border: 1px solid black
 }
+/* uso de display: table conforme visto em: https://www.w3schools.com/cssref/pr_class_display.asp & https://css-tricks.com/almanac/properties/d/display/ & https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+
 #palette1 {
   background-color: black;
 }
@@ -21,4 +23,21 @@
 }
 #palette4 {
   background-color: blue;
+}
+
+.selected {
+}
+
+#pixel-board {
+  display: table;
+  padding: 2px;
+  background-color: slategray;
+  border: 1px solid black;
+}
+.pixel {
+  display: table-cell;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid black;
 }
