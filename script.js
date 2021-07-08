@@ -8,6 +8,7 @@ function createPalette() {
     colorPalette.appendChild(newColor);
     if (index === 0) {
       newColor.style.backgroundColor = 'black';
+      newColor.classList.add('selected');
     } else {
       newColor.style.backgroundColor = generateRandomColor();
     }
