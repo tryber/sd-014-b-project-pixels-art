@@ -80,6 +80,7 @@ const clickClear = document.querySelector('.button-section'); // seleciona o loc
 const buttonClear = document.createElement('button');
 buttonClear.innerHTML = 'Limpar';
 clickClear.appendChild(buttonClear);
+
 buttonClear.setAttribute('id', 'clear-board'); // define atributes, dá o id
 
 function clearBox() {

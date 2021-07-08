@@ -13,12 +13,13 @@ body {
 }
 
 h2 {
-    color: rgb(231, 241, 241);
+    color: rgb(0, 7, 7);
     font-size: 20px;
     font-weight: bold;
     box-sizing: content-box;
-
-    background-color: black;
+     width: 310px;
+     border: 4px solid green;
+    background-color: rgb(195, 238, 5);
 }
 
 main {
@@ -57,6 +58,7 @@ td, th {
    width: 40px;
    height: 40px;
    border: 1px solid black;
+   background-color: rgb(255, 255,255);
 }    
 
 #footer {
