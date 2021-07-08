@@ -1,5 +1,4 @@
-window.onload = function() {  
-
+function createPalette() {
   let numberOfColors = 4;
   let colorPalette = document.querySelector('#color-palette');
 
@@ -13,12 +12,34 @@ window.onload = function() {
       newColor.style.backgroundColor = generateRandomColor();
     }
   }
+}
 
-  function generateRandomColor() {
-    let r = Math.random() * 255;
-    let g = Math.random() * 255;
-    let b = Math.random() * 255;
+createPalette();
 
-    return `rgb(${r}, ${g}, ${b})`;
+function generateRandomColor() {
+  let r = Math.random() * 255;
+  let g = Math.random() * 255;
+  let b = Math.random() * 255;
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+function createPixelBoard() {
+  let pixelBoard = document.querySelector('#pixel-board');
+  let numberOfRows = 5;
+  let numberOfColumns = 5;
+
+  for (let rows = 0; rows < numberOfRows; rows += 1) {
+    let newRow = document.createElement('div');
+    newRow.className = 'tr';
+    pixelBoard.appendChild(newRow);
+    for (let columns = 0; columns < numberOfColumns; columns += 1) {
+      let newPixel = document.createElement('div');
+      newPixel.className = 'pixel td';
+      newPixel.style.backgroundColor = 'white';
+      newRow.appendChild(newPixel);
+    }
   }
 }
+
+createPixelBoard();

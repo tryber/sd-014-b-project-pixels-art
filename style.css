@@ -8,6 +8,7 @@ h1#title {
 ul#color-palette {
   list-style: none;
   text-align: center;
+  padding-inline-start: 0;
 }
 
 li.color {
@@ -16,4 +17,22 @@ li.color {
   width: 80px;
   height: 80px;
   margin: 10px 10px;
+}
+
+#pixel-board {
+  margin: auto;
+  display: table;
+  padding: 20px;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
+  height: 80px;
+  width: 80px;
+  border: 1px solid black;
+  margin: 5px;
 }
