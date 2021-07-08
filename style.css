@@ -8,18 +8,22 @@
 }
 
 .selected {
+    background-color: black;
+}
+
+#black {
   background-color: black;
 }
 
-.yellow {
+#yellow {
   background-color: yellow;
 }
 
-.red {
+#red {
   background-color: red;
 }
 
-.blue {
+#blue {
   background-color: blue;
 }
 
