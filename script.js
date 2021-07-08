@@ -21,5 +21,15 @@ function fillPixel(event) {
   const paint = document.querySelector('.color.selected');
   const color = paint.getAttribute('id');
   event.target.setAttribute('id', color);
-} 
+}
 pixelBoard.addEventListener('click', fillPixel);
+
+// Requisito #9
+const pixel = document.querySelectorAll('.pixel');
+const button = document.querySelector('#clear-board');
+
+function clearBoard() {
+  for (let index = 0; index < pixel.length; index += 1) {
+    pixel[index].style.backgroundColor = 'white';
+  }
+} button.addEventListener('click', clearBoard);
