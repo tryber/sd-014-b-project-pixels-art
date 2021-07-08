@@ -1,4 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 #title {
+    margin: 10px;
     text-align: center;
     font-size: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -7,6 +13,7 @@
 #color-palette {
     display: flex;
     justify-content: center;
+    margin: 10px;
 }
 
 .color {
@@ -32,4 +39,17 @@
 
 .black {
     background-color: black;
+}
+
+#pixel-board {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pixel {
+    background-color: white;
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
 }
