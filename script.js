@@ -48,3 +48,19 @@ makeSelected();
 
 //-----------------------------------------------------------------------------
 
+// Faz quando clicar na cor ela ser selecionada
+
+const keepAllColor = document.querySelectorAll('.color');
+
+for (let index = 0; index < keepAllColor.length; index += 1) {
+    let singleElementColor = keepAllColor[index];
+    singleElementColor.addEventListener('click', function(){
+        let lastSelectedElement = document.querySelector('.selected');
+        if (singleElementColor.className != 'selected'){
+            lastSelectedElement.classList.remove('selected');
+            singleElementColor.classList.add('selected');
+        }
+    })
+}
+
+
