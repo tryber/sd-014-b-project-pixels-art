@@ -77,7 +77,15 @@ generateButton.addEventListener('click', () => {
   if (!input.value) {
     alert('Board inválido!');
   } else {
-    createPixelBoard();
+    if (input.value < 5) {
+      input.value = 5;
+      createPixelBoard();
+    } else if (input.value > 50) {
+      input.value = 50;
+      createPixelBoard();
+    } else {
+      createPixelBoard();
+    }
   }
 });
 
