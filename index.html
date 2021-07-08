@@ -8,15 +8,15 @@
   <title>Pixel Art by RSTD</title>
 </head>
 <body>
-  <div class="body-container">
+  <div class="body-container center">
   <header>
     <h1 id="title">Paleta de Cores</h1>
   </header>
   <nav>
-    <div class="body-container">
+    <div class="body-container center">
       <table id="color-palette">
         <tr>
-          <td class="color-selected"></td>
+          <td class="color"></td>
           <td class="color"></td>
           <td class="color"></td>
           <td class="color"></td>
@@ -25,7 +25,40 @@
     </div>
   </nav>
   <main>
-    <table id="pixel-board">
+    <section class="body-container center">
+      <input id="board-size" type="text" min="1" placeholder="Insira o tamanho desejado da matriz de pixels" >
+      <button id="generate-board">VQV</button>
+      <button id="clear-board">Limpar</button>
+    </section>
+    <table id="pixel-board" class="body-container center">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
       <tr>
         <td></td>
         <td></td>
@@ -34,9 +67,6 @@
         <td></td>
       </tr>
     </table>
-    <input id="board-size" type="text" placeholder="Insira o tamanho desejado da matriz de pixels">
-    <button id="generate-board">Clique aqui</button>
-    <button id="clear-board">Limpar</button>
   </main>
 </div>
   <script src="script.js"></script>

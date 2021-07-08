@@ -11,30 +11,33 @@
 /* Manipulação de elementos principais */
 
 body {
-  background-color: #FFF6EA);
+  background-color: #FFF6EA;
 }
 
 .body-container {
   display: block;
-  width: 800px;
+  width: 80%;
   height: auto;
-  margin-top: 50px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.center {
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
 }
 
 h1 {
   font-family: 'Crete Round', serif;
   font-size: 3em;
   color: #84D182;
-  margin-top: 100px;
-
+  margin-top: 1em;
 }
 
 button, input {
   font-family: 'Prompt', sans-serif;
   padding: 10px;
+  margin-right: 10px;
 }
 
 .color-space {
@@ -103,14 +106,16 @@ button, input {
   
 }
 
-.color-palette {
+#color-palette {
   display: table;
-  padding: 5px;
+  padding: 25px;
 }
 
 table {
   display: table;
   padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 tr {
@@ -120,8 +125,8 @@ tr {
 
 td {
   display: table-cell;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border: 1px solid black;
   margin: 5px;
 }
@@ -130,9 +135,12 @@ td {
   background-color: black;
 }
   
-
-
 #pixel-board {
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
+.pixel {
+
+}
