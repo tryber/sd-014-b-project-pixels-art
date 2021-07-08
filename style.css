@@ -1,7 +1,7 @@
-#color-palette { 
-display:flex;
+#color-palette{ 
+  display:flex;
 }
-.color {
+.color{
   width: 50px;
   height: 50px;
   display: inline-block;
@@ -9,7 +9,7 @@ display:flex;
   border-style: solid;
   border-width: 1px;
 }
-#green {
+#green{
   background-color:green;
   width: 50px;
   height: 50px;
@@ -18,7 +18,7 @@ display:flex;
   border-style: solid;
   border-width: 1px;
 }
-#blue {
+#blue{
   background-color:blue;
   width: 50px;
   height: 50px;
@@ -27,7 +27,7 @@ display:flex;
   border-style: solid;
   border-width: 1px;
 }
-#red {
+#red{
   background-color:red;
   width: 50px;
   height: 50px;
@@ -36,7 +36,7 @@ display:flex;
   border-style: solid;
   border-width: 1px;
 }
-#black {
+#black{
   background-color:black;
   width: 50px;
   height: 50px;
@@ -45,23 +45,23 @@ display:flex;
   border-style: solid;
   border-width: 1px;
 }
-#pixel-board {
+#pixel-board{
   grid: auto-flow / repeat(5, auto);
   justify-content: center;
   display: table;
   padding: 5px;
 }
-.h1 {
+.h1{
   position: center;
 }
-.td {
+.td{
   display:table-cell;
   padding:5px;
   width: 150px;
   border:black solid 1px;
   margin: 5px;
 }
-.pixel {
+.pixel{
   width: 40px;
   height: 40px;
   background-color: white;
