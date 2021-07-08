@@ -24,6 +24,10 @@
     margin-top: 20px;
     justify-content: center;
   }
+
+  table {
+    border-spacing: 0px;
+}
   
   .color {
     display: inline-block;
@@ -33,13 +37,16 @@
     margin-left: 5px;
     margin-right: 5px;
   }
+
+  div.color{
+    background-color: rgba(0, 0, 0, 0);
+  }
  
-  .pixel {
+  td.pixel{
     border: 1px solid #000;
     width: 40px;
     height: 40px;
     background-color: #fff;
-    padding: 0;
   }
   
   .quadro {
@@ -47,9 +54,7 @@
     justify-content: center;
     margin-top: 40px;
   }
-  #pixel-board {
-    border-collapse: collapse;
-  }
+
   
   #clear-board {
     display: flex;
