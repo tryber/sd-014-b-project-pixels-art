@@ -1,51 +1,36 @@
-window.onload = function () {
-  let c = document.querySelectorAll('.color');
+const select = () => {
+  const reset = () => {
+    const colorSelected = document.querySelector('.selected');
+    colorSelected.classList.remove('selected');
+  };
+  const changeColor = document.querySelector('#color-palette');
 
-  //define as cores da paleta de cores percorrendo ela como um array.
-  for (let idx of c) {
-    if (c[0] === idx) {
-      idx.style.backgroundColor = 'black';
-      idx.classList.add('selected');
-    }
-    if (c[1] === idx) {
-      idx.style.backgroundColor = 'grey';
-    }
-    if (c[2] === idx) {
-      idx.style.backgroundColor = 'orange';
-    }
-    if (c[3] === idx) {
-      idx.style.backgroundColor = 'pink';
-    }
-
-    addEventListener('click', function (event) {
-      //percorre removendo todos. Adiciona ao seu selecionado
-      for (let idx = 0; idx < c.length; idx += 1) {
-        c[idx].classList.remove('selected');
-        event.target.classList.add('selected');
-        for (let idx = 1; idx <= 25; idx += 1) {
-          pixel.classList.add('pixel');
-        }
-      }
-    });
-  }
+  changeColor.addEventListener('click', (e) => {
+    reset();
+    e.target.classList.add('selected');
+  });
 };
 
-//função de pintar
-let pboard = document.querySelector('#pixel-board');
-pboard.addEventListener('click', function (event) {
-  let selectedd = document.querySelector('.selected').style.backgroundColor;
-  event.target.style.backgroundColor = selectedd;
-});
+const paint = () => {
+  const painting = document.querySelector('#pixel-board');
 
-//função de apagar, altera todos os backgrounds pra white, percorrendo pixel a pixel
+  painting.addEventListener('click', (e) => {
+    e.target.style.backgroundColor =
+      document.querySelector('.selected').style.backgroundColor;
+  });
+};
+
 const clear = () => {
   const totalDeleteLesgoTrybers = document.querySelector('#clear-board');
+
   totalDeleteLesgoTrybers.addEventListener('click', () => {
     const pxl = document.querySelectorAll('.pixel');
-    for (let j = 0; j < pxl.length; j += 1) {
-      pxl[j].style.backgroundColor = 'white';
+    for (let index = 0; index < pxl.length; index += 1) {
+      pxl[index].style.backgroundColor = 'white';
     }
   });
 };
 
+select();
+paint();
 clear();
