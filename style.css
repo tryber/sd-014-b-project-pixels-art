@@ -38,7 +38,24 @@
 }
 
 .black {
-    background-color: black;
+    background-color:black;
+}
+
+.white {
+    background-color: white;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#clear-board {
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 8px;
+    margin: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 #pixel-board {
@@ -48,8 +65,9 @@
 }
 
 .pixel {
-    background-color: white;
     border: 1px solid black;
     width: 40px;
     height: 40px;
 }
+
+
