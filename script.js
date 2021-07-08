@@ -6,3 +6,8 @@ const trChindren = document.querySelector('tr').children;
 for (let index = 0; index < trChindren.length; index += 1) {
   trChindren[index].setAttribute('style', colors[index]);
 }
+
+window.onload = function () {
+  let color = document.querySelector('.color');
+  color.classList.add('selected');
+};
