@@ -30,16 +30,23 @@
 
 #blue {
     background-color: blue;
+    padding: 16px;
+    border-radius: 10%;
 }
 #red {
     background-color: red;
+    padding: 16px;
+    border-radius: 10%;
 
 }
 #yellow {
     background-color: yellow;
+    padding: 16px;
+    border-radius: 10%;
 
 }
 #black {
     background-color: black;
-
+    padding: 16px;
+    border-radius: 10%;
 }
