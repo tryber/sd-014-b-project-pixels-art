@@ -25,7 +25,7 @@ window.onload = function load() {
   colors[1].setAttribute('style', 'background-color: green');
   colors[2].setAttribute('style', 'background-color: yellow');
   colors[3].setAttribute('style', 'background-color: pink');
-  colors[0].setAttribute('class', 'selected');
+  colors[0].className = 'selected color';
 
   const lineUser = 5;
   const columnUser = 5;
