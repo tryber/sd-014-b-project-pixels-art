@@ -3,13 +3,24 @@ h1 {
 }
 
 .color {
-    border: solid black 1px;
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    
+  border: solid black 1px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  
 }
 
 #color-palette {
+  margin: auto;
+  
+}
+
+#pixel-board {
     margin: auto;
+}
+
+.pixel {
+    border: solid black 1px;
+    width: 100px;
+    height: 100px;
 }
