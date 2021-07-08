@@ -47,7 +47,6 @@ selectClass1.classList.add('selected');
 const colorsArray = document.querySelectorAll('.color'); // selector all cria uma array com todos elementos com a classe "color"
 for (let i = 0; i < colorsArray.length; i += 1) {
   colorsArray[i].addEventListener('click', addClassColors); // cria um evento de click para todos os elementos do array [colors]
-  // eslint-disable-next-line no-inner-declarations
   function addClassColors(event) { // cria uma funçao para adicionar classe a elemento clicado (no array);
     clearClass(); // invoca a função de remoção para proxima seleção;
     event.target.classList.add('selected'); // seleciona o target (elemento clicado e adciona a classe "selected")
@@ -57,5 +56,16 @@ for (let i = 0; i < colorsArray.length; i += 1) {
 function clearClass() { // função de remoção (usada dentro do loop inicial de seleção para remover pos outro item selecionado)
   for (let i = 0; i < colorsArray.length; i += 1) { // faz o loop dentro dos elementos com a classe color
     colorsArray[i].classList.remove('selected');
+  }
+}
+
+// Requisito 8
+const pixelArray = document.querySelectorAll('.pixel'); // pixel sao os elementos do board de pixels a ser criado
+
+for (let i = 0; i < pixelArray.length; i += 1) { // passa por todos elementos do araray contendo os valores pixel
+  pixelArray[i].addEventListener("click", addColorPixel);
+  function addColorPixel(event) { // função de adcionar cor aos pixels (o evento target é o pixel clicado (com a class selected))
+    const backColor = document.querySelector('.selected').style.backgroundColor; // armazena a variavel da cor de fundo do elemento que foi criado
+    event.target.style.backgroundColor = backColor; // o evento target (o que foi cliclado receb a cor do selected)
   }
 }
