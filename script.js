@@ -46,10 +46,9 @@ function selectColorAndRemove(event){                    // Apartir da variavel 
 let colors = document.querySelectorAll('.color');
 criaPixels(5,5);
 colors[0].classList.add('selected'); // seleciona o preto.
-colors[0].addEventListener('click', selectColorAndRemove);
-colors[1].addEventListener('click', selectColorAndRemove);
-colors[2].addEventListener('click', selectColorAndRemove);
-colors[3].addEventListener('click', selectColorAndRemove);
+for (let index = 0; index <= 3; index += 1){
+    colors[index].addEventListener('click', selectColorAndRemove);
+};
 
 
 
