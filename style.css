@@ -15,6 +15,7 @@
   width: 100px;
   border: 1px solid black;
 }
+
 #color-palette #black {
   background: black;
 }
@@ -29,4 +30,21 @@
 
 #color-palette #blue {
   background: blue;
+}
+
+#pixel-board {
+    display: table;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.pixel-board-row {
+    diplay: table-row;
+}
+
+.pixel {
+    display: table-cell;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
 }
