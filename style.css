@@ -58,6 +58,11 @@
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+#board-size {
+    width: 50px;
+    text-align: center;
+}
+
 #pixel-board {
   display: flex;
   justify-content: center;

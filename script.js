@@ -25,3 +25,20 @@ clearButton.addEventListener('click', function () {
     pixel.classList.add('white')
 }
 });
+
+const sizeButton = document.querySelector('#generate-board');
+
+sizeButton.addEventListener('click', function () {
+  let sizeNumber = document.querySelector('#board-size').value
+  let size = sizeNumber+ 'px';
+  if (sizeNumber === "") {
+      alert('Board inválido!');
+  }else{
+    for (const pixel of pixels) {
+      pixel.style.width = size;
+      pixel.style.height = size;
+      pixel.classList.remove(pixel.classList[1]);
+      pixel.classList.add('white');
+  }
+  }
+})
