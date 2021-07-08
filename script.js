@@ -4,6 +4,7 @@ window.onload = function () {
     for (let colors of paletaDeCores) {
         if (paletaDeCores[0] === colors) {
             colors.style.backgroundColor = 'black';
+            colors.classList.add('selected');
         }
         else if (paletaDeCores[1] === colors) {
             colors.style.backgroundColor = 'blue';
@@ -16,3 +17,4 @@ window.onload = function () {
         }
     }
 }
+
