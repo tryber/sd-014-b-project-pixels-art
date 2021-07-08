@@ -14,19 +14,19 @@
     padding: 5%;
 }
 
-.black {
+#black {
     background-color: black;
 }
 
-.red {
+#red {
     background-color: red;
 }
 
-.orange {
+#orange {
     background-color: orange;
 }
 
-.teal {
+#teal {
     background-color: teal;
 }
 
@@ -50,4 +50,8 @@ tr {
     height: 40px;
     border: #000000 solid 1px;
     margin: 5px;
+}
+
+.selected {
+    
 }
