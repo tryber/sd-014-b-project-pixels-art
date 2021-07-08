@@ -1,0 +1,1 @@
+color-palette.style.widht = window.innerwidht
