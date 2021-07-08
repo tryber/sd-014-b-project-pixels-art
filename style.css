@@ -14,8 +14,8 @@ header {
 .color {
   margin: 0px 10px 0px 10px;
   border: 1px solid black;
-  height: 75px;
-  width: 75px;
+  height: 40px;
+  width: 40px;
 }
 #pixel-board{
   padding: 10px;
