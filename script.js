@@ -12,6 +12,13 @@ window.onload = function () {
         } else if (colorsPallete[3] === element) {
             element.style.backgroundColor = 'green';
         }
+
+        element.addEventListener('click', function (event) { //adiciona a classe 'selected' ao elemento clicado, e retira de outro que esteja com a classe
+            for (let i = 0; i < colorsPallete.length; i += 1) {
+            colorsPallete[i].classList.remove('selected')
+            event.target.classList.add('selected')
+            }
+        })
     }
 
     let pixelBoard = document.querySelector('#pixel-board');
