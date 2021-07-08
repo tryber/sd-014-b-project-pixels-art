@@ -1,70 +1,63 @@
-* {
-    margin: 0;
+function divPalette() {
+  const divCor = document.querySelector('#color-palette');
+  for (let i = 0; i < 4; i += 1) {
+    const palette = document.createElement('div');
+    palette.className = 'color';
+    divCor.appendChild(palette);
   }
-  
-  #title {
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 50pt;
-    text-align: center;
-    background-color: beige;
-    padding: 30px;
+}
+
+divPalette();
+
+const colorBlack = document.querySelectorAll('.color')[0];
+colorBlack.style.background = '#000';
+
+const color1 = document.querySelectorAll('.color')[1];
+color1.style.background = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+
+const color2 = document.querySelectorAll('.color')[2];
+color2.style.background = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+
+const color3 = document.querySelectorAll('.color')[3];
+color3.style.background = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+
+const start = function () {
+  window.onload = colorBlack.classList.add('selected');
+  color1.classList.remove('selected');
+  color2.classList.remove('selected');
+  color3.classList.remove('selected');
+};
+start();
+
+function changeColor() {
+  const selector = document.querySelectorAll('#color-palette .color');
+  for (let i = 0; i < selector.length; i += 1) {
+    selector[i].addEventListener('click', (event) => {
+      document.querySelector('.selected').classList.remove('selected');
+      event.target.classList.add('selected');
+    });
   }
-  #color-pallete {
-    text-align: center;
-    padding: 10px;
-    font-family: 'montserrat';
+}
+
+changeColor();
+
+const paint = function (event) {
+  const click = event;
+  const selectColor = document.querySelector('.selected').style.backgroundColor;
+  if (event.target.className === 'pixel') {
+    click.target.style.backgroundColor = selectColor;
   }
-  
-  p {
-    font-family: 'montserrat';
+};
+
+document.querySelector('#pixel-board').addEventListener('click', paint);
+
+const botaoLimpar = function () {
+  const clean = document.getElementsByClassName('pixel');
+  for (let i = 0; i < clean.length; i += 1) {
+    if (clean[i] !== 'white') {
+      clean[i].style.backgroundColor = 'white';
+    }
   }
-  
-  #color-palette {
-    display: flex;
-    margin-top: 20px;
-    justify-content: center;
-  }
-  
-  .color {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #000;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .selected {
-  }
-  .pixel {
-    border: 1px solid #000;
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    padding: 0;
-  }
-  
-  .quadro {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-  }
-  #pixel-board {
-    border-collapse: collapse;
-  }
-  
-  #clear-board {
-    display: flex;
-    justify-content: center;
-    margin: 20px auto;
-    font-family: 'montserrat';
-    background-color: indianred;
-    padding: 10px;
-    color: #fff;
-    width: 110px;
-    border-radius: 3px;
-  }
-  
-  #clear-board:hover {
-    background-color: salmon;
-  }
-  
+};
+
+document.querySelector('#clear-board').addEventListener('click', botaoLimpar);
