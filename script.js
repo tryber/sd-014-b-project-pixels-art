@@ -27,7 +27,7 @@ window.onload = function() {
   }, false);
   //Acima foi ultilizado o conceito de event bubbling contido no link https://gomakethings.com/attaching-multiple-elements-to-a-single-event-listener-in-vanilla-js/
 
-  const resetButton = document.getElementById('clear-button');
+  const resetButton = document.getElementById('clear-board');
   resetButton.addEventListener('click', function(){
     const pixels = document.querySelectorAll('.pixel');
     for (let index = 0; index < pixels.length; index += 1) {
