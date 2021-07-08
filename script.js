@@ -12,5 +12,17 @@ function criaPixels(x,y){
             li.className = 'pixel';
         }
     } 
-}
+};
+
+function selectColor(color){
+color = document.querySelector('.' + color);
+color.classList.add('selected');
+};
+
+function removeColor(color){
+    color = document.querySelector('.' + color);
+    color.className.remove = 'selected';
+    };
+
 criaPixels(5,5);
+selectColor('preto');
