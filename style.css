@@ -1,20 +1,35 @@
-.color{
+.color {
   border: 1px solid black;
   display: inline-block;
   padding: 20px;
 }
 
-.black{
+.black {
   background-color: black;
 }
 
-.green{
+.green {
   background-color: chartreuse;
 }
-.blue{
+.blue {
   background-color: blue;
 }
 
-.gray{
+.gray {
   background-color: gray;
+}
+
+/* #pixel-board {
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+} */
+
+.pixel {
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: white;
 }
