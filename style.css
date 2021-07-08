@@ -1,0 +1,19 @@
+.colorRed {
+    background: red;
+}
+
+.colorBlack {
+    background: black;
+}
+
+.colorBlue {
+    background: blue;
+}
+
+.colorYellow {
+    background: yellow;
+}
+
+.color {
+    border: solid 1px black;
+}
