@@ -13,3 +13,10 @@ function criaGrid() {
   }
 }
 criaGrid();
+let pegaCor = document.querySelector('.selected');
+const grid = document.getElementById('pixel-board');
+grid.addEventListener('click', function (event) {
+  if (event.target.nodeName === 'TD') {
+    event.target.style.backgroundColor = 'black';
+  }
+});
