@@ -1,0 +1,22 @@
+#color-palette{
+color:aliceblue;
+
+}
+.color {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: solid 1px black;
+}
+#black-box{
+    background-color:black;
+}
+#red-box{
+    background-color: red;
+}
+#green-box{
+    background-color: green;
+}
+#blue-box{
+    background-color: blue;
+}
