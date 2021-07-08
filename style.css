@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: azure;
+}
+
+#title {
+  font-family:monospace;
+  margin-top: 50px;
+  font-size: 50px;
+}
+
+#color-palette {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.color {
+  border: black solid 1px;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+
+#button-conteiner {
+  display: flex;
+  justify-content:flex-end;
+  width: 120%;
+}
+
+#clear-board {
+  color: aliceblue;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: solid 2px rgb(13, 139, 65);
+  background-color: rgb(178, 76, 236);
+  margin-top: 5px;
+}
+
+#pixels-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* #pixel-board {
+
+} */
+/* 5 - Faça com que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel. */
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: solid 1px black;
+  display: inline-block;
+  background-color: white;
+}
