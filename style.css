@@ -1,0 +1,19 @@
+.color {
+    border: 1px solid black;
+    margin: 2px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+#black {
+    background-color: black;
+}
+#orange {
+    background-color: orange;
+}
+#blue {
+    background-color: blue;
+}
+#green {
+    background-color: green;
+}
