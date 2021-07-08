@@ -1,0 +1,18 @@
+body {
+  height:auto;
+  padding: 40px 0;
+  color:rgb(44, 43, 43);
+  font-size:20px;
+  text-align:center;
+  background-color:#8badec;
+  background-color:#9eb6eb;
+  background-image: linear-gradient(to right, rgba(255,255,255,.1), rgba(255,255,255,.4), rgba(255,255,255,0), rgba(255,255,255,.4));
+}
+
+main {
+  border: 3px solid black;
+}
+
+header {
+  border: 1px solid gray;
+}
