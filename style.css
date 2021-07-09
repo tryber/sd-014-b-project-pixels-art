@@ -57,10 +57,10 @@
     border-width: 1px;
   }
 
-body {
+#corpo {
     background-color: white;
 }
 
-#bgc {
-    background-color: white;
+#pixel-board {
+    width: 240px
 }

@@ -31,20 +31,14 @@ function painting (event){
   document.querySelector('#pixel-board').addEventListener('click', painting)
 
 // REQUISITO 9 
-// function limparQuadro() {    
-//     pixelsPintados.style.setBackgroundColor = white;
-// }
+const clearButton = document.getElementById('clear-board');
+const allPixels = document.getElementsByClassName('pixel');
 
-// clearButton.addEventListener('click', limparQuadro);
+function clearBoard() {
+    for (let index = 0; index < allPixels.length; index += 1) {
+        allPixels[index].style.backgroundColor = 'white';
+    }
+}
 
-// let backgroundColor = document.querySelectorAll("pixel")
-//       for (let index = 0; index < backgroundColor.length; index += 1) {
-//         backgroundColor[index].addEventListener("click", function(event) {
-//           setBackgroundColor(event.target.selectedColor)
-//         })
-//       }
-
-// function trocaCor(){
-//     var cor = document.getElementById("bgc").value;
-//     document.getElementById("dye").style.backgroundColor = cor;
-//  }
+  clearButton.addEventListener('click', clearBoard);
+  
