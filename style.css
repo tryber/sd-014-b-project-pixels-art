@@ -18,6 +18,12 @@ body {
 ----- Paleta de Cores -----
 **********/
 
+.main-content {
+    width: 16%;
+    margin: auto;
+    text-align: center;
+}
+
 #color-palette {
     display: table;
     border-collapse:separate;

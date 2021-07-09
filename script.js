@@ -16,6 +16,9 @@ window.onload = function () {
     };
 }
 
+let btnClearBoard = document.querySelector('#clear-board');
+btnClearBoard.addEventListener('click', clearBoard);
+
 function generatePixels() {
     let pixelBoard = document.querySelector('#pixel-board');
 
@@ -83,4 +86,14 @@ function fillPixel(event) {
             pixel.style.backgroundColor = getColor;
         };
     };
+}
+
+function clearBoard() {
+    const listPixels = document.querySelectorAll('.pixel');
+
+    for (let key of listPixels) {
+        let pixel = key;
+        
+        pixel.style.backgroundColor = "#ffffff";
+    }
 }
