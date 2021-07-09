@@ -1,3 +1,7 @@
+body {
+  text-align: center;
+}
+
 .color {
   border: 1px black solid;
   width: 60px;
