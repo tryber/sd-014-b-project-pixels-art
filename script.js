@@ -38,6 +38,7 @@ seleciona();
 
 function getColor() {
   const selec = document.querySelector('.selected');
+
   return selec.classList[1];
 }
 
@@ -45,6 +46,7 @@ function print() {
   const pixels = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixels.length; i += 1) {
     const element = pixels[i];
+
     element.addEventListener('click', function clickOn() {
       element.style.backgroundColor = `${getColor()}`;
     });
@@ -56,6 +58,7 @@ function clearButton() {
   const button = document.querySelector('#clear-board');
   const pixels = document.querySelectorAll('.pixel');
   console.log(pixels.length);
+
   button.addEventListener('click', function clickIn() {
     for (let i = 0; i < pixels.length; i += 1) {
       const pixel = pixels[i];
