@@ -4,9 +4,14 @@ body {
 }
 
 #color-palette {
-  display: inline-block;
+  display: block;
   padding: 10px;
   margin: auto;
+}
+
+#pixel-board {
+  padding: 10px;
+  margin: 22px;
 }
 
 .color {
@@ -17,4 +22,17 @@ body {
   height: 40px;
   margin-right: 5px;
   margin-left: 5px;
+}
+
+#line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pixel {
+  border: black solid 1px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
 }

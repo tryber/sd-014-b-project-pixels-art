@@ -5,7 +5,7 @@ title.id = 'title';
 title.innerHTML = 'Paleta de Cores';
 document.querySelector('body').appendChild(title);
 
-// [Requisito 2]
+// [Requisito 2 e 3]
 // Adiciona à página uma paleta de quatro cores distintas
 // Cria paleta de cores
 const colorPalette = document.createElement('div');
@@ -29,3 +29,23 @@ black.style.backgroundColor = 'black';
 cyan.style.backgroundColor = 'cyan';
 magenta.style.backgroundColor = 'magenta';
 yellow.style.backgroundColor = 'yellow';
+
+// [Requisito 4]
+// Adiciona à página um quadro de pixels, com 25 pixels.
+// Cria quadro de pixel
+const board = document.createElement('div');
+board.id = 'pixel-board';
+document.querySelector('body').appendChild(board);
+
+for (let indexLine = 0; indexLine < 5; indexLine += 1) {
+  // Cria uma linha
+  const line = document.createElement('div');
+  line.id = 'line';
+  board.appendChild(line);
+  // Cria pixel
+  for (let index = 0; index < 5; index += 1) {
+    const pixel = document.createElement('div');
+    pixel.classList.add('pixel');
+    line.appendChild(pixel);
+  }
+}
