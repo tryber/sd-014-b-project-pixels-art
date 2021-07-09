@@ -1,14 +1,13 @@
-
 #color-palette li {
-    margin: 5px;
-    border: solid 1px black;
-    display: inline-block;
-    height: 64px;
-    width: 64px;
-    padding: 0;
+  margin: 5px;
+  border: solid 1px black;
+  display: inline-block;
+  height: 64px;
+  width: 64px;
+  padding: 0;
 }
 
-.black { background-color: black; }
-.red   { background-color: red; }
-.blue  { background-color: blue; }
-.green { background-color: green; }
+.color:nth-child(1) { background-color: black; }
+.color:nth-child(2) { background-color: red; }
+.color:nth-child(3) { background-color: blue; }
+.color:nth-child(4) { background-color: green; }
