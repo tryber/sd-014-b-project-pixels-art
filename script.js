@@ -9,10 +9,10 @@ pixelColors.addEventListener('click', function changeColorSelected(event) {
 
 const tablePixel = document.querySelector('#pixel-board');
 
-tablePixel.addEventListener('click', function changePixelColor(event) {
+tablePixel.addEventListener('click', function changePixelColor(mouse) {
   const colorClassSelected = document.querySelector('.selected');
   const color = getComputedStyle(colorClassSelected);
-  event.target.style.backgroundColor = color.backgroundColor;
+  mouse.target.style.backgroundColor = color.backgroundColor;
   console.log(colorClassSelected.id);
 });
 
