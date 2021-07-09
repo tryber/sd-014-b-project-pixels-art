@@ -16,9 +16,6 @@ window.onload = function () {
     };
 }
 
-let btnClearBoard = document.querySelector('#clear-board');
-btnClearBoard.addEventListener('click', clearBoard);
-
 function generatePixels() {
     let pixelBoard = document.querySelector('#pixel-board');
 
@@ -88,12 +85,15 @@ function fillPixel(event) {
     };
 }
 
+let btnClearBoard = document.querySelector('#clear-board');
+btnClearBoard.addEventListener('click', clearBoard);
+
 function clearBoard() {
     const listPixels = document.querySelectorAll('.pixel');
 
     for (let key of listPixels) {
         let pixel = key;
         
-        pixel.style.backgroundColor = "#ffffff";
+        pixel.style.backgroundColor = "#fff";
     }
 }
