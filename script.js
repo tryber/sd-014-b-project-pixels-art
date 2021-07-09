@@ -14,15 +14,10 @@ document.getElementById("pixel-board").style.marginLeft = "10px";
 document.getElementById("black").classList.add("selected");
 
 
-let blackColor = document.getElementById("black");
-let yellowColor = document.getElementById("yellow");
-let redColor = document.getElementById("red");
-let blueColor = document.getElementById("blue");
-
-blackColor.addEventListener("click", pickColor);
-yellowColor.addEventListener("click", pickColor);
-redColor.addEventListener("click", pickColor);
-blueColor.addEventListener("click", pickColor);
+let colors = document.querySelectorAll(".color");
+for (let index = 0; index < colors.length; index += 1) {
+  colors[index].addEventListener("click", pickColor);
+}
 
 // Função que seleciona a cor na paleta e atribui a classe "selected"
 function pickColor (event) {
