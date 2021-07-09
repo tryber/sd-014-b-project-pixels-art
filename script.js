@@ -56,7 +56,7 @@ btn.addEventListener('click', function () {
 });
 
 const colorsPallet = {
-  color0: '#FFFFFF', //Branco
+ 
   color1: '#000000', //Preto
   color2: '#F11D00', //Vermelho
   color3: '#2FC18C', //Verde
