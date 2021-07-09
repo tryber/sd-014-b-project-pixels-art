@@ -40,8 +40,7 @@ function generatePixelCells(n) {
 
 const generateCellsButton = document.querySelector('#generate-board');
 
-
-generateCellsButton.addEventListener('click', function buttonEvent() {
+function buttonEvent() {
   const inputValue = document.querySelector('#board-size').value;
   if (inputValue === '') {
     alert('Board Inválido!');
@@ -52,7 +51,9 @@ generateCellsButton.addEventListener('click', function buttonEvent() {
   } else if (inputValue >= 50) {
     generatePixelCells(50);
   }
-});
+}
+
+generateCellsButton.addEventListener('click', buttonEvent);
 function generateRandomColors() {
   const colorPaletteArray = document.getElementsByClassName('color');
   for (let index = 1; index < colorPaletteArray.length; index += 1) {
