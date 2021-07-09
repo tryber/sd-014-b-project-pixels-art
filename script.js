@@ -21,23 +21,41 @@ document.querySelector(".pixel").classList.add("pixel-selected");
 
 let pixelSelected = document.querySelectorAll(".pixel");
 for (let index = 0; index < pixelSelected.length; index += 1) {
-  pixelSelected[index].addEventListener("click", pickPixel);
+  pixelSelected[index].addEventListener("click", clickPixel);
   pixelSelected[index].addEventListener("click", changeColor);
 };
-function pickPixel(event) {
+function clickPixel(event) {
   let pixelClick = document.querySelector(".pixel-selected");
   pixelClick.classList.remove("pixel-selected");
   event.target.classList.add("pixel-selected");
 }
 
-let changeColorPixel = document.querySelector(".pixel-selected")
-changeColorPixel.addEventListener("click", changeColor);
-
-
 function changeColor () {
-  let paleta = document.querySelector(".selected").id;
+  let palette = document.querySelector(".selected").id;
   let pixel = document.querySelector(".pixel-selected")
-  pixel.style.backgroundColor = paleta;
+  pixel.style.backgroundColor = palette;
+}
+
+function button (texto){
+
+  let getColorPalette = document.querySelector('.clearButton');
+  let newButton = document.createElement('button');
+  newButton.id = 'clear-board';
+  newButton.innerHTML = texto;
+
+  getColorPalette.appendChild(newButton)
+}
+button('Limpar quadro');
+
+
+let getClearButton = document.querySelector('#clear-board');
+getClearButton.addEventListener('click', clearBoard);
+
+function clearBoard(){
+ let allPixels = document.querySelectorAll('.pixel');
+ for (let index = 0; index < allPixels.length; index += 1){
+   allPixels[index].style.backgroundColor = 'white';
+ }
 }
 
 }
