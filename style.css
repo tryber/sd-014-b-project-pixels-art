@@ -1,0 +1,38 @@
+.color {
+    border: 1px solid black;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+.black{
+    background-color: black;
+}
+.purple {
+    background-color: purple;
+}
+.green {
+    background-color: green;
+}
+.yellow {
+    background-color: yellow;
+}
+#color-palette {
+    display: inline-block;
+}
+#pixel-board {
+    display: table;
+    border: 1px solid black;
+    background-color: black;
+    margin: 5px;
+}
+.row {
+    display: table-row;
+}
+.pixel {
+    display: table-cell;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black 
+}
