@@ -51,3 +51,10 @@ for(let index = 0; index < pixel.length; index += 1){
     event.target.style.backgroundColor = paintColor.id;
   })
 }
+
+//Requisito 9:
+function clearAll(){
+  for(let index = 0; index < pixel.length; index += 1){
+    pixel[index].style.backgroundColor = 'white';
+  }
+}
