@@ -1,0 +1,28 @@
+.color {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-color:black ;
+    border: solid;
+    border-width: 1px;
+  }
+#pixel-board{
+  width: 200px;
+  height: 200px;
+  margin: 0px;
+  border-color: black;
+  border: solid;
+  display: inline-block;
+  border-width: 1px;
+
+}
+.pixel{
+    width:40px;
+    height:40px;
+    background-color: white;
+
+}
+#preto{background-color: black;}
+#verde{background-color: #76EB23;}
+#roxo{background-color: #A566F2;}
+#laranja{background-color: #DB8A01;}
