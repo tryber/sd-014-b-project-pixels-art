@@ -1,3 +1,34 @@
 body {
   font-family: Roboto, sans-serif;
+  color: #282a36;
+  justify-content: center;
+}
+
+#palette {
+  display: inline-flex;
+}
+
+.color {
+  border: black solid 1px;
+  display: inline-table;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+#pixel-board {
+  border: black solid 1px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  width: 210px;
+  height: 210px;
+  margin: 20px;
+  margin-left: 0;
+}
+
+.pixel {
+  border: black solid 1px;
+  width: 40px;
+  height: 40px;
 }
