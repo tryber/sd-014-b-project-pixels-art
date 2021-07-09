@@ -10,9 +10,8 @@ pixelColors.addEventListener('click', changeColorSelected);
 
 function changeTableColor(pixelTarget) {
   const colorClassSelected = document.querySelector('.selected');
-  const color = getComputedStyle(colorClassSelected);
-  pixelTarget.target.style.backgroundColor = color.backgroundColor;
-  console.log(colorClassSelected.id);
+  const color = getComputedStyle(colorClassSelected).backgroundColor;
+  pixelTarget.target.style.backgroundColor = color;
 }
 
 const tablePixel = document.querySelector('#pixel-board');
