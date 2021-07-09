@@ -30,11 +30,13 @@
 }
 
 table {
-    border: solid black 1px;
-    align-self: center;
+  border: solid black 1px;
+  margin: auto;
+  margin-top: 50px;
 }
+
 td {
-  background-color:white;
+  background-color: white;
   border: solid black 1px;
   width: 40px;
   height: 40px;

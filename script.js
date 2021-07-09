@@ -13,11 +13,42 @@ function corAleatoria() {
 }
 
 function carregamentoCompleto() {
-  const corUm = document.querySelector('#cor2');
-  corUm.style.backgroundColor = corAleatoria();
-  const corDois = document.querySelector('#cor3');
+  const corUm = document.querySelector('#cor1');
+  corUm.style.backgroundColor = 'black';
+  corUm.classList.add('selected');
+  const corDois = document.querySelector('#cor2');
   corDois.style.backgroundColor = corAleatoria();
-  const cortres = document.querySelector('#cor4');
-  cortres.style.backgroundColor = corAleatoria();
+  const corTres = document.querySelector('#cor3');
+  corTres.style.backgroundColor = corAleatoria();
+  const corQuatro = document.querySelector('#cor4');
+  corQuatro.style.backgroundColor = corAleatoria();
 }
 window.onload = carregamentoCompleto;
+
+function colorSelector1() {
+  document.querySelector('#cor1').classList.add('selected');
+  document.querySelector('#cor2').classList.remove('selected');
+  document.querySelector('#cor3').classList.remove('selected');
+  document.querySelector('#cor4').classList.remove('selected');
+}
+
+function colorSelector2() {
+  document.querySelector('#cor1').classList.remove('selected');
+  document.querySelector('#cor2').classList.add('selected');
+  document.querySelector('#cor3').classList.remove('selected');
+  document.querySelector('#cor4').classList.remove('selected');
+}
+
+function colorSelector3() {
+  document.querySelector('#cor1').classList.remove('selected');
+  document.querySelector('#cor2').classList.remove('selected');
+  document.querySelector('#cor3').classList.add('selected');
+  document.querySelector('#cor4').classList.remove('selected');
+}
+
+function colorSelector4() {
+  document.querySelector('#cor1').classList.remove('selected');
+  document.querySelector('#cor2').classList.remove('selected');
+  document.querySelector('#cor3').classList.remove('selected');
+  document.querySelector('#cor4').classList.add('selected');
+}
