@@ -1,3 +1,10 @@
+* {
+  text-align: center;
+}
+#pixel-board {
+  margin-left: 40%;
+}
+
 .color {
   display: inline-block;
   height: 50px;
