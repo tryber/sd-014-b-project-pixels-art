@@ -6,11 +6,11 @@
   margin: 2px;
   margin-top: 20px;
   margin-bottom: 50px;
-  }
+}
 
 #black {
   background-color: black;
-  }
+}
 
 #red {
   background-color: red;
@@ -26,7 +26,7 @@
 
 #pixel-board {
   display: table;
-}         
+}
 
 .tr {
   display: table-row;
