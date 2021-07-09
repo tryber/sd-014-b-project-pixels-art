@@ -15,8 +15,6 @@ for (let index = 0; index < 25; index +=1){
     tabelaDePixels.appendChild(pixelsDaTabela);
 }
 
-
-
 let selecionaCor = document.querySelector('#preto');
 let selecionaCorAmarelo = document.querySelector('#amarelo');
 let selecionaCorAzul = document.querySelector('#azul');
@@ -38,7 +36,19 @@ function recebeClick(evento){
 }
 
     
-let telaPixels = document.querySelectorAll('.pixel');
+
+let quadroDePixels = document.querySelector('#pixel-board');
+quadroDePixels.addEventListener("click", recebeCor);
+
+function recebeCor(evento){ // pesquisei sobre no MDN Web Docs
+    let seletorDeSelected = document.querySelector('.selected');
+    let seletorDeCor = window.getComputedStyle(seletorDeSelected).getPropertyValue ('background-color'); // window.getComputedStyle, vai selecionar os stylos do que vc selecionar e getPropertyValue vai fazer selecionar apenas o background color
+    evento.target.style.backgroundColor = seletorDeCor //aqui esta adc esse stylo selecionado ao evento, no caso o pixel
+}
+
+
+
+
 
 
 
