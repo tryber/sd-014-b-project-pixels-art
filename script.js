@@ -26,7 +26,14 @@ generateBoard.addEventListener('click', createLine);
 function createLine() {
   let n = input.value;
   document.querySelector('#pixel-board').innerHTML = '';
-  if (n > 0 && n < 11)  {
+  if (n.length > 0)  {
+    if (n < 5) {
+      n = 5;
+    } else if (n > 50) {
+      n = 50;
+    } else {
+      n = n;
+    }
     document.body.appendChild(pixelBoard);
     for (let i = 1; i <= n; i += 1) {
       const div = document.createElement('div');
