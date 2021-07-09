@@ -36,6 +36,8 @@ function setColorsInPalette() {
 		color.style.backgroundColor = colors[i];
 		color.addEventListener('click', setSelectedColor);
 	}
+	const erase = document.querySelector('.erase')
+	erase.addEventListener('click', setSelectedColor);
 	colorsPalette[0].classList.add('selected');
 }
 
@@ -45,7 +47,7 @@ function setPixelBoardValues(element) {
 	pixel.style.height = '41px';
 	pixel.style.backgroundColor = 'white';
 	pixel.style.padding = '0px';
-	pixel.style.border = 'solid black 1px';
+	pixel.style.border = 'solid #61210f 1px';
 	pixel.classList.add('pixel');
 }
 

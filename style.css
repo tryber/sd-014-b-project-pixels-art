@@ -2,14 +2,14 @@ body {
     background-color: #EDEDF4;
 }
 
-.color {
+.color, .erase{
     width: 41px;
     height: 41px;
     border: solid black 1px;
     display: table-cell;
 }
 
-.color:hover {
+.color:hover, .erase:hover{
 	transform: scale(1.1);
 	border: solid #00cecb 2px;
 	transition: all ease 0.15s;
@@ -47,4 +47,10 @@ body {
     margin-left: 30px;
     width: 50px;
     text-align: center;
+}
+.erase {
+	text-align: center;
+	background-color: white;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	color: brown;
 }
