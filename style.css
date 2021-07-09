@@ -1,0 +1,38 @@
+.color{ 
+   
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+    
+}
+
+
+.pixel{
+
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-collapse: collapse;   
+}
+
+#pixel-board{ 
+    border-spacing: 0;
+}
+
+#color-palette{
+    margin-bottom: 30px;
+}
+#color-palette #color3{
+background-color: blue;
+}
+#color-palette #color2{
+    background-color:#3F303F;
+}
+#color-palette #color4{
+background-color: #11156D;
+}
+
+td.pixel{ 
+    background-color: rgb(255, 255, 255);
+}
