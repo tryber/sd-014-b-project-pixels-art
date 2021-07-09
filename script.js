@@ -1,8 +1,5 @@
 // eslint-disable-next-line func-names
-window.onload = function () {
-  resetColorPixel();
-  colorSeletectedInitial('black');
-};
+
 // Criar div com as paletas de cores.
 
 function createDivColors(quantidadeColors) {
@@ -32,7 +29,7 @@ function addColor(colors) {
 
 addColor(['black', 'red', 'blue', 'green']);
 
-// Cria a tabela de divs.
+// Cria a tabela de divs, usando o display table.
 
 function tablePixel(row, cell) {
   const pixelBoard = document.getElementById('pixel-board');
@@ -54,6 +51,8 @@ function tablePixel(row, cell) {
 
 tablePixel(5, 5);
 
+// Define cor branco, assim que a pagina e carregada, no window.onload.
+
 function resetColorPixel() {
   const pixel = document.getElementsByClassName('pixel');
   for (let index = 0; index < pixel.length; index += 1) {
@@ -61,7 +60,7 @@ function resetColorPixel() {
   }
 }
 
-// Definir cor preto Inicial.
+// Definir cor inicial selecionada, a funcao colorSelectedInitial, e chamada no window.onload - LINHA 74, com a cor que deseja-se ser a inicial.
 
 function colorSeletectedInitial(color) {
   const colors = document.querySelectorAll('.color');
@@ -72,10 +71,15 @@ function colorSeletectedInitial(color) {
   }
 }
 
+window.onload = function onload() {
+  resetColorPixel();
+  colorSeletectedInitial('black');
+};
+
 // Difinir class selected
 function handleChangeTech(event) {
-  const techElement = document.querySelector('.selected');
-  techElement.classList.remove('selected');
+  const colorElement = document.querySelector('.selected');
+  colorElement.classList.remove('selected');
   event.target.classList.add('selected');
 }
 const divsColors = document.querySelectorAll('.color');
@@ -84,22 +88,15 @@ for (let index = 0; index < divsColors.length; index += 1) {
   divsIndex.addEventListener('click', handleChangeTech);
 }
 
-// function handleChangeSelected(event) {
-//   const colorElement = document.querySelectorAll('.color');
-//   for (let index = 0; index < colorElement.length; index += 1) {
-//     const colorList = colorElement[index].classList;
-//     for (let sIndex = 0; sIndex < colorList.length; sIndex += 1) {
-//       if (colorList[sIndex] === 'selected') {
-//         colorList[sIndex].classList.remove('selected');
-//       } else {
-//         event.target.classList.add('selected');
-//       }
-//     }
-//   }
+// Clicar em uma das cores da paleta faz com que ela seja selecionada e utilizada para preencher os pixels no quadro.
 
-//   // input.value = '';
-// }
-
-// const palette = document.querySelector('.color');
-
-// palette.addEventListener('click', handleChangeSelected);
+const boxPixel = document.querySelectorAll('.pixel');
+for (let index = 0; index < boxPixel.length; index += 1) {
+  const pixelIndex = boxPixel[index];
+  pixelIndex.addEventListener('click', (event) => {
+    const selected = document.querySelector('.selected');
+    const colorSelected = selected.style.backgroundColor;
+    // eslint-disable-next-line no-param-reassign
+    event.target.style.backgroundColor = colorSelected;
+  });
+}
