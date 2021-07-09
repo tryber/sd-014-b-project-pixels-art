@@ -1,22 +1,22 @@
 .color {
-    display: inline-block;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    height: 40px;
-    width: 40px;
-    padding: 20px;
+  display: inline-block;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  height: 40px;
+  width: 40px;
+  padding: 20px;
 }
 
 #pixel-board {
-    border: solid 1px;
+  border: solid 1px;
 }
 
 .pixel {
-    border: solid 1px;
-    padding: 20px;
-    background-color: white;
-    border-color: black;
-    height: 40px;
-    width: 40px;
+  border: solid 1px;
+  padding: 20px;
+  background-color: white;
+  border-color: black;
+  height: 40px;
+  width: 40px;
 }
