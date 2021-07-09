@@ -14,7 +14,7 @@ const select = () => {
 };
 //com a função fill pegamos a cor selecionada na select e preenchemos um pixel presente no pixel board.
 const fill = () => {
-  addEventListener('click', (e) => {
+  document.querySelector('#pixel-board').addEventListener('click', (e) => {
     e.target.style.backgroundColor =
       document.querySelector('.selected').style.backgroundColor;
   });
