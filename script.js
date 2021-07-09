@@ -7,6 +7,8 @@ window.onload = function () {
     color.addEventListener('click', selectColor);
   }
   
+  generateColorPallete()
+  firstColor.style.backgroundColor = 'black' // requisito 12
   updatePixels();
   setBoardSize(5);
 };
@@ -26,7 +28,7 @@ let btnBoardSize = document.getElementById('generate-board');
 let pixelBoardElement = document.querySelector('#pixel-board');
 
 function setBoardSize(number) {
-  if(inputBoardSize.value < 5){
+  if(inputBoardSize.value < 5 && pixelBoardSize !== ""){
     inputBoardSize.value = 5;
   } else if(inputBoardSize.value > 50){
     inputBoardSize.value = 50;
@@ -78,4 +80,22 @@ function clearGrade() {
   for (let pixel of pixels) {
     pixel.style.backgroundColor = 'white';
   }
+}
+
+function generateColorPallete(){
+  for (color of colors){
+    color.style.backgroundColor = getRandomColor()
+  }
+}
+
+function getRandomColor() { // Source: https://stackoverflow.com/questions/1484506/random-color-generator
+  let letters = '0123456789ABCDEF';
+  let generatedColor = '#';
+  for (var i = 0; i < 6; i++) {
+    generatedColor += letters[Math.floor(Math.random() * 16)]; 
+    // Math.random() * 16 gera um numero aleatorio de 1 a 16, mas não é um numero inteiro, 
+    // Math.floor o transforma em numero inteiro, pegando somente o piso(floor) do numero
+    // o numero gerado é passado como index da string letters que contem a base do sistema hexadecimal
+  }
+  return generatedColor;
 }
