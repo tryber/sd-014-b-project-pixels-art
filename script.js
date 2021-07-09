@@ -1,17 +1,27 @@
 function colorSelected(event) {
 
-    const selectedActual = document.getElementsByClassName('selected')[0];
-    selectedActual.classList.remove('selected');
+  const selectedActual = document.getElementsByClassName('selected')[0];
+  selectedActual.classList.remove('selected');
 
-    event.target.classList.add('selected');
+  event.target.classList.add('selected');
 
 }
 document.getElementById('color-palette').addEventListener('click', colorSelected);
 
-// const corVerde = document.getElementById('color4');
+function printPixel(event) {
+  const elementoSelecionado = document.querySelector('.selected');
+  const corSelecionada = window.getComputedStyle(elementoSelecionado).backgroundColor
+  event.target.style.backgroundColor = corSelecionada;
+}
 
-// verificar se for clicada for clicada,
-// corVerde.addEventListener('click', colorSelected);
-// a classe selected deve ser removida de onde estava e
+document.getElementById('pixel-board').addEventListener('click', printPixel);
 
-// ficar na cor atual, nesse caso a verde.
+function limpaPixel(pixel) {
+  pixel.style.backgroundColor = 'white';
+}
+
+function limparBoard() {
+  const pixelBoard = document.getElementsByClassName('pixel');
+  [...pixelBoard].forEach(limpaPixel);
+}
+document.getElementById('clear-board').addEventListener('click', limparBoard)
