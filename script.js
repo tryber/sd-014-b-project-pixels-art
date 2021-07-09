@@ -1,31 +1,42 @@
 
-// let currentColor = colorSelector();
-// function colorSelector() {
-//     let colorSelected = document.getElementById("color-palette");
-//     colorSelected.addEventListener('click', function(el) {
-//     let selectedColor = (el.target.id);
-//     return selectedColor;
-//     })
-// }
+// const color1 = "black";
+// const color2 = "red";
+// const color3 = "green";
+// const color4 = "blue";
 
-// function colorShift() {
-//     let colorShifted = document.getElementById("pixel-board");
-//     colorShifted.addEventListener('click', function() {
-//         if (selectedColor === 'color1') { this.style.backgroundColor = 'black' };
-//     })
-// }
+// function colorPix(value) {
+  //   let currentPix = document.getElementById("tableRow");
+  //   currentPix.addEventListener('click', function(pix) {
+    //       let coloured = pix.target;
+    //       let colouredPix = document.querySelector(coloured);
+    //       colouredPix.style.backgroundColor = value;
+    //   });
+    // }
 
-function oi() {
-  console.log('Oi');
+  function colorShift() {
+    let colorItem = document.querySelector(".selected");
+    return colorItem.id;
+  //   console.log(colorId);
+  }
+
+  function colorPix(value) {
+    // value = colorShift();
+  let currentPix = document.querySelectorAll("#tableRow div");
+  for (index = 0; index < currentPix.length; index += 1) {
+    currentPix[index].addEventListener('click', function() {
+      this.style.backgroundColor = value;
+    });
+  }
 }
 
 function defineClass() {
-  removeClass();
   let newItem = document.getElementById("color-palette");
   newItem.addEventListener('click', function(itemClick) {
-      let clicked = (itemClick.target.id);
-      let currentItem = document.getElementById(clicked);
-      currentItem.className = "color selected";
+    removeClass();
+    let clicked = (itemClick.target.id);
+    let currentItem = document.getElementById(clicked);
+    currentItem.className = "color selected";
+    colorPix(colorShift());
   });
 }
 function removeClass() {
@@ -33,12 +44,20 @@ function removeClass() {
   item.className = "color";
 }
 
+// - - - - - - - - - - //
+
 window.onload = function() {
 
   let repeatCount = 5;
   let pixBoard = document.getElementById("pixel-board");
 
+  // let colorId = colorShift();
+
   createTable(repeatCount);
+
+  defineClass();
+
+  colorPix(colorShift());
 
   function createPix() {
     let pix = document.createElement("div");
@@ -49,7 +68,7 @@ window.onload = function() {
   function createLine(count) {
       count = repeatCount;
       let currentDiv = document.createElement("div");
-      currentDiv.className = "tableRow";
+      currentDiv.setAttribute("id", "tableRow");
       for (index = 1; index <= count; index += 1) {
           let lineDiv = createPix();
           currentDiv.appendChild(lineDiv);
@@ -64,4 +83,20 @@ window.onload = function() {
         pixBoard.appendChild(lineDiv);
       }
     }
+
+  // function colorShift() {
+  //   let colorItem = document.querySelector(".selected");
+  //   return colorItem.id;
+  // //   console.log(colorId);
+  // }
+
+  // function colorPix(value) {
+  //     // value = colorShift();
+  //   let currentPix = document.querySelectorAll("#tableRow div");
+  //   for (index = 0; index < currentPix.length; index += 1) {
+  //     currentPix[index].addEventListener('click', function() {
+  //       this.style.backgroundColor = value;
+  //     });
+  //   }
+  // }
 }
