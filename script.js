@@ -9,3 +9,9 @@ function generateRandomColor() {
 }
 generateRandomColor();
 
+const board = document.querySelector('#color-palette');
+board.addEventListener('click', function(event) {
+  const colorSelected = document.querySelector('.selected');
+  colorSelected.classList.remove('selected');
+  event.target.classList.add('selected');
+})
