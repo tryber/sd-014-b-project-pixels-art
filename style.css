@@ -1,0 +1,46 @@
+#color-palette li {
+  margin: 5px;
+  border: solid 1px black;
+  display: inline-block;
+  height: 64px;
+  width: 64px;
+  padding: 0;
+}
+
+#black {
+  background-color: black;
+}
+
+#red {
+  background-color: red;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#green {
+  background-color: green;
+}
+
+#pixel-board {
+  display: grid;
+  grid: auto-flow / repeat(5, auto);
+  justify-content: left;
+  margin-left: 39px;
+}
+
+.pixel {
+  margin: 7px;
+  border: solid 1px black;
+  background-color: white;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+}
+
+#clear-board {
+  margin-left: 45px;
+  margin-bottom: 10px;
+}
