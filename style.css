@@ -5,7 +5,7 @@ button {
     width: 100px;
     height: 30px;
     font-size: 12px;
-    cursor: pointer;
+    cursor: pointer; /* Altera cursor para a "mãozinha" */
 }
 
 .selected {
@@ -27,7 +27,7 @@ table, td, th, #pixel-board {
   border: 1px solid black;
 }
 
-table {
+#color-palette, table {
   width: 100%;
   border-collapse: collapse;
   width:160px;
