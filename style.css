@@ -14,11 +14,13 @@ ul {
 
 #color-palette {
   margin: auto;
+  width: 300px;
 }
 
 #color-palette ul {
   display: flex;
   justify-content: center;
+  padding-left: 0;
 }
 
 #color-palette li {
