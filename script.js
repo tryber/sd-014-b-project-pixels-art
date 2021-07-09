@@ -2,12 +2,12 @@ let colorSelected = 'black';
 
 window.onload = function() {
   setColors();
-  eventAdd();
+  /* eventAdd(); */
   const colorBlack = document.querySelector('.color');
   colorBlack.classList.add('selected');
 }
 
-function eventAdd() {
+/* function eventAdd() {
   let botoesCores = document.querySelectorAll('.color');
   let pixels = document.querySelectorAll('.pixel');
   let botaoReset = document.getElementById('clear-board');
@@ -18,7 +18,7 @@ function eventAdd() {
     pixels[i].addEventListener('click', colorPixel);
   }
   botaoReset.addEventListener('click', resetPalette);
-}
+} */
 
 function setColors() {
   let botoesCores = document.querySelectorAll('.color');
