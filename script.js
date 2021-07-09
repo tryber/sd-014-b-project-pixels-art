@@ -18,6 +18,17 @@ function fillCells(cells, paramLines) {
   }
 }
 
+// selecionando uma das palletas de cores.
+function selectedColor(colors) {
+  for (let index = 0; index < colors.length; index += 1) {
+    colors[index].addEventListener('click', function () {
+      const oldSelected = document.querySelector('.selected');
+      oldSelected.className = 'color';
+      colors[index].className = 'selected color';
+    });
+  }
+}
+
 window.onload = function load() {
   const colors = document.querySelectorAll('.color');
 
@@ -33,4 +44,6 @@ window.onload = function load() {
   createLine(lineUser);
   const lines = document.querySelectorAll('.tr');
   fillCells(columnUser, lines);
+
+  selectedColor(colors);
 };
