@@ -37,13 +37,13 @@ const board = document.createElement('div');
 board.id = 'pixel-board';
 document.querySelector('body').appendChild(board);
 
-for (let indexLine = 0; indexLine < 16; indexLine += 1) {
+for (let indexLine = 0; indexLine < 5; indexLine += 1) {
   // Cria uma linha
   const line = document.createElement('div');
   line.id = 'line';
   board.appendChild(line);
   // Cria pixel
-  for (let index = 0; index < 16; index += 1) {
+  for (let index = 0; index < 5; index += 1) {
     const pixel = document.createElement('div');
     pixel.classList.add('pixel');
     line.appendChild(pixel);
