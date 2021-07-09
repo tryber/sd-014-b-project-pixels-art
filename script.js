@@ -36,11 +36,19 @@ window.onload = function () {
   let boxOfPixels = document.querySelector('#pixel-board');
   boxOfPixels.addEventListener('click', receiveColorOfPixels);
 
-  function receiveColorOfPixels (Event) { 
+  function receiveColorOfPixels(Event) {
     let selectedPixels = document.querySelector('.selected');
     let colorSelect = window.getComputedStyle(selectedPixels).getPropertyValue('background-color'); //fonte:https://www.w3schools.com/jsref/met_cssstyle_getpropertyvalue.asp. e https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle.
     Event.target.style.backgroundColor = colorSelect;
   }
-  
 
+  let clickButtonToClear = document.querySelector('#clear-board');
+  clickButtonToClear.addEventListener('click', clearEverything);
+
+  function clearEverything() {
+    let pixels = document.querySelectorAll(".pixel")
+    for (let index = 0; index < pixels.length; index += 1){
+      pixels[index].style.backgroundColor = "white";
+    }
+  }
 }
