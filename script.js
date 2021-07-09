@@ -7,11 +7,11 @@ const select = () => {
   });
 };
 const fill = () => q('#pixel-board').addEventListener('click', (e) =>
-  (e.target.style.backgroundColor = q('.selected').style.backgroundColor));
+  e.target.style.backgroundColor = q('.selected').style.backgroundColor);
 const clear = () => q('#clear-board').addEventListener('click', () => {
-  for (let pxl of qll('.pixel')) pxl.style.backgroundColor = 'white';
+  for (const pxl of qll('.pixel')) pxl.style.backgroundColor = 'white';
 });
-select(), fill(), clear();
+select(); fill(); clear();
 /*Referencias do trabalho, fontes de estudo etc:
 
 Tabelas Display Flex: https://www.maujor.com/tutorial/anti-heroi-css-display-table.php
