@@ -1,0 +1,38 @@
+header {
+  text-align: center;
+  font-family: monospace;
+}
+
+#color-palette {
+  padding: 10px 0px 10px 0px;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.color {
+  margin: 0px 10px 0px 10px;
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+}
+
+#clear-board{
+  display: block;
+  margin: 5px auto 5px auto;
+  border-radius: 10px;
+  width: 100px;
+  /* border: 1px solid black; */
+}
+
+#pixel-board{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.pixel {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+}
