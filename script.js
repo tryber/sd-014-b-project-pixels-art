@@ -12,18 +12,17 @@ color3.style.backgroundColor = "green";
 let color4 = document.getElementsByClassName('color')[3];
 color4.style.backgroundColor = "yellow";
 
-color1.addEventListener("click" , recebeClick);
-color2.addEventListener("click" , recebeClick);
-color3.addEventListener("click" , recebeClick);
-color4.addEventListener("click" , recebeClick);
+function clickNaCor(event) {
+  const corSelect = document.querySelector('.selected');
+  corSelect.classList.remove('selected');
 
-function recebeClick(event) {
-  for (index = 0; index < 5; index +=1){
-    let corSelect = document.querySelector('.color');
-    if (corSelect[index] === document.querySelector('.selected')){
-      corSelect = corSelect[index].classList.remove('.selected');
-    } 
-  }
-  event.target.classList.add('.selected');
+  event.target.classList.add('selected');
 }
+function addClick () {
+color1.addEventListener("click" , clickNaCor);
+color2.addEventListener("click" , clickNaCor);
+color3.addEventListener("click" , clickNaCor);
+color4.addEventListener("click" , clickNaCor);
+}
+addClick();
 }
