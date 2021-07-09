@@ -43,3 +43,9 @@
   grid: auto-flow / repeat(5, auto);
   justify-content: center;
 }
+
+#clear-board {
+    margin-left: auto;
+    margin-right: auto;
+    width: 7em;
+}
