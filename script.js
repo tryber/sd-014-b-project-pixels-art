@@ -49,9 +49,13 @@ function generatePixelCells(n) {
 }
 
 const generateCellsButton = document.querySelector('#generate-board');
-const inputValue = document.querySelector('#board-size').value;
 
+<<<<<<< HEAD
 function buttonEvent() {
+=======
+generateCellsButton.addEventListener('click', function buttonEvent() {
+  let inputValue = document.querySelector('#board-size').value;
+>>>>>>> parent of 0608edb... Projeto Pixels Art :rocket: requisito 12 com indentação de script v1.11
   if (inputValue === '') {
     alert('Board Inválido!');
   } else if (inputValue > 5 && inputValue <= 50) {
