@@ -1,10 +1,10 @@
 let colorSelected = 'black';
 
-window.onload = function () {
+window.onload = function() {
   setColors();
+  eventAdd();
   const colorBlack = document.querySelector('.color');
   colorBlack.classList.add('selected');
-  eventAdd();
 }
 
 function eventAdd() {
