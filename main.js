@@ -1,24 +1,26 @@
 window.onload = function initialBlack() {
-    const blackColor = document.querySelector('.black')
-    blackColor.classList.add('selected')
+    const blackColor = document.querySelector('.black');
+    blackColor.classList.add('selected');
 }
 
-const base = 5;
-const pixBoard = document.getElementById('pixel-board');
-const divsWithColor = document.querySelectorAll('.color');
+let base = 5;
+let pixBoard = document.getElementById('pixel-board');
+let divsWithColor = document.querySelectorAll('.color');
 
-function createPixBoard() {
-    for (let index = 1; index <= base; index += 1) {
-        const line = document.createElement('div');
+function createPixBoard(value1) {
+    for (let index = 1; index <= value1; index += 1) {
+        let line = document.createElement('div');
+        line.className = 'line';
         pixBoard.appendChild(line);
-        for (let secondIndex = 0; secondIndex < base; secondIndex += 1) {
-            const pixel = document.createElement('div');
+        for (let secondIndex = 0; secondIndex < value1; secondIndex += 1) {
+            let pixel = document.createElement('div');
             pixel.className = 'pixel';
             line.appendChild(pixel);
         }
     }
 }
-createPixBoard();
+createPixBoard(base)
+
 
 function assignSelected(color) {
     let selected = document.querySelector('.selected');
@@ -57,13 +59,32 @@ changePixel()
 function clearBoard() {
     let button = document.getElementById('clear-board');
     let pixels = document.querySelectorAll('.pixel')
-    button.addEventListener('click', function (){
-        for (let index = 0; index < pixels.length; index += 1){
+    button.addEventListener('click', function () {
+        for (let index = 0; index < pixels.length; index += 1) {
             pixels[index].style.backgroundColor = 'white';
         }
     });
 }
 clearBoard()
+
+function changeBoard() {
+    let button = document.getElementById('generate-board');
+    let input = document.getElementById('board-size');
+    button.addEventListener('click', function (){
+        let value = parseInt(input.value);
+        if (value >= 5 && value <= 50 && value > 0) {
+            base = value;
+        } else {
+            alert("Board inválido!");
+        }
+    })
+}
+changeBoard()
+
+
+
+
+
 
 
 

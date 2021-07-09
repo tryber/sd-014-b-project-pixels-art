@@ -32,3 +32,9 @@
  height: 40px;
  display: inline-block;
 }
+
+.line {
+ margin: 0;
+ padding: 0;
+ height: 40px;
+}
