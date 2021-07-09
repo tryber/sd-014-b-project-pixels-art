@@ -4,18 +4,16 @@
     font-size: 21px;
 
 }
-.title{
 
-}
-#color-palette{ 
-}
 .color{
     border: 1px solid rgb(0, 0, 0);
     display: inline-block;
     width: 50px;
     height: 40px;    
 }
-
+div.color:nth-of-type(1){
+    background-color: black;
+}
 div.selected{
     background-color: black;
 
@@ -35,7 +33,6 @@ div.pixel{
     background-color: rgb(255, 255, 255);
     width: 40px;
     height: 40px;
-    color: rgb(255, 255, 255);
     border: 1px solid rgb(0, 0, 0);
         
 }
