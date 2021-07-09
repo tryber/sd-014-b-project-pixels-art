@@ -20,3 +20,11 @@ function addColor(event){
 for(let index = 0; index < pixelList.length; index +=1){
    pixelList[index].addEventListener("click", addColor);
 }
+
+function emptyPixels(){
+   for(let index = 0; index < pixelList.length; index +=1){
+      pixelList[index].style.backgroundColor = "white";
+   }
+}
+let getButton = document.getElementById("clear-button");
+getButton.addEventListener("click", emptyPixels);
