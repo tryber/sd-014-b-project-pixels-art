@@ -21,7 +21,7 @@
 
   function colorPix(value) {
     // value = colorShift();
-  let currentPix = document.querySelectorAll("#tableRow div");
+  let currentPix = document.querySelectorAll(".pixel");
   for (index = 0; index < currentPix.length; index += 1) {
     currentPix[index].addEventListener('click', function() {
       this.style.backgroundColor = value;
@@ -44,6 +44,15 @@ function removeClass() {
   item.className = "color";
 }
 
+function clearButton() {
+  let button = document.getElementById("clear-board");
+  button.addEventListener('click', function() {
+    let clearPix = document.querySelectorAll(".pixel");
+    for (index = 0; index < clearPix.length; index += 1) {
+      clearPix[index].style.backgroundColor = "white";
+    }
+  })
+}
 // - - - - - - - - - - //
 
 window.onload = function() {
@@ -54,6 +63,8 @@ window.onload = function() {
   // let colorId = colorShift();
 
   createTable(repeatCount);
+
+  clearButton();
 
   defineClass();
 
