@@ -1,16 +1,20 @@
+document.querySelector(color).style.backgroundColor = 'black';
+
 window.onload = function start() {
-  document.getElementById('black').classList.add('selected');
-  document.querySelector(color).style.backgroundColor = 'black';
+  //document.getElementById('black').classList.add('selected');
+  
   let colors = randomColors();
   let colorsOK = verifyColors(colors);
   setPalette(colorsOK);
 };
 
 function randomColors() {
-  let colorsPalette = [];
+  const colorsPalette = [];
   const firstColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`; // Sugestão ESLint: prefer-template
   colorsPalette.push(firstColor);
-  const secondColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  do {
+    let secondColor = `#${Math.floor(Math.random() * 16777215).toString(16);}`;
+
   colorsPalette.push(secondColor);
   const thirdColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   colorsPalette.push(thirdColor);
@@ -23,7 +27,7 @@ function setPalette(colorsRandom) {
   document.getElementById('color2').style.backgroundColor = colorsRandom[1];
   document.getElementById('color3').style.backgroundColor = colorsRandom[2];
 }
-
+/*
 function verifyColors(colors) {
   let test = true;
   let verifyWhite = false;
@@ -31,12 +35,18 @@ function verifyColors(colors) {
   do {
     let check = randomColors();
     if (check[0] === check[1] || check[0] === check[2] || check[1] === check[2]) {
-        test = true;
+        test = true;window.onload = function start() {
+  document.getElementById('black').classList.add('selected');
+  document.querySelector(color).style.backgroundColor = 'black';
+  let colors = randomColors();
+  let colorsOK = verifyColors(colors);
+  setPalette(colorsOK);
+};
         }
     }
-    while (test === true)
+    while (test === true);
     return colors;
-  }
+  }*/
 
 // Requisito 6: Defina a cor preta como cor inicial. Ao carregar a página, a cor preta já deve estar selecionada para pintar os pixels
 // let colorZero = 'black';
@@ -63,3 +73,4 @@ clearBoard(); */
 // getElementsByClassName --> retorna lista de elementos, não retorna apenas um elemento
 // getElementsByTagName -->  retorna lista de elementos, não retorna apenas um elemento
 // querySelector --> 
+
