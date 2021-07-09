@@ -8,12 +8,15 @@
 .black {
   background-color: black;
 }
+
 .yellow {
   background-color: yellow;
 }
+
 .red {
   background-color: red;
 }
+
 .green {
   background-color: green;
 }
@@ -22,10 +25,12 @@
   display: table;
   padding: 5px;
 }
+
 .tr {
   display: table-row;
   padding: 5px;
 }
+
 .pixel {
   display: table-cell;
   padding: 5px;
