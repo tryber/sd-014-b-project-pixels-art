@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100;200;300;400;500;600;700;800;900&display=swap') ;
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,15 +6,13 @@
   padding: 0;
 }
 
-
 #title {
   text-align: center;
   background-color: black;
   color: orangered;
   text-transform: uppercase;
-  font-family: Encode Sans SC, sans-serif, serif;
-  margin-bottom: 50px;
-  padding: 30px;
+  font-family: 'Encode Sans SC';
+  margin-bottom: 20px;
 }
 
 #color-palette{
@@ -24,8 +22,46 @@
 
 .color {
   display: inline-block;
-  border: 1px solid black;
-  width: 100px;
-  height: 100px;
+  border: 1px solid;
+  width: 50px;
+  height: 50px;
   margin-right: 5px;
+}
+
+#pixel-board {
+  margin: 0 auto;
+  border: 1px solid;
+  border-spacing: 0;
+}
+
+.pixel {
+  border: 1px solid;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+}
+
+#align-itens {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 20px auto;
+}
+
+button , input {
+  text-align: center;
+  margin: 10px 10px;
+}
+
+#generate-board {
+  padding: 8px;
+}
+
+#board-size {
+  font-size: 20px;
+}
+
+#clear-board {
+  padding: 8px
 }
