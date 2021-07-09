@@ -1,14 +1,35 @@
 #title {
-color:black;
-font-size: 30px;
-font-family: 'Lucida Sans', Verdana, sans-serif;
+  color:black;
+  font-size: 30px;
+  font-family: 'Lucida Sans', 'Verdana', 'sans-serif';
 }
-#color-palette {}
-.color {}
-.container{}
-#black {}
-#orange{}
-#red {}
-#blue{}
-#pixel-board{}
-.pixel{}
+#color-palette {
+    border: 1px solid black;
+}
+.color , .pixel {
+    border:1px solid black;
+}
+#black {
+    background-color: black;
+    border:1px solid black;
+}
+#orange {
+    background-color: orange;
+    border:1px solid black;
+}
+#red {
+    background-color: red;
+    border: 1px solid black;
+}
+#blue {
+    background-color: blue;
+    border: 1px solid black;
+}
+#pixel-board {
+    display: grid;
+    justify-content: center;
+}
+.pixel {
+    background-color: white;
+}
+
