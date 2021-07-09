@@ -16,6 +16,7 @@ function createPalette(){
         switch(index){
             case 1:
                 document.querySelectorAll('div')[1].style.backgroundColor = 'black';
+                document.querySelectorAll('div')[1].className = 'color selected'
             break;
             case 2:
                 document.querySelectorAll('div')[2].style.backgroundColor = 'blue';
