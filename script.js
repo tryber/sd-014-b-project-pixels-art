@@ -8,18 +8,34 @@
 const paletteColors = document.querySelectorAll('.color');
 console.log(paletteColors.length);
 
+function getColor() {
+  const currentPalette = document.querySelector('.selected');
+  const currentColor = window
+    .getComputedStyle(currentPalette)
+    .getPropertyValue('background-color');
+  return currentColor;
+}
+
 function addClassSelected(event) {
   const lastColor = document.querySelector('.selected');
   lastColor.classList.remove('selected');
   event.target.classList.add('selected');
   console.log(event);
+  getColor();
 }
 
 for (let i = 0; i < paletteColors.length; i += 1) {
   paletteColors[i].addEventListener('click', addClassSelected);
 }
 
-function getColor () {
-  let currentPalette = document.querySelector('.selected')
-  let currentColor = window.getComputedStyle(currentPalette).getPropertyValue("background-color")
+function applyColor(event) {
+  event.target.style.backgroundColor = 'getColor';
 }
+
+document.querySelectorAll('.pixel').forEach((item) => {
+  item.addEventListener('click', (event) => {
+    event.target.style.backgroundColor = getColor();
+    console.log(event);
+    console.log(getColor());
+  });
+});

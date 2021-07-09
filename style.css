@@ -1,59 +1,61 @@
 body {
-    background-color: rgb(31, 31, 31);
+  background-color: rgb(240, 240, 240);
 }
 
 #title {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(20, 20, 20);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(20, 20, 20);
 }
 
 #color-palette {
-    display: flex;
-    padding: 5px
+  display: flex;
+  padding: 5px;
 }
 
 .color {
-    border: 1px solid black;
-    width: 40px;
-    height: 40px;
-    display: table-cell;
-} 
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: table-cell;
+}
 
 #box1 {
-    background-color: black
+  background-color: black;
 }
 
 #box2 {
-    background-color: #EE988E
+  background-color: #ee988e;
 }
 
 #box3 {
-    background-color: #F5BB95
+  background-color: #f5bb95;
 }
 
 #box4 {
-    background-color: #F5D6A2
+  background-color: #f5d6a2;
 }
 
 #pixel-board {
-    display: table
+  display: table;
 }
 
 .pixel {
-    display: table-cell;
-    background-color: rgb(255, 255, 255);
-    color: rgb(9, 97, 168);
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
+  display: table-cell;
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
 }
 
 #row {
-    display: table-row;
+  display: table-row;
 }
 
 .selected {
-    width: 40px;
-    height: 40px;
-    padding: 12px;
+  width: 40px;
+  height: 40px;
+  padding: 12px;
 }
+
+/* Referências:  */
+/* https://stackoverflow.com/questions/29229523/how-and-why-to-use-display-table-cell-css */
