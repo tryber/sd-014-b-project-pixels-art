@@ -40,3 +40,27 @@ for (let index = 0; index < colors.length; index += 1) {
   color.style.border = 'black solid 1px';
   color.style.borderRadius = '50%';
 }
+
+// Cria um quadro de píxel 5x5 de elementos
+const canvas = document.createElement('div');
+canvas.className = 'canvas';
+canvas.id = 'pixel-board';
+document.querySelector('body').appendChild(canvas);
+canvas.style.width = '210px';
+canvas.style.height = '210px';
+canvas.style.border = 'black solid 1px';
+canvas.style.margin = '1.5em';
+canvas.style.marginLeft = '0';
+canvas.style.gridTemplateColumns = 'auto auto auto auto auto';
+canvas.style.display = 'grid';
+for (let index = 0; index < 25; index += 1) {
+  const div = document.createElement('div');
+  div.className = 'pixel';
+  div.innerHTML = index;
+  div.style.border = 'black solid 1px';
+  div.style.display = 'table-cell';
+  div.style.width = '40px';
+  div.style.height = '40px';
+  div.style.backgroundColor = '#ffffff';
+  canvas.appendChild(div);
+}
