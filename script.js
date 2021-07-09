@@ -23,3 +23,11 @@ for (let index = 0; index < pixel.length; index += 1){
     event.target.style.backgroundColor = color.id
   })
 } 
+
+const clearButton = document.querySelector('#clear-board');
+clearButton.addEventListener('click', function(){
+  const pixel = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixel.length; index += 1){
+    pixel[index].style.backgroundColor = 'white'
+  }
+})
