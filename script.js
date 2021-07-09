@@ -38,7 +38,7 @@ function clickGreen() {
 const pixels = document.querySelectorAll('.pixel');
 
 function paint() {
-  
+  console.log('teste');
 }
 
 function cleaning() {
