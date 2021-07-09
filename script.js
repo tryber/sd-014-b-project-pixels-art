@@ -1,8 +1,10 @@
 const firstDiv = document.getElementById('black');
 const secondDiv = document.getElementById('yellow');
 const thirdDiv = document.getElementById('red');
-const forDiv = document.getElementById('blue');
-const botao = document.getElementById('clear-board')
+const fourthDiv = document.getElementById('blue');
+const clearButton = document.getElementById('clear-board');
+const generateButton = documen.getElementById('generate-board');
+const pixelBoard = document.getElementById('pixel-board');
 
     for(let cont=0;cont <=24; cont+=1){
         let box = document.querySelectorAll('.pixel');
@@ -33,10 +35,25 @@ function resetColor(){
     let boxPrinted = document.querySelectorAll('.pixel')
     for (let cont = 0; cont <=24;cont+=1){
     boxPrinted[cont].style.backgroundColor = 'white';
-} 
+    } 
 }
 
-botao.addEventListener("click",resetColor);
+clearButton.addEventListener("click",resetColor);
+generateButton.addEventListener("click",creatDiv);
+
+function creatDiv(){
+    let n = input.value;
+    if (n > 0){
+        for (let cont=0; cont < n; cont+=1){
+            let div = document.createElement('div')
+            pixelBoard.appendChild(div);
+            div.classList.add('pixel');
+        }
+        }else {
+            alert('Board inválido!')
+        }
+    }
+
 
 
 
