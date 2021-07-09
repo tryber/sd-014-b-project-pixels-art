@@ -20,11 +20,23 @@ function generatePalet(){
     paletItem[3].style.backgroundColor = "green";
     paletItem[3].id = "green";
 }    
+for(index = 1; index <= 25; index += 1){
+    let line = document.createElement('div');
+    line.className = "pixel";
+    board.appendChild(line);
+    board.style.maxWidth = '410px';
+    board.style.maxHeight = '425px';
+    }
 
 function generateBoard(){
-    let board = document.getElementById('pixel-board');
+    let deleteBoard = document.querySelector('main');
+    let aBoard = document.getElementById('pixel-board');
     let input = document.getElementById("board-size").value;  
-    console.log(input);  
+      deleteBoard.removeChild(aBoard); 
+    let newboard = document.createElement('div');
+    newboard.id = 'pixel-board';
+    deleteBoard.appendChild(newboard); 
+    let board = document.getElementById('pixel-board');
     if(input === ''){
         alert('Board inválido!');
     }else{
