@@ -20,7 +20,7 @@ window.onload = function () {
 function selectColor() {
   const colorSelected = document.querySelectorAll('.color');
   for (let i = 0; i < colorSelected.length; i += 1) {
-    colorSelected[i].addEventListener('click', function() {
+    colorSelected[i].addEventListener('click', function () {
       if (!colorSelected[i].classList.contains('selected')) {
         for (let index = 0; index < colorSelected.length; index += 1) {
           colorSelected[index].classList.contains('selected');
@@ -34,3 +34,22 @@ function selectColor() {
   }
 }
 selectColor();
+
+// function getColor() {
+//   const getColorSelected = document.querySelectorAll('.selected');
+//   const getColorActive = window.getComputedStyle(getColorSelected, null).background;         
+//   console.log(getColorActive);
+// }
+// getColor();
+
+function selectPixels() {
+  const pixelsWhite = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixelsWhite.length; i += 1) { 
+    pixelsWhite[i].addEventListener('click', function () {
+    pixelsWhite[i].classList.add('selected');
+    pixelsWhite[i].style.backgroundColor = 'black';
+    console.log(pixelsWhite[i].style.backgroundColor);
+    });
+  }
+}
+selectPixels();
