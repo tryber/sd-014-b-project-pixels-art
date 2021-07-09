@@ -50,7 +50,7 @@
     margin: 0 auto;
 }
 
-.green-ryb {
+/* .green-ryb {
     background-color: rgb(85, 166, 48);
     width: 40px;
     height: 40px;
@@ -114,23 +114,8 @@
     height: 40px;
     border: 1px solid black;
     display: inline-block;
-}
-
-/* #table {
-    display: table;
-    padding: 0px;
-}
-.tr {
-    display: table-row;
-    padding: 0px;
-}
-.td {
-    display: table-cell;
-    padding: 0px;
-    width: 150px;
-    border: #000000 solid 1px;
-    margin: 0px;
 } */
+
 
 #canvas {
     align-items: center;
