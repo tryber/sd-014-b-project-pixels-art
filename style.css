@@ -1,6 +1,12 @@
 body {
-  margin: auto;
-  background-color: rgb(206, 206, 255);
+  text-align: center;
+  text-justify: auto;
+  width: 300px;
+  border: 1px solid rgb(57, 253, 155);
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(232, 232, 255);
 }
 
 .color {
@@ -35,4 +41,13 @@ body {
 
 #pixel-board {
   border-spacing: 0;
+  margin: auto;
+}
+
+#clear-board {
+  text-align: center;
+  width: 60px;
+  height: 20px;
+  background-color: white;
+  border: 1px solid black;
 }
