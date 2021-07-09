@@ -17,43 +17,60 @@ function createTable(){
 }
 createTable()
 
-function createPalette(){
-  const rowPalette = document.getElementById('color-palette');
-  let colorArray=['color1','color2','color3','color4']
-  for(index=0; index<4; index +=1 ){
-    const row=document.createElement('div');
-    if(index==0){
-    row.className='color';
-    row.classList.add(colorArray[index]); 
-    row.classList.add('selected');   
-    rowPalette.appendChild(row);
-    }
-    else{
-    row.className='color';
-    row.classList.add(colorArray[index]);       
-    rowPalette.appendChild(row);
-    }
-    
-  }  
 
-}
-createPalette()
-
-const color1 = document.getElementsByClassName('.color1')
-const color2 = document.getElementsByClassName('.color2')
-const color3 = document.getElementsByClassName('.color3')
-const color4 = document.querySelector('.color4')
-
-function selectedColor(event){
+//deleta e seleciona 
+function deletColor(event){
   const color = document.querySelector('.selected');
   color.classList.remove('selected');
   event.target.classList.add('selected');
 }
 
-color1.addEventListener('click', selectedColor);
-color2.addEventListener('click', selectedColor);
-color3.addEventListener('click', selectedColor);
-color4.addEventListener('click', selectedColor); 
+function selectedColor(){
+  const colorDelet= document.querySelectorAll('.color');
+  for(let index=0; index<colorDelet.length; index +=1){
+    colorDelet[index].addEventListener('click', deletColor);
+  }
+}
+
 
 selectedColor()
 
+
+function colorPixel(event)  {
+  let colorPallet = document.querySelector('.selected').style.backgroundColor
+  event.target.style.backgroundColor = colorPallet;
+} 
+
+
+function pixelSelect() {  
+  const pixel = document.querySelectorAll('.pixel')
+  for (let index = 0; index<pixel.length; index += 1){
+  pixel[index].addEventListener('click', colorPixel)
+  }
+}
+
+pixelSelect()
+
+function resetButton(){
+  const buttonReset = document.getElementById('button-reset')
+  const button = document.createElement('button');
+  buttonReset.appendChild(button);
+  button.id = 'clear-board';
+  button.innerText= 'Reset button';    
+}
+ resetButton()
+
+
+/*  function reset(){
+   const button = document.getElementById('clear-board')
+   button.addEventListener('click', function(){
+    let pixel= document.getElementsByClassName('pixel');
+    for(let index=0; index<pixel.length; index +=1){
+      pixel[index].style.backgroundColor = 'white';
+    }
+   })
+ }
+  */
+
+ 
+ 
