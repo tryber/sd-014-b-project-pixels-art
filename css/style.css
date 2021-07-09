@@ -1,0 +1,32 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#color-palette, #title {
+  padding-left: 35px;
+  padding-top: 15px;
+}
+
+.color {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.black {
+  background-color: black;
+}
+
+.violet {
+  background-color: blueviolet;
+}
+
+.green {
+  background-color: green;
+}
+
+.pink {
+  background-color: palevioletred;
+}
