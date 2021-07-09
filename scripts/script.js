@@ -79,7 +79,7 @@ document.querySelectorAll('.pixel').forEach((element) => {
 // Cria um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
 const clearButton = document.createElement('button');
 clearButton.id = 'clear-board';
-clearButton.innerHTML = 'Limpar pixels';
+clearButton.innerHTML = 'Limpar';
 const div = document.createElement('div');
 div.id = 'buttons';
 document.querySelector('#pixel-board').previousSibling.appendChild(div);
