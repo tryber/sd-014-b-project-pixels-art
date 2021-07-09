@@ -1,9 +1,6 @@
 * {
   text-align: center;
 }
-#pixel-board {
-  margin-left: 40%;
-}
 
 .color {
   display: inline-block;
@@ -31,6 +28,7 @@
 #pixel-board {
   display: table;
   padding: 5px;
+  margin-left: 40%;
 }
 
 .tr {
