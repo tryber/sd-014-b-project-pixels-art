@@ -96,3 +96,19 @@ function addListenerPixel (){
 }
 
 addListenerPixel();
+
+//Requisito 9:
+
+function clearEvent (){
+  let clearButton = document.querySelector('#clear-board')
+  clearButton.addEventListener('click', clearPixels)
+
+  function clearPixels (event){
+    let pixels = document.querySelectorAll('.pixel');
+    for (i = 0; i < pixels.length; i += 1){
+      pixels[i].style.backgroundColor = 'white';
+    }
+  }
+}
+
+clearEvent();

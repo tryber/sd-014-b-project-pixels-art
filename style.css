@@ -16,6 +16,15 @@ header {
   height: 50px;
   width: 50px;
 }
+
+#clear-board{
+  display: block;
+  margin: 5px auto 5px auto;
+  border-radius: 10px;
+  width: 100px;
+  /* border: 1px solid black; */
+}
+
 #pixel-board{
   padding: 10px;
   display: flex;
