@@ -12,6 +12,9 @@
   display: inline-block;
 }
 
+#clear-board{
+    box-align: center;
+}
 #cor1 {
   background-color: black;
   margin-left: 480px;

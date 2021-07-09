@@ -52,3 +52,19 @@ function colorSelector4() {
   document.querySelector('#cor3').classList.remove('selected');
   document.querySelector('#cor4').classList.add('selected');
 }
+
+colorSelector4();
+colorSelector3();
+colorSelector2();
+colorSelector1();
+
+function pintar() {
+  const currentColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
+}
+
+function clearBoard() {
+  const tdLength = document.getElementsByTagName('td').length;
+  for (let key = 0; key < tdLength; key += 1) {
+    document.getElementsByTagName('td')[key].style.backgroundColor = 'white';
+  }
+}
