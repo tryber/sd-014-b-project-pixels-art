@@ -13,10 +13,16 @@ document.getElementById("pixel-board").style.marginLeft = "10px";
 
 document.getElementById("black").classList.add("selected");
 
+// Explicação tirada do https://stackoverflow.com/questions/1484506/random-color-generator e foi realizada uma
+// busca no Google para entender o funcionamento das letras e números do sistema hexadecimal
 
 let colors = document.querySelectorAll(".color");
-for (let index = 1; index < colors.length; index += 1) {
+for (let index = 0; index < colors.length; index += 1) {
   colors[index].addEventListener("click", pickColor);
+}
+
+let randomColor = document.querySelectorAll(".color");
+for (let index = 1; index < randomColor.length; index += 1) {
   let color = getRandomColor();
   colors[index].style.backgroundColor = color;
   colors[index].id = color;
