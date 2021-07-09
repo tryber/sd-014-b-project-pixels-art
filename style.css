@@ -3,6 +3,9 @@
     border-style: solid;
     border-color: black;
     border-width: 1px;
+    height: 40px;
+    width: 40px;
+    padding: 20px;
 }
 
 #pixel-board {

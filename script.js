@@ -16,5 +16,21 @@ window.onload = function () {
             colors.style.backgroundColor = 'pink';
         }
     }
+    let color1 = document.querySelector('#blackPixel');
+    let color2 = document.querySelector('#bluePixel');
+    let color3 = document.querySelector('#purplePixel');
+    let color4 = document.querySelector('#pinkPixel');
+
+    color1.addEventListener(click, clickPalette);
+    color2.addEventListener(click, clickPalette);
+    color3.addEventListener(click, clickPalette);
+    color4.addEventListener(click, clickPalette);
+
+    function clickPalette(eventColor) {
+        let colorSelected = document.querySelector('.selected');
+        colorSelected.classList.remove("selected");
+        eventColor.target.classList.add("selected");
+        console.log(eventColor.target);
+    }
 }
 
