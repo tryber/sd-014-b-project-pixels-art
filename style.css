@@ -14,7 +14,6 @@
 #clear-board {
   padding: 5px;
   margin: 8px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
   border-radius: 25%;
   background-color: lime;
@@ -24,4 +23,22 @@
   background-color: green;
   color: white;
   font-weight: bold;
+}
+
+#input {
+  padding: 5px;
+  margin: 6px;
+  display: inline;
+}
+
+#board-size {
+  width: 10rem;
+  margin: 5px;
+  height: 1rem;
+  margin-left: 0;
+}
+
+#generate-board {
+  padding: 2px;
+  margin: 2px;
 }
