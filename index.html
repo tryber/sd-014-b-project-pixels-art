@@ -1,45 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Paleta de Cores</title>
-  <link rel="stylesheet" href="style.css">
-  
-</head>
-
-<body>
-
-  <div class="container">
-    <header>
-      <h1 id="title">Projeto Pixels arts</h1>
-    </header>
-    <div class="content">
-     
-      <div id="color-palette" class="color-palette">
+        <link rel="stylesheet" href="style.css">
         
-        <button class="color color1 selected" id="color1"></button>
-        <button class="color color2" id="color2"></button>
-        <button class="color color3" id="color3"></button>
-        <button class="color color4" id="color4"></button>
+    </head>
+    <body>
+        <section class="container">
+            <header class="header">
+                <h1 class="title is-2">Pixels Art</h1>
+            </header>
+
+            <div class="container paleta">
+                <h2 class="title is-5" id="title">Paleta de Cores</h2>
+                <div class="color-palette" id="color-palette">
+                    <div class="color black selected"></div>
+                    <div class="color color1"></div>
+                    <div class="color color2"></div>
+                    <div class="color color3"></div>
+                </div>
+            </div>
+    
+            <label class="label" for="">Tamanho do quadro</label>
+            <div class="form">
+                <input class="input is-primary" id="board-size" type="number" min="1" placeholder="">
+                <button class="button is-primary" id="generate-board">VQV</button>
+            </div>
+            <div class="board">
+                <button class="clear-board button is-danger" id="clear-board">Limpar board</button>
         
-      </div>
-      <div class="btn-config">
-        <div class="board-size-content">
-          <input type="number" id="board-size" placeholder="5" class="board-size" min="1"oninput="validity.valid || (value='');">
-          <button id="generate-board" class="generate-board">VQV</button>
-        </div>
-        
-        <button id="clear-board" class="clear-board">Limpar</button>
-      </div>
-      
-
-      <div id="pixel-board" class="pixel-board"></div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-
+                <div class="pixel-board" id="pixel-board">
+                    <div class="row">
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                    </div>
+                    <div class="row">
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                    </div>
+                    <div class="row">
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                    </div>
+                    <div class="row">
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                    </div>
+                    <div class="row">
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                        <div class="pixel"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </body>
 </html>
