@@ -6,15 +6,13 @@ Javascript Arrow Functions: https://www.w3schools.com/js/js_arrow_function.asp/
 //refs: Ajudas do meu colega, Glauco.
 //seleciona a palheta, aidicona um evento, seleciona a classe selected, no clique, remove do antigo e adiciona no novo.
 const select = () => {
-  document
-    .querySelector('#color-palette')
-    .addEventListener('click', async (e) => {
-      document.querySelector('.selected').classList.remove('selected');
-      e.target.classList.add('selected');
-    });
+  document.querySelector('#color-palette').addEventListener('click', (e) => {
+    document.querySelector('.selected').classList.remove('selected');
+    e.target.classList.add('selected');
+  });
 };
 //com a função paint pegamos a cor selecionada na select e aplicamos no item do pixel-board.
-const paint = () => {
+const fill = () => {
   document.querySelector('#pixel-board').addEventListener('click', (e) => {
     e.target.style.backgroundColor =
       document.querySelector('.selected').style.backgroundColor;
@@ -31,5 +29,5 @@ const clear = () => {
 };
 
 select();
-paint();
+fill();
 clear();
