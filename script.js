@@ -6,7 +6,7 @@ const select = () => {
     e.target.classList.add('selected');
   });
 };
-const fill = () => q('#pixel-board').addEventListener('click', async (e) =>
+const fill = () => q('div').addEventListener('click', async (e) =>
   await (e.target.style.backgroundColor = q('.selected').style.backgroundColor));
 const clear = () => q('#clear-board').addEventListener('click', () => {
   for (let p of qll('.pixel')) p.style.backgroundColor = 'white';
@@ -19,7 +19,7 @@ Flexbox: https://www.w3schools.com/css/css3_flexbox.asp
 Javascript Arrow Functions: https://www.w3schools.com/js/js_arrow_function.asp/
 operações com classlist https://developer.mozilla.org/pt-BR/docs/Web/API/Element/classList
 change backgrounds with js https://stackoverflow.com/questions/197748/how-do-i-change-the-background-color-with-javascript
-
+assync fuctions https://developers.google.com/web/fundamentals/primers/async-functions#:~:text=If%20you%20use%20the%20async,the%20rejected%20value%20is%20thrown.
 
 select: essa função é acionada com o click, quando clica-se remove selected do black e adiciona a classe selected a cor do clique.
 
