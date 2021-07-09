@@ -1,4 +1,5 @@
 const colorPalette = document.querySelector('#color-palette ul');
+const tablePixels = document.querySelector('#pixel-board');
 
 /**
  * essa função pega a lista das cores que estao na paleta e em seguida
@@ -24,4 +25,45 @@ colorPalette.addEventListener('click', (element) => {
   element.target.classList.add('selected');
 });
 
-console.log(colorPalette);
+function colorRGB(color) {
+  switch (color) {
+  case 'black':
+    return 'rgb(0, 0, 0)';
+  case 'red':
+    return 'rgb(254, 0, 0)';
+  case 'blue':
+    return 'rgb(16, 97, 255)';
+  case 'green':
+    return 'rgb(33, 182, 77)';
+  default:
+    return null;
+  }
+}
+
+/**
+ * essa funçao pega a lista das de cores na paleta e a pecorre
+ * buscando a cor selecionada, apos encontrar a cor selecionada
+ * pega o nome da cor atraves do id e passa esse nome como parametro
+ * para função 'colorRGB' e a mesma retorna a cor respectiva
+ * em rgb. Por fim a funçao retorna a cor selecionanda em rbg
+ */
+function selectedColor() {
+  const lis = document.querySelectorAll('li');
+  for (let i = 0; i < lis.length; i += 1) {
+    if (lis[i].classList.contains('selected')) {
+      let color = (lis[i].id);
+      color = colorRGB(color);
+      return color;
+    }
+  }
+}
+
+/**
+ * quando a tabela de pixels receber o evento de click
+ * pega o pixel (quadrado) que recebeu o click e atribui
+ * a ele a cor de fundo atual selecionada na paleta de cores
+ */
+tablePixels.addEventListener('click', (element) => {
+  const pixel = element.target;
+  pixel.style.backgroundColor = selectedColor();
+});
