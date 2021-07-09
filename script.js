@@ -4,6 +4,28 @@ const color2 = document.querySelector('.color-2');
 const color3 = document.querySelector('.color-3');
 const color4 = document.querySelector('.color-4');
 const pixels = document.querySelectorAll('.pixel');
+let selectedColor = '';
+
+// Função que captura qual o elemento está com a classe selected e salva a classe da cor correspondente em uma variável
+function captureSelected() {
+  for (let index = 0; index < allColors.length; index += 1) {
+    let currentBoxColor = allColors[index];
+    if (currentBoxColor.classList.contains('selected')) {
+      if (currentBoxColor === color1) {
+        selectedColor = 'color-1';
+      }
+      else if (currentBoxColor === color2) {
+        selectedColor = 'color-2';
+      }
+      else if (currentBoxColor === color3) {
+        selectedColor = 'color-3';
+      }
+      else if (currentBoxColor === color4) {
+        selectedColor = 'color-4';
+      }
+    }
+  }
+}
 
 function removeSelectedElement() {
   for (let index = 0; index < allColors.length; index += 1) {
@@ -14,7 +36,7 @@ function removeSelectedElement() {
 }
 
 function clickColor() {
-  RemoveSelectedElement();
+  removeSelectedElement();
   // Adiciono a classe selected ao elemento que chamou a função
   // O event.target referencia o o próprio elemento que realizou o evento
   event.target.classList.add('selected');
@@ -22,6 +44,7 @@ function clickColor() {
 
 function changeColorToPixel() {
   // Pegar a cor da paleta seleciona
+  captureSelected();
   // Adicionar a cor ao pixel clicado
 }
 
