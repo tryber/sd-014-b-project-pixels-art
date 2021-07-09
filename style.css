@@ -8,6 +8,8 @@
   width: 40px;
   height: 40px;
   display: inline-block;
+  border-radius: 40%;
+
 }
 
 .pixel {
@@ -16,6 +18,10 @@
   height: 40px;
   border: 1px solid black;
   display: inline-block;
+}
+
+.fundo-branco {
+  background-color: white;
 }
 
 #black {
