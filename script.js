@@ -3,7 +3,7 @@ const black = document.querySelector('#black');
 const green = document.querySelector('#green');
 const blue = document.querySelector('#blue');
 const yellow = document.querySelector('#yellow');
-const pixels = document.querySelector('#pixel-board');
+const boxes = document.querySelector('#pixel-board');
 
 function selectedColor(event) {
   const elemento = document.querySelector('.selected');
@@ -20,5 +20,18 @@ yellow.addEventListener('click', selectedColor);
 function changeBgColorPixel(event) {
   const getColor = document.querySelector('.selected');
   event.target.style.backgroundColor = getColor.id;
-};
-pixels.addEventListener('click', changeBgColorPixel)
+}
+boxes.addEventListener('click', changeBgColorPixel);
+
+// Requisito 09
+function clearButton() {
+  const button = document.querySelector('#clear-board');
+  button.addEventListener('click', function () {
+    const pixels = document.querySelectorAll('.pixel');
+    for (const value of pixels) {
+      value.style.backgroundColor = 'white';
+    }
+  });
+}
+
+clearButton();
