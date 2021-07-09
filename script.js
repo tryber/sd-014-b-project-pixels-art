@@ -3,8 +3,8 @@ const q = document.querySelector.bind(document)
 const qll = document.querySelectorAll.bind(document);
 const select = () => {
   q('#color-palette').addEventListener('click', async (e) => {
-    q('.selected').classList.remove('selected');
-    await e.target.classList.add('selected');
+    await q('.selected').classList.remove('selected');
+    e.target.classList.add('selected');
   });
 };
 const fill = () => q('#pixel-board').addEventListener('click', async (e) =>
@@ -24,7 +24,8 @@ change backgrounds with js https://stackoverflow.com/questions/197748/how-do-i-c
 assync fuctions https://developers.google.com/web/fundamentals/primers/async-functions#:~:text=If%20you%20use%20the%20async,the%20rejected%20value%20is%20thrown.
 how to select divs https://medium.datadriveninvestor.com/how-to-select-all-div-elements-on-a-page-using-javascript-9b2cd16af740#:~:text=How%20to%20Select%20All%20Elements%20with%20JavaScript,name%2C%20i.e.%20.&text=Calling%20document.
 
-____Funções____
+____Funções____ fiz o máximo para reduzi-las e usar uma sintaxe mais moderna
+
 select: essa função é acionada com o click, quando clica-se remove selected do black e adiciona a classe selected a cor do clique.
 
 fill: essa função é acionada no click, ela preenche um target contido no pixelboard, aplicando o backgroundColor da cor selecionada.
