@@ -15,9 +15,10 @@ function setColor(event) {
   event.target.style.backgroundColor = color.id;
 }
 
-let table = document.getElementById('pixel-board');
-table.addEventListener('click', setColor);
-
+let table = document.getElementsByClassName('pixel');
+for (let index of table) {
+  index.addEventListener('click', setColor);
+}
 //#9
 function clearTable() {
   let pixel = document.getElementsByClassName('pixel');
