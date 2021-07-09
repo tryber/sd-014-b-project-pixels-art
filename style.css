@@ -1,0 +1,54 @@
+#black {
+    background-color: black;
+}
+#red {
+    background-color: red;
+}
+#green {
+    background-color: green;
+}
+#blue {
+    background-color: blue;
+}
+* {
+    box-sizing: border-box;
+}
+#color-palette, #pixel-board {
+    width: 220px;
+    margin: auto;
+}
+.color {
+    width: 51px;
+    height: 50px;
+    margin: auto;
+    display: inline-block;
+    border: solid 1px black;
+}
+#pixel-board {
+    height: 230px;
+}
+h1 {
+    text-align: center;
+}
+.pixel-align{
+    width:100%;
+    display: inline-block;
+    margin-top: 5%;
+}
+.pixel {
+    width: 40px;
+    display: inline-block;
+    height: 40px;
+    border: solid 1px black;
+    background-color: white;
+}
+
+button {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.middle {
+    width: 70px;
+    margin: 1px auto 7px;
+}
