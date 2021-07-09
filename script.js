@@ -63,12 +63,12 @@ generateCellsButton.addEventListener('click', function buttonEvent() {
 });
 
 function generateRandomColors() {
-  let colorPaletteArray = document.getElementsByClassName('color')
+  const colorPaletteArray = document.getElementsByClassName('color');
   for (let index = 1; index < colorPaletteArray.length; index += 1) {
     const index1 = Math.trunc(Math.random() * (255));
     const index2 = Math.trunc(Math.random() * (255));
     const index3 = Math.trunc(Math.random() * (255));
-    colorPaletteArray[index].style.backgroundColor = `rgb(${index1}, ${index2},${index3})`
+    colorPaletteArray[index].style.backgroundColor = `rgb(${index1}, ${index2},${index3})`;
   }
 }
 generateRandomColors();
