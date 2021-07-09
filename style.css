@@ -8,54 +8,54 @@
   margin-bottom: 50px;
   }
 
-  #black {
+#black {
   background-color: black;
   }
 
-  #red {
+#red {
   background-color: red;
-  }
+}
 
-  #blue {
+#blue {
   background-color: blue;
-  }
+}
 
-  #springgreen {
+#springgreen {
   background-color: springgreen;
-  }
+}
 
-  #pixel-board {
+#pixel-board {
   display: table;
-  }         
+}         
 
-  .tr {
+.tr {
   display: table-row;
-  }
+}
 
-  .pixel {
+.pixel {
   display: table-cell;
   width: 40px;
   height: 40px;
   background-color: white;
   border: solid 1px black;
-  }
+}
 
-  #clear-board {
+#clear-board {
   margin: 0px 0px 10px 30px;
-  }
+}
 
-  #board-size {
+#board-size {
   margin-right: 10px;
   margin-bottom: 40px;
   width: 300px;
   float: inline-start;
-  }
+}
 
-  #generate-board {
+#generate-board {
   float: inline-end;
-  }
+}
 
-  .paragraph {
+.paragraph {
   margin-top: 70px;
   margin-bottom: 20px;
-  }
+}
