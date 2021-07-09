@@ -12,7 +12,7 @@ const colorOrange = document.createElement('div');
 const colorPink = document.createElement('div');
 
 // Insere cores nos elementos da paleta
-colorBackground.style.backgroundColor = '#282a36';
+colorBackground.style.backgroundColor = '#000000';
 colorCyan.style.backgroundColor = '#8be9fd';
 colorOrange.style.backgroundColor = '#ffb86c';
 colorPink.style.backgroundColor = '#ff79c6';
