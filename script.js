@@ -1,9 +1,9 @@
-const query = document.querySelector.bind(document);
-const queries = document.querySelectorAll.bind(document);
+//const query = document.querySelector.bind(document);
+//const queries = document.querySelectorAll.bind(document);
 
 function criaPixel(quant) {
-  let pixelBoard = document.querySelector('#pixel-board');
-  for (let i = 0; i < quant; i++) {
+  const pixelBoard = document.querySelector('#pixel-board');
+  for (let i = 0; i < quant; i += 1) {
     const pixel = document.createElement('div');
 
     pixel.className = 'pixel';
@@ -13,7 +13,7 @@ function criaPixel(quant) {
 criaPixel(25);
 
 function firstBlack() {
-  let color1 = document.querySelector('.black');
+  const color1 = document.querySelector('.black');
   color1.classList.add('selected');
 }
 firstBlack();
@@ -36,10 +36,15 @@ function seleciona() {
 }
 seleciona();
 
+function getColor() {
+  let selec = document.querySelector('.selected');
+  return selec.classList[1];
+}
+
 function print() {
-  let pixels = document.querySelectorAll('.pixel');
-  for (let i = 0; i < pixels.length; i++) {
-    let element = pixels[i];
+  const pixels = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    const element = pixels[i];
     element.addEventListener('click', function () {
       element.style.backgroundColor = `${getColor()}`;
     });
@@ -47,17 +52,12 @@ function print() {
 }
 print();
 
-function getColor() {
-  let selec = document.querySelector('.selected');
-  return selec.classList[1];
-}
-
 function clearButton() {
   let button = document.querySelector('#clear-board');
   let pixels = document.querySelectorAll('.pixel');
   console.log(pixels.length);
   button.addEventListener('click', function () {
-    for (let i = 0; i < pixels.length; i++) {
+    for (let i = 0; i < pixels.length; i += 1) {
       let pixel = pixels[i];
 
       pixel.style.backgroundColor = 'white';
