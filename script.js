@@ -18,17 +18,17 @@ function fillCells(cells, paramLines) {
   }
 }
 
-// selecionando uma das palletas de cores.
-function selectedColor(colors) {
-  for (let index = 0; index < colors.length; index += 1) {
-    colors[index].addEventListener('click', function () {
-      const oldSelected = document.querySelector('.selected');
-      oldSelected.className = 'color';
-      colors[index].className = 'selected color';
-    });
-  }
+function select(colors) {
+  const color = colors;
+  const oldSelected = document.querySelector('.selected');
+  oldSelected.className = 'color';
+  color.className = 'selected color';
 }
 
+function paintPixel(pixel) {
+  const selectColor = document.querySelector('.selected').getAttribute('style');
+  pixel.setAttribute('style', selectColor);
+}
 window.onload = function load() {
   const colors = document.querySelectorAll('.color');
 
@@ -37,13 +37,21 @@ window.onload = function load() {
   colors[2].setAttribute('style', 'background-color: yellow');
   colors[3].setAttribute('style', 'background-color: pink');
   colors[0].className = 'selected color';
-
-  const lineUser = 5;
-  const columnUser = 5;
-
-  createLine(lineUser);
-  const lines = document.querySelectorAll('.tr');
-  fillCells(columnUser, lines);
-
-  selectedColor(colors);
 };
+
+const colors = document.querySelectorAll('.color');
+const lineUser = 5;
+const columnUser = 5;
+
+createLine(lineUser);
+const lines = document.querySelectorAll('.tr');
+fillCells(columnUser, lines);
+for (let index = 0; index < colors.length; index += 1) {
+  colors[index].addEventListener('click', function selectColor() { select(colors[index]); });
+}
+
+const pixels = document.querySelectorAll('.pixel');
+
+for (let index = 0; index < pixels.length; index += 1) {
+  pixels[index].addEventListener('click', function pixelColor() { paintPixel(pixels[index]); });
+}
