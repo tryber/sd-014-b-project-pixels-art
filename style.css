@@ -9,6 +9,17 @@ body {
     display: table-cell;
 }
 
+.color:hover {
+	transform: scale(1.1);
+	border: solid #00cecb 2px;
+	transition: all ease 0.15s;
+}
+
+.selected {
+	transform: scale(1.1);
+	border: solid #ff0054 2px;
+}
+
 #pixel-board tr {
     display: table-row;
 }
