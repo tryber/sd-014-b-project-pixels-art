@@ -6,9 +6,9 @@ div #black {
   border :  1px solid black;
 }
 
-div #blue { 
+div #blue {
   display : inline-block;
-  background-color : rgb(65, 112, 199);
+  background-color : blue;
   width : 100px;
   height : 100px;
   border :  1px solid black;
@@ -16,7 +16,7 @@ div #blue {
 
 div #red {
   display: inline-block;
-  background-color: rgb(212, 8, 8);
+  background-color: red;
   width : 100px;
   height : 100px;
   border :  1px solid black;
@@ -24,13 +24,13 @@ div #red {
 
 div #green {
   display : inline-block;
-  background-color: rgb(48, 133, 32);
+  background-color: green;
   width : 100px;
   height : 100px;
   border :  1px solid black;
 }
 
-td, tr {
+td , tr {
   border : 1px solid black;
   width : 40px;
   height : 40px;
