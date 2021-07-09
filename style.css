@@ -10,7 +10,10 @@ body {
 }
 
 h1 {
-  font-weight: 400;
+  font-family: Tangerine, sans-serif;
+  font-weight: 700;
+  font-size: xxx-large;
+  margin-top: 5px;
 }
 
 .color {
@@ -21,10 +24,11 @@ h1 {
   border-radius: 5px;
   margin: 2px;
   transition: 0.5s;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
 }
 
 .selected {
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px rgba(255, 236, 194, 0.5);
   border-radius: 50%;
 }
 
@@ -79,7 +83,9 @@ input {
 }
 
 button {
-  background: rgb(49, 155, 49);
+  background: rgb(145, 29, 169);
+  color: white;
+  font-weight: 700;
   border: none;
   padding: 8px;
   border-radius: 5px;
