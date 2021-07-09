@@ -1,20 +1,24 @@
 const pixelColors = document.querySelector('#color-palette');
 
-pixelColors.addEventListener('click', function changeColorSelected(event) {
+function changeColorSelected(event) {
   const colorClassSelected = document.querySelector('.selected');
   colorClassSelected.classList.remove('selected');
   event.target.classList.add('selected');
   console.log(document.querySelector('.selected'));
-});
+}
+
+pixelColors.addEventListener('click', changeColorSelected);
 
 const tablePixel = document.querySelector('#pixel-board');
 
-tablePixel.addEventListener('click', function changePixelColor(mouse) {
+function changePixelColor(mouse) {
   const colorClassSelected = document.querySelector('.selected');
   const color = getComputedStyle(colorClassSelected);
   mouse.target.style.backgroundColor = color.backgroundColor;
   console.log(colorClassSelected.id);
-});
+}
+
+tablePixel.addEventListener('click', changePixelColor);
 
 const button = document.querySelector('#clear-board');
 
@@ -47,7 +51,7 @@ function generatePixelCells(n) {
 const generateCellsButton = document.querySelector('#generate-board');
 const inputValue = document.querySelector('#board-size').value;
 
-generateCellsButton.addEventListener('click', function buttonEvent() {
+function buttonEvent() {
   if (inputValue === '') {
     alert('Board Inválido!');
   } else if (inputValue > 5 && inputValue <= 50) {
@@ -57,7 +61,9 @@ generateCellsButton.addEventListener('click', function buttonEvent() {
   } else if (inputValue >= 50) {
     generatePixelCells(50);
   }
-});
+}
+
+generateCellsButton.addEventListener('click', buttonEvent);
 
 function generateRandomColors() {
   const colorPaletteArray = document.getElementsByClassName('color');
