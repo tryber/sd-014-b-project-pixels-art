@@ -33,7 +33,7 @@ addColor(['black', 'red', 'blue', 'green']);
 
 function tablePixel(row, cell) {
   const pixelBoard = document.getElementById('pixel-board');
-  for (let index = 1; index <= cell; index += 1) {
+  for (let index = 1; index <= row; index += 1) {
     const createBoxCell = document.createElement('div');
     createBoxCell.classList.add('pixel-tr');
     pixelBoard.appendChild(createBoxCell);
@@ -41,7 +41,7 @@ function tablePixel(row, cell) {
   const pixelCell = document.getElementsByClassName('pixel-tr');
   for (let index = 0; index < pixelCell.length; index += 1) {
     const pixelIndex = pixelCell[index];
-    for (let sIndex = 1; sIndex <= row; sIndex += 1) {
+    for (let sIndex = 1; sIndex <= cell; sIndex += 1) {
       const createBoxRow = document.createElement('div');
       createBoxRow.classList.add('pixel');
       pixelIndex.appendChild(createBoxRow);
@@ -100,3 +100,11 @@ for (let index = 0; index < boxPixel.length; index += 1) {
     event.target.style.backgroundColor = colorSelected;
   });
 }
+
+// Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
+
+const clearButton = document.getElementById('clear-board');
+
+clearButton.addEventListener('click', () => {
+  resetColorPixel();
+});
