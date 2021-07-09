@@ -21,10 +21,10 @@ window.onload = function () {
   let color3 = document.querySelector('#purplePixel');
   let color4 = document.querySelector('#pinkPixel');
 
-  color1.addEventListener("click", clickPalette);
-  color2.addEventListener("click", clickPalette);
-  color3.addEventListener("click", clickPalette);
-  color4.addEventListener("click", clickPalette);
+  color1.addEventListener('click', clickPalette);
+  color2.addEventListener('click', clickPalette);
+  color3.addEventListener('click', clickPalette);
+  color4.addEventListener('click', clickPalette);
 
   function clickPalette(eventColor) {
     let colorSelected = document.querySelector('.selected');
@@ -32,4 +32,15 @@ window.onload = function () {
     eventColor.target.classList.add("selected");
     console.log(eventColor.target);
   }
+
+  let boxOfPixels = document.querySelector('#pixel-board');
+  boxOfPixels.addEventListener('click', receiveColorOfPixels);
+
+  function receiveColorOfPixels (Event) { 
+    let selectedPixels = document.querySelector('.selected');
+    let colorSelect = window.getComputedStyle(selectedPixels).getPropertyValue('background-color'); //fonte:https://www.w3schools.com/jsref/met_cssstyle_getpropertyvalue.asp. e https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle.
+    Event.target.style.backgroundColor = colorSelect;
+  }
+  
+
 }
