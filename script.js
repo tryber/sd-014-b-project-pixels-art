@@ -14,27 +14,13 @@ function carregarApp() {
 
   /* Cores inicias */
 
-  /* botoesCores[0].style.backgroundColor = 'black'; */
   botoesCores[1].style.backgroundColor = 'rgb(227,113,113)';
   botoesCores[2].style.backgroundColor = 'rgb(55,154,234)';
   botoesCores[3].style.backgroundColor = 'rgb(226,232,81)';
 
-  /* Eventos de seleção do botão e da cor */
+  /* Add eventos de seleção do botão e da cor */
   for (let i = 0; i < botoesCores.length; i += 1) {
-
-    botoesCores[i].addEventListener('click', function () {
-      
-      for (let k = 0; k < botoesCores.length; k += 1) {
-        botoesCores[k].classList.remove('selected');  
-      }
-
-      botoesCores[i].classList.add('selected');
-
-      corSelected = window.getComputedStyle(botoesCores[i], null).getPropertyValue("background-color");
-      console.log(corSelected);
-
-    })
-
+    botoesCores[i].addEventListener('click', selectColor);
   }
 
   /* Eventos de pintura na tabela */
@@ -53,4 +39,10 @@ function carregarApp() {
     }
   })
 
+}
+
+function selectColor(event) {
+  document.querySelector('.selected').classList.remove('selected');
+  event.target.classList.add('selected');
+  corSelected = window.getComputedStyle(event.target, null).getPropertyValue("background-color");
 }
