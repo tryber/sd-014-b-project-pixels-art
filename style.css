@@ -33,10 +33,9 @@ body {
 }
 
 #pixel-board {
-  display: flex;
-  flex-flow: row wrap;
-  width: 13%;
-  height: 13%;
+  display: grid;
+  grid: auto-flow / repeat(5, auto);
+  justify-content: center;
 }
 
 .pixel {
