@@ -34,7 +34,7 @@ function generateBoard() {
   addPropertyInPixelBoard(boardSizeLoaded);
 
   for (let index = 1; index <= boardSize; index += 1) {
-    let div = document.createElement('div');
+    let div =document.createElement('div');
     addProperty(div);
     pixelBoard.appendChild(div);
   }
