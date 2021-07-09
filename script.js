@@ -1,7 +1,8 @@
 window.onload = function (){
+    
 
 //Criação dos quadrados com cada um com sua cor
-  let colorPalette = document.getElementById('color-palette');
+  let colorPalette = document.getElementById('color-palette');  
 
   let colorBlack = document.createElement('div');
   colorBlack.className = "color selected"
@@ -36,6 +37,26 @@ window.onload = function (){
       pixelBoard.appendChild(pixels);    
     }
   }
-  
+//Criar seletor do botão
+
+  function selectedButton(){
+    let selectedButtonColor = document.querySelectorAll(".color")
+
+      for (let index = 0; index < selectedButtonColor.length; index += 1) {
+        selectedButtonColor[index].addEventListener('click', function (event){ 
+          for (let indexContador = 0; indexContador < selectedButtonColor.length;indexContador += 1) {
+
+            if (selectedButtonColor[indexContador] !== event.target){
+              selectedButtonColor[indexContador].classList.remove('selected');
+              
+            }else {
+              event.target.classList.add('selected');
+            }
+          }           
+        })        
+      }    
+  }
+  selectedButton();
 }
+  
   
