@@ -1,5 +1,5 @@
 window.onload = function teste() {
-  let select = document.getElementById('black');
+  const select = document.getElementById('black');
   select.classList.add('selected');
 }
 
@@ -7,7 +7,7 @@ function clickRed() {
   document.querySelector('#black').classList.remove('selected');
   document.querySelector('#blue').classList.remove('selected');
   document.querySelector('#green').classList.remove('selected');
-  let select = document.querySelector('#red').classList.add('selected');
+  document.querySelector('#red').classList.add('selected');
   alert('vermelho');
 }
 
@@ -15,7 +15,7 @@ function clickBlack() {
   document.querySelector('#red').classList.remove('selected');
   document.querySelector('#blue').classList.remove('selected');
   document.querySelector('#green').classList.remove('selected');
-  let select = document.querySelector('#black').classList.add('selected');
+  document.querySelector('#black').classList.add('selected');
   alert('preto');
 }
 
@@ -23,7 +23,7 @@ function clickBlue() {
   document.querySelector('#black').classList.remove('selected');
   document.querySelector('#red').classList.remove('selected');
   document.querySelector('#green').classList.remove('selected');
-  let select = document.querySelector('#blue').classList.add('selected');
+  document.querySelector('#blue').classList.add('selected');
   alert('azul');
 }
 
@@ -31,14 +31,14 @@ function clickGreen() {
   document.querySelector('#black').classList.remove('selected');
   document.querySelector('#blue').classList.remove('selected');
   document.querySelector('#red').classList.remove('selected');
-  let select = document.querySelector('#green').classList.add('selected');
+  document.querySelector('#green').classList.add('selected');
   alert('verde');
 }
 
 const pixels = document.querySelectorAll('.pixel');
 
-function paint() {
-  console.log('teste');
+function painting() {
+  
 }
 
 function cleaning() {
@@ -58,6 +58,9 @@ clickBlu.addEventListener('click', clickBlue);
 
 const clickG = document.getElementById('green');
 clickG.addEventListener('click', clickGreen);
+
+const paint = document.getElementById('pixel-board');
+paint.addEventListener('click', painting);
 
 const clean = document.getElementById('clear-board');
 clean.addEventListener('click', cleaning);

@@ -35,7 +35,7 @@ body {
   box-sizing: border-box;
   width: 40px;
   height: 40px;
-  background-color: white;
+  background-color: red;
   border: 1px solid black;
 }
 
@@ -50,4 +50,8 @@ body {
   height: 20px;
   background-color: white;
   border: 1px solid black;
+}
+
+td.pixel {
+  background-color: red;
 }
