@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-brnp">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Pixeks Art</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="script.js"></script>
 </head>
+
 <body>
     <header>
         <h1 id="title">Paleta de Cores</h1>
     </header>
     <div id="color-palette">
-        <div class="color black"></div>
-        <div class="color red"></div>
-        <div class="color blue"></div>
-        <div class="color green"></div>
+        <div onclick="addClasseBlack()" class="color selected" id="black"></div>
+        <div onclick="addClasseRed()" class="color" id="red"></div>
+        <div onclick="addClasseBlue()" class="color" id="blue"></div>
+        <div onclick="addClasseGreen()" class="color" id="green"></div>
     </div>
-    <div id="pixel-board">
-        <div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-        </div>
-        <div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-        </div>
-        <div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-        </div>
-        <div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-        </div>
-        <div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-        </div>
-    </div>
+    <table id="pixel-board">
+        <tr>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+        </tr>
+        <tr>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+        </tr>
+        <tr>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+        </tr>
+        <tr>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+        </tr>
+        <tr>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
