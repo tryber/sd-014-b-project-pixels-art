@@ -28,8 +28,10 @@ function colorir(event) {
 whiteBox.addEventListener('click', colorir);
 
 // criando uma função para que quando eu clique no botão limpar todo backgroudColor dos elementos <section id="pixel-board">  <div class="pixel"></div> receberão cor branca
-function clear(event) {    
-  event.target.classList.add('.fundo-branco');
+function clear() {    
+  whiteBox.style.backgroundColor = 'white'; // alterando o style com background recebendo a cor branca
+  for (let i = 0; i < arrayPixel.length; i += 1) {
+    arrayPixel[i].style.backgroundColor = 'white';// percorrendo o array com as classes pixel, que representa cada quadradinho e colocando o style background color branco.
+  }
 }
 botao.addEventListener('click', clear);
-console.log(arrayPixel);
