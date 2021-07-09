@@ -37,32 +37,40 @@ const board = document.createElement('div');
 board.id = 'pixel-board';
 document.querySelector('body').appendChild(board);
 
-for (let indexLine = 0; indexLine < 5; indexLine += 1) {
+for (let indexLine = 0; indexLine < 16; indexLine += 1) {
   // Cria uma linha
   const line = document.createElement('div');
   line.id = 'line';
   board.appendChild(line);
   // Cria pixel
-  for (let index = 0; index < 5; index += 1) {
+  for (let index = 0; index < 16; index += 1) {
     const pixel = document.createElement('div');
     pixel.classList.add('pixel');
     line.appendChild(pixel);
   }
 }
 
-window.onload = function script() {
-  // [Requisito 6]
-  // Define a cor preta como cor inicial.
-  black.classList.add('selected');
-  let selectedColor = black;
+// [Requisito 6]
+// Define a cor preta como cor inicial.
+black.classList.add('selected');
+let selectedColor = black;
 
-  // [Requisito 7]
-  // Clicar em uma das cores da paleta faz com que ela seja selecionada e utilizada para preencher os pixels no quadro.
-  colors.forEach((color) => {
-    color.addEventListener('click', (event) => {
-      selectedColor.classList.remove('selected');
-      event.target.classList.add('selected');
-      selectedColor = event.target;
-    });
+// [Requisito 7]
+// Clicar em uma das cores da paleta faz com que ela seja selecionada e utilizada para preencher os pixels no quadro.
+colors.forEach((color) => {
+  color.addEventListener('click', (event) => {
+    selectedColor.classList.remove('selected');
+    event.target.classList.add('selected');
+    selectedColor = event.target;
   });
-};
+});
+
+// [Requisito 8]
+// Clicar em um pixel dentro do quadro após selecionar uma cor na paleta faz com que o pixel seja preenchido com a cor selecionada.
+document.querySelectorAll('.pixel').forEach((element) => {
+  element.addEventListener('click', (event) => {
+    const pixel = event.target;
+    console.log(pixel);
+    pixel.style.backgroundColor = selectedColor.style.backgroundColor;
+  });
+});
