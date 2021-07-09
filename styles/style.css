@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url('images/pattern.svg');
+  background-image: url('../images/pattern.svg');
   background-repeat: repeat;
   font-family: Roboto, sans-serif;
 }
@@ -25,6 +25,7 @@ h1 {
   margin: 2px;
   transition: 0.5s;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
 }
 
 .selected {
@@ -72,7 +73,7 @@ header {
 }
 
 main {
-  margin: 150px auto 0;
+  margin: 200px auto 0;
 }
 
 input {
@@ -80,6 +81,7 @@ input {
   border: none;
   border-radius: 5px;
   margin: 5px 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
 }
 
 button {
@@ -90,8 +92,10 @@ button {
   padding: 8px;
   border-radius: 5px;
   transition: 0.4s;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
 }
 
 button:hover {
-  background-color: rgb(101, 181, 101);
+  background-color: rgb(174, 85, 192);
 }
