@@ -1,6 +1,7 @@
 
+
 function colorGenerator() {
-// Definir cores aleatoriamente (Referência [1])
+// Definir cores aleatoriamente (REF. [1])
 // O primeiro quadrado (número 0) é sempre preto
     for (let i=1; i <= 3; i+=1){
         let x = Math.floor(Math.random() * 256);
@@ -22,7 +23,22 @@ function colorGenerator() {
         } 
     }
 }
+
+function createPixel(value) {
+    // Criar um grid de 5x5
+    let pixelBoard = document.querySelector('#pixel-board');
+    for (let i = 1; i <= value; i += 1) {
+      let boardItem = document.createElement('div');
+      boardItem.className = 'pixel';
+      pixelBoard.appendChild(boardItem);
+    }
+}
+
+createPixel(25);
 colorGenerator();
 
-// REFERÊNCIAS:
+
+
+
+// REFERÊNCIAS JAVASCRIPT:
 // [1] GERADOR DE COR ALEATÓRIA: https://www.w3resource.com/javascript-exercises/javascript-math-exercise-40.php
