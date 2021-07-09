@@ -42,3 +42,5 @@ function paint(evento) {
   const selectedColor = document.querySelector('.selected').style.backgroundColor;
   evento.target.style.backgroundColor = selectedColor;
 }
+
+// Req 9: Botão reset

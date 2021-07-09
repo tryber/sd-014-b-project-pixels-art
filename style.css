@@ -50,6 +50,11 @@
     margin: 0 auto;
 }
 
+#clear-board {
+    display: flex;
+    position: center;
+}
+
 #canvas {
     align-items: center;
     justify-content: center;
