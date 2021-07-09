@@ -4,6 +4,9 @@ window.onload = initColorBlack;
 
 const optTable = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
+const btn = document.getElementById('clear-board');
+
+
 console.log("---");
 console.log(optTable);
 console.log("--");
@@ -18,6 +21,7 @@ function initColorBlack (){
     const secondColor = document.querySelector('#color2');
     const thirdColor = document.querySelector('#color3');
     const forthColor = document.querySelector('#color4');
+    
     firstColor.style.backgroundColor = "black"
     secondColor.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
     thirdColor.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
@@ -43,8 +47,22 @@ function newClass(event) {
 
 }
 
+function clearBoard (){
+    
+   let pixelboard = document.querySelectorAll('.pixel')
+  
+   for (var i = 0; i < pixelboard.length; i++){ 
+       console.log("seu lugar é no museu!");
+       pixelboard[i].style.backgroundColor = "white";
+   }
+
+   console.log(pixelboard);
+   // pixelboard.style.backgroundColor = "black";
 
 
 
+}
+
+btn.addEventListener('click', clearBoard)
 optTable.addEventListener('click', newClass)
 pixelBoard.addEventListener('click', selectColor)
