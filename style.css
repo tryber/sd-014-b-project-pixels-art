@@ -32,20 +32,14 @@ header {
   border-radius: 20px;
 }
 
-#black {
-  background-color: black;
-}
-
-#red {
-  background-color: red;
-}
-
-#blue {
-  background-color: blue;
-}
-
-#yellow {
-  background-color: yellow;
+.box {
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  background-color: #eddcd2;
+  width: 25%;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 table {
@@ -54,6 +48,7 @@ table {
   width: 200px;  
   border-spacing: 0;
 }
+
 tr {
   display: table-row;  
 }
