@@ -25,3 +25,16 @@
   justify-content: center;
   margin-top: 39px;
 }
+
+.container-botao {
+  text-align: center;
+  margin-top: 30px;
+}
+#clear-board {
+  width: 150px;
+  padding: 15px 20px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background-color: #fcc302;
+  font-size: 18px;
+}

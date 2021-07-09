@@ -30,3 +30,25 @@ blackColor.addEventListener('click', pintaPixel);
 redColor.addEventListener('click', pintaPixel);
 orangeColor.addEventListener('click', pintaPixel);
 yellowColor.addEventListener('click', pintaPixel);
+
+function mudaCor(evento) {
+  for (i = 0; i < 5; i++) {
+    let corAtual = document.querySelectorAll('.color');
+    if (corAtual[i] === document.querySelector('.selected'))
+      [(corAtual = corAtual[i].classList.remove('selected'))];
+  }
+  evento.target.classList.add('selected');
+}
+
+const pixelBo4rd = document.querySelector('#pixel-board');
+pixelBo4rd.addEventListener('click', (e) => {
+  const jáSelecionada =
+    document.querySelector('.selected').style.backgroundColor;
+  e.target.style.backgroundColor = jáSelecionada;
+});
+
+const botao = document.querySelector('#clear-board');
+botao.addEventListener('click', clearButton);
+function clearButton() {
+  document.querySelector('#pixel-board').style.backgroundColor = 'white';
+}
