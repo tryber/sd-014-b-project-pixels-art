@@ -54,3 +54,36 @@ function setColor() {
   }
 }
 setColor();
+
+function clearPixels() {
+  const buttonClear = document.querySelector('#clear-board');
+  const getPixels = document.querySelectorAll('.pixel');
+  buttonClear.addEventListener('click', function () {
+    for (let index = 0; index < getPixels.length; index += 1) {
+      getPixels[index].style.backgroundColor = 'white';
+    }
+  });
+}
+clearPixels();
+
+function newTable() {
+  const getPixels = document.querySelectorAll('.pixel');
+  const getButtonVqv = document.querySelector('#generate-board');
+  const getAlterSquare = document.querySelector('#board-size');
+  getButtonVqv.addEventListener('click', function () {
+    if (getAlterSquare.value !== '' && getAlterSquare.value < 5) {
+      getAlterSquare.value = 5;
+    }
+    for (let index = 0; index < getPixels.length; index += 1) {
+      if (getAlterSquare.value !== '') {
+        getPixels[index].style.width = `${getAlterSquare.value * getAlterSquare.value}px`;
+        getPixels[index].style.height = `${getAlterSquare.value * getAlterSquare.value}px`;
+        getPixels[index].style.backgroundColor = 'white';
+      } else {
+        alert('Board inválido!');
+        break;
+      }
+    }
+  });
+}
+newTable();

@@ -19,3 +19,12 @@
   width: 40px;
   height: 40px;
 }
+
+#clear-board {
+  margin: 5px;
+  margin-left: 20px;
+}
+
+#color-palette {
+  margin-left: 15px;
+}
