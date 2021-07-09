@@ -102,33 +102,17 @@ button, input {
 
 .color {
   border: 1px solid black;
-  
-  
+  background-color: #22ad94;
+  width: 40px;
+  height: 40px;
+    
 }
 
 #color-palette {
-  display: table;
-  padding: 25px;
-}
-
-table, tbody {
-  display: table;
-  padding: 5px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-tr {
-  display: table-row;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
   padding: 20px;
-}
-
-td {
-  display: table-cell;
-  width: 40px;
-  height: 40px;
-  border: 1px solid black;
-  margin: 5px;
 }
 
 .selected {
@@ -136,9 +120,15 @@ td {
 }
   
 #pixel-board {
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .pixel {
-
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: white;
+  
 }
