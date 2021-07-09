@@ -3,6 +3,10 @@
   padding: 0px;
 }
 
+body{
+  background-color:#55423d;
+}
+
 .container{
   text-align: center;
 }
@@ -45,4 +49,12 @@
 
 .color-white{
   background-color: rgb(255, 255, 255);
+}
+
+#clear-board{
+  background-color: #ffc0ad;
+  color: #271c19;
+  margin: 20px;
+  padding: 20px;
+  width: 250px;
 }

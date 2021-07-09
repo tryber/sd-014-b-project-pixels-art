@@ -4,6 +4,7 @@ const color2 = document.querySelector('.color-2');
 const color3 = document.querySelector('.color-3');
 const color4 = document.querySelector('.color-4');
 const pixels = document.querySelectorAll('.pixel');
+const clearBoardButton = document.querySelector('#clear-board');
 let selectedColor = '';
 
 // Função que captura qual o elemento está com a classe selected e salva a classe da cor correspondente em uma variável
@@ -60,9 +61,19 @@ function clickPixel() {
   }
 }
 
+//Define o background de pixels como branco
+function clearBoard() {
+  for (index = 0; index < pixels.length; index += 1) {
+    let currentPixel = pixels[index];
+    currentPixel.classList.remove(selectedColor);
+    currentPixel.classList.add('color-white');
+  } 
+}
+
 clickPixel();
 
 color1.addEventListener('click', clickColor);
 color2.addEventListener('click', clickColor);
 color3.addEventListener('click', clickColor);
 color4.addEventListener('click', clickColor);
+clearBoardButton.addEventListener('click', clearBoard);
