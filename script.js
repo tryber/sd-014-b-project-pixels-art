@@ -115,3 +115,11 @@ input.addEventListener("keyup", function(event) {
     document.getElementById("generate-board").click();
   }
 });
+
+function generateColor() { // Inspirado em código achado no seguint url (https://stackoverflow.com/questions/1152024/best-way-to-generate-a-random-color-in-javascript/1152508)
+  const primeiro = Math.floor(Math.random() * 256);
+  const segundo = Math.floor(Math.random() * 256);
+  const terceiro = Math.floor(Math.random() * 256);
+  
+  return `rgb(${primeiro}, ${segundo}, ${terceiro})`;
+}
