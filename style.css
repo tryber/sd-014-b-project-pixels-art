@@ -26,11 +26,12 @@ h1 {
 }
 
 .pixel {
-    
+
     width: 40px;
     height: 40px;
     border: black;
     border-width: 1px;
     border-style: solid;
+    background-color: white;
 
 }
