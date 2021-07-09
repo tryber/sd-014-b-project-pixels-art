@@ -4,7 +4,7 @@ window.addEventListener('load', function() {
 })
 
 let colors = document.querySelectorAll('.color');
-let divColors = document.body.children[1];
+let divColors = document.body.children[0].children[1];
 let selectColor = document.querySelector('.selected');
 
 function selectedPallet(event) {

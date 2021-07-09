@@ -49,3 +49,16 @@ button {
   width: 233px;
   background-color: black;
 }
+
+.backgroundImg {
+  background-image: url(https://cdn.mos.cms.futurecdn.net/sv9Bmvzmrnq8eJMgMZHezA.jpg);
+  background-size: 1700px;
+}
+
+#principal {
+  padding: 50px;
+  border: 1px solid black;
+  width: 250px;
+  margin-left: 40%;
+  margin-top: 5%;
+}
