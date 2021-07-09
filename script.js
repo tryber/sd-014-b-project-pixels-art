@@ -1,4 +1,6 @@
 window.onload = function blk() {
+    let allPixels = document.querySelectorAll('.pixel');
+
     for (let index = 0; index < allPixels.length; index++) {
         allPixels[index].addEventListener('click', function() {
             if (allPixels[index].style.backgroundColor != 'black') {
@@ -9,9 +11,17 @@ window.onload = function blk() {
 }
 
 
-
 let allPixels = document.querySelectorAll('.pixel');
 
+let limpar = document.getElementById('clear-board').innerHTML = "Limpar";
+let clean = document.getElementById('clear-board').addEventListener('click', clear);
+
+function clear() {
+    for (let index = 0; index < allPixels.length; index++)
+        if (allPixels[index].style.backgroundColor !== 'white') {
+            allPixels[index].style.backgroundColor = 'white';
+        };
+}
 //Remover classe selected!!!
 
 
