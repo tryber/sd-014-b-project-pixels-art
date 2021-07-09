@@ -65,7 +65,8 @@ for (let index = 0; index < keepAllColor.length; index += 1) {
 
 //---------------------------------------------------------------------------------
 
-// 
+// Coloca a cor selecionada no board de pixels
+
 const pixelToColor = document.querySelectorAll('.pixel');
 
 
@@ -77,4 +78,16 @@ pixelToColor[index].addEventListener('click', function(){
 }
 
 //---------------------------------------------------------------------------------------
+
+// Limpa a board de pixels ao clicar no botão
+
+const clearButton = document.getElementById('clear-board');
+function clearBoard () {
+for (let index = 0; index < pixelToColor.length; index += 1) {
+    if (pixelToColor[index].style.backgroundColor != 'white') {
+        pixelToColor[index].style.backgroundColor = 'white';
+        }
+    }
+}
+clearButton.addEventListener('click', clearBoard);
 
