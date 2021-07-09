@@ -1,39 +1,33 @@
 /* Variaveis globais */
 
-/* let corSelected = 'black'; */
+let colorSelected;
 
 /* ********* */
 
 window.onload = function () {
   const botaoBlack = document.getElementById('black');
   botaoBlack.classList.add('selected');
+  colorSelected = 'rgb(0,0,0)';
+  eventAdd();
 }
 
-/* function selectColor(event) {
+function selectColor(event) {
   document.querySelector('.selected').classList.remove('selected');
   event.target.classList.add('selected');
-  corSelected = window.getComputedStyle(event.target, null).getPropertyValue("background-color");
-} */
+  colorSelected = window.getComputedStyle(event.target, null).getPropertyValue("background-color");
+}
 
-/* Chamando eventos */
+function colorPixel(event) {
+  event.target.style.backgroundColor = colorSelected;
+}
 
-/* Add eventos de seleção do botão e da cor */
-/* for (let i = 0; i < botoesCores.length; i += 1) {
-  botoesCores[i].addEventListener('click', selectColor);
-} */
-
-/* Eventos de pintura na tabela */
-/* for (let i = 0; i < pixels.length; i += 1) {
-
-  pixels[i].addEventListener('click', function () {
-    pixels[i].style.backgroundColor = corSelected;
-  })
-
-} */
-
-/* Ferramentas - Botão de resetar tudo pra branco */
-/* botaoReset.addEventListener('click', function () {
-  for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].style.backgroundColor = 'rgb(255,255,255)';
+function eventAdd() {
+  let botoesCores = document.querySelectorAll('.color');
+  let pixels = document.querySelectorAll('.pixel');
+  for (let i = 0; i < botoesCores.length; i += 1) {
+    botoesCores[i].addEventListener('click', selectColor);
   }
-}) */
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].addEventListener('click', colorPixel);
+  }
+}
