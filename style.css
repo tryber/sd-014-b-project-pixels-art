@@ -51,6 +51,18 @@ h3 {
   background-color: black;
 }
 
+#blue {
+  background-color: blue;
+}
+
+#red {
+  background-color: red;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
 .color {
   width: 40px;
   height: 40px;
