@@ -1,46 +1,45 @@
 #title {
-  color: blue;
   text-align: center;
-  font-size: 50px;
+  font-size: 70px;
+  color: black;
 }
 
 .color {
   border: solid black 1px;
-  width: 60px;
-  height: 60px;
-  margin: 20px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
+  margin: 10px;
 }
 
-#clear-board{
-    box-align: center;
-}
 #cor1 {
   background-color: black;
-  margin-left: 480px;
+  margin-left: 550px;
 }
 
 #cor2 {
-  background-color: black;
+  background-color: blue;
 }
 
 #cor3 {
-  background-color: black;
+  background-color: red;
 }
 
 #cor4 {
-  background-color: black;
+  background-color: whitesmoke;
 }
 
-table {
-  border: solid black 1px;
+#clear-board {
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 3px;
+  display: flex;
   margin: auto;
-  margin-top: 50px;
 }
 
-td {
-  background-color: white;
-  border: solid black 1px;
+.pixel {
   width: 40px;
   height: 40px;
+  border: solid black 1px;
+  background-color: white;
 }

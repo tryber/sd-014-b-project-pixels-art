@@ -6,60 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paleta de Cores</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    
 </head>
 <body>
     <header>
-       <h1 id="title">Paleta de Cores</h1> 
+        <h1 id="title">Paleta de Cores</h1>
     </header>
-    <main>
-        <section id="color-palette">
-            <div class="color" id="cor1" onclick="colorSelector1()"></div>
-            <div class="color" id="cor2" onclick="colorSelector2()"></div>
-            <div class="color" id="cor3" onclick="colorSelector3()"></div>
-            <div class="color" id="cor4" onclick="colorSelector4()"></div>
-        </section>
-        <button id="clear-board" onclick="clearBoard()">Limpar</button>
-        <section>
-            <table id="pixel-board">
-                <tr>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                </tr>
-                <tr>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                </tr>
-                <tr>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                </tr>
-                <tr>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                </tr>
-                <tr>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                    <td class="pixel" onclick="pintar()"></td>
-                </tr>
-            </table>
-        </section>
-    </main>
-    <script src="script.js"></script>
+    <section id="color-palette">
+        <div class="color" id="cor1"></div>
+        <div class="color" id="cor2"></div>
+        <div class="color" id="cor3"></div>
+        <div class="color" id="cor4"></div>
+    </section>
+        <button id="clear-board">Limpar</button>
+        <table id="pixel-board" align="center">
+
+        </table>
 </body>
+<script src="script.js"></script>
 </html>

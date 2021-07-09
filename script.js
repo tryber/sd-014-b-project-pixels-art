@@ -1,5 +1,4 @@
-// Math.round() serve para arredondar valores para o inteiro mais próximo, https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round
-
+// gerador de uma cor aleatória
 function corAleatoria() {
   let valorR = Math.random() * (255 - 1) + 1;
   valorR = Math.round(valorR);
@@ -12,59 +11,45 @@ function corAleatoria() {
   return valorRGB;
 }
 
-function carregamentoCompleto() {
-  const corUm = document.querySelector('#cor1');
-  corUm.style.backgroundColor = 'black';
-  corUm.classList.add('selected');
-  const corDois = document.querySelector('#cor2');
+// gerar e atribuir cores três cores aleatórias para os três pixels
+function colorPaletteGenerator() {
+  const corUm = document.querySelector('#cor2');
+  corUm.style.backgroundColor = corAleatoria();
+  const corDois = document.querySelector('#cor3');
   corDois.style.backgroundColor = corAleatoria();
-  const corTres = document.querySelector('#cor3');
-  corTres.style.backgroundColor = corAleatoria();
-  const corQuatro = document.querySelector('#cor4');
-  corQuatro.style.backgroundColor = corAleatoria();
+  const cortres = document.querySelector('#cor4');
+  cortres.style.backgroundColor = corAleatoria();
 }
-window.onload = carregamentoCompleto;
 
-function colorSelector1() {
+//gerador da tabela de pixels
+let num = 5;
+const tabela = document.querySelector('table');
+
+function tableGenerator() {
+  for (let index = 0; index < num; index += 1) {
+    let line = document.createElement('tr');
+    tabela.appendChild(line);
+    for (let aux = 0; aux < num; aux += 1) {
+      let column = document.createElement('td');
+      column.innerText = '';
+      column.className = 'pixel';
+      line.appendChild(column);
+    }
+  }
+}
+
+function blackSelected() {
   document.querySelector('#cor1').classList.add('selected');
   document.querySelector('#cor2').classList.remove('selected');
   document.querySelector('#cor3').classList.remove('selected');
   document.querySelector('#cor4').classList.remove('selected');
 }
-
-function colorSelector2() {
-  document.querySelector('#cor1').classList.remove('selected');
-  document.querySelector('#cor2').classList.add('selected');
-  document.querySelector('#cor3').classList.remove('selected');
-  document.querySelector('#cor4').classList.remove('selected');
+// função de carregamento de página
+function loadingFunction() {
+  colorPaletteGenerator();
+  tableGenerator();
+  blackSelected();
 }
 
-function colorSelector3() {
-  document.querySelector('#cor1').classList.remove('selected');
-  document.querySelector('#cor2').classList.remove('selected');
-  document.querySelector('#cor3').classList.add('selected');
-  document.querySelector('#cor4').classList.remove('selected');
-}
-
-function colorSelector4() {
-  document.querySelector('#cor1').classList.remove('selected');
-  document.querySelector('#cor2').classList.remove('selected');
-  document.querySelector('#cor3').classList.remove('selected');
-  document.querySelector('#cor4').classList.add('selected');
-}
-
-colorSelector4();
-colorSelector3();
-colorSelector2();
-colorSelector1();
-
-function pintar() {
-  const currentColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
-}
-
-function clearBoard() {
-  const tdLength = document.getElementsByTagName('td').length;
-  for (let key = 0; key < tdLength; key += 1) {
-    document.getElementsByTagName('td')[key].style.backgroundColor = 'white';
-  }
-}
+// ativador da função de carregamento de página
+window.onload = loadingFunction;
