@@ -1,3 +1,4 @@
+/* eslint-disable prefer-arrow-callback */
 // eslint-disable-next-line func-names
 window.onload = function () {
   const getPixelBlack = document.querySelectorAll('.color')[0];
@@ -18,6 +19,7 @@ function createPixels() {
 }
 createPixels();
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
 function addClickColors() {
   const getTableColors = document.querySelectorAll('.color');
   for (let index = 0; index < getTableColors.length; index += 1) {
@@ -32,4 +34,19 @@ function addClickColors() {
     });
   }
 }
+
 addClickColors();
+
+function getColor(event) {
+  const getSelected = document.querySelector('.selected');
+  const color = window.getComputedStyle(getSelected, null).getPropertyValue('background-color');
+  event.target.style.backgroundColor = color;
+}
+
+function setColor() {
+  const getPixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < getPixels.length; index += 1) {
+    getPixels[index].addEventListener('click', getColor);
+  }
+}
+setColor();
