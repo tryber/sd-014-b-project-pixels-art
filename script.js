@@ -1,6 +1,6 @@
 /* Variaveis globais */
 
-let corSelected = 'rgb(0,0,0)';
+let corSelected;
 
 /* ********* */
 
@@ -11,13 +11,16 @@ function carregarApp() {
   let botoesCores = document.querySelectorAll('.color');
   let pixels = document.querySelectorAll('.pixel');
   let botaoReset = document.getElementById('clear-board');
-  
+
   /* Cores inicias */
 
   botoesCores[0].style.backgroundColor = 'rgb(0,0,0)';
   botoesCores[1].style.backgroundColor = 'rgb(227,113,113)';
   botoesCores[2].style.backgroundColor = 'rgb(55,154,234)';
   botoesCores[3].style.backgroundColor = 'rgb(226,232,81)';
+
+  botoesCores[0].classList.add('selected');
+  corSelected = window.getComputedStyle(botoesCores[0], null).getPropertyValue("background-color");
 
   /* Eventos de seleção do botão e da cor */
   for (let i = 0; i < botoesCores.length; i += 1) {
