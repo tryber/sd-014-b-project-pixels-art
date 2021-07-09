@@ -15,8 +15,21 @@ document.getElementById("black").classList.add("selected");
 
 
 let colors = document.querySelectorAll(".color");
-for (let index = 0; index < colors.length; index += 1) {
+for (let index = 1; index < colors.length; index += 1) {
   colors[index].addEventListener("click", pickColor);
+  let color = getRandomColor();
+  colors[index].style.backgroundColor = color;
+  colors[index].id = color;
+}
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  console.log(letters[Math.floor(Math.random() * 16)]);
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+
+  return color;
 }
 
 // Função que seleciona a cor na paleta e atribui a classe "selected"
