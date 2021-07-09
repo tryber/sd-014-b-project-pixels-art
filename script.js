@@ -48,8 +48,8 @@ const generateCellsButton = document.querySelector('#generate-board');
 
 generateCellsButton.addEventListener('click', function buttonEvent() {
   let inputValue = document.querySelector('#board-size').value;
-  if (input.value == '') {
-    alert("Board Inválido!");
+  if (input.value === '') {
+    alert('Board Inválido!');
   } else if (inputValue > 5 && inputValue <= 50) {
     generatePixelCells(inputValue);
   } else if (inputValue <= 5) {
@@ -57,21 +57,17 @@ generateCellsButton.addEventListener('click', function buttonEvent() {
   } else if (inputValue >= 50) {
     generatePixelCells(50);
   } else if (input.value == null) {
-    alert("Board Inválido!");
+    alert('Board Inválido!');
   }
-  input.value = ''
 });
 
 function generateRandomColors() {
   let colorPaletteArray = document.getElementsByClassName('color')
   for (let index = 1; index < colorPaletteArray.length; index += 1) {
-    colorPaletteArray[index].style.backgroundColor = `rgb(${Math.trunc(Math.random() * (255))}, ${Math.trunc(Math.random() * (255))},${Math.trunc(Math.random() * (255))})`
+    const index1 = Math.trunc(Math.random() * (255));
+    const index2 = Math.trunc(Math.random() * (255));
+    const index3 = Math.trunc(Math.random() * (255));
+    colorPaletteArray[index].style.backgroundColor = `rgb(${index1}, ${index2},${index3})`
   }
 }
 generateRandomColors();
-
-
-
-
-
-
