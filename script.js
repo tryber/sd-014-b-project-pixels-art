@@ -45,9 +45,9 @@ function generatePixelCells(n) {
 }
 
 const generateCellsButton = document.querySelector('#generate-board');
+const inputValue = document.querySelector('#board-size').value;
 
 generateCellsButton.addEventListener('click', function buttonEvent() {
-  let inputValue = document.querySelector('#board-size').value;
   if (inputValue === '') {
     alert('Board Inválido!');
   } else if (inputValue > 5 && inputValue <= 50) {
