@@ -22,13 +22,13 @@
   background-color: #320836;
 }
 
-/* #color-palette td:nth-of-type(5) {
+#color-palette td:nth-of-type(5) {
   background-color: slateblue;
 }
 
 #color-palette td:nth-of-type(6) {
     background-color: #DA4167;
-} */
+}
 
 .pixel {
   height: 40px;

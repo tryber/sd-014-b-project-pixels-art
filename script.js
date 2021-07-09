@@ -1,11 +1,12 @@
 window.onload = function () {
   btnBoardSize.addEventListener('click', setBoardSize);
   btnClearPixels.addEventListener('click', clearGrade);
-
+  let firstColor = document.querySelector('.color')
+  firstColor.classList.add('selected') // requisito 7
   for (let color of colors) {
     color.addEventListener('click', selectColor);
   }
-
+  
   updatePixels();
   setBoardSize(5);
 };
@@ -60,7 +61,7 @@ function setBoardSize(number) {
 function selectColor(selectedColor) {
   for (let color of colors) {
     if (color.className.includes('selected')) {
-      color.className = color.className.replace(' selected', '');
+      color.classList.remove('selected');
     }
   }
   selectedColor.target.className += ' selected';
