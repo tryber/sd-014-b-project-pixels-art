@@ -61,10 +61,7 @@ const colorsPallet = {
   color2: '#F11D00', //Vermelho
   color3: '#2FC18C', //Verde
   color4: '#54BCEA', //Azul
-  color5: '#F27924', //Laranja
-  color6: '#F3E26F', //Amarelo
-  color7: '#A52AEA', //Roxo
-  color8: '#F398B1' //Rosa
+  
 }
 
 let colorCurrent = colorsPallet.color1;
