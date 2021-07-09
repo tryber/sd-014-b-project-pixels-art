@@ -29,5 +29,11 @@
     height: 40px;
     background-color: white;
 }
+.botão{
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    border: solid 2px black;
+}
 
 

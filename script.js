@@ -34,9 +34,19 @@ function recebeClick(evento){
         corAtual = corAtual[index].classList.remove('selected');
         }
     }
-   evento.target.classList.add('selected');
-        
+   evento.target.classList.add('selected');      
 }
+
+    
+let telaPixels = document.querySelectorAll('.pixel');
+
+
+
+
+
+
+
+
 
 
 
