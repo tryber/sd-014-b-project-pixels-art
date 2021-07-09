@@ -1,3 +1,50 @@
 #title {
-    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(20, 20, 20);
+}
+
+#color-palette {
+    display: flex;
+    padding: 5px
+}
+
+.color {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    padding: 5px
+    display: table-cell;
+} 
+
+#box1 {
+    background-color: black
+}
+
+#box2 {
+    background-color: #EE988E
+}
+
+#box3 {
+    background-color: #F5BB95
+}
+
+#box4 {
+    background-color: #F5D6A2
+}
+
+#pixel-board {
+    display: table
+}
+
+.pixel {
+    display: table-cell;
+    background-color: rgb(255, 255, 255);
+    color: rgb(9, 97, 168);
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+#row {
+    display: table-row;
 }
