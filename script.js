@@ -21,4 +21,11 @@ greenDiv.addEventListener('click', changeSelectedColor);
 function paintSquare(event){
   event.target.style.backgroundColor = document.querySelector('.selected').id;
 }
-caixaPixel.addEventListener('click', paintSquare)
+caixaPixel.addEventListener('click', paintSquare) 
+
+function createClearButton(){
+  let buttonID = document.querySelector('#clear-board');
+  let buttonIcon = document.createElement('button');
+  buttonIcon.id = buttonID;
+ }
+ 
