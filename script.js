@@ -1,27 +1,18 @@
 const pixelColors = document.querySelector('#color-palette');
-
-function changeColorSelected(event) {
+pixelColors.addEventListener('click', function changeColorSelected(event) {
   const colorClassSelected = document.querySelector('.selected');
   colorClassSelected.classList.remove('selected');
   event.target.classList.add('selected');
   console.log(document.querySelector('.selected'));
-}
-
-pixelColors.addEventListener('click', changeColorSelected);
-
+});
 const tablePixel = document.querySelector('#pixel-board');
-
-function changePixelColor(mouse) {
+tablePixel.addEventListener('click', function changePixelColor(mouse) {
   const colorClassSelected = document.querySelector('.selected');
   const color = getComputedStyle(colorClassSelected);
   mouse.target.style.backgroundColor = color.backgroundColor;
   console.log(colorClassSelected.id);
-}
-
-tablePixel.addEventListener('click', changePixelColor);
-
+});
 const button = document.querySelector('#clear-board');
-
 button.addEventListener('click', function clearBoard() {
   const pixelCells = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixelCells.length; index += 1) {
@@ -30,7 +21,6 @@ button.addEventListener('click', function clearBoard() {
 });
 const tableParent = document.getElementById('pixel-board');
 console.log(tableParent);
-
 function generatePixelCells(n) {
   // código da linha 4 a 7, visualizado e re-interpretado da url https://www.codegrepper.com/code-examples/javascript/how+to+remove+all+child+elements+of+div+in+javascript
   while (tableParent.firstChild) {
@@ -49,13 +39,10 @@ function generatePixelCells(n) {
 }
 
 const generateCellsButton = document.querySelector('#generate-board');
+const inputValue = document.querySelector('#board-size').value;
 
-<<<<<<< HEAD
-function buttonEvent() {
-=======
 generateCellsButton.addEventListener('click', function buttonEvent() {
   let inputValue = document.querySelector('#board-size').value;
->>>>>>> parent of 0608edb... Projeto Pixels Art :rocket: requisito 12 com indentação de script v1.11
   if (inputValue === '') {
     alert('Board Inválido!');
   } else if (inputValue > 5 && inputValue <= 50) {
@@ -65,10 +52,7 @@ generateCellsButton.addEventListener('click', function buttonEvent() {
   } else if (inputValue >= 50) {
     generatePixelCells(50);
   }
-}
-
-generateCellsButton.addEventListener('click', buttonEvent);
-
+});
 function generateRandomColors() {
   const colorPaletteArray = document.getElementsByClassName('color');
   for (let index = 1; index < colorPaletteArray.length; index += 1) {
