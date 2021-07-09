@@ -12,6 +12,8 @@ color3.style.backgroundColor = "green";
 let color4 = document.getElementsByClassName('color')[3];
 color4.style.backgroundColor = "yellow";
 
+// função #7 para selecionar as 4 cores pré definidas  do pallete 
+// evento click espera a ação do click para executar a função click na cor, a função invoca um evento que seleciona o alvo com target
 function clickNaCor(event) {
   const corSelect = document.querySelector('.selected');
   corSelect.classList.remove('selected');
@@ -26,3 +28,16 @@ color4.addEventListener("click" , clickNaCor);
 }
 addClick();
 }
+
+function corPixel(event) {
+  const corSelectPixel = document.querySelector('.selected');
+
+  event.target.style.backgroundColor = corSelectPixel.style.backgroundColor;
+}
+
+function ClickPixel () {
+  const clickPalette = document.querySelector('#pixel-board');
+
+  clickPalette.addEventListener('click', corPixel);
+}
+ClickPixel();
