@@ -1,4 +1,5 @@
 let palette = document.querySelector("#color-palette");
+let pixelBoard = document.querySelector("#pixel-board");
 createPalette();
 
 function createPalette(){
@@ -29,4 +30,12 @@ function createPalette(){
 
     }
 }
-
+createPixel()
+function createPixel(){
+    for(let index = 0; index < 25; index += 1){
+        let pixel = document.createElement('div');
+        pixel.className = 'pixel'
+        pixelBoard.appendChild(pixel); 
+        
+    }
+}

@@ -1,16 +1,40 @@
+body{
+    background:url(img/gandalf.jpg) no-repeat;
+}
 #title{
-    margin-left: 20px;
+    margin-left: 70px;
 }
 .color{
+    border-radius: 50%;
     border: 1px solid black;
     float: left;
     display:inline;
     height: 70px;
     width: 70px;
-    margin-left:20px;
+    margin:10px 10px;
 }
 #color-palette{
-    height: 72px;
-    width: 390px;
-    border: 2px solid black;
+    border-radius: 100px;
+    height: 100px;
+    width: 370px;
+    border: 2px solid blanchedalmond;
+    clear: both;
+    background-color: cornsilk;
+    opacity: 70%;
+}
+#pixel-board{
+    opacity: 80%;
+    margin:30px 35px;
+    width: 350px;
+    height: 320px;
+ 
+}
+.pixel{
+    padding: 10px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    display: inline;
+    float: left;
+    border: 1px solid black;
 }
