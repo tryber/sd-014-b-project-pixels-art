@@ -5,7 +5,7 @@ const color3 = document.querySelector('.color-3');
 const color4 = document.querySelector('.color-4');
 const pixels = document.querySelectorAll('.pixel');
 
-function RemoveSelectedElement() {
+function removeSelectedElement() {
   for (let index = 0; index < allColors.length; index += 1) {
     let currentBoxColor = allColors[index];
     // Removo a classe selected
