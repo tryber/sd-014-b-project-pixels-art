@@ -64,3 +64,9 @@ h1{
   border: black solid 1px;
   background-color: white;
 }
+
+#clear-board{
+  margin-top: 20px;
+  border-color: teal;
+  background-color: turquoise;
+}
