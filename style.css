@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: cadetblue;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: fantasy;
+  color: white;
+}
+#color-palette {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+.color {
+  margin-right: 3px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+#pixel-board {
+  margin: auto;
+  display: table-row;
+}
+.pixel {
+  display: table-cell;
+  border: 1px solid black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+}
+#clear-board {
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 20px;
+  color: aqua;
+}
