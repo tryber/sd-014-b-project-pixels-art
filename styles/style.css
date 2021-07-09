@@ -1,3 +1,20 @@
 body {
   font-family: Roboto, sans-serif;
+  text-align: center;
+}
+
+#color-palette {
+  display: inline-block;
+  padding: 10px;
+  margin: auto;
+}
+
+.color {
+  border: black solid 1px;
+  border-radius: 50%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
