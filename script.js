@@ -3,7 +3,7 @@ const boxColor = ['black', 'blue', 'green', 'red'];
 
 for (let i = 0; i < 4; i += 1) {
   const boxPalheta = document.createElement('div');
-  const nroDoQuadro = i + 1;
+  //const nroDoQuadro = i + 1;
   if (i === 0) {
     boxPalheta.className = 'color selected';
   } else {
@@ -30,27 +30,28 @@ for (let i = 0; i < 5; i += 1) {
   }
 }
 
-console.log(boxColor);
-function selectColor () {
-  let colorSelected = document.querySelector('.color');
-  colorSelected.addEventListener('click', function () {
-    for (let i = 0; i < boxColor.length; i += 1){
-      let posicao = colorSelected[i];
-      console.log(posicao);
-    }
-    
-  /*   if (color === 'black') {
-      local.className = 'color selected';
-      color = 'color select';
-    } else {
-      local.className = 'color';
-      color = 'black';
-    } */
-  });
-};
-selectColor();
+function selectColor() {
+  const colorSelected = document.querySelectorAll('.color');
+  let verificador = 0;
+  for (let index = 0; index < colorSelected.length; index += 1) {
+    colorSelected[index].addEventListener('click', function (event) {
+      for (let index = 0; index < colorSelected.length; index += 1) {
+        const valorClasse = colorSelected[index].className;
+        if (valorClasse === 'color selected') {
+          verificador = index;
+          console.log(verificador);
+        }
+      }
+      let clickedColor = event.target.style.backgroundColor;
+      colorSelected[verificador].classList.remove('selected');
+      colorSelected[index].classList.add('selected');
+      console.log(event.target);
 
-function paintBox() {
+    });
+  };
+}
+selectColor();
+/* function paintBox() {
   let colorSelected = document.getElementsByClassName('color selected');
   let palheta = document.querySelector('.color');
   let box = document.querySelector('#pixel-board');
@@ -65,4 +66,4 @@ function paintBox() {
     }
   });
   };
-  paintBox();
+  paintBox(); */
