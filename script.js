@@ -1,5 +1,53 @@
-document.querySelector(color).style.backgroundColor = 'black';
+document.querySelector('.color').style.backgroundColor = 'black';
 
+function boardSize() {
+  console.log("teste");
+};
+
+function clearBoard() {
+  console.log("teste");
+};
+/*
+let colors = [];
+do {
+  let generatedColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  if (generatedColor !== 16777215 && generatedColor !== 0){}
+
+
+} while (test === true);
+const firstColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;*/
+
+let colors = [];
+let num;
+
+function generateRandom() {
+  for (let index = 0; index < 3; index += 1) {
+  num = Math.floor(Math.random() * 16777215); // Gera número aleatório de base decimal, para passar a hexadecimal
+  return (num === 0 || num === 16777215) ? generateRandom() : colors.push(num);}
+}
+
+var test = generateRandom(1, 6)
+
+const firstColor = num.toString(16); // Converte de base decimal para hexadecimal
+
+console.log(generateRandom());
+
+// Baseado no post "JavaScript generate random number except some values", fonte:
+// https://stackoverflow.com/questions/27406377/javascript-generate-random-number-except-some-values
+
+
+
+
+
+
+/*
+function setPalette(colorsRandom) {
+  document.querySelector('#color1').style.backgroundColor = colorsRandom[0];
+  document.querySelector('#color2').style.backgroundColor = colorsRandom[1];
+  document.querySelector('#color3').style.backgroundColor = colorsRandom[2];
+}
+
+/*
 window.onload = function start() {
   //document.getElementById('black').classList.add('selected');
   
@@ -7,7 +55,7 @@ window.onload = function start() {
   let colorsOK = verifyColors(colors);
   setPalette(colorsOK);
 };
-
+/*
 function randomColors() {
   const colorsPalette = [];
   const firstColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`; // Sugestão ESLint: prefer-template
@@ -26,7 +74,7 @@ function setPalette(colorsRandom) {
   document.getElementById('color1').style.backgroundColor = colorsRandom[0];
   document.getElementById('color2').style.backgroundColor = colorsRandom[1];
   document.getElementById('color3').style.backgroundColor = colorsRandom[2];
-}
+}*/
 /*
 function verifyColors(colors) {
   let test = true;

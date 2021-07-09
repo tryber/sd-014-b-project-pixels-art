@@ -1,23 +1,25 @@
 .color{
-  border: 1px solid black;
 }
 
 #pixel-board {
-  width: 200px;
-  height: 200px;
 }
 
 .pixel {
   width: 40px;
   height: 40px;
   background-color: white;
-}
-
-table, td, th, #pixel-board {
   border: 1px solid black;
+  border-collapse: collapse;
 }
 
-#color-palette, table {
+table, td, tr, #pixel-board {
+  border: 1px solid black;
+  margin-block-end: 50px;
+  margin-block-start: 50px;
+  border-collapse: collapse;
+}
+
+#color-palette {
   width: 100%;
   border-collapse: collapse;
   width:160px;
@@ -34,4 +36,10 @@ button {
   height: 30px;
   font-size: 12px;
   cursor: pointer; /* Altera cursor para a "mãozinha" */
+}
+
+#board-size {
+  margin-right: 10px;
+  width: 120px;
+  height: 20px;
 }
