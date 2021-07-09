@@ -39,3 +39,8 @@
   width: 40px;
   padding: 0;
 }
+
+#clear-board {
+  margin-left: 45px;
+  margin-bottom: 10px;
+}

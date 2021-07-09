@@ -19,6 +19,13 @@ function fillPixel(event) {
   event.target.style.backgroundColor = color;
 }
 
+function clearBoard() {
+  const pixels = document.getElementsByClassName('pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels.item(i).style.backgroundColor = 'white';
+  }
+}
+
 function Main() {
   CreatePixelBoard(25);
   const palets = document.querySelectorAll('.color');
@@ -29,6 +36,8 @@ function Main() {
   for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].addEventListener('click', fillPixel);
   }
+  const clearButton = document.getElementById('clear-board');
+  clearButton.addEventListener('click', clearBoard);
 }
 
 window.onload = Main;
