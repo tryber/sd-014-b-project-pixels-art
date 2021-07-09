@@ -22,7 +22,7 @@ const fill = () => {
 const clear = () => {
   document.querySelector('#clear-board').addEventListener('click', () => {
     const pxl = document.querySelectorAll('.pixel');
-    for (let i = 0; i < 25; i += 1) {
+    for (let i = 0; i < pxl.length; i += 1) {
       pxl[i].style.backgroundColor = 'white';
     }
   });
