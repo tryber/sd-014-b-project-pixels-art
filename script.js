@@ -8,7 +8,7 @@ function changeColorSelected(event) {
 
 pixelColors.addEventListener('click', changeColorSelected);
 
-function changePixelColor(mouse) {
+function changeTableColor(mouse) {
   const colorClassSelected = document.querySelector('.selected');
   const color = getComputedStyle(colorClassSelected);
   mouse.target.style.backgroundColor = color.backgroundColor;
@@ -16,7 +16,7 @@ function changePixelColor(mouse) {
 }
 
 const tablePixel = document.querySelector('#pixel-board');
-tablePixel.addEventListener('click', changePixelColor);
+tablePixel.addEventListener('click', changeTableColor);
 
 const button = document.querySelector('#clear-board');
 function clearBoard() {
