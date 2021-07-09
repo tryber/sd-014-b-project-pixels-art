@@ -3,7 +3,7 @@ Tabelas Display Flex: https://www.maujor.com/tutorial/anti-heroi-css-display-tab
 Flexbox: https://www.w3schools.com/css/css3_flexbox.asp
 Javascript Arrow Functions: https://www.w3schools.com/js/js_arrow_function.asp/
 */
-//refs: Ajudas do meu colega, Glauco.
+//refs: script do aluno Glauco.
 //seleciona a palheta, aidicona um evento, seleciona a classe selected, no clique, remove do antigo e adiciona no novo.
 const select = () => {
   document.querySelector('#color-palette').addEventListener('click', (e) => {
