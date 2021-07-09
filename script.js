@@ -37,7 +37,7 @@ function seleciona() {
 seleciona();
 
 function print() {
-  const pixels = document.querySelectorAll('.pixel');
+  let pixels = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixels.length; i++) {
     let element = pixels[i];
     element.addEventListener('click', function () {
