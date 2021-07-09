@@ -1,34 +1,47 @@
 body {
   margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
 }
 
 .color-palette {
-	display: flex;
-	
+    display: flex;
 }
 
 .color {
-	display: inline-flex;
-	width: 50px;
-	height: 50px;
-	border: solid black 1px;
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  border: solid black 1px;
 }
 
 .black {
-	background-color: black;
+  background-color: black;
 }
 
 .red {
-	background-color: red;
+  background-color: red;
 }
 
 .blue {
-	background-color: blue;
+  background-color: blue;
 }
 
 .green {
-	background-color: green;
+  background-color: green;
+}
+
+#pixel-board {
+  display: flex;
+  flex-flow: row wrap;
+  width: 13%;
+  height: 13%;
+}
+
+.pixel {
+  background-color: white;
+  border: solid black 1px;
+  width: 40px;
+  height: 40px;
 }
