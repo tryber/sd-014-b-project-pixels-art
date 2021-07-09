@@ -20,21 +20,23 @@ function randomHexColorGenerator() {
 
 function createColorPalette() {
   const paletteColor = document.getElementById('color-palette');
+  const newColor = document.createElement('input');
 
   for (let index = 0; index < 4; index += 1) {
     const color = document.createElement('div');
     color.className = 'color';
     color.addEventListener('click', colorSelector);
-
     if (index === 0) {
       color.style.backgroundColor = 'black';
       color.classList.add('selected');
     } else {
       color.style.backgroundColor = randomHexColorGenerator();
     }
-
     paletteColor.appendChild(color);
   }
+  newColor.type = 'color';
+  newColor.id = 'new-color';
+  paletteColor.appendChild(newColor);
 }
 
 function createPixelBoard() {
