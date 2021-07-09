@@ -11,13 +11,10 @@ h1 {
 
 #color-palette {
   margin: auto;
-  display: table;
-  
 }
 
 #table-color {
   margin: auto;
-  
 }
 
 
@@ -34,6 +31,7 @@ h1 {
   height: 100px;
   display: inline-block;
 }
+
 #blue {
   background-color: blue;
   width: 100px;
@@ -54,4 +52,5 @@ h1 {
   height: 100px;
   display: inline-block;
 }
+
 
