@@ -28,7 +28,6 @@ const tableParent = document.getElementById('pixel-board');
 console.log(tableParent);
 
 function generatePixelCells(n) {
-  tableParent = document.getElementById('pixel-board');
   // código da linha 4 a 7, visualizado e re-interpretado da url https://www.codegrepper.com/code-examples/javascript/how+to+remove+all+child+elements+of+div+in+javascript
   while (tableParent.firstChild) {
     tableParent.removeChild(tableParent.lastChild);
