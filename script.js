@@ -3,6 +3,10 @@
 window.onload = function () {
   const getPixelBlack = document.querySelectorAll('.color')[0];
   getPixelBlack.classList.add('selected');
+  const setPixelsWhite = document.querySelectorAll('.pixel');
+  for (let index = 0; index < setPixelsWhite.length; index += 1) {
+    setPixelsWhite[index].style.backgroundColor = 'white';
+  }
 };
 
 function createPixels() {
