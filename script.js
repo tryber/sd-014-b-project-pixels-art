@@ -1,8 +1,8 @@
-let colorSelected;
+let colorSelected = 'rgb(0,0,0)';
 
 window.onload = function () {
-  document.querySelector('.color').classList.add('selected');
-  colorSelected = 'rgb(0,0,0)';
+  let colorBlack = document.querySelector('.color');
+  colorBlack.classList.add('selected');
   eventAdd();
 }
 
