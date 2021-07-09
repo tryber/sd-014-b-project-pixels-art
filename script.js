@@ -1,12 +1,12 @@
-let allColors = document.querySelectorAll('.color');
-let color1 = document.querySelector('.color-1');
-let color2 = document.querySelector('.color-2');
-let color3 = document.querySelector('.color-3');
-let color4 = document.querySelector('.color-4');
-let pixels = document.querySelectorAll('.pixel');
+const allColors = document.querySelectorAll('.color');
+const color1 = document.querySelector('.color-1');
+const color2 = document.querySelector('.color-2');
+const color3 = document.querySelector('.color-3');
+const color4 = document.querySelector('.color-4');
+const pixels = document.querySelectorAll('.pixel');
 
 function RemoveSelectedElement() {
-  for (index = 0; index < allColors.length; index += 1) {
+  for (let index = 0; index < allColors.length; index += 1) {
     let currentBoxColor = allColors[index];
     // Removo a classe selected
     currentBoxColor.classList.remove('selected');
