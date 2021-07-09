@@ -54,6 +54,7 @@ h3 {
   display: inline-block;
   border-radius: 50%;
   transition: 0.5s box-shadow;
+  cursor: pointer;
 }
 
 .selected {
