@@ -1,10 +1,13 @@
 const pixelColors = document.querySelector('#color-palette');
-pixelColors.addEventListener('click', function changeColorSelected(event) {
+function changeColorSelected(event) {
   const colorClassSelected = document.querySelector('.selected');
   colorClassSelected.classList.remove('selected');
   event.target.classList.add('selected');
   console.log(document.querySelector('.selected'));
-});
+}
+
+pixelColors.addEventListener('click', changeColorSelected);
+
 const tablePixel = document.querySelector('#pixel-board');
 tablePixel.addEventListener('click', function changePixelColor(mouse) {
   const colorClassSelected = document.querySelector('.selected');
@@ -12,6 +15,7 @@ tablePixel.addEventListener('click', function changePixelColor(mouse) {
   mouse.target.style.backgroundColor = color.backgroundColor;
   console.log(colorClassSelected.id);
 });
+
 const button = document.querySelector('#clear-board');
 button.addEventListener('click', function clearBoard() {
   const pixelCells = document.querySelectorAll('.pixel');
@@ -19,6 +23,7 @@ button.addEventListener('click', function clearBoard() {
     pixelCells[index].style.backgroundColor = 'white';
   }
 });
+
 const tableParent = document.getElementById('pixel-board');
 console.log(tableParent);
 function generatePixelCells(n) {
@@ -36,7 +41,7 @@ function generatePixelCells(n) {
       newLine.appendChild(newCol);
     }
   }
-}
+};
 
 const generateCellsButton = document.querySelector('#generate-board');
 
@@ -51,7 +56,7 @@ function buttonEvent() {
   } else if (inputValue >= 50) {
     generatePixelCells(50);
   }
-}
+};
 
 generateCellsButton.addEventListener('click', buttonEvent);
 function generateRandomColors() {
@@ -62,5 +67,6 @@ function generateRandomColors() {
     const index3 = Math.trunc(Math.random() * (255));
     colorPaletteArray[index].style.backgroundColor = `rgb(${index1}, ${index2},${index3})`;
   }
-}
+};
+
 generateRandomColors();
