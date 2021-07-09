@@ -6,19 +6,19 @@ document.querySelector('#title').innerHTML = "Paleta de Cores";
 document.querySelector('.color').style.backgroundColor = 'black';
 
 //Requisito 6:
-document.querySelectorAll('.color')[0].id = 'first';
-document.getElementById('first').classList.add("selected");
+document.querySelectorAll('.color')[0].id = 'black';
+document.getElementById('black').classList.add("selected");
 //console.log(document.getElementById('first').className);
 //console.log(document.querySelectorAll('.selected')[0]);
 
 //Requisito 7:
-let firstColor = document.getElementById('first');
-document.querySelectorAll('.color')[1].id = 'second';
-let secondColor = document.getElementById('second');
-document.querySelectorAll('.color')[2].id = 'third';
-let thirdColor = document.getElementById('third');
-document.querySelectorAll('.color')[3].id = ('forth');
-let forthColor = document.getElementById('forth');
+let firstColor = document.getElementById('black');
+document.querySelectorAll('.color')[1].id = 'red';
+let secondColor = document.getElementById('red');
+document.querySelectorAll('.color')[2].id = 'purple';
+let thirdColor = document.getElementById('purple');
+document.querySelectorAll('.color')[3].id = ('gold');
+let forthColor = document.getElementById('gold');
 
 //console.log(firstColor, secondColor, thirdColor, forthColor);
 
@@ -41,4 +41,13 @@ function selectorColor(event){
       event.target.classList.add('selected');
     }
   }  
+}
+
+//Requisito 8:
+let pixel =document.querySelectorAll('.pixel');
+for(let index = 0; index < pixel.length; index += 1){
+  pixel[index].addEventListener('click',function(event){
+    let paintColor = document.querySelector('.selected');
+    event.target.style.backgroundColor = paintColor.id;
+  })
 }
