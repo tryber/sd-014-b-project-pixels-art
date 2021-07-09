@@ -1,40 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
+  background-color: aliceblue;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.settings {
+  flex-direction: column;
+  width: 33%;
+}
+output {
+  display: flex;
+  justify-content: center;
+}
+
+.sub-settings {
+  display: flex;
+  margin-top: 1rem;
+}
+
+button:nth-child(2) {
+  margin-left: 3rem;
+}
+
+.clear-board {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #7983ff;
-  font-family: Arial, Helvetica, sans-serif;
-  color: aliceblue;
+  margin-top: 1rem;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  margin-top: 2rem;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #7983ff;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #7983ff;
+  cursor: pointer;
+}
+
+#color-palette {
+  display: flex;
+  flex-direction: row;
+}
+
+#color-palette > button {
+  width: 3.3rem;
+  height: 3.3rem;
 }
 
 .color {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   border: 1px solid black;
   box-shadow: 2px 2px 2px black;
   border-radius: 50%;
-  display: inline-block;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  transition: transform 0.2s;
+  font-size: 10px;
+}
+
+.color:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.2);
+}
+
+.pixel-board-row {
+  display: flex;
+  flex-direction: row;
 }
 
 .pixel {
-  background-color: white;
   width: 40px;
   height: 40px;
-  display: inline-block;
+  background-color: white;
   border: 1px solid black;
-  margin-right: 1px;
 }
 
-#pixel-board {
-  margin-top: 20px;
-  width: 14rem;
-  height: 14rem;
-  display: block;
+.selected-color {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
 }
 
-#clear-board {
-  margin-top: 1.6rem;
-  margin-bottom: 1.6rem;
+.selected-color:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.2);
+}
+
+.selected-color p {
+  color: white;
+  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black,
+    1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+.eraser {
+  background-color: white;
+}
+#clear-board,
+#generate-board {
+  margin-bottom: 2rem;
   position: relative;
   background: #7983ff;
   padding: 1rem 4rem;
@@ -49,13 +158,15 @@ body {
   box-shadow: 2px 2px 9px black;
 }
 
-#clear-board span {
+#clear-board span,
+#generate-board span {
   position: relative;
 }
 
-#clear-board:before {
+#clear-board:before,
+#generate-board:before {
   --size: 0;
-  content: '';
+  content: "";
   position: absolute;
   left: var(--x);
   top: var(--y);
@@ -66,18 +177,43 @@ body {
   transition: width 0.2s ease, height 0.2s ease;
 }
 
-#clear-board:hover:before {
+#clear-board:hover:before,
+#generate-board:hover:before {
   --size: 200px;
 }
 
-.zoom {
-  background-color: green;
-  transition: transform 0.2s; /* Animation */
-  margin: 0 auto;
+/* #clear-board,
+#generate-board {
+  width: 170px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  font-family: "Bree Serif", serif;
+  color: rgb(148, 42, 42);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  border-radius: 4px;
+  box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 0.5),
+    0px 0px 10px rgba(0, 0, 0, 0.15);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 0) 5%,
+    rgba(255, 255, 255, 0.5) 6%,
+    rgba(255, 255, 255, 0) 9%,
+    rgba(255, 255, 255, 0.5) 10%,
+    rgba(255, 255, 255, 0) 17%,
+    rgba(255, 255, 255, 0.5) 19%,
+    rgba(255, 255, 255, 0) 21%
+  );
+  background-size: 150%;
+  background-position: right;
 }
-
-.zoom:hover {
-  transform: scale(
-    1.5
-  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
+#clear-board:hover,
+#generate-board:hover {
+  transition: 1s;
+  background-position: left;
+  box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 1),
+    0px 0px 10px rgba(0, 0, 0, 0.25);
+} */
