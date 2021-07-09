@@ -1,7 +1,8 @@
 
 function colorGenerator() {
 // Definir cores aleatoriamente (Referência [1])
-    for (let i=0; i <= 3; i+=1){
+// O primeiro quadrado (número 0) é sempre preto
+    for (let i=1; i <= 3; i+=1){
         let x = Math.floor(Math.random() * 256);
         let y = Math.floor(Math.random() * 256);
         let z = Math.floor(Math.random() * 256);
@@ -11,7 +12,7 @@ function colorGenerator() {
     }
 // Não permitir a cor branca nem cores repetidas    
     let colors = document.querySelectorAll('.color');
-    for (let j=0; j<=3; j+=1){
+    for (let j=1; j<=3; j+=1){
         for (let k=0; k<=3; k+=1){
             if (color[j] === 'white' || color[j] === color[k]){
                 colorGenerator();
