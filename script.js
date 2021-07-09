@@ -1,8 +1,8 @@
 window.onload = function start() {
   document.getElementById('black').classList.add('selected');
-  document.querySelector(.color).style.backgroundColor = 'black';
-  colors = randomColors();
-  colorsOK = verifyColors(colors);
+  document.querySelector(color).style.backgroundColor = 'black';
+  let colors = randomColors();
+  let colorsOK = verifyColors(colors);
   setPalette(colorsOK);
 };
 
