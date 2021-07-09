@@ -2,10 +2,15 @@
   padding: 10px;
   display: block;
 }
+
 .color {
   border: black solid 1px;
   display: inline-block;
   width: 30px;
   height: 30px;
   padding: 30px;
+}
+
+.pixel {
+  background-color: white;
 }
