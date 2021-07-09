@@ -18,39 +18,47 @@
         <div class="color" id="blue"></div>
         <div class="color" id="green"></div>
     </div>
-
-    <button id="clear-board">Limpar</button>
+    <section class="button-input">
+        <button id="clear-board">Limpar</button>
+        <!-- https://pt.stackoverflow.com/questions/253767/remover-sinal-de-negativo-de-input-number -->
+        <!-- TEMPORÁRIO ATÉ RESOLVER DE FORMA CORRETA -->
+        <input type="number" onkeypress="return event.charCode >= 48" min="1" id="board-size">
+        <!-- <input type="text"  pattern="[0-9]{2}" min='0'  id="board-size"> -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern -->
+        <button id="generate-board">VQV</button>
+    </section>
+    
 
     <div id="pixel-board">
-        <div>
+        <div class="line-board">
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
         </div>
-        <div>
+        <div class="line-board"> 
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
         </div>
-        <div>
+        <div class="line-board">
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
         </div>
-        <div>
+        <div class="line-board">
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
         </div>
-        <div>
+        <div class="line-board">
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>

@@ -17,12 +17,30 @@
 #green {
   background-color: green;
 }
+#pixel-board {
+    margin: 10px;
+    width: 250px;
+    position: absolute;
+}
+
+.line-board {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
 
 .pixel {
   border: 1px solid black;
-  margin: 2px;
+  box-sizing: border-box;
+  margin: -2px;
+  padding: 0px;
   display: inline-block;
   width: 40px;
   height: 40px;
   background-color: white;
+}
+
+.button-input {
+  display: inline-block;
 }
