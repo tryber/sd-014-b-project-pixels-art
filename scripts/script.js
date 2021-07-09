@@ -50,7 +50,19 @@ for (let indexLine = 0; indexLine < 5; indexLine += 1) {
   }
 }
 
-// [Requisito 6]
-window.onload = function selectBlackColor() {
+window.onload = function script() {
+  // [Requisito 6]
+  // Define a cor preta como cor inicial.
   black.classList.add('selected');
+  let selectedColor = black;
+
+  // [Requisito 7]
+  // Clicar em uma das cores da paleta faz com que ela seja selecionada e utilizada para preencher os pixels no quadro.
+  colors.forEach((color) => {
+    color.addEventListener('click', (event) => {
+      selectedColor.classList.remove('selected');
+      event.target.classList.add('selected');
+      selectedColor = event.target;
+    });
+  });
 };
