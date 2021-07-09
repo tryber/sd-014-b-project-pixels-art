@@ -30,8 +30,7 @@ aside {
 }
 
 .sections-right {
-  padding: 20px;
-  border-top: 1px solid rgb(212, 212, 212);
+  padding: 10px;
   text-align: center;
 }
 
@@ -44,7 +43,9 @@ aside {
 
 h3 {
   margin: 0;
-  margin-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  border-top: 1px solid rgb(212, 212, 212);
 }
 
 .color {
