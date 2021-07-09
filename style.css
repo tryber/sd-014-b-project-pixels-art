@@ -24,10 +24,12 @@ body {
   display: table;
   padding: 5px;
 }
+
 .pixel-tr {
   display: table-row;
   padding: 5px;
 }
+
 .pixel {
   display: table-cell;
   height: 40px;

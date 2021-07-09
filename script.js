@@ -31,9 +31,9 @@ addColor(['black', 'red', 'blue', 'green']);
 
 // Cria a tabela de divs, usando o display table.
 
-function tablePixel(row, cell) {
+function tablePixel(pixel) {
   const pixelBoard = document.getElementById('pixel-board');
-  for (let index = 1; index <= row; index += 1) {
+  for (let index = 1; index <= pixel; index += 1) {
     const createBoxCell = document.createElement('div');
     createBoxCell.classList.add('pixel-tr');
     pixelBoard.appendChild(createBoxCell);
@@ -41,7 +41,7 @@ function tablePixel(row, cell) {
   const pixelCell = document.getElementsByClassName('pixel-tr');
   for (let index = 0; index < pixelCell.length; index += 1) {
     const pixelIndex = pixelCell[index];
-    for (let sIndex = 1; sIndex <= cell; sIndex += 1) {
+    for (let sIndex = 1; sIndex <= pixel; sIndex += 1) {
       const createBoxRow = document.createElement('div');
       createBoxRow.classList.add('pixel');
       pixelIndex.appendChild(createBoxRow);
@@ -49,7 +49,7 @@ function tablePixel(row, cell) {
   }
 }
 
-tablePixel(5, 5);
+tablePixel(5);
 
 // Define cor branco, assim que a pagina e carregada, no window.onload.
 
@@ -108,3 +108,6 @@ const clearButton = document.getElementById('clear-board');
 clearButton.addEventListener('click', () => {
   resetColorPixel();
 });
+
+// Faça o quadro de pixels ter seu tamanho definido pela pessoa usuária.
+
