@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(31, 31, 31);
+}
+
 #title {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(20, 20, 20);
@@ -12,7 +16,6 @@
     border: 1px solid black;
     width: 40px;
     height: 40px;
-    padding: 5px
     display: table-cell;
 } 
 
@@ -47,4 +50,10 @@
 
 #row {
     display: table-row;
+}
+
+.selected {
+    width: 40px;
+    height: 40px;
+    padding: 12px;
 }
