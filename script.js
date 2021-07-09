@@ -56,8 +56,7 @@ generateCellsButton.addEventListener('click', function buttonEvent() {
     generatePixelCells(5);
   } else if (inputValue >= 50) {
     generatePixelCells(50);
-  } 
-  inputValue = '';
+  }
 });
 
 function generateRandomColors() {
