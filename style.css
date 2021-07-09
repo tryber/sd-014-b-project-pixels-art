@@ -1,0 +1,47 @@
+* {
+  text-align: center;
+}
+
+.color {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+}
+
+.black {
+  background-color: black;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+#pixel-board {
+  display: table;
+  padding: 5px;
+  margin-left: 40%;
+}
+
+.tr {
+  display: table-row;
+  padding: 5px;
+}
+
+.pixel {
+  display: table-cell;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  border: black solid 1px;
+  margin: 5px;
+  background-color: white;
+}
