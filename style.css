@@ -9,7 +9,8 @@ body {
 }
 
 section {
-  height: 60px;
+  height: auto;
+  padding: 7px 0;
 }
 
 .color {
