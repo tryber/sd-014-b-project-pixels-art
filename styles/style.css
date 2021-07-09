@@ -76,7 +76,7 @@ header {
   height: 60px;
 }
 
-input[type=color] {
+#new-color {
   position: fixed;
   padding: 0;
   height: 25px;
