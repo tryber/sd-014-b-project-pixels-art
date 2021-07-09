@@ -6,12 +6,12 @@ body {
 #color-palette {
   display: block;
   padding: 10px;
-  margin: auto;
+  margin: 10px;
 }
 
 #pixel-board {
   padding: 10px;
-  margin: 22px;
+  margin: 10px;
 }
 
 .color {
@@ -32,6 +32,7 @@ body {
 
 .pixel {
   border: black solid 1px;
+  background-color: white;
   width: 40px;
   height: 40px;
   display: inline-block;
