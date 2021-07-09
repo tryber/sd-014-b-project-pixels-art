@@ -30,7 +30,6 @@ body{
 }
 
 .selected {
-    border: 3px solid white;
     transform: translateY(-5px);
 }
 
