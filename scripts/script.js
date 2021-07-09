@@ -74,3 +74,17 @@ document.querySelectorAll('.pixel').forEach((element) => {
     pixel.style.backgroundColor = selectedColor.style.backgroundColor;
   });
 });
+
+// [Requisito 9]
+// Cria um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
+const clearButton = document.createElement('button');
+clearButton.id = 'clear-board';
+clearButton.innerHTML = 'Limpar pixels';
+document.querySelector('body').appendChild(clearButton);
+
+clearButton.addEventListener('click', () => {
+  document.querySelectorAll('.pixel').forEach((element) => {
+    const pixel = element;
+    pixel.style.backgroundColor = 'white';
+  });
+});
