@@ -7,7 +7,6 @@ const pixelBoard = document.getElementById('pixel-board');
 const input = document.querySelector('input');
 const generateBoard = document.getElementById('generate-board');
 
-generateBoard.addEventListener('click', createLine);
 let n = 5;
 for (let i = 1; i <= n; i += 1) {
   const div = document.createElement('div');
@@ -22,9 +21,13 @@ for (let i = 0; i < pixelLine.length; i += 1) {
     pixel.className = 'pixel';
   }
 }
+generateBoard.addEventListener('click', createLine);
+
 function createLine() {
   let n = input.value;
-  if (n > 0) {
+  document.querySelector('#pixel-board').innerHTML = '';
+  if (n > 0 && n < 11)  {
+    document.body.appendChild(pixelBoard);
     for (let i = 1; i <= n; i += 1) {
       const div = document.createElement('div');
       pixelBoard.appendChild(div);
