@@ -32,6 +32,21 @@ function verde() {
     select[2].classList.remove ('selected')
     select[3].classList.add ('selected')
 }
+let setColor = window.getComputedStyle(document.querySelector('.selected')).getPropertyValue("background-color")
+
+let a = document.querySelectorAll('.pixel')
 
 
+
+    for (let index = 0; index < a.length; index += 1) {
+        a[index].addEventListener ('click', c)
+
+        function c() {
+
+            let setColor = window.getComputedStyle(document.querySelector('.selected')).getPropertyValue("background-color")
+
+            a[index].style.backgroundColor = setColor;
+
+        }
+    }
 
