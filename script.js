@@ -42,11 +42,25 @@ function clickColor() {
   event.target.classList.add('selected');
 }
 
+// Função altera a cor dos quadrados de pixels
 function changeColorToPixel() {
-  // Pegar a cor da paleta seleciona
+  // Pegar a cor da paleta selecionada
   captureSelected();
   // Adicionar a cor ao pixel clicado
+  event.target.classList.remove('color-white')
+  event.target.classList.add(selectedColor);
 }
+
+//Função que captura o clique de um quadrado de pixel
+function clickPixel() {
+  // Capturar o index que foi clicado
+  for (index = 0; index < pixels.length; index += 1) {
+    let currentPixel = pixels[index];
+    currentPixel.addEventListener('click',changeColorToPixel);
+  }
+}
+
+clickPixel();
 
 color1.addEventListener('click', clickColor);
 color2.addEventListener('click', clickColor);
