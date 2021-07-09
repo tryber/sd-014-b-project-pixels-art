@@ -1,13 +1,13 @@
-let pixelColors = document.querySelector("#color-palette");
+const pixelColors = document.querySelector('#color-palette');
 
 pixelColors.addEventListener('click', function changeColorSelected(event) {
-  let colorClassSelected = document.querySelector('.selected');
+  const colorClassSelected = document.querySelector('.selected');
   colorClassSelected.classList.remove('selected');
   event.target.classList.add('selected');
   console.log(document.querySelector('.selected'));
 });
 
-let tablePixel = document.querySelector('#pixel-board');
+const tablePixel = document.querySelector('#pixel-board');
 
 tablePixel.addEventListener('click', function changePixelColor(event) {
   let colorClassSelected = document.querySelector('.selected');
@@ -16,15 +16,15 @@ tablePixel.addEventListener('click', function changePixelColor(event) {
   console.log(colorClassSelected.id);
 });
 
-let button = document.querySelector('#clear-board');
+const button = document.querySelector('#clear-board');
 
 button.addEventListener('click', function clearBoard() {
-  let pixelCells = document.querySelectorAll('.pixel');
+  const pixelCells = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixelCells.length; index += 1) {
-    pixelCells[index].style.backgroundColor = 'white'
+    pixelCells[index].style.backgroundColor = 'white';
   }
 });
-let tableParent = document.getElementById('pixel-board')
+const tableParent = document.getElementById('pixel-board');
 console.log(tableParent)
 
 function generatePixelCells(n) {
