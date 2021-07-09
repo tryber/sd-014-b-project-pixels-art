@@ -35,8 +35,8 @@ function selectColor(event) {
   const colors = document.querySelectorAll('.color');
   for (let i = 0; i < colors.length; i += 1) {
     colors[i].classList.remove('selected');
-    event.target.classList.add('selected');
   }
+  event.target.classList.add('selected');
 }
 
 function paintPixel(event) {
