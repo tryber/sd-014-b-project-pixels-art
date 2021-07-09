@@ -13,12 +13,22 @@ function selectColor(event) {
   event.target.classList.add('selected');
 }
 
+function fillPixel(event) {
+  const currentPalet = document.getElementsByClassName('selected');
+  const color = window.getComputedStyle(currentPalet.item(0)).backgroundColor;
+  event.target.style.backgroundColor = color;
+}
+
 function Main() {
   CreatePixelBoard(25);
-  const paletas = document.querySelectorAll('.color');
-  for (let i = 0; i < paletas.length; i += 1) {
-    paletas[i].addEventListener('click', selectColor);
+  const palets = document.querySelectorAll('.color');
+  for (let i = 0; i < palets.length; i += 1) {
+    palets[i].addEventListener('click', selectColor);
+  }
+  const pixels = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].addEventListener('click', fillPixel);
   }
 }
 
-Main();
+window.onload = Main;
