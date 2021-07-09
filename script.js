@@ -5,6 +5,7 @@ window.addEventListener('load', function() {
 
 let colors = document.querySelectorAll('.color');
 let divColors = document.body.children[1];
+let selectColor = document.querySelector('.selected');
 
 function selectedPallet(event) {
   for (let index = 0; index < colors.length; index += 1) {
@@ -18,3 +19,21 @@ function selectedPallet(event) {
 }
 
 divColors.addEventListener('click', selectedPallet);
+
+let table = document.querySelector('#pixel-board');
+function copySelectedColor(event) {
+  if (colors[0].classList.length === 3) {
+    event.target.style.backgroundColor = 'black';
+  }
+  if (colors[1].classList.length === 3) {
+    event.target.style.backgroundColor = 'rgb(255, 198, 255)';
+  }
+  if (colors[2].classList.length === 3) {
+    event.target.style.backgroundColor = 'rgb(189, 178, 255)';
+  }
+  if (colors[3].classList.length === 3) {
+    event.target.style.backgroundColor = 'rgb(155, 246, 255)';
+  }
+}
+
+table.addEventListener('click', copySelectedColor);
