@@ -10,17 +10,24 @@
 .pixel{
     border:  1px solid black;
     display: inline-block;
-    padding: 30px;
+    padding: 20px;
     background-color: rgb(255, 255, 255);
     height: 40px;
     width: 40px;
 }
 
-#pixel-board{
-    max-width: 510px;
-    max-height: 525px;
+/* #pixel-board{
+    max-width: 410px;
+    max-height: 425px;
     
-}
+} */
 #clear-board{
     margin-bottom: 20px;
+}
+#clear-board{
+    margin-right: 20px;
+}
+input{
+    width: 300px;
+
 }
