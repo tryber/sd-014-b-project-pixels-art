@@ -28,7 +28,7 @@ let btnBoardSize = document.getElementById('generate-board');
 let pixelBoardElement = document.querySelector('#pixel-board');
 
 function setBoardSize(number) {
-  if(inputBoardSize.value < 5 && pixelBoardSize !== ""){
+  if(inputBoardSize.value < 5 && inputBoardSize.value !== ""){
     inputBoardSize.value = 5;
   } else if(inputBoardSize.value > 50){
     inputBoardSize.value = 50;
