@@ -1,27 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
 
+body {
+  background: url('pixel-art-desert.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: 'VT323', 'open-sans';
+  text-align: center;
+}
+
+header {
+  padding: 165px 0 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+#color-palette {
+  background-color: white;
+  border: dashed;
+  border-radius: 15px;
+  margin: auto;
+  width: 200px;
+}
+
 .color {
   border: black solid 1px;
+  border-radius: 50%;
   display: inline-block;
 }
 
 #black {
   background-color: black;
+  margin: 10px 3px;
+  width: 30px;
+  height: 30px;
 }
 
 #orange {
   background-color: #f14902;
+  margin: 10px 3px;
+  width: 30px;
+  height: 30px;
 }
 
 #cream {
   background-color: #f6e7d8;
+  margin: 10px 3px;
+  width: 30px;
+  height: 30px;
 }
 
 #yellow {
   background-color: #fff547;
+  margin: 10px 3px;
+  width: 30px;
+  height: 30px;
+}
+
+#pixel-board {
+  background-color: black;
+  border-radius: 5px;
+  margin: 2% auto;
 }
 
 .pixel {
@@ -29,4 +72,12 @@
   border: black solid 1px;
   width: 40px;
   height: 40px;
+}
+
+#footer {
+  text-align: center;
+  text-transform: uppercase;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
