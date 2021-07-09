@@ -1,27 +1,26 @@
 #color-palette {
-    border: solid black 1px;
+  border: solid black 1px;
 }
+
 #black {
-    border: solid black 1px;
-    height: 50px;
-    width: 50px;
-    background-color: black;
-    display: inline-block;
+  border: solid black 1px;
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  display: inline-block;
 }
-#palete2, #palete3, #palete4 {
-    border: solid black 1px;
-    height: 50px;
-    width: 50px;
-    display: inline-block;
+
+#palete2 , #palete3 , #palete4 {
+  border: solid black 1px;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
 }
+
 .pixel {
-    border: solid black 1px;
-    height: 40px;
-    width: 40px;
-    display: inline-block;
-    background-color: white;
+  border: solid black 1px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background-color: white;
 }
-
-
-
-

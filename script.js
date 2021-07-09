@@ -24,7 +24,7 @@ for (let i = 0; i < pixelLine.length; i += 1) {
 function createLine() {
   let n = input.value;
   document.querySelector('#pixel-board').innerHTML = '';
-  if (n.length > 0)  {
+  if (n.length > 0) {
     if (n < 5) {
       n = 5;
     } else if (n > 50) {
