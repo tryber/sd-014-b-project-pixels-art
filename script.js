@@ -87,12 +87,21 @@ function swapClass(evnt) {
   evnt.target.classList.add('selected');//adiciono a class ao elemento que eu cliquei
 }
 
+function clearButton () {
+  let bodySelection = document.querySelector('body')
+  let divCreation = document.createElement('button')
+  divCreation.innerText = 'Limpar'
+  divCreation.id = 'clear-board'
+  bodySelection.appendChild(divCreation)
+}
+
 h1Creation()
 paletteCreation()
 colors('black')
 colors('yellow')
 colors('red')
 colors('green')
+clearButton()
 pixelTable()
 function setPixelColor (event){
   let selection = document.querySelector('.selected')
@@ -101,3 +110,9 @@ function setPixelColor (event){
 }
 document.querySelector('#color-palette').addEventListener('click', swapClass)
 document.querySelector('#pixel-board').addEventListener('click', setPixelColor)
+document.querySelector('#clear-board').addEventListener('click', function(){
+  let pixelSelection = document.querySelectorAll(".pixel")
+  for(let index = 0; index < pixelSelection.length; index +=1){
+  pixelSelection[index].style.backgroundColor = 'white'
+  }
+})
