@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1 id ="title">Paleta de Cores</h1>
+    </section>
+
+    <div id='color-palette'>
+        <div class="color selected" id="black"></div>
+        <div class="color" id="orange"></div>
+        <div class="color" id="blue"></div>
+        <div class="color" id="green"></div>
+    </div>
+    <section class="button-input">
+        <button id="clear-board">Limpar</button>
+        <!-- https://pt.stackoverflow.com/questions/253767/remover-sinal-de-negativo-de-input-number -->
+        <!-- TEMPORÁRIO ATÉ RESOLVER DE FORMA CORRETA -->
+        <input type="number" onkeypress="return event.charCode >= 48" min="1" id="board-size">
+        <!-- <input type="text"  pattern="[0-9]{2}" min='0'  id="board-size"> -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern -->
+        <button id="generate-board">VQV</button>
+    </section>
+    
+
+    <div id="pixel-board">
+        <div class="line-board">
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+        </div>
+        <div class="line-board"> 
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+        </div>
+        <div class="line-board">
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+        </div>
+        <div class="line-board">
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+        </div>
+        <div class="line-board">
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

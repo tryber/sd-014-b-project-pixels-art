@@ -1,0 +1,46 @@
+.color {
+  border: 1px solid black;
+  margin: 2px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+#black {
+  background-color: black;
+}
+#orange {
+  background-color: orange;
+}
+#blue {
+  background-color: blue;
+}
+#green {
+  background-color: green;
+}
+#pixel-board {
+    margin: 10px;
+    width: 250px;
+    position: absolute;
+}
+
+.line-board {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.pixel {
+  border: 1px solid black;
+  box-sizing: border-box;
+  margin: -2px;
+  padding: 0px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+}
+
+.button-input {
+  display: inline-block;
+}
