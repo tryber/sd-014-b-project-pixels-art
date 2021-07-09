@@ -1,14 +1,14 @@
 .color {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: inline-block;
     border-color:black ;
     border: solid;
     border-width: 1px;
   }
 #pixel-board{
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   margin: 0px;
   border-color: black;
   border: solid;
@@ -17,10 +17,13 @@
 
 }
 .pixel{
-    width:40px;
-    height:40px;
-    background-color: white;
-
+  margin: 0px;
+  width:40px;
+  height:40px;
+  background-color:green;
+  border-color: black;
+  border-width: 1px;
+  border: solid;
 }
 #preto{background-color: black;}
 #verde{background-color: #76EB23;}
