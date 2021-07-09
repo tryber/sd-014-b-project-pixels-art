@@ -56,9 +56,7 @@ generateCellsButton.addEventListener('click', function buttonEvent() {
     generatePixelCells(5);
   } else if (inputValue >= 50) {
     generatePixelCells(50);
-  } else if (input.value == null) {
-    alert('Board Inválido!');
-  }
+  } 
   inputValue = '';
 });
 
