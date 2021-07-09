@@ -1,5 +1,5 @@
-//const query = document.querySelector.bind(document);
-//const queries = document.querySelectorAll.bind(document);
+// const query = document.querySelector.bind(document);
+// const queries = document.querySelectorAll.bind(document);
 
 function criaPixel(quant) {
   const pixelBoard = document.querySelector('#pixel-board');
@@ -37,7 +37,7 @@ function seleciona() {
 seleciona();
 
 function getColor() {
-  let selec = document.querySelector('.selected');
+  const selec = document.querySelector('.selected');
   return selec.classList[1];
 }
 
@@ -45,7 +45,7 @@ function print() {
   const pixels = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixels.length; i += 1) {
     const element = pixels[i];
-    element.addEventListener('click', function () {
+    element.addEventListener('click', function clickOn() {
       element.style.backgroundColor = `${getColor()}`;
     });
   }
@@ -53,12 +53,12 @@ function print() {
 print();
 
 function clearButton() {
-  let button = document.querySelector('#clear-board');
-  let pixels = document.querySelectorAll('.pixel');
+  const button = document.querySelector('#clear-board');
+  const pixels = document.querySelectorAll('.pixel');
   console.log(pixels.length);
-  button.addEventListener('click', function () {
+  button.addEventListener('click', function clickIn() {
     for (let i = 0; i < pixels.length; i += 1) {
-      let pixel = pixels[i];
+      const pixel = pixels[i];
 
       pixel.style.backgroundColor = 'white';
     }
