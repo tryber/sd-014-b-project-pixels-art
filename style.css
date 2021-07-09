@@ -20,19 +20,6 @@ h1 {
   cursor: pointer;
   border: 1px solid black;
 }
-#black {
-  background-color: black;
-}
-#orange {
-  background-color: orange;
-}
-#pink {
-  background-color: pink;
-}
-#burlywood {
-  background-color: burlywood;
-}
-
 #pixel-board {
   margin: auto;
   display: table-row;
@@ -49,4 +36,5 @@ h1 {
   cursor: pointer;
   margin: auto;
   margin-bottom: 20px;
+  color: aqua;
 }
