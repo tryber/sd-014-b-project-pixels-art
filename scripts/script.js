@@ -80,10 +80,7 @@ document.querySelectorAll('.pixel').forEach((element) => {
 const clearButton = document.createElement('button');
 clearButton.id = 'clear-board';
 clearButton.innerHTML = 'Limpar';
-const div = document.createElement('div');
-div.id = 'buttons';
-document.querySelector('#pixel-board').previousSibling.appendChild(div);
-div.appendChild(clearButton);
+document.querySelector('#pixel-board').previousSibling.appendChild(clearButton);
 
 clearButton.addEventListener('click', () => {
   document.querySelectorAll('.pixel').forEach((element) => {
