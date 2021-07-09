@@ -54,13 +54,13 @@ h3 {
   border: 1px solid black;
   display: inline-block;
   border-radius: 50%;
-  /* transition: 0.5s box-shadow; */
+  transition: 0.5s box-shadow;
   cursor: pointer;
 }
 
-/* .selected {
+.selected {
   box-shadow: 0px 0px 0px 4px rgb(165, 165, 165);
-} */
+}
 
 /* ESTILO E ESTRUTURA DO ELEMENTOS A ESQUERDA */
 
