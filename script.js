@@ -1,6 +1,6 @@
 /* Variaveis globais */
 
-let corSelected;
+let corSelected = 'black';
 
 /* ********* */
 
@@ -18,9 +18,6 @@ function carregarApp() {
   botoesCores[1].style.backgroundColor = 'rgb(227,113,113)';
   botoesCores[2].style.backgroundColor = 'rgb(55,154,234)';
   botoesCores[3].style.backgroundColor = 'rgb(226,232,81)';
-
-  botoesCores[0].classList.add('selected');
-  corSelected = 'black';
 
   /* Eventos de seleção do botão e da cor */
   for (let i = 0; i < botoesCores.length; i += 1) {
