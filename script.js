@@ -22,13 +22,6 @@ function colors (colorDesired) {
   divSelection.appendChild(divCreation)
 }
 
-function setPixelColor(evnt) {
-  evnt.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
-}
-function abc () {
-  document.querySelector('#pixel-board').classList.add('bioca')
-}
-
 function tableContainer () {
   let bodySelection = document.querySelector('body');
   let divCreation = document.createElement('div')
