@@ -24,21 +24,27 @@ yellowColor.addEventListener("click", pickColor);
 redColor.addEventListener("click", pickColor);
 blueColor.addEventListener("click", pickColor);
 
+// Função que seleciona a cor na paleta e atribui a classe "selected"
 function pickColor (event) {
   let colorWithSelected = document.querySelector(".selected");
   colorWithSelected.classList.remove("selected");
   event.target.classList.add("selected");
 }
 
-// Cria função para fazer armezanar o pixel que está selecionado (mesma lógica da pickColor) 
 
 document.querySelector(".pixel").classList.add("pixel-selected");
 
 let pixelSelected = document.querySelectorAll(".pixel");
+
+// For que seleciona pixels e pinta os que são clicados com a cor selecionada na paleta
+
 for (let index = 0; index < pixelSelected.length; index += 1) {
   pixelSelected[index].addEventListener("click", pickPixel);
   pixelSelected[index].addEventListener("click", changeColor);
 };
+
+// Função que adiciona classe "pixel-selected" ao pixel clicado 
+
 function pickPixel(event) {
   let pixelClick = document.querySelector(".pixel-selected");
   pixelClick.classList.remove("pixel-selected");
@@ -48,6 +54,7 @@ function pickPixel(event) {
 let changeColorPixel = document.querySelector(".pixel-selected")
 changeColorPixel.addEventListener("click", changeColor);
 
+// Função que atribui a cor ao pixel
 
 function changeColor () {
   let paleta = document.querySelector(".selected").id;
@@ -55,3 +62,12 @@ function changeColor () {
   pixel.style.backgroundColor = paleta;
 }
 
+let buttonClear = document.querySelector("#clear-board");
+buttonClear.addEventListener("click", clearSquare);
+
+function clearSquare() {
+  let pixelClear = document.querySelectorAll(".pixel");
+  for (let index = 0; index < pixelClear.length; index += 1) {
+    pixelClear[index].style.backgroundColor = 'white';
+  }
+}
