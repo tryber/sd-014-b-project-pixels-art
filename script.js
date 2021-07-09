@@ -1,7 +1,8 @@
-let colorSelected = 'rgb(0,0,0)';
+let colorSelected = 'black';
 
 window.onload = function () {
-  let colorBlack = document.querySelector('.color');
+  setColors();
+  const colorBlack = document.querySelector('.color');
   colorBlack.classList.add('selected');
   eventAdd();
 }
@@ -17,6 +18,14 @@ function eventAdd() {
     pixels[i].addEventListener('click', colorPixel);
   }
   botaoReset.addEventListener('click', resetPalette);
+}
+
+function setColors() {
+  let botoesCores = document.querySelectorAll('.color');
+  botoesCores[0].style.backgroundColor = 'black';
+  botoesCores[1].style.backgroundColor = 'blue';
+  botoesCores[2].style.backgroundColor = 'red';
+  botoesCores[3].style.backgroundColor = 'yellow';
 }
 
 function selectColor(event) {
