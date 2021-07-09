@@ -19,6 +19,20 @@ function oi() {
   console.log('Oi');
 }
 
+function defineClass() {
+  removeClass();
+  let newItem = document.getElementById("color-palette");
+  newItem.addEventListener('click', function(itemClick) {
+      let clicked = (itemClick.target.id);
+      let currentItem = document.getElementById(clicked);
+      currentItem.className = "color selected";
+  });
+}
+function removeClass() {
+  let item = document.querySelector(".selected");
+  item.className = "color";
+}
+
 window.onload = function() {
 
   let repeatCount = 5;
