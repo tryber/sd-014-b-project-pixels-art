@@ -36,12 +36,22 @@ for (let index = 0; index <= getColor.length - 1; index += 1) {
   let selectedColor = getColor[index].addEventListener('click', selectColor);
 }
 
-function selectColor(event) {
-  event.target.classList.add('selected');
+function selectColor(color) {
+  color.target.classList.add('selected');
   for (let index = 0; index <= getColor.length - 1; index += 1) {
     let otherColor = getColor[index];
-    if (otherColor !== event.target) {
+    if (otherColor !== color.target) {
       otherColor.classList.remove('selected');
     }
   }
+}
+
+const getPixel = document.querySelectorAll('.pixel');
+for (let index = 0; index <= getPixel.length - 1; index += 1) {
+  let selected = getPixel[index].addEventListener('click', changeColor);
+}
+
+function changeColor(pixel) {
+  const currentSelectedColor = document.querySelector('.selected');
+  pixel.target.style.backgroundColor = currentSelectedColor.id;
 }
