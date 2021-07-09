@@ -37,7 +37,7 @@ for (let index = 0; index < colors.length; index += 1) {
   const color = colors[index];
   color.style.display = 'table-cell';
   color.style.padding = '1.5em';
-  // slint-disable-next-line sonarjs/no-duplicate-stringe
+  // eslint-disable-next-line sonarjs/no-duplicate-string
   color.style.border = 'black solid 1px';
   color.style.borderRadius = '50%';
 }
