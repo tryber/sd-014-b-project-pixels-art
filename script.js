@@ -13,7 +13,7 @@ function carregarApp() {
   let botaoReset = document.getElementById('clear-board');
 
   /* Cores inicias */
-
+  botoesCores[0].classList.add('selected');
   botoesCores[1].style.backgroundColor = 'rgb(227,113,113)';
   botoesCores[2].style.backgroundColor = 'rgb(55,154,234)';
   botoesCores[3].style.backgroundColor = 'rgb(226,232,81)';
@@ -46,3 +46,5 @@ function selectColor(event) {
   event.target.classList.add('selected');
   corSelected = window.getComputedStyle(event.target, null).getPropertyValue("background-color");
 }
+
+
