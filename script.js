@@ -1,6 +1,13 @@
 window.onload = function () {
   const blackPixel = document.getElementById('black');
   blackPixel.classList.add('selected');
+  let colorsPalete2 = ['yellow', 'blue', 'brown', 'green'];
+  let colorsPalte3 = ['orange', 'red', 'gray', 'pink'];
+  let colorsPalete4 = ['chartreuse', 'purple', 'crimson', 'cyan'];
+  blackPalete.style.backgroundColor = 'black';
+  palete2.style.backgroundColor = colorsPalete2[Math.floor(Math.random() * 3)];
+  palete3.style.backgroundColor = colorsPalte3[Math.floor(Math.random() * 3)];
+  palete4.style.backgroundColor = colorsPalete4[Math.floor(Math.random() * 3)];
 };
 
 const pixelBoard = document.getElementById('pixel-board');
@@ -53,46 +60,46 @@ function createLine() {
   }
 }
 const blackPalete = document.querySelector('#black');
-const redPalete = document.querySelector('#red');
-const bluePalete = document.querySelector('#blue');
-const yellowPalete = document.querySelector('#yellow');
+const palete2 = document.querySelector('#palete2');
+const palete3 = document.querySelector('#palete3');
+const palete4 = document.querySelector('#palete4');
 
-redPalete.addEventListener('click', changeSelectRed);
+palete2.addEventListener('click', changeSelectRed);
 
 function changeSelectRed() {
   blackPalete.classList.remove('selected');
-  bluePalete.classList.remove('selected');
-  yellowPalete.classList.remove('selected');
-  redPalete.classList.add('selected');
+  palete3.classList.remove('selected');
+  palete4.classList.remove('selected');
+  palete2.classList.add('selected');
 }
 
 blackPalete.addEventListener('click', changeSelectBlack);
 function changeSelectBlack() {
-  redPalete.classList.remove('selected');
-  bluePalete.classList.remove('selected');
-  yellowPalete.classList.remove('selected');
+  palete2.classList.remove('selected');
+  palete3.classList.remove('selected');
+  palete4.classList.remove('selected');
   blackPalete.classList.add('selected');
 }
 
-bluePalete.addEventListener('click', changeSelectBlue);
+palete3.addEventListener('click', changeSelectBlue);
 function changeSelectBlue() {
-  redPalete.classList.remove('selected');
+  palete2.classList.remove('selected');
   blackPalete.classList.remove('selected');
-  yellowPalete.classList.remove('selected');
-  bluePalete.classList.add('selected');
+  palete4.classList.remove('selected');
+  palete3.classList.add('selected');
 }
 
-yellowPalete.addEventListener('click', changeSelectYellow);
+palete4.addEventListener('click', changeSelectYellow);
 function changeSelectYellow() {
-  redPalete.classList.remove('selected');
+  palete2.classList.remove('selected');
   blackPalete.classList.remove('selected');
-  bluePalete.classList.remove('selected');
-  yellowPalete.classList.add('selected');
+  palete3.classList.remove('selected');
+  palete4.classList.add('selected');
 }
 let pixel = document.querySelector('#pixel-board');
 pixel.addEventListener('click', colorPixel);
 function colorPixel(event) {
-  const paleteColor = document.querySelector('.selected').id;
+  const paleteColor = document.querySelector('.selected').style.backgroundColor;
   event.target.style.backgroundColor = paleteColor;
 }
 
