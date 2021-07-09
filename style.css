@@ -2,10 +2,13 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-color: cadetblue;
 }
 h1 {
   display: flex;
   justify-content: center;
+  font-family: fantasy;
+  color: white;
 }
 #color-palette {
   display: flex;
