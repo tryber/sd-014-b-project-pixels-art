@@ -36,22 +36,21 @@ function seleciona() {
 }
 seleciona();
 
-function print(color) {
-  let pixels = document.querySelectorAll('.pixel');
-
+function print() {
+  const pixels = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixels.length; i++) {
     let element = pixels[i];
     element.addEventListener('click', function () {
-      element.style.backgroundColor = `${color}`;
+      element.style.backgroundColor = `${getColor()}`;
     });
   }
 }
+print();
 
 function getColor() {
   let selec = document.querySelector('.selected');
-  print(selec.classList[1]);
+  return selec.classList[1];
 }
-getColor();
 
 function clearButton() {
   let button = document.querySelector('#clear-board');
