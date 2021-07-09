@@ -1,4 +1,6 @@
 const colorPalette = document.querySelector('#color-palette');
+const pixelBoard = document.querySelector('#pixel-board');
+const clearButton = document.querySelector('#clear-board');
 
 function createColor(rgbString) {
   const createElement = document.createElement('div');
@@ -22,8 +24,7 @@ function createPixelBoard() {
   for (let i = 0; i < setBoardHeight; i += 1) {
     for (let i2 = 0; i2 < setBoardWidth; i2 += 1) {
       const createPixel = document.createElement('div');
-      const getBoard = document.querySelector('#pixel-board');
-      const pixel = getBoard.appendChild(createPixel);
+      const pixel = pixelBoard.appendChild(createPixel);
       pixel.style.backgroundColor = 'white';
       pixel.style.border = '1px solid black';
       pixel.setAttribute('class', 'pixel');
@@ -49,3 +50,19 @@ function selectColor(event) {
 }
 
 colorPalette.addEventListener('click', selectColor);
+
+function paintPixel(event) {
+  const selectedColor = document.querySelector('.selected').style.backgroundColor;
+  event.target.style.backgroundColor = selectedColor;
+}
+
+pixelBoard.addEventListener('click', paintPixel);
+
+function clearBoard() {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = 'white';
+  }
+}
+
+clearButton.addEventListener('click', clearBoard);
