@@ -10,8 +10,8 @@ pixelColors.addEventListener('click', function changeColorSelected(event) {
 const tablePixel = document.querySelector('#pixel-board');
 
 tablePixel.addEventListener('click', function changePixelColor(event) {
-  let colorClassSelected = document.querySelector('.selected');
-  let color = getComputedStyle(colorClassSelected)
+  const colorClassSelected = document.querySelector('.selected');
+  const color = getComputedStyle(colorClassSelected);
   event.target.style.backgroundColor = color.backgroundColor;
   console.log(colorClassSelected.id);
 });
@@ -28,7 +28,7 @@ const tableParent = document.getElementById('pixel-board');
 console.log(tableParent);
 
 function generatePixelCells(n) {
-  const tableParent = document.getElementById('pixel-board');
+  tableParent = document.getElementById('pixel-board');
   // código da linha 4 a 7, visualizado e re-interpretado da url https://www.codegrepper.com/code-examples/javascript/how+to+remove+all+child+elements+of+div+in+javascript
   while (tableParent.firstChild) {
     tableParent.removeChild(tableParent.lastChild);
@@ -48,8 +48,7 @@ function generatePixelCells(n) {
 const generateCellsButton = document.querySelector('#generate-board');
 
 generateCellsButton.addEventListener('click', function buttonEvent() {
-  let input = document.querySelector('#board-size');
-  let inputValue = input.value;
+  let inputValue = document.querySelector('#board-size').value;
   if (input.value == '') {
     alert("Board Inválido!");
   } else if (inputValue > 5 && inputValue <= 50) {
