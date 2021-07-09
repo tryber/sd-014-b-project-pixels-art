@@ -49,3 +49,8 @@ for (let indexLine = 0; indexLine < 5; indexLine += 1) {
     line.appendChild(pixel);
   }
 }
+
+// [Requisito 6]
+window.onload = function selectBlackColor() {
+  black.classList.add('selected');
+};
