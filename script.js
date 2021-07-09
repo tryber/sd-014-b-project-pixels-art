@@ -1,4 +1,4 @@
-//helpers pra reduzir o tamanho da sintaxe.
+//helpers.
 const query = document.querySelector.bind(document);
 const queries = document.querySelectorAll.bind(document);
 /*outras refs *
@@ -6,6 +6,7 @@ Tabelas Display Flex: https://www.maujor.com/tutorial/anti-heroi-css-display-tab
 ainda referente a tabelas: https://stackoverflow.com/questions/29229523/how-and-why-to-use-display-table-cell-css
 Flexbox: https://www.w3schools.com/css/css3_flexbox.asp
 Javascript Arrow Functions: https://www.w3schools.com/js/js_arrow_function.asp/
+operações com classlist https://developer.mozilla.org/pt-BR/docs/Web/API/Element/classList
 */
 //refs: script do aluno Glauco.
 
