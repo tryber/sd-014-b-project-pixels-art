@@ -1,6 +1,6 @@
 let blackColor = document.querySelector('.black');
 window.addEventListener('load', function() {
-  blackColor.classList.add('selected')
+  blackColor.classList.add('selected');
 })
 
 let colors = document.querySelectorAll('.color');
@@ -37,3 +37,13 @@ function copySelectedColor(event) {
 }
 
 table.addEventListener('click', copySelectedColor);
+
+let clearButton = document.querySelector('#clear-board');
+let cells = document.querySelectorAll('td');
+function clearBoard () {
+  for (let index = 0; index < cells.length; index += 1) {
+    cells[index].style.backgroundColor = 'white';
+  }
+}
+
+clearButton.addEventListener('click', clearBoard);
