@@ -16,7 +16,11 @@ colorFour.addEventListener('click', selectColor);
 
 function colorir(event) {
   const corSelecionada = document.querySelector('.selected').id;
-  event.target.style.backgroundColor = corSelecionada;  
+  event.target.style.backgroundColor = corSelecionada;
 }
 whiteBox.addEventListener('click', colorir);
 
+function clear(event) {
+  const botao = document.querySelector('#clear-board');
+
+}
