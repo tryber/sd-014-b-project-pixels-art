@@ -57,6 +57,10 @@ ul {
   border: 1px solid black;
 }
 
+.selected {
+  border-radius: 50%;
+}
+
 /**
 * Consultei o stite w3schools para formatar o estilo da tabela
 * Link: https://www.w3schools.com/html/html_tables.asp
