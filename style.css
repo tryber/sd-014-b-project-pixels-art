@@ -1,0 +1,16 @@
+#title{
+    margin-left: 20px;
+}
+.color{
+    border: 1px solid black;
+    float: left;
+    display:inline;
+    height: 70px;
+    width: 70px;
+    margin-left:20px;
+}
+#color-palette{
+    height: 72px;
+    width: 390px;
+    border: 1px solid black;
+}
