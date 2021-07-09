@@ -15,7 +15,7 @@
 }
 
 .black {
-    background-color: '';
+    background-color: black;
     width: 40px;
     height: 40px;
     border: 1px solid black;
@@ -49,6 +49,7 @@
     display: inline-block;
     margin: 0 auto;
 }
+
 
 #canvas {
     align-items: center;

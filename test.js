@@ -1,14 +1,16 @@
 /* var test = document.getElementsByClassName('color')[0];
 test.classList.add('selected'); */
 
-const colorDivs = document.getElementsByClassName('color');
-colorDivs[0].classList.add('selected');
+const arrayPaleta = document.getElementsByClassName('color');
+arrayPaleta[0].classList.add('selected');
 
-// Atribuindo cores às divs #1~#4
-const targetColors = ['black', '#315F1C', '#298E46', '#90DFA7'];
-for (let index = 0; index < colorDivs.length; index += 1) {
-  colorDivs[index].style.backgroundColor = targetColors[index];
+let coresAtribuir = ['#003D2E', 'rgb(0,127,95)', 'rgb(43, 147, 72)'];
+for (let index = 1; index <= arrayPaleta.length; index += 1) {
+  arrayPaleta[index].style.backgroundColor = coresAtribuir[index];
 }
+
+
+
 
 // nomeando uma variável pra cada div-cor:
 const setBlack = document.getElementsByClassName('color')[0];
@@ -32,13 +34,14 @@ function selectColor(evento) {
 }
 
 // Req 8:
-let pixels = document.querySelectorAll('.pixel');
+let selectedColor = setBlack.style.backgroundColor;
+console.log(selectedColor);
 
-for (let index = 0; index < pixels.length; index += 1) {
-  pixels[index].addEventListener('click', paint);
-}
 
-function paint(evento) {
-  const selectedColor = document.querySelector('.selected').style.backgroundColor;
-  evento.target.style.backgroundColor = selectedColor;
-}
+/* event.target.style.backgroundColor */
+
+
+
+
+
+
