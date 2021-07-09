@@ -27,8 +27,11 @@ body{
     border: 1px solid black;
     display: inline-block;
     
+}
 
-    
+.selected {
+    border: 3px solid white;
+    transform: translateY(-5px);
 }
 
 .pixel {
