@@ -6,5 +6,7 @@ document.querySelector('#title').innerHTML = "Paleta de Cores";
 document.querySelector('.color').style.backgroundColor = 'black';
 
 //Requisito 6:
-document.querySelectorAll('.color')[0].classList.replace('color','selected')
+document.querySelectorAll('.color')[0].id = 'first';
+document.getElementById('first').className = "selected";
+//console.log(document.getElementById('first').className);
 //console.log(document.querySelectorAll('.selected')[0]);
