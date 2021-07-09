@@ -21,16 +21,17 @@ function colorPaletteGenerator() {
   cortres.style.backgroundColor = corAleatoria();
 }
 
-//gerador da tabela de pixels
-let num = 5;
+// gerador da tabela de pixels
+const num = 5;
 const tabela = document.querySelector('table');
 
+// gerador de tabela
 function tableGenerator() {
   for (let index = 0; index < num; index += 1) {
-    let line = document.createElement('tr');
+    const line = document.createElement('tr');
     tabela.appendChild(line);
     for (let aux = 0; aux < num; aux += 1) {
-      let column = document.createElement('td');
+      const column = document.createElement('td');
       column.innerText = '';
       column.className = 'pixel';
       line.appendChild(column);
@@ -38,12 +39,14 @@ function tableGenerator() {
   }
 }
 
+// função que seta preto como cor inicial selecionada
 function blackSelected() {
   document.querySelector('#cor1').classList.add('selected');
   document.querySelector('#cor2').classList.remove('selected');
   document.querySelector('#cor3').classList.remove('selected');
   document.querySelector('#cor4').classList.remove('selected');
 }
+
 // função de carregamento de página
 function loadingFunction() {
   colorPaletteGenerator();
@@ -53,3 +56,20 @@ function loadingFunction() {
 
 // ativador da função de carregamento de página
 window.onload = loadingFunction;
+
+const selectionColor1 = document.getElementsByClassName('color')[0];
+const selectionColor2 = document.getElementsByClassName('color')[1];
+const selectionColor3 = document.getElementsByClassName('color')[2];
+const selectionColor4 = document.getElementsByClassName('color')[3];
+
+function changeSelectedColor(event) {
+  for (let index = 0; index < 4; index += 1) {
+    document.getElementsByClassName('color')[index].classList.remove('selected');
+  }
+  event.target.classList.add('selected');
+}
+
+selectionColor1.addEventListener('click', changeSelectedColor);
+selectionColor2.addEventListener('click', changeSelectedColor);
+selectionColor3.addEventListener('click', changeSelectedColor);
+selectionColor4.addEventListener('click', changeSelectedColor);
