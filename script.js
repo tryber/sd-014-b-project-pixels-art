@@ -1,6 +1,7 @@
+const colorPalette = document.querySelector('#color-palette');
+
 function createColor(rgbString) {
   const createElement = document.createElement('div');
-  const colorPalette = document.querySelector('#color-palette');
   const color = colorPalette.appendChild(createElement);
   color.style.backgroundColor = rgbString;
   color.style.border = '1px solid black';
@@ -31,3 +32,20 @@ function createPixelBoard() {
 }
 
 createPixelBoard();
+
+function defaultColor() {
+  const colors = document.querySelectorAll('.color');
+  colors[0].classList.add('black', 'selected');
+}
+
+defaultColor();
+
+function selectColor(event) {
+  const colors = document.querySelectorAll('.color');
+  for (let i = 0; i < colors.length; i += 1) {
+    colors[i].classList.remove('selected');
+    event.target.classList.add('selected');
+  }
+}
+
+colorPalette.addEventListener('click', selectColor);
