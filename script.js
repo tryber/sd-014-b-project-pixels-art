@@ -91,7 +91,7 @@ function changePixelColor(event) {
 }
 
 let pixels = document.querySelectorAll('.pixel');
-for (let index = 0; index < pixels.length; index += 1) {
+for (let index = 0; index < pixels.length; index += 1) {4
   pixels[index].addEventListener('click', changePixelColor);
 }
 btnClear.addEventListener('click', function () {
@@ -106,17 +106,22 @@ function removeBoard() {
 }
 
 btnGenerateBoard.addEventListener('click', function() {
-  let inputtedBoardSize = inputBoardSize.value;
-  if (inputtedBoardSize === '') {
+  let inputValue = inputBoardSize.value;
+  let inputNumber = parseInt(inputValue);
+  if (inputValue === '') {
     window.alert('Board inválido!');
-  } else {
-    removeBoard();
-    createPixelBoardElement();
-    numberOfRows = Number(inputtedBoardSize);
-    numberOfColumns = Number(inputtedBoardSize);
-    createPixelBoard();
-    inputBoardSize.value = '';
+  } else if (inputNumber < 5) {
+    inputNumber = 5;
+  } else if (inputNumber > 50) {
+    inputNumber = 50;
   }
+  removeBoard();
+  createPixelBoardElement();
+  numberOfRows = inputNumber;
+  numberOfColumns = inputNumber;
+  createPixelBoard();
+  inputBoardSize.value = '';
+
   function selectColor(event) {
     const selectedColor = document.querySelector('.selected');
     selectedColor.classList.remove('selected');
