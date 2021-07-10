@@ -41,10 +41,11 @@ function colorGenerator() {
 }
 colorGenerator();
 
+
 function getColor() {
   // Retorna a cor clicada pelo usuário
-  let colorPalette = document.querySelector('#color-palette');
   let colors = document.getElementsByClassName('color');
+  const colorPalette = document.querySelector('#color-palette');
   colorPalette.addEventListener('click', (event) => {
     for (let j=0; j<colors.length; j++){
       if (colors[j].classList.contains('selected')){
@@ -56,7 +57,7 @@ function getColor() {
         colors[i].classList.add('selected');
         let newColor = colors[i].style.backgroundColor;
         console.log(newColor);
-        return newColor;
+        return newColor
       }
     }
   });
@@ -65,15 +66,17 @@ getColor();
 
 function paintGrid() {
   // Pinta os pixels
+  let newColor = getColor();
+  // Pintar ao clicar:
+  let pixels = document.querySelectorAll('.pixel');
   let pixelBoard = document.querySelector('#pixel-board');
-  let selectedColor = document.querySelector('.selected');
-  let pixels = document.getElementsByClassName('pixel');
-  pixelBoard.addEventListener('click', (event) => {
-    for (let i=0; i<pixels.length; i++){
-        getColor();
-        pixels[i].event.target.style.backgroundColor = 'newColor';
-    }
- });
+  for (let i = 0; i < pixels.length; i++){
+    pixelBoard.addEventListener('click', (event) => {
+        if (event.target === pixels[i]){
+          pixels[i].style.backgroundColor = newColor;
+        }
+    });
+  }
 }
 paintGrid();
 
