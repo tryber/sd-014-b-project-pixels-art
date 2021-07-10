@@ -12,3 +12,36 @@ window.onload = function criarDeTabela() {
     }
   }
 };
+
+function obterCores() {
+  const paletaDeCores = document.getElementById('color-palette');
+  return paletaDeCores.children;
+}
+
+function removerClasse() {
+  const cores = obterCores();
+
+  for (let i = 0; i < cores.length; i += 1) {
+    const cor = cores[i];
+    cor.classList.remove('selected');
+  }
+}
+
+function selecionarCor(elemento) {
+  removerClasse();
+  elemento.classList.add('selected');
+}
+
+function adicionarClick() {
+  const cores = obterCores();
+
+  for (let i = 0; i < cores.length; i += 1) {
+    const cor = cores[i];
+
+    cor.addEventListener('click', () => {
+      selecionarCor(cor);
+    });
+  }
+}
+
+adicionarClick();
