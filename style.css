@@ -47,3 +47,8 @@
   display: flex;
   justify-content: center;
 }
+
+#sizeChange {
+  display: flex;
+  justify-content: center;
+}

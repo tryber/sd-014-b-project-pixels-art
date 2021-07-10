@@ -24,7 +24,7 @@ function colorPaletteGenerator() {
 }
 
 // gerador da tabela de pixels
-const num = 5;
+let num = 5;
 const tabela = document.querySelector('table');
 
 // gerador de tabela
@@ -101,3 +101,22 @@ function placeColor(event) {
 }
 
 tablePixel.addEventListener('click', placeColor);
+
+const sizeSelected = document.querySelector('#board-size');
+
+function sizeChanger() {
+  document.querySelector('#pixel-board').innerHTML = '';
+  num = sizeSelected.value;
+  if (sizeSelected.value === '') {
+    alert('Board Inválido!');
+  }
+  if (sizeSelected.value < 5) {
+    num = 5;
+  }
+  if (sizeSelected.value > 50) {
+    num = 50;
+  }
+  tableGenerator();
+}
+
+document.querySelector('#generate-board').addEventListener('click', sizeChanger);
