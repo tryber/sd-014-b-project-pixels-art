@@ -1,4 +1,5 @@
-// *Requisito 7*
+// * Requisito 7 *
+
 // function changeClass() {
 //   let pathColor = document.querySelectorAll('.color');
 //   for (let content of pathColor) {
@@ -26,7 +27,8 @@ for (let content of document.querySelectorAll('.color')) {
   })   
 }
 
-// *Requisito 8*
+// * Requisito 8 *
+
 const pixelBlocks = document.querySelectorAll('.pixel');
 function paintBlocks() {
   for (let index = 0; index < pixelBlocks.length; index += 1) {
@@ -36,10 +38,52 @@ function paintBlocks() {
   }
 }; paintBlocks();
 
-// *Requisito 9*
+// * Requisito 9 *
 
 document.querySelector('#clear-board').addEventListener('click', function () {
   for (let index = 0; index < pixelBlocks.length; index += 1) {
     pixelBlocks[index].style.backgroundColor = 'white';
   }
 })
+
+// * Requisito 10 *
+let boardInput = document.querySelector('#board-size');
+let boardButton = document.querySelector('#generate-board');
+
+boardButton.addEventListener('click', function() {
+  if (boardInput.value == '') {
+    alert('Board inválido!');
+  }
+  removeBoard()
+  createTable()
+})
+
+function createTable () {
+  if (boardInput.value != '' && boardInput.value < 5) {
+    // checkInputValue()
+    boardInput.value = 5;
+  } else if (boardInput.value != '' && boardInput.value > 50) {
+    boardInput.value = 50;
+  }
+  for (let lines = 0; lines < boardInput.value; lines += 1) {
+    let newTr = document.createElement('tr');
+    let pixelBoard = document.querySelector('#pixel-board');
+    pixelBoard.appendChild(newTr).classList.add('board-lines');;
+    for (let columns = 0; columns < boardInput.value; columns += 1) {
+      let newTd = document.createElement('td');
+      newTr.appendChild(newTd).classList.add('pixel');
+    }
+  }
+}
+
+// function checkInputValue () {
+//   if (boardInput.value < 5) {
+//     alert('Valor inválido! Escolha um valor maior, ou igual a 5.');
+//   } else if (boardInput.value > 50) {
+//     alert('Valor inválido! Escolha um valor menor, ou igual a 50.');
+//   }
+// }
+
+function removeBoard () {
+  document.querySelector('table').innerHTML = '';
+}

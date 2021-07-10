@@ -5,48 +5,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Project Pixels Art</title>
 </head>
 <body>
   <h1 id="title">Paleta de Cores</h1>
   <section id="color-palette">
     <div id='black' class="color selected"></div>
-    <div id='purple' class="color"></div>
+    <div id='red' class="color"></div>
     <div id='green' class="color"></div>
     <div id='orange' class="color"></div>
   </section>
   <button id="clear-board">Limpar</button>
   <section>
+    <input id="board-size" type="number" min="1" max="50"> 
+    <!-- Referência do input: https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input -->
+    <button id="generate-board">VQV</button>
     <table id="pixel-board">
-      <tr>
+      <tr class="board-lines">
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
       </tr>
-      <tr>
+      <tr class="board-lines">
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
       </tr>
-      <tr>
+      <tr class="board-lines">
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
       </tr>
-      <tr>
+      <tr class="board-lines">
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
       </tr>
-      <tr>
+      <tr class="board-lines">
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>

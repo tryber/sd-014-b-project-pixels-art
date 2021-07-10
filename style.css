@@ -1,20 +1,31 @@
 body {
   text-align: center;
+  background-image: url('https://www.icegif.com/wp-content/uploads/stitch-icegif-2.gif');
+  background-size: cover; /* Referência background cover: https://www.bitdegree.org/learn/responsive-image */
+  /* Para trocar a bgImage ao carregar a página, posso randomizar com "Math.floor(Math.random()* imgArray.length)" um array com links de gif's e retornar um a cada load */
+  background-color: pink;
 }
 
 .color {
-  border: 1px black solid;
+  border: 1px black solid; /* border: 2px rgb(109, 26, 126) solid; */
   width: 60px;
   height: 60px;
   display: inline-block;
+  border-radius: 25%;
+}
+
+h1 {
+  color: rgb(165, 31, 192);
+  text-shadow: 2px 0 0 rgb(87, 0, 0), -2px 0 0 rgb(87, 0, 0), 0 2px 0 rgb(87, 0, 0), 0 -2px 0 rgb(87, 0, 0), 1px 1px rgb(87, 0, 0), -1px -1px 0 rgb(87, 0, 0), 1px -1px 0 rgb(87, 0, 0), -1px 1px 0 rgb(87, 0, 0);
+  /* Referência da borda de texto: https://stackoverflow.com/questions/13426875/text-border-using-css-border-around-text/13427256 */
 }
 
 #black {
   background-color: black;
 }
 
-#purple {
-  background-color: purple;
+#red {
+  background-color: red;
 }
 
 #green {
@@ -28,6 +39,7 @@ body {
 table {
   width: auto;
   margin: auto;
+  margin-top: 2%;
 }
 
 tr {
