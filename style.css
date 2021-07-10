@@ -3,5 +3,9 @@
   height: 40px;
   width: 40px;
   display: inline-block;
-  margin: 2px;
+  
+}
+
+.pixel {
+  background-color: white;
 }

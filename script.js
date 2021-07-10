@@ -1,6 +1,5 @@
-// Define cores da paleta aleatoriamente (REF. [1]):
+// Define cores da paleta aleatoriamente (REF. [1]):7
 function colorGenerator() {
-  // O primeiro quadrado (posição 0) é sempre preto
   let square0 = document.getElementById('color-palette').children[0];
   square0.style.backgroundColor = 'black';
   // Os outros três são de cores aleatórias
@@ -18,8 +17,7 @@ function colorGenerator() {
     for (let k=0; k<=3; k+=1){
       if (colors[j] === 'white' || colors[j] === colors[k]){
         colorGenerator();
-    } 
-      else {
+    } else {
       break;
     }
   } 
