@@ -44,3 +44,11 @@ body {
     float: left;
     border: 1px solid black;
 }
+#clear-board{
+    margin-bottom: 20px;
+    padding: 5px;
+    font-family: monospace;
+    text-transform: uppercase;
+    width: 100px;
+    border-radius: 50px;
+}

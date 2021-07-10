@@ -60,12 +60,21 @@ for(let index = 0; index < divColor.length; index += 1){
    
 }
 let colorPixel = document.querySelectorAll('.pixel');
-
+let clearPixel = document.querySelector('#clear-board');
 
 for(let index = 0;index < colorPixel.length;index +=1){
     colorPixel[index].addEventListener('click',function(event){
         let element = document.querySelector('.selected');
         element = element.style.backgroundColor;
         event.target.style.backgroundColor = element;
+ 
     });
 }
+for(let index = 0; index < colorPixel.length; index += 1){
+    clearPixel.addEventListener('click',function (){
+        
+        colorPixel[index].style.backgroundColor = 'white';
+    });
+}
+
+
