@@ -1,0 +1,80 @@
+
+#color-palette {
+}
+.color {
+    font-size: xx-large;
+    font-weight: 400;
+    color: white;
+    line-height: 150px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+}
+/* .selected {
+    border: solid 5px yellow;
+} */
+#black {
+    background-color: black;
+}
+#red {
+    background-color: red;
+}
+#green {
+    background-color: green;
+}
+#blue {
+    background-color: blue;
+}
+
+#clear {
+    display: inline;
+} #clear-board {
+    padding: 10px 25px;
+    margin: 15px;
+    font-size: larger;
+    font-weight: 600;
+}
+
+form {
+    display: inline;
+}
+#inputDiv {
+    display: inline;
+    margin: 0 60px;
+    /* padding: 20px 10px;
+    border: groove silver; */
+} #generate-board {
+    padding: 10px 25px;
+    margin: 15px 5px;
+    font-size: larger;
+    font-weight: 600;
+} #board-size {
+    padding: 10px 5px;
+    margin: 15px 5px;
+    font-size: larger;
+    font-weight: 600;
+} legend {
+    font-size: large;
+    margin-left: 200px;
+    margin-top: -10px;
+} .conditionTrue {
+    font-size: large;
+    text-decoration: underline;
+} .conditionFalse {
+    font-weight: 600;
+    color: red;
+    text-decoration: underline double;
+}
+
+.pixel {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: solid 1px black;
+    background-color: white;
+}
+#tableRow {
+    display: flex;
+}
