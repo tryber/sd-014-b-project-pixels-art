@@ -19,6 +19,8 @@ function colorPaletteGenerator() {
   corDois.style.backgroundColor = corAleatoria();
   const cortres = document.querySelector('#cor4');
   cortres.style.backgroundColor = corAleatoria();
+  const corPreto = document.querySelector('#cor1');
+  corPreto.style.backgroundColor = 'black';
 }
 
 // gerador da tabela de pixels
@@ -93,9 +95,9 @@ cleaner.addEventListener('click', clearBoard);
 const tablePixel = document.getElementById('pixel-board');
 
 function placeColor(event) {
-  if (event.target.className === 'pixel') {
-    event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
-  }
+  console.log();
+  const pintar = event.target;
+  pintar.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
 
 tablePixel.addEventListener('click', placeColor);

@@ -14,7 +14,6 @@
 
 #cor1 {
   background-color: black;
-  margin-left: 550px;
 }
 
 #cor2 {
@@ -42,4 +41,9 @@
   height: 40px;
   border: solid black 1px;
   background-color: white;
+}
+
+#color-palette {
+  display: flex;
+  justify-content: center;
 }
