@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap') ;
 
 * {
   margin: 0;
@@ -9,12 +9,12 @@ body {
   background: url('pixel-art-desert.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
-  font-family: 'VT323', 'open-sans';
+  font-family: VT323, monospace;
   text-align: center;
 }
 
 header {
-  padding: 165px 0 20px;
+  padding: 5% 0 0.5%;
   text-transform: uppercase;
   font-size: 20px;
 }
@@ -48,7 +48,7 @@ header {
 }
 
 #cream {
-  background-color: #f6e7d8;
+  background-color: #fffdd0;
   margin: 10px 3px;
   width: 30px;
   height: 30px;
@@ -61,10 +61,27 @@ header {
   height: 30px;
 }
 
+#clear-board {
+  background-color: #efefef;
+  margin: 1% auto;
+  font-family: VT323, monospace;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100px;
+  height: 25px;
+  border: groove;
+}
+
+#clear-board:active {
+  background-color: #fffdd0;
+  border: inset;
+}
+
 #pixel-board {
   background-color: black;
   border-radius: 5px;
-  margin: 2% auto;
+  margin: 1% auto;
 }
 
 .pixel {
