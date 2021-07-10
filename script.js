@@ -1,17 +1,4 @@
 
-// const color1 = "black";
-// const color2 = "red";
-// const color3 = "green";
-// const color4 = "blue";
-
-// function colorPix(value) {
-  //   let currentPix = document.getElementById("tableRow");
-  //   currentPix.addEventListener('click', function(pix) {
-    //       let coloured = pix.target;
-    //       let colouredPix = document.querySelector(coloured);
-    //       colouredPix.style.backgroundColor = value;
-    //   });
-    // }
 
   function colorShift() {
     let colorItem = document.querySelector(".selected");
@@ -53,16 +40,81 @@ function clearButton() {
     }
   })
 }
+
+function createPix() {
+  let pix = document.createElement("div");
+  pix.className = "pixel";
+  return pix;
+}
+
+function createLine(count) {
+    count = inputValue();
+    let currentDiv = document.createElement("div");
+    currentDiv.setAttribute("id", "tableRow");
+    for (index = 1; index <= count; index += 1) {
+        let lineDiv = createPix();
+        currentDiv.appendChild(lineDiv);
+      }
+      return currentDiv;
+  }
+
+  function createTable(lines) {
+    let pixBoard = document.getElementById("pixel-board");
+      lines = inputValue();
+    for  (let index = 1; index <= lines; index += 1) {
+      let lineDiv = createLine();
+      pixBoard.appendChild(lineDiv);
+    }
+  }
+
+function inputValue() {
+  let inputBoard = document.getElementById("board-size");
+  let currentInput = inputBoard.value;
+  if (currentInput < 5) return 5;
+  if (currentInput > 50) return 50;
+    return currentInput;
+}
+
+function removeTable() {
+  let currentBoard = document.getElementById("pixel-board");
+  let currentTable = document.querySelectorAll("#tableRow");
+  for (index = 0; index < currentTable.length; index += 1) {
+    currentBoard.removeChild(currentTable[index]);
+  }
+}
+
+function createNewTable() {
+  let inputButton = document.getElementById("generate-board");
+  inputButton.addEventListener('click', function() {
+    let currentInput = inputValue();
+
+    if (currentInput === "") return alert("Board inválido!");
+    // } else if (currentInput < 5) { 
+    //   removeTable();
+    //   createTable(5);
+    //   colorPix(colorShift());
+    // } else if (currentInput > 50) { 
+    //   removeTable();
+    //   createTable(50);
+    //   colorPix(colorShift());
+    // } else {
+      removeTable();
+      createTable(currentInput);
+      colorPix(colorShift());
+    // }
+  });
+}
+
 // - - - - - - - - - - //
 
 window.onload = function() {
 
-  let repeatCount = 5;
-  let pixBoard = document.getElementById("pixel-board");
+  // let repeatCount = document.getElementById("board-size").value;
 
-  // let colorId = colorShift();
 
-  createTable(repeatCount);
+  createNewTable();
+
+  createTable(inputValue());
 
   clearButton();
 
@@ -70,44 +122,4 @@ window.onload = function() {
 
   colorPix(colorShift());
 
-  function createPix() {
-    let pix = document.createElement("div");
-    pix.className = "pixel";
-    return pix;
-  }
-
-  function createLine(count) {
-      count = repeatCount;
-      let currentDiv = document.createElement("div");
-      currentDiv.setAttribute("id", "tableRow");
-      for (index = 1; index <= count; index += 1) {
-          let lineDiv = createPix();
-          currentDiv.appendChild(lineDiv);
-        }
-        return currentDiv;
-    }
-
-    function createTable(lines) {
-        lines = repeatCount;
-      for  (let index = 1; index <= lines; index += 1) {
-        let lineDiv = createLine();
-        pixBoard.appendChild(lineDiv);
-      }
-    }
-
-  // function colorShift() {
-  //   let colorItem = document.querySelector(".selected");
-  //   return colorItem.id;
-  // //   console.log(colorId);
-  // }
-
-  // function colorPix(value) {
-  //     // value = colorShift();
-  //   let currentPix = document.querySelectorAll("#tableRow div");
-  //   for (index = 0; index < currentPix.length; index += 1) {
-  //     currentPix[index].addEventListener('click', function() {
-  //       this.style.backgroundColor = value;
-  //     });
-  //   }
-  // }
 }

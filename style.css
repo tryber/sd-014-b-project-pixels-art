@@ -28,6 +28,46 @@
     background-color: blue;
 }
 
+#clear {
+    display: inline;
+} #clear-board {
+    padding: 10px 25px;
+    margin: 15px;
+    font-size: larger;
+    font-weight: 600;
+}
+
+form {
+    display: inline;
+}
+#inputDiv {
+    display: inline;
+    margin: 0 60px;
+    /* padding: 20px 10px;
+    border: groove silver; */
+} #generate-board {
+    padding: 10px 25px;
+    margin: 15px 5px;
+    font-size: larger;
+    font-weight: 600;
+} #board-size {
+    padding: 10px 5px;
+    margin: 15px 5px;
+    font-size: larger;
+    font-weight: 600;
+} legend {
+    font-size: large;
+    margin-left: 200px;
+    margin-top: -10px;
+} .conditionTrue {
+    font-size: large;
+    text-decoration: underline;
+} .conditionFalse {
+    font-weight: 600;
+    color: red;
+    text-decoration: underline double;
+}
+
 .pixel {
     display: inline-block;
     width: 40px;

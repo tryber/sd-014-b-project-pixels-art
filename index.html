@@ -15,7 +15,17 @@
     <div id="green" class="color">Verde</div>
     <div id="blue" class="color">Azul</div>
   </div>
-  <button id="clear-board">Limpar</button>
+  <div id="clear">
+    <button id="clear-board">Limpar</button>
+  </div>
+  <div id="inputDiv">
+    <!-- Após encontrar no Stackoverflow o atributo: oninput="validity.valid||(value='');" eu pesquisei seu funcionamento e decidi ser a melhor escolha parao requisito do Zero -->
+      <input oninput="validity.valid|| 
+      (value='');" id="board-size" type="number" min="1" value="5"> ◄-|-►
+      <button id="generate-board">VQV</button>
+
+    <legend>Escolha quantos Pixels. <span id="conditionNumber" class="conditionTrue">Use números de 5 a 50</span>.</legend>
+  </div>
   <div id="pixel-board">
     
   </div>
