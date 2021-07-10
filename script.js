@@ -1,5 +1,6 @@
 let palette = document.querySelector("#color-palette");
 let pixelBoard = document.querySelector("#pixel-board");
+
 createPalette();
 
 function createPalette(){
@@ -11,7 +12,6 @@ function createPalette(){
         createDivItem.className = 'color';
         
         palette.appendChild(createDivItem);
-        console.log(createDivItem);
 
         switch(index){
             case 1:
@@ -31,6 +31,9 @@ function createPalette(){
 
     }
 }
+
+
+
 createPixel()
 function createPixel(){
     for(let index = 0; index < 25; index += 1){
@@ -40,3 +43,20 @@ function createPixel(){
         
     }
 }
+//variável com as divs que devem ser selecionadas
+let divColor = document.querySelectorAll('.color');
+for(let index = 0; index < divColor.length; index += 1){
+    //cria variável para recuperar o elemento 
+    let activeClass = divColor[index];
+    //atribui um evento a classe criada
+    activeClass.addEventListener('click',function(){
+        disableClass = document.querySelector('.selected');
+    //cria um if para verificar se o elemento ja possui a class selected e caso tenha altera no click
+        if(activeClass.className != 'selected'){
+            disableClass.classList.remove('selected');
+            activeClass.classList.add('selected');
+        }
+    });
+   
+}
+

@@ -1,10 +1,14 @@
-body{
-    background:url(img/gandalf.jpg) no-repeat;
+body {
+    
+    background:rgba(7, 39, 7, 0.664) url(img/gandalf_wallpaper1.png) ;
+    width: 1366px;
+    height: 768;
+    font-family: monospace;
+    color:bisque;
+    text-transform: uppercase;
+    text-align: center;
 }
-#title{
-    margin-left: 70px;
-}
-.color{
+.color {
     border-radius: 50%;
     border: 1px solid black;
     float: left;
@@ -13,7 +17,7 @@ body{
     width: 70px;
     margin:10px 10px;
 }
-#color-palette{
+#color-palette {
     border-radius: 100px;
     height: 100px;
     width: 370px;
@@ -21,15 +25,17 @@ body{
     clear: both;
     background-color: cornsilk;
     opacity: 70%;
+    margin: auto;
+    margin-bottom: 20px;
 }
-#pixel-board{
+#pixel-board {
     opacity: 80%;
-    margin:30px 35px;
-    width: 350px;
+    width: 310px;
     height: 320px;
+    margin: auto;
  
 }
-.pixel{
+.pixel {
     padding: 10px;
     background-color: white;
     width: 40px;
