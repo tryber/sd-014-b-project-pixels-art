@@ -1,19 +1,16 @@
+// 1 - Adicione à página o título "Paleta de Cores". OK
+
 document.getElementsByClassName('color')[0].style.backgroundColor = 'black';
 
-// pixel = document.getElement
+// 9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
 
-/*
-pixel.addEventListener('mousedown', function() {
-    const color = document.querySelector('.color').value;
-    this.style.backgroundColor = color;
-  })
-/*
+const clearButton = document.getElementById('clear-board'); // Atribuir elemento do botão clear-board à variável clearButton
 
-/*
-let sizeBoard = document.getElementById('board-size').value;
+function clearBoard() { // Adicionar evento 'click' para botão acionar função anônima
+  document.querySelectorAll('.pixel').forEach((element) => {
+    const pixel = element;
+    pixel.style.backgroundColor = 'white'; // Setar backgroundcolor em branco para cada pixel
+  });
+}
 
-if (sizeBoard === '') {
-    alert("Board inválido!");
-  } else {
-    document.getElementById("...").appendChild(li);
-  } */
+clearButton.addEventListener('click', clearBoard);

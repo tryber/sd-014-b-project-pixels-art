@@ -21,9 +21,9 @@
         </table>
     <!--Paleta de cores-->
 
-    <input id='board-size'><button type='button' id='generate-board' onclick="boardSize()">VQV</button>
+    <input id='board-size' type='number'><button type='button' id='generate-board' onclick="createPixelBoard()">VQV</button>
 
-    <button type="button" id='clear-board' onclick="clearBoard()">Limpar</button>
+    <button type="button" id='clear-board'>Limpar</button>
 
     <table id='pixel-board'>
         <tr>
@@ -64,7 +64,7 @@
     </table>
 
     
-
+    <td>Tamanho dos lados do pixel board: </td><td><input id="uintTextBox"></td>
 
 
 <script src="script.js"></script>
