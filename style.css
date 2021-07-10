@@ -1,0 +1,54 @@
+body {
+    
+    background:rgba(7, 39, 7, 0.664) url(img/gandalf_wallpaper1.png) ;
+    width: 1366px;
+    height: 768;
+    font-family: monospace;
+    color:bisque;
+    text-transform: uppercase;
+    text-align: center;
+}
+.color {
+    border-radius: 50%;
+    border: 1px solid black;
+    float: left;
+    display:inline;
+    height: 70px;
+    width: 70px;
+    margin:10px 10px;
+}
+#color-palette {
+    border-radius: 100px;
+    height: 100px;
+    width: 370px;
+    border: 2px solid blanchedalmond;
+    clear: both;
+    background-color: cornsilk;
+    opacity: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+#pixel-board {
+    opacity: 80%;
+    width: 310px;
+    height: 320px;
+    margin: auto;
+ 
+}
+.pixel {
+    padding: 10px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    display: inline;
+    float: left;
+    border: 1px solid black;
+}
+#clear-board{
+    margin-bottom: 20px;
+    padding: 5px;
+    font-family: monospace;
+    text-transform: uppercase;
+    width: 100px;
+    border-radius: 50px;
+}
