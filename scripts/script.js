@@ -1,3 +1,6 @@
+// Referência: como adicionar o mesmo evento em vários elementos
+// src: https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
+
 // [Requisito 1]
 // Adiciona à página o título 'Paleta de Cores'
 const title = document.createElement('h1');
@@ -29,6 +32,20 @@ black.style.backgroundColor = 'black';
 cyan.style.backgroundColor = 'cyan';
 magenta.style.backgroundColor = 'magenta';
 yellow.style.backgroundColor = 'yellow';
+
+// [Requisito 9]
+// Cria um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
+const clearButton = document.createElement('button');
+clearButton.id = 'clear-board';
+clearButton.innerHTML = 'Limpar';
+document.querySelector('body').appendChild(clearButton);
+
+clearButton.addEventListener('click', () => {
+  document.querySelectorAll('.pixel').forEach((element) => {
+    const pixel = element;
+    pixel.style.backgroundColor = 'white';
+  });
+});
 
 // [Requisito 4]
 // Adiciona à página um quadro de pixels, com 25 pixels.
@@ -72,19 +89,5 @@ document.querySelectorAll('.pixel').forEach((element) => {
     const pixel = event.target;
     console.log(pixel);
     pixel.style.backgroundColor = selectedColor.style.backgroundColor;
-  });
-});
-
-// [Requisito 9]
-// Cria um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
-const clearButton = document.createElement('button');
-clearButton.id = 'clear-board';
-clearButton.innerHTML = 'Limpar';
-document.querySelector('#pixel-board').previousSibling.appendChild(clearButton);
-
-clearButton.addEventListener('click', () => {
-  document.querySelectorAll('.pixel').forEach((element) => {
-    const pixel = element;
-    pixel.style.backgroundColor = 'white';
   });
 });
