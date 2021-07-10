@@ -40,5 +40,5 @@ function clearBoard() {
     }
 }
 
-  clearButton.addEventListener('click', clearBoard);
+clearButton.addEventListener('click', clearBoard);
   
