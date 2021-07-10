@@ -1,8 +1,24 @@
+html {
+  display: table;
+  margin: auto;
+}
+
+body{
+  display: table-cell;
+  vertical-align: middle;
+}
+
 #title {
   text-align: center;
+  background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
+  border: 1px solid #696969;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px black;
 }
 #color-palette {
-  display: flex;
+  
+ margin-left: 15%;
   gap: 10px;
 }
 
@@ -24,4 +40,15 @@
   border-collapse: collapse;
   margin: 0 auto;
   border: 1px solid black;
+}
+#clear-board {
+  margin-left: 37%;
+  background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
+    border: 1px solid #696969;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px black;
+}
+body {
+ background-image: url('tetris.jpg');
 }
