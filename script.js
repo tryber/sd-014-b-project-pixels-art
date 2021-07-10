@@ -57,6 +57,7 @@ function loadingFunction() {
 // ativador da função de carregamento de página
 window.onload = loadingFunction;
 
+// inicio do selecionador de cores
 const selectionColor1 = document.getElementsByClassName('color')[0];
 const selectionColor2 = document.getElementsByClassName('color')[1];
 const selectionColor3 = document.getElementsByClassName('color')[2];
@@ -73,3 +74,16 @@ selectionColor1.addEventListener('click', changeSelectedColor);
 selectionColor2.addEventListener('click', changeSelectedColor);
 selectionColor3.addEventListener('click', changeSelectedColor);
 selectionColor4.addEventListener('click', changeSelectedColor);
+
+// final do selecionador de cores;
+
+// função do botão limpar
+const cleaner = document.querySelector('#clear-board');
+const quadrado = num * num;
+function clearBoard() {
+  for (let key = 0; key < quadrado; key += 1) {
+    document.getElementsByTagName('td')[key].style.backgroundColor = 'white';
+  }
+}
+
+cleaner.addEventListener('click', clearBoard);
