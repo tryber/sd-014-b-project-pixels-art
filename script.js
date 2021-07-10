@@ -68,7 +68,8 @@ function paintGrid() {
 getColor(); // REF. [2]
 paintGrid();
 
-// Como paintGrid pinta TUDO, eu preciso apagar tudo também...
+// Botão que apaga o grid 
+// Como paintGrid pinta TUDO em que clica, eu preciso apagar tudo também...
 // Ou seja, section, table, tr, th e divs
 let clearBoardButton = document.querySelector('#clear-board');
 clearBoardButton.addEventListener('click', (event) => {
