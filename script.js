@@ -31,7 +31,7 @@ function selectColor(evento) {
   evento.target.classList.add('selected');
 }
 
-// Req 8:
+// Req 8 - Pintando os pixels
 let pixels = document.querySelectorAll('.pixel');
 
 for (let index = 0; index < pixels.length; index += 1) {
@@ -43,4 +43,51 @@ function paint(evento) {
   evento.target.style.backgroundColor = selectedColor;
 }
 
-// Req 9: Botão reset
+// Req 9 - Apagando os pixels
+const resetButton = document.querySelector('#clear-board')
+resetButton.addEventListener('click', clearBoard)
+
+function clearBoard() {
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  }
+}
+
+// Req 10
+const boardSize = document.querySelector('#board-size'); // elemento input
+const boardGenerator = document.querySelector('#generate-board'); // button VQV
+
+boardGenerator.addEventListener('click', verifySize)
+
+function verifySize () {
+  boardSize.value
+  if (boardSize.value === '') {
+    alert('Board inválido!')
+  } if (boardSize.value < 5) {
+    boardSize.value = 5;
+  } if (boardSize.value > 50) {
+    boardSize.value = 50;
+  }
+  createBoard();
+}
+
+
+function createBoard () {
+  let board = document.querySelector('#pixel-board') // elemento table
+  board.innerHTML = '';
+  for (let index = 0; index < boardSize.value; index += 1) {
+    let newTr = document.createElement('tr');
+    newTr.classList.add('tr');
+    board.appendChild(newTr);
+    let tableLine = document.getElementsByClassName('tr')[index]; 
+    for (let index2 = 0; index2 < boardSize.value; index2 += 1) {
+      let newPixel = document.createElement('td');
+      newPixel.classList.add('pixel');
+      tableLine.appendChild(newPixel);
+    }
+  }
+  let pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', paint);
+  }
+}
