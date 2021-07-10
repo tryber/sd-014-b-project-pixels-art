@@ -87,3 +87,15 @@ function clearBoard() {
 }
 
 cleaner.addEventListener('click', clearBoard);
+
+// transferindo a cor para o pixel
+
+const tablePixel = document.getElementById('pixel-board');
+
+function placeColor(event) {
+  if (event.target.className === 'pixel') {
+    event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+  }
+}
+
+tablePixel.addEventListener('click', placeColor);
