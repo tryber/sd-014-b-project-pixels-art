@@ -1,17 +1,10 @@
 .color, .pixel {
-  border: 2px solid black;
-  width: 40px;
+  border: 1px solid black;
   height: 40px;
+  width: 40px;
   display: inline-block;
-  margin-right: 2px;
 }
 
 #black {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
-
-#pixel-board {
-  margin-top: 80px;
-}
-
-
