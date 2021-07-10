@@ -1,0 +1,54 @@
+#title {
+  text-align: center;
+  font-size: 70px;
+  color: black;
+}
+
+.color {
+  border: solid black 1px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: 10px;
+}
+
+#cor1 {
+  background-color: black;
+}
+
+#cor2 {
+  background-color: blue;
+}
+
+#cor3 {
+  background-color: red;
+}
+
+#cor4 {
+  background-color: whitesmoke;
+}
+
+#clear-board {
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 3px;
+  display: flex;
+  margin: auto;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: solid black 1px;
+  background-color: white;
+}
+
+#color-palette {
+  display: flex;
+  justify-content: center;
+}
+
+#sizeChange {
+  display: flex;
+  justify-content: center;
+}
