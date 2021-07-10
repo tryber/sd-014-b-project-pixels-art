@@ -23,7 +23,6 @@ function createPalette(){
             break;
             case 3:
                 document.querySelectorAll('div')[3].style.backgroundColor = 'red';
-            
             case 4:
                 document.querySelectorAll('div')[4].style.backgroundColor = 'yellow';
             break;
@@ -55,8 +54,18 @@ for(let index = 0; index < divColor.length; index += 1){
         if(activeClass.className != 'selected'){
             disableClass.classList.remove('selected');
             activeClass.classList.add('selected');
+            
         }
     });
    
 }
+let colorPixel = document.querySelectorAll('.pixel');
 
+
+for(let index = 0;index < colorPixel.length;index +=1){
+    colorPixel[index].addEventListener('click',function(event){
+        let element = document.querySelector('.selected');
+        element = element.style.backgroundColor;
+        event.target.style.backgroundColor = element;
+    });
+}
