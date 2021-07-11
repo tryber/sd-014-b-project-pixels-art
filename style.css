@@ -6,8 +6,8 @@
 
 #color-palette {
   border: 2px solid black;
-  width: 400px;
-  height: 100px;
+  width: 200px;
+  height: 50px;
 }
 
 .color {
@@ -28,4 +28,14 @@
 
 #Yellow {
   background-color: yellow;
+}
+
+#pixel-board {
+  width: 400px;
+  height: 400px;
+}
+
+.pixel {
+  border: 1px solid black;
+  background-color: white;
 }
