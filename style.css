@@ -1,0 +1,74 @@
+body {
+  text-align: center;
+  background-image: url('https://www.icegif.com/wp-content/uploads/stitch-icegif-2.gif');
+  background-size: cover;
+
+  /* Referência background cover: https://www.bitdegree.org/learn/responsive-image */
+
+  /* Para trocar a bgImage ao carregar a página, posso randomizar
+  com "Math.floor(Math.random()* imgArray.length)"
+  um array com links de gif's e retornar um a cada load */
+  background-color: pink;
+}
+
+.color {
+  border: 1px black solid; /* border: 2px rgb(109, 26, 126) solid; */
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  border-radius: 25%;
+}
+
+h1 {
+  color: rgb(165, 31, 192);
+  text-shadow: 2px 0 0 rgb(87, 0, 0), -2px 0 0 rgb(87, 0, 0), 0 2px 0 rgb(87, 0, 0),
+    0 -2px 0 rgb(87, 0, 0), 1px 1px rgb(87, 0, 0), -1px -1px 0 rgb(87, 0, 0),
+    1px -1px 0 rgb(87, 0, 0), -1px 1px 0 rgb(87, 0, 0);
+
+  /* Referência da borda de texto:
+  https://stackoverflow.com/questions/13426875/text-border-using-css-border-around-text/13427256 */
+}
+
+#black {
+  background-color: black;
+}
+
+#clear-board , #reset-colors {
+  margin: 10px 2px;
+  background-color: purple;
+  color: white;
+  font-size: 1.5em;
+  border-radius: 20%;
+  border: 2px black solid;
+}
+
+#generate-board , #board-size {
+  font-size: 1.5em;
+  border-radius: 20%;
+  border: 2px black solid;
+}
+
+#generate-board {
+  background-color: yellowgreen;
+  color: white;
+}
+
+
+table {
+  width: auto;
+  margin: auto;
+  margin-top: 2%;
+}
+
+tr {
+  width: 40px;
+  height: 40px;
+  border: 1px black solid;
+}
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: 1px black solid;
+}
