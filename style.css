@@ -1,8 +1,13 @@
 body {
   text-align: center;
   background-image: url('https://www.icegif.com/wp-content/uploads/stitch-icegif-2.gif');
-  background-size: cover; /* Referência background cover: https://www.bitdegree.org/learn/responsive-image */
-  /* Para trocar a bgImage ao carregar a página, posso randomizar com "Math.floor(Math.random()* imgArray.length)" um array com links de gif's e retornar um a cada load */
+  background-size: cover;
+
+  /* Referência background cover: https://www.bitdegree.org/learn/responsive-image */
+
+  /* Para trocar a bgImage ao carregar a página, posso randomizar
+  com "Math.floor(Math.random()* imgArray.length)"
+  um array com links de gif's e retornar um a cada load */
   background-color: pink;
 }
 
@@ -16,25 +21,38 @@ body {
 
 h1 {
   color: rgb(165, 31, 192);
-  text-shadow: 2px 0 0 rgb(87, 0, 0), -2px 0 0 rgb(87, 0, 0), 0 2px 0 rgb(87, 0, 0), 0 -2px 0 rgb(87, 0, 0), 1px 1px rgb(87, 0, 0), -1px -1px 0 rgb(87, 0, 0), 1px -1px 0 rgb(87, 0, 0), -1px 1px 0 rgb(87, 0, 0);
-  /* Referência da borda de texto: https://stackoverflow.com/questions/13426875/text-border-using-css-border-around-text/13427256 */
+  text-shadow: 2px 0 0 rgb(87, 0, 0), -2px 0 0 rgb(87, 0, 0), 0 2px 0 rgb(87, 0, 0),
+    0 -2px 0 rgb(87, 0, 0), 1px 1px rgb(87, 0, 0), -1px -1px 0 rgb(87, 0, 0),
+    1px -1px 0 rgb(87, 0, 0), -1px 1px 0 rgb(87, 0, 0);
+
+  /* Referência da borda de texto:
+  https://stackoverflow.com/questions/13426875/text-border-using-css-border-around-text/13427256 */
 }
 
 #black {
   background-color: black;
 }
 
-/* #red {
-  background-color: red;
+#clear-board , #reset-colors {
+  margin: 10px 2px;
+  background-color: purple;
+  color: white;
+  font-size: 1.5em;
+  border-radius: 20%;
+  border: 2px black solid;
 }
 
-#green {
-  background-color: green;
+#generate-board , #board-size {
+  font-size: 1.5em;
+  border-radius: 20%;
+  border: 2px black solid;
 }
 
-#orange {
-  background-color: orange;
-} */
+#generate-board {
+  background-color: yellowgreen;
+  color: white;
+}
+
 
 table {
   width: auto;

@@ -30,10 +30,11 @@ for (let content of document.querySelectorAll('.color')) {
 // * Requisito 8 *
 
 const pixelBlocks = document.querySelectorAll('.pixel');
+document.querySelector('#black').style.backgroundColor = 'black';
 function paintBlocks() {
   for (let index = 0; index < pixelBlocks.length; index += 1) {
     pixelBlocks[index].addEventListener('click', function () {
-      document.querySelectorAll('.pixel')[index].style.backgroundColor = document.querySelector('.selected').id;
+      document.querySelectorAll('.pixel')[index].style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
     })
   }
 }; paintBlocks();
@@ -90,22 +91,18 @@ function removeBoard () {
 // * Requisito 12 *
 
 window.onload = function () {
-  const paletteOfColors = ['blue', 'red', 'yellow', 'orange', 'purple', 'green', 'silver', 'aqua', 'beige', 'brown', 'aquamarine', 'blueviolet'];
-  const colorPalette = document.querySelectorAll('.color');
-  let diferentRandomNumbers = [];
+  function resetColorPalette () {
+    const colorPalette = document.querySelectorAll('.color');
 
-  for (let n = 1; n <= 3; n += 1) {
-    let randomNumber = Math.floor(Math.random() * (paletteOfColors.length - 1));
-    diferentRandomNumbers.push(randomNumber);
-    for (let repeat = 1; repeat <= (n - 1); repeat += 1) {
-      if (diferentRandomNumbers[repeat] == diferentRandomNumbers[repeat - 1] || randomNumber == diferentRandomNumbers[0]) {
-        diferentRandomNumbers[repeat] = diferentRandomNumbers[repeat - 1] + 1;
-      }
-    console.log(diferentRandomNumbers);
-    console.log(diferentRandomNumbers[repeat] + ' e ' + diferentRandomNumbers[repeat - 1]);
-    console.log(randomNumber + ' e ' + diferentRandomNumbers[0]);
+    for (let n = 1; n <= 3; n += 1) {
+      let valueRed = Math.round(Math.random() * (255 - 1));
+      let valueGreen = Math.round(Math.random() * (255 - 1));
+      let valueBlue = Math.round(Math.random() * (255 - 1));
+      colorPalette[n].style.backgroundColor = `rgb(${valueRed}, ${valueGreen}, ${valueBlue})`;
     }
-    colorPalette[n].id = paletteOfColors[diferentRandomNumbers[n - 1]];
-    colorPalette[n].style.backgroundColor = colorPalette[n].id;
-  }
+  } resetColorPalette();
+
+  document.querySelector('#reset-colors').addEventListener('click', function () {
+    resetColorPalette();
+  })
 }
