@@ -1,10 +1,14 @@
 const containerPalhetas = document.querySelector('#color-palette');
 const boxColor = ['black', 'blue', 'green', 'red'];
+let corSelecionada = '';
+let whiteBox = document.querySelector('#pixel-board');
+let btnLimparQuadro = document.querySelector('#clear-board');
 
 for (let i = 0; i < 4; i += 1) {
   const boxPalheta = document.createElement('div');
   if (i === 0) {
     boxPalheta.className = 'color selected';
+    corSelecionada = boxColor[i];
   } else {
     boxPalheta.className = 'color';
   }
@@ -28,7 +32,6 @@ for (let i = 0; i < 5; i += 1) {
   }
 }
 
-
 function selectColor(event) {
   const colorSelected = document.querySelectorAll('.color');
   let verificador = 0;
@@ -40,26 +43,25 @@ function selectColor(event) {
           verificador = index;
         }
       }
-      let clickedColor = event.target.style.backgroundColor;
+      corSelecionada = event.target.style.backgroundColor;
       colorSelected[verificador].classList.remove('selected');
       colorSelected[index].classList.add('selected');
-      return clickedColor;
-    });
-  };
-}
-
-selectColor();
-
-
-function paintBox() {
-  let cor = document.querySelector('.color.selected');
-  cor = cor.style.backgroundColor;
-  let whiteBox = document.querySelectorAll('.pixel');
-  console.log(cor);
-  for (let i = 0; i < whiteBox.length; i += 1) {
-    whiteBox[i].addEventListener('click', function(event) {
-      event.target.style.backgroundColor = cor;
     });
   }
 }
-paintBox();
+selectColor();
+
+function paintWhiteBox(event) {
+  if (event.target.id !== 'pixel-board') {
+    event.target.style.backgroundColor = corSelecionada;
+  }
+}
+whiteBox.addEventListener('click', paintWhiteBox);
+
+function cleanWhiteBoxes() {
+  let whiteBox = document.querySelectorAll('.pixel');
+  for (let i = 0; i < whiteBox.length; i += 1) {
+    whiteBox[i].style.backgroundColor = 'white';
+  }
+}
+btnLimparQuadro.addEventListener('click', cleanWhiteBoxes);
