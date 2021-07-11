@@ -1,5 +1,9 @@
 const containerPalhetas = document.querySelector('#color-palette');
-const boxColor = ['black', 'blue', 'green', 'red'];
+const color2 = `#${randomColor()}`;
+const color3 = `#${randomColor()}`;
+let color4 = `#${randomColor()}`;
+console.log(color2, color4);
+const boxColor = ['black', color2, color3, color4];
 let corSelecionada = '';
 let whiteBox = document.querySelector('#pixel-board');
 let btnLimparQuadro = document.querySelector('#clear-board');
@@ -7,6 +11,13 @@ let inputBoardSize = document.querySelector('#board-size');
 let btnGenerate = document.querySelector('#generate-board');
 let n = 5;
 inputBoardSize.value = n;
+
+// Gerador de cores aleatórias - pesquisado no site
+// https://javascript.plainenglish.io/build-a-random-color-generator-with-javascript-31061a6b99ae
+function randomColor() {
+  let randomize = Math.floor(Math.random() * 16777215).toString(16);
+  return randomize;
+}
 
 for (let i = 0; i < 4; i += 1) {
   const boxPalheta = document.createElement('div');
