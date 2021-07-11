@@ -90,6 +90,16 @@ function adicionarClickNosPixels() {
   }
 }
 
+function resertarPixels() {
+  const pixels = obterPixels();
+
+  for (let i = 0; i < pixels.length; i += 1) {
+    const pixel = pixels[i];
+    pixel.style.backgroundColor = '#ffffff';
+  }
+}
+
 criarTabela();
 adicionarClickNasCores();
 adicionarClickNosPixels();
+document.getElementById('clear-board').addEventListener('click', resertarPixels);
