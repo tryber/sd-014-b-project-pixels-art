@@ -10,6 +10,16 @@ body {
 #title {
   font-weight: 500;
   padding-left: 9px;
+  text-align: center;
+}
+
+#color-palette , #container-board {
+  vertical-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .color {
@@ -23,6 +33,8 @@ body {
 #pixel-board {
   display: table;
   padding: 5px;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .pixel-tr {

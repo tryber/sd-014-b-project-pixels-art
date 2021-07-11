@@ -12,13 +12,17 @@
 <body>
   <h1 id=title>Paleta de Cores</h1>
   <div id=color-palette>
-
   </div>
-  <button id = clear-board>
-    <span>Limpar</span>
-  </button>
+  <div id=container-board>
+    <button id=clear-board>
+      <span>Limpar</span>
+    </button>
+    <input type="number" id=board-size placeholder='Tamanho do board!' min='1'>
+    <button id='generate-board'>
+      <span>VQV</span>
+    </button>
+  </div>
   <div id=pixel-board>
-
   </div>
   <script src='script.js'></script>
 </body>
