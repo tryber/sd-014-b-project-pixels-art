@@ -1,31 +1,57 @@
-#color-palette1 {
-  width: 40px;
-  height: 40px;
-  border: 1px solid black;
-  background: black;
+html, body {
+  margin: 0;
+  text-align: center;
+  background-image: url('art-button/blue-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Yomogi', cursive;
 }
 
-#color-palette2 {
-  width: 40px;
-  height: 40px;
-  border: 1px solid black;
-  background: tomato;
+.button {
+  margin-top: 10px;
 }
 
-#color-palette3 {
-  width: 40px;
+.color {
   height: 40px;
-  border: 1px solid black;
-  background: yellow;
-}
-
-#color-palette4 {
   width: 40px;
-  height: 40px;
   border: 1px solid black;
-  background: blue;
 }
 
 div {
   display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type=color] {
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: black;
+}
+
+.pixel-board {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 210px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
 }
