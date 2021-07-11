@@ -1,0 +1,31 @@
+#title {
+  font-family: Times, serif, Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 35px;
+}
+
+#color-palette {
+  border: 2px solid black;
+  width: 400px;
+  height: 100px;
+}
+
+.color {
+  border: 1px solid black;
+}
+
+#Black {
+  background-color: black;
+}
+
+#Red {
+  background-color: red;
+}
+
+#Green {
+  background-color: green;
+}
+
+#Yellow {
+  background-color: yellow;
+}
