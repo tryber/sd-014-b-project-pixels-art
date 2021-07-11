@@ -1,4 +1,4 @@
-body {
+body h1{
   font-family: Montserrat, sans-serif;
 }
 
@@ -10,7 +10,7 @@ body {
 }
 
 .color {
-  margin:20px 30px 20px 20px;
+  margin:40px 80px 40px 10%;
   padding: 10px;
   width: 60px;
   height: 60px;
@@ -36,4 +36,6 @@ body {
 button {
   width: 120px;
   height: 50px;
+  margin-left: 20%;
+  border: solid;
 }
