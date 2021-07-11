@@ -5,7 +5,7 @@
   width: 40px;
   height: 40px;
   background-color: white;
-  border: 1px solid black;
+  outline: 1px solid black; /* border: 1px solid black; */
   border-collapse: collapse;
 }
 
