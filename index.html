@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formoso's Pixel Art</title>
+  <link rel="stylesheet" type="text/CSS" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Martel:400,700" rel="stylesheet">
+</head>
+<body class="background-image">
+  <h1 id="title">Paleta de Cores</h1>
+  <main>
+    <section id="color-palette">
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+    </section>
+    <div id="board-size-div">
+      <h2>Defina o tamanho do quadro:</h2>
+      <input type="number" id="board-size" min="1">
+      <button id="generate-board">VQV</button>
+    </div>
+    <button id="clear-board">Limpar</button>
+    <section id="pixel-board"></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
