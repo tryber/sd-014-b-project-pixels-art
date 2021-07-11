@@ -1,4 +1,4 @@
-window.onload = function criarDeTabela() {
+function criarTabela() {
   const table = document.getElementById('pixel-board');
 
   for (let i = 0; i < 5; i += 1) {
@@ -11,7 +11,7 @@ window.onload = function criarDeTabela() {
       tr.appendChild(td);
     }
   }
-};
+}
 
 function obterCores() {
   const paletaDeCores = document.getElementById('color-palette');
@@ -32,7 +32,7 @@ function selecionarCor(elemento) {
   elemento.classList.add('selected');
 }
 
-function adicionarClick() {
+function adicionarClickNasCores() {
   const cores = obterCores();
 
   for (let i = 0; i < cores.length; i += 1) {
@@ -44,4 +44,52 @@ function adicionarClick() {
   }
 }
 
-adicionarClick();
+function obterPixels() {
+  const pixelBoard = document.getElementById('pixel-board');
+  const linhas = pixelBoard.children;
+  const pixels = [];
+
+  for (let i = 0; i < linhas.length; i += 1) {
+    const linha = linhas[i];
+    const colunas = linha.children;
+
+    for (let j = 0; j < colunas.length; j += 1) {
+      const coluna = colunas[j];
+      pixels.push(coluna);
+    }
+  }
+
+  return pixels;
+}
+
+function obterCorSelecionada() {
+  const cores = obterCores();
+  let corSelecionada;
+
+  for (let i = 0; i < cores.length; i += 1) {
+    const cor = cores[i];
+
+    if (cor.classList.contains('selected')) {
+      corSelecionada = window.getComputedStyle(cor, null)
+        .getPropertyValue('background-color');
+    }
+  }
+
+  return corSelecionada;
+}
+
+function adicionarClickNosPixels() {
+  const pixels = obterPixels();
+
+  for (let i = 0; i < pixels.length; i += 1) {
+    const pixel = pixels[i];
+
+    pixel.addEventListener('click', () => {
+      pixel.style.backgroundColor = obterCorSelecionada();
+    });
+  }
+}
+
+criarTabela();
+adicionarClickNasCores();
+adicionarClickNosPixels();
