@@ -1,0 +1,96 @@
+body{
+    text-align: center;
+    background-color:midnightblue;
+}
+
+#color-palette table{
+    font-family: sans-serif;
+    display: table-cell;
+    display: inline-block;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+#black{
+    background-color: black;
+}
+
+#pink{
+    background-color:pink;
+}
+
+#springgreen{
+    background-color:springgreen;
+}
+
+#khaki{
+    background-color:khaki;
+}
+
+#pixel-board tr {
+    display: table-row;
+}
+
+#pixel-board tr td{
+    width: 40px;
+    height: 40px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-style: solid;
+    background-color: white;
+    display: table-cell;
+    padding: 0px;
+    border: solid black 1px;
+    text-align: center;
+}
+
+#pixel-board{
+
+    display: inline-block;
+    margin-top: 20px;
+    min-height: 40px;
+  min-width: 40px;
+  width: fit-content;
+  text-align: center;
+    
+}
+
+.pixel {
+
+    background-color: white;
+    border: solid black 1px;
+    text-align: center;
+}
+
+#clear-board{
+    width: 80px;
+    height: 50px;
+    border-style: solid black 2px;
+    border-radius: 10%;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+
+#board-size{
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+    margin-top: 20px;
+}
+
+#choose-color{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:navajowhite;
+}
+
+#title{
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:navajowhite;
+}
