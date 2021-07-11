@@ -3,6 +3,10 @@ const boxColor = ['black', 'blue', 'green', 'red'];
 let corSelecionada = '';
 let whiteBox = document.querySelector('#pixel-board');
 let btnLimparQuadro = document.querySelector('#clear-board');
+let inputBoardSize = document.querySelector('#board-size');
+let btnGenerate = document.querySelector('#generate-board');
+let n = 5;
+inputBoardSize.value = n;
 
 for (let i = 0; i < 4; i += 1) {
   const boxPalheta = document.createElement('div');
@@ -17,18 +21,18 @@ for (let i = 0; i < 4; i += 1) {
 }
 
 // Quadro branco
-const containerWhiteBoard = document.querySelector('#pixel-board');
-for (let i = 0; i < 5; i += 1) {
-  const lineBox = document.createElement('div');
-  /*   lineBox.className = 'pixel';
-  lineBox.innerText = i + 1; */
-  containerWhiteBoard.appendChild(lineBox);
-  for (let ii = 0; ii < 5; ii += 1) {
-    const lineBox2 = document.createElement('div');
-    lineBox2.className = 'pixel';
-    // lineBox2.innerText = ii + 1;
-    lineBox2.style.color = 'white';
-    containerWhiteBoard.appendChild(lineBox2);
+function gerarQuadroBranco() {
+  const containerWhiteBoard = document.querySelector('#pixel-board');
+  for (let i = 0; i < n; i += 1) {
+    const lineBox = document.createElement('div');
+    containerWhiteBoard.appendChild(lineBox);
+    for (let ii = 0; ii < n; ii += 1) {
+      const lineBox2 = document.createElement('div');
+      lineBox2.className = 'pixel';
+      lineBox2.style.color = 'white';
+      containerWhiteBoard.appendChild(lineBox2);
+      console.log(n);
+    }
   }
 }
 
@@ -65,3 +69,25 @@ function cleanWhiteBoxes() {
   }
 }
 btnLimparQuadro.addEventListener('click', cleanWhiteBoxes);
+
+function generateNewBoardSize() {
+  if (n === '' || n < 0) {
+    alert('Board inválido!');
+  } else if (n < 5) {
+    n = 5;
+    inputBoardSize.value = n;
+  } else if (n > 50) {
+    n = 50;
+    inputBoardSize.value = n;
+  } else {
+    n = inputBoardSize.value;
+  }
+  //removerQuadroAnterior();
+  gerarQuadroBranco();
+}
+btnGenerate.addEventListener('click', generateNewBoardSize);
+
+window.onload = function() {
+  inputBoardSize.value = 5;
+  generateNewBoardSize();
+};
