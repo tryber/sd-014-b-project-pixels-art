@@ -2,20 +2,43 @@ window.onload = function () {
 
 
 const black = document.getElementById('black');
-const green = document.getElementById('green');
-const red = document.getElementById('red');
-const blue = document.getElementById('blue');
+const green = document.getElementById('pink');
+const red = document.getElementById('springgreen');
+const blue = document.getElementById('khaki');
 
-function clickColor(event) {
-    const previousColor = document.querySelector('.selected');
-    previousColor.classList.remove('selected');
-    event.target.classList.add('selected');        
-} 
+
+
 
 black.addEventListener('click', clickColor);
 green.addEventListener('click', clickColor);
 red.addEventListener('click', clickColor);
 blue.addEventListener('click', clickColor); 
+
+function clickColor(event) {
+  const previousColor = document.querySelector('.selected');
+  previousColor.classList.remove('selected');
+  event.target.classList.add('selected');        
+} 
+
+const colors = document.querySelectorAll('.color');
+
+
+
+
+  for (let index = 0; index < colors.length; index += 1){
+    colors[index].addEventListener('mouseover', colorAplly);
+    colors[index].addEventListener('mouseout', colorRemove);
+
+    function colorAplly(event){
+      event.target.style.border = "solid pink 2px";
+    }
+      
+    function colorRemove(event){
+      event.target.style.border = "";
+     
+    }
+        
+  }
 
 document.querySelector(".pixel").classList.add("pixel-selected");
 
@@ -57,5 +80,6 @@ function clearBoard(){
    allPixels[index].style.backgroundColor = 'white';
  }
 }
+
 
 }
