@@ -32,3 +32,8 @@ body {
   background-color: white;
   display: inline-block;
 }
+
+button {
+  width: 120px;
+  height: 50px;
+}
