@@ -34,11 +34,34 @@ window.onload = function() {
   for (let i = 0; i < canvas.length; i += 1) {
   canvas[i].addEventListener('click', paint);
   }
-  console.log(canvas);
-  function paint(event) {
+  function paint(selection) {
   let currentColor = sessionStorage.getItem('colorPicker');
-  event.target.style.backgroundColor = currentColor;
+  selection.target.style.backgroundColor = currentColor;
   }
-};
-
-
+  // Permite troca da cor atual, move a classe 'selected' de acordo com o click do usuário, e limita a posse a um elemento
+  let palette = document.querySelectorAll('.color');
+    for (let i = 0; i < palette.length; i += 1) {
+    palette[i].addEventListener('click', pickColor);
+    palette[i].addEventListener('click', selectColor)
+    }
+  function pickColor(selection) {
+    let newColor = selection.target.id;
+    sessionStorage.setItem('colorPicker', newColor);
+  }
+  function selectColor(selection) {
+    let selectedColor = document.querySelectorAll('.selected');
+    if (selectedColor.length !== 0) {
+      selectedColor[0].classList.remove('selected');
+      selection.target.classList.add('selected');
+    }
+  }
+  // Permite limpar o quadro, preenche todos os pixels com a cor branca
+  const clearButton = document.getElementById('clear-board');
+  clearButton.addEventListener('click', clearCanvas);
+  function clearCanvas() {
+    let canvas = document.querySelectorAll('.pixel');
+    for (let i = 0; i < canvas.length; i += 1) {
+      canvas[i].style.backgroundColor = 'white';
+    }
+  }
+}
