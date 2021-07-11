@@ -1,0 +1,64 @@
+div {
+
+}
+#color-palette {
+  display: table;
+  border: #000000 solid 1px;
+  margin-left: 8%;
+}
+
+#pixel-board {
+  background-color: white;
+}
+
+.palette {
+  display: table-row;
+}
+
+.color {
+  display: table-cell;
+  width: 40px;
+ height: 40px;
+ border: #000000 solid 1px;
+}
+.preto {
+  background-color:black;
+}
+
+.vermelho {
+  background-color: red;
+}
+
+.azul {
+  background-color: blue;
+}
+
+.amarelo {
+  background-color: yellow;
+}
+
+#inputButton {
+  display: inline;
+}
+
+
+.linha {
+  border: rgb(0, 0, 0) solid 1px;
+  display: table-row;
+  text-align: center;
+  
+}
+.pixel {
+  display: table-cell;
+   width: 40px;
+  height: 40px;
+  border: rgb(0, 0, 0) solid 1px;
+  background-color: white;
+}
+
+#pixel-board {
+  display: table;
+  border: #000000 solid 1px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
