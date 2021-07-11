@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" async></script>
   <title>Projeto Pixelart</title>
 </head>
 <body>
@@ -12,10 +13,10 @@
 
   <div class="paleta">
     <section id="color-palette">
-      <div onclick="paletteSelection()" class="color selected">Preto</div>
-      <div onclick="paletteSelection()" class="color">Vermelho</div>
-      <div onclick="paletteSelection()" class="color">Verde</div>
-      <div onclick="paletteSelection()" class="color">Azul</div>
+      <div id="color1" class="color black selected">Preto</div>
+      <div id="color2" class="color red">Vermelho</div>
+      <div id="color3" class="color grenn">Verde</div>
+      <div id="color4" class="color blue">Azul</div>
     </section>
     <ul class="listaCores">
       <li>Preto</li>
@@ -24,35 +25,10 @@
       <li>Azul</li>
     </ul>
   </div>
-
-  <section id="pixel-board">
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-  </section>
-  <script src="script.js"></script>
+  <button id="clear-board">Limpar</button>
+  <section id="pixel-board"></section>
+  
+  
 </body>
 
 </html>
