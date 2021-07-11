@@ -20,8 +20,9 @@ for (let i = 0; i < 4; i += 1) {
   containerPalhetas.appendChild(boxPalheta);
 }
 
-// Quadro branco
+// Gerar Quadro branco
 function gerarQuadroBranco() {
+  console.log(n);
   const containerWhiteBoard = document.querySelector('#pixel-board');
   for (let i = 0; i < n; i += 1) {
     const lineBox = document.createElement('div');
@@ -31,9 +32,15 @@ function gerarQuadroBranco() {
       lineBox2.className = 'pixel';
       lineBox2.style.color = 'white';
       containerWhiteBoard.appendChild(lineBox2);
-      console.log(n);
     }
   }
+  inputBoardSize.value = '';
+}
+
+// Remover Quadro branco
+function removerQuadroAnterior() {
+  const quadrosBrancos = document.querySelector('#pixel-board');
+  quadrosBrancos.innerHTML = '';
 }
 
 function selectColor(event) {
@@ -71,23 +78,23 @@ function cleanWhiteBoxes() {
 btnLimparQuadro.addEventListener('click', cleanWhiteBoxes);
 
 function generateNewBoardSize() {
+  n = inputBoardSize.value;
   if (n === '' || n < 0) {
     alert('Board inválido!');
-  } else if (n < 5) {
-    n = 5;
-    inputBoardSize.value = n;
-  } else if (n > 50) {
-    n = 50;
-    inputBoardSize.value = n;
   } else {
-    n = inputBoardSize.value;
+    if (n < 5) {
+      n = 5;
+    } else if (n > 50) {
+      n = 50;
+    } else {
+      n = inputBoardSize.value;
+    }
+    removerQuadroAnterior();
+    gerarQuadroBranco();
   }
-  //removerQuadroAnterior();
-  gerarQuadroBranco();
 }
 btnGenerate.addEventListener('click', generateNewBoardSize);
 
 window.onload = function() {
-  inputBoardSize.value = 5;
   generateNewBoardSize();
 };
