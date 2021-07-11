@@ -36,6 +36,6 @@ body h1{
 button {
   width: 120px;
   height: 50px;
-  margin-left: 20%;
-  border: solid;
+  margin-top: 20px;
+  margin-left: 10px;
 }

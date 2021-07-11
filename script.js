@@ -45,13 +45,14 @@ ClickPixel();
 // Requisito 9
 
 function clear() {
-  const pixel = document.getElementsByClassName('pixel');
-  for (let index = 0; index < pixel.length; index += 1) {
-    pixel[index].style.backgroundColor = 'white';
+  const pixel = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixel.length; index += 1) {
+      pixel[index].style.backgroundColor = 'white';
   }
 }
- const buttonLimpaCores = document.querySelector('#clear-board');
- buttonLimpaCores.addEventListener('click', clear);
+  const buttonLimpaCores = document.querySelector('#clear-board');
+  buttonLimpaCores.addEventListener('click', clear);
+ 
  
 
 
