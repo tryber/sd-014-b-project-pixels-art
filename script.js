@@ -1,8 +1,4 @@
-
-
 window.onload = function() {
-
-
 
 let color1 = document.getElementsByClassName('color')[0];
 color1.style.backgroundColor = "black";
@@ -48,15 +44,14 @@ ClickPixel();
 
 
 // Requisito 9
-document.querySelector('#clear-board').innerText = "Limpar";
-    
+
 function clear() {
   const pixel = document.getElementsByClassName('pixel');
     for (let index = 0; index < pixel.length; index +=1) {
       pixel[index].style.backgroundColor = 'white';
     }
  }
- const buttonLimpaCores = document.querySelector('#clear-board');
+ let buttonLimpaCores = document.querySelector('#clear-board');
  buttonLimpaCores.addEventListener('click', clear);
  
 
