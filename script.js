@@ -42,3 +42,11 @@ let a = document.querySelectorAll('.pixel')
         }
     }
 
+document.querySelector('#clear-board').addEventListener('click', function() {
+    let pixel = document.querySelectorAll('.pixel')
+    for(let index = 0; index < pixel.length; index += 1 ) {
+        pixel[index].style.backgroundColor = 'white'
+    }
+
+})
+
