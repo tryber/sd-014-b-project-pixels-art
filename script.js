@@ -46,12 +46,12 @@ document.querySelector('#clear-board').addEventListener('click', function () {
   }
 })
 
-// * Requisito 10 *
+// * Requisitos 10 e 11*
 let boardInput = document.querySelector('#board-size');
 let boardButton = document.querySelector('#generate-board');
 
 boardButton.addEventListener('click', function() {
-  if (boardInput.value == '') {
+  if (boardInput.value === '') {
     alert('Board inválido!');
   }
   removeBoard()
@@ -59,10 +59,9 @@ boardButton.addEventListener('click', function() {
 })
 
 function createTable () {
-  if (boardInput.value != '' && boardInput.value < 5) {
-    // checkInputValue()
+  if (boardInput.value !== '' && boardInput.value < 5) {
     boardInput.value = 5;
-  } else if (boardInput.value != '' && boardInput.value > 50) {
+  } else if (boardInput.value !== '' && boardInput.value > 50) {
     boardInput.value = 50;
   }
   for (let lines = 0; lines < boardInput.value; lines += 1) {
@@ -86,4 +85,27 @@ function createTable () {
 
 function removeBoard () {
   document.querySelector('table').innerHTML = '';
+}
+
+// * Requisito 12 *
+
+window.onload = function () {
+  const paletteOfColors = ['blue', 'red', 'yellow', 'orange', 'purple', 'green', 'silver', 'aqua', 'beige', 'brown', 'aquamarine', 'blueviolet'];
+  const colorPalette = document.querySelectorAll('.color');
+  let diferentRandomNumbers = [];
+
+  for (let n = 1; n <= 3; n += 1) {
+    let randomNumber = Math.floor(Math.random() * (paletteOfColors.length - 1));
+    diferentRandomNumbers.push(randomNumber);
+    for (let repeat = 1; repeat <= (n - 1); repeat += 1) {
+      if (diferentRandomNumbers[repeat] == diferentRandomNumbers[repeat - 1] || randomNumber == diferentRandomNumbers[0]) {
+        diferentRandomNumbers[repeat] = diferentRandomNumbers[repeat - 1] + 1;
+      }
+    console.log(diferentRandomNumbers);
+    console.log(diferentRandomNumbers[repeat] + ' e ' + diferentRandomNumbers[repeat - 1]);
+    console.log(randomNumber + ' e ' + diferentRandomNumbers[0]);
+    }
+    colorPalette[n].id = paletteOfColors[diferentRandomNumbers[n - 1]];
+    colorPalette[n].style.backgroundColor = colorPalette[n].id;
+  }
 }
