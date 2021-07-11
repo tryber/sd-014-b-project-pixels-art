@@ -1,0 +1,40 @@
+.color{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: solid 1px black;
+}
+
+.black{
+    background-color: black;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color:yellow;
+}
+
+.green{
+    background-color: green;
+}
+
+#pixel-board{
+    display: table;
+    border: solid 1px black;
+}
+
+.line{
+    display: table-row;
+    
+}
+
+.pixel{
+    display:table-cell ;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: solid 1px black;
+}
