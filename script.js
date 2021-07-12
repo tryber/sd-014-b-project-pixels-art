@@ -67,17 +67,20 @@ buttonClear.addEventListener('click', () => {
 // https://stackoverflow.com/questions/11563638/how
 // -do-i-get-the-value-of-text-input-field-using-javascript
 
-const textValue = document.querySelector('#board-size').value;
+const textValue = document.getElementById('board-size');
 const buttomResize = document.querySelector('#resize');
-// https://developer.mozilla.org/pt-BR/docs
-// /Web/JavaScript/Reference/Global_Objects/parseInt
 
 buttomResize.addEventListener('click', () => {
-  if (textValue < 5) {
+  const textValueR = textValue.value;
+  const pixelC = document.querySelectorAll('.pboard');
+  for (let i = 0; i < pixelC.length; i += 1) {
+    board.removeChild(pixelC[i]);
+  }
+  if (textValueR < 5) {
     size(5);
-  } else if (textValue >= 50) {
+  } else if (textValueR >= 50) {
     size(50);
   } else {
-    size(textValue);
+    size(textValueR);
   }
 });
