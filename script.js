@@ -2,6 +2,7 @@ const divColors = document.querySelector('#color-palette');
 const color1 = document.querySelector('.color1');
 const color2 = document.querySelector('.color2');
 const color3 = document.querySelector('.color3');
+const color4 = document.querySelector('.color4');
 const boardSize = document.querySelector('#board-size');
 const generateBoard = document.querySelector('#generate-board');
 const cleaner = document.querySelector('#clear-board');
@@ -57,18 +58,20 @@ function generateColor() { // Inspirado em código achado no seguint url (https:
   const first = Math.floor(Math.random() * 256);
   const second = Math.floor(Math.random() * 256);
   const third = Math.floor(Math.random() * 256);
+  const forth = Math.floor(Math.random()* 256);
   
-  return `rgb(${first}, ${second}, ${third})`;
+  return `rgb(${first}, ${second}, ${third}, ${forth})`;
 }
 //  DEFINIÇÕES PÓS FUNÇÕES
 selectedColor = getColor(selectedDiv);
 
 //  EVENTOS
 //  Gerando cores
-window.onload = function () {
+window.onload = function gerar () {
   color1.style.backgroundColor = generateColor();
   color2.style.backgroundColor = generateColor();
   color3.style.backgroundColor = generateColor();
+  color4.style.backgroundColor = generateColor();
   
 };
 //  Adicionando evento de clique nas cores da paleta
