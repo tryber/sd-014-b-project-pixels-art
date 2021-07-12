@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Tiago Ponce - Pixel Art!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
     <h1 id='title'>Paleta de Cores</h1>
 
     <div class='paleta-de-cores'>
         <!-- Tabela de 1 linha e 4 colunas criado dinamicamente no javascript -->
     </div>
 
+    <div class='quadro-pixel'>
+
+    </div>
+
     <script>
+
+                   
 
         // cria a tabela de 1 linha e 4 colunas
         for (let i = 0 ; i < 1 ; i += 1) {
@@ -23,11 +25,11 @@
 
             const addressDiv = document.querySelector('.paleta-de-cores');
 
-            let createTable = document.createElement('table');
+            var createTablePalet = document.createElement('table');
 
-            createTable.id = "color-palette";
+            createTablePalet.id = "color-palette";
 
-            addressDiv.appendChild(createTable);
+            addressDiv.appendChild(createTablePalet);
 
             const addressTable = document.getElementById('color-palette');
 
@@ -47,18 +49,47 @@
 
             for (let j = 0 ; j < 4 ; j += 1) {
                 const addressTr = document.querySelector('.tr-table');
-                
+
                 let createTd = document.createElement('td');
 
                 createTd.className = 'color';
-
+                
+                if (j === 0) {
+                    createTd.className = 'selected';
+                }
                 addressTr.appendChild(createTd);
 
-                createTable.rows[i].cells[j].bgColor = cores[j];
+                createTablePalet.rows[i].cells[j].style.backgroundColor = cores[j];
 
             }
+
         }
+
+            // pixel board
+                const addressDiv = document.querySelector('.quadro-pixel');
+
+                let createTable = document.createElement('table');
+
+                createTable.id = 'pixel-board';
+
+                addressDiv.appendChild(createTable);
+
+                const addressTable = document.getElementById('pixel-board');
+
+            for (let i = 0 ; i < 5 ; i += 1) {
+                let createTr = document.createElement('tr');
+
+                addressTable.appendChild(createTr);
+
+                for (let j = 0 ; j < 5 ; j += 1) {
+                let createTd = document.createElement('td');
+                createTd.className = 'pixel';
+                createTr.appendChild(createTd);
+                }
+
+            }
+
 
     </script>
 </body>
-</html>
+</html> 
