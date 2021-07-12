@@ -77,12 +77,10 @@ buttomResize.addEventListener('click', () => {
     board.removeChild(pixelC[i]);
   }
   if (textValueR < 5) {
+    alert('Board inválido!');
     size(5);
   } else if (textValueR >= 50) {
     size(50);
-  } else if (textValue === null) {
-    alert('Board inválido!');
-    size(5);
   } else {
     size(textValueR);
   }
