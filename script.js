@@ -44,8 +44,20 @@ function clearBoard() {
   });
 }
 
+function checkNumberPixel(number) {
+  const numberInt = number;
+  if (numberInt < 5) {
+    return 5;
+  }
+  if (numberInt > 50) {
+    return 50;
+  }
+
+  return number;
+}
+
 function generateBoard() {
-  const numberPixel = document.querySelector('#board-size').value;
+  const numberPixel = checkNumberPixel(document.querySelector('#board-size').value);
   const clearTable = document.querySelector('#table').children;
   /**
    * Source: https://stackoverflow.com/questions/35969974/foreach-is-not-a-function-error-with-javascript-array
@@ -55,14 +67,14 @@ function generateBoard() {
   Array.from(clearTable).forEach((pixel) => {
     pixel.parentElement.removeChild(pixel);
   });
-  if (numberPixel > 0 && numberPixel < 50) {
-    createLine(numberPixel);
-    const lines = document.querySelectorAll('.tr');
-    fillCells(numberPixel, lines);
-    loadPixels();
-  } else {
+  const inputValue = document.querySelector('#board-size').value;
+  if (inputValue === '') {
     alert('Board inválido!');
   }
+  createLine(numberPixel);
+  const lines = document.querySelectorAll('.tr');
+  fillCells(numberPixel, lines);
+  loadPixels();
 }
 
 window.onload = function load() {
