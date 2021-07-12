@@ -1,0 +1,55 @@
+.color {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+}
+
+body {
+  text-align: center;
+}
+
+.color-palette {
+  display: block;
+}
+
+.pboard {
+  display: table-column;
+}
+
+.pixel {
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+#pixel-board {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+}
+
+#custom {
+  width: 100px;
+  height: 20px;
+  resize: none;
+}
+
+#botao , #clear {
+  height: 21px;
+}
+
+.secao , #custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.selected {
+  border-radius: 20%;
+}
