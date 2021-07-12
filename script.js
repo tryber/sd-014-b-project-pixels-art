@@ -7,7 +7,7 @@ function createClearButton() {
   const buttonSection = document.createElement('section');
   document.querySelector('body').appendChild(buttonSection);
   const button = document.createElement('button');
-  button.type = "button";
+  button.type = 'button';
   button.id = 'clear-board';
   button.innerText = 'Limpar';
   buttonSection.appendChild(button);
@@ -46,13 +46,13 @@ createPixels();
 
 const getColor = document.querySelectorAll('.color');
 for (let index = 0; index <= getColor.length - 1; index += 1) {
-  let selectedColor = getColor[index].addEventListener('click', selectColor);
+  const selectedColor = getColor[index].addEventListener('click', selectColor);
 }
 
 function selectColor(color) {
   color.target.classList.add('selected');
   for (let index = 0; index <= getColor.length - 1; index += 1) {
-    let otherColor = getColor[index];
+    const otherColor = getColor[index];
     if (otherColor !== color.target) {
       otherColor.classList.remove('selected');
     }
@@ -61,17 +61,17 @@ function selectColor(color) {
 
 const getPixel = document.querySelectorAll('.pixel');
 
-for (let index = 0; index <= getPixel.length - 1; index += 1) {
-  let selected = getPixel[index].addEventListener('click', changeColor);
-}
-
 function changeColor(pixel) {
   const currentSelectedColor = document.querySelector('.selected');
   pixel.target.style.backgroundColor = currentSelectedColor.id;
 }
 
-function clearPixelTable(){
-  for (let index = 0; index <= getPixel.length - 1;  index +=1 ) {
+for (let index = 0; index <= getPixel.length - 1; index += 1) {
+  const selected = getPixel[index].addEventListener('click', changeColor);
+}
+
+function clearPixelTable() {
+  for (let index = 0; index <= getPixel.length - 1; index += 1) {
     getPixel[index].style.backgroundColor = '';
   }
 }
