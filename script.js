@@ -17,7 +17,6 @@ function createTable() {
 }
 createTable();
 
-//deleta e seleciona
 function deletColor(event) {
   const color = document.querySelector('.selected');
   color.classList.remove('selected');
@@ -39,7 +38,6 @@ function colorPixel(event) {
     .getComputedStyle(selected)
     .getPropertyValue('background-color');
   event.target.style.backgroundColor = newBackground;
-  console.log(newBackground);
 }
 document.querySelector('#pixel-board').addEventListener('click', colorPixel);
 
