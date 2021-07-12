@@ -22,9 +22,8 @@ createClearButton();
 function createInput() {
   const input = document.createElement('input');
   input.type = 'number';
-  input.id = 'board-size'
-  input.min = 0;
-  input.value = 5;
+  input.id = 'board-size';
+  input.min = 1;
   buttonSection.appendChild(input);
 }
 
@@ -45,7 +44,7 @@ function createPixelsAsk() {
   const inputValue = document.querySelector('input').value;
   console.log(inputValue);
   if (inputValue === '') {
-    alert('Board Inválido');
+    alert('Board Inválido!');
   } else {
     if (inputValue < 5) {
       pixelTableSize = 5;
