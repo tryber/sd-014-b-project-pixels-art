@@ -1,10 +1,12 @@
 body {
   margin: 5%;
 }
+
 header {
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Courier New, Courier, monospace;
 }
+
 .color {
   display: inline-block;
   margin: auto 5px;
@@ -12,18 +14,23 @@ header {
   width: 100px;
   border: solid 1px black;
 }
+
 #black {
   background-color: black;
 }
+
 #blue {
   background-color: blue;
 }
+
 #green {
   background-color: green;
 }
+
 #yellow {
   background-color: yellow;
 }
+
 .pixel {
   background-color: white;
   height: 40px;

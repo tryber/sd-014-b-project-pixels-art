@@ -38,3 +38,14 @@ function colorBlock() {
   });
 }
 colorBlock();
+
+function clearAll() {
+  const colorTable = document.querySelectorAll('#pixel-board .pixel');
+  const clear = document.querySelector('#clear-board');
+  clear.addEventListener('click', () => {
+    for (let i = 0; i < colorTable.length; i += 1) {
+      colorTable[i].removeAttribute('style');
+    }
+  });
+}
+clearAll();
