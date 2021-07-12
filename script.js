@@ -2,7 +2,7 @@ window.onload = function load () {
     const colors = document.querySelectorAll('.color');
 
 colors[0].setAttribute('style', 'background-color: black');
-colors[0].setAttribute ('class', 'selected');
+colors[0].className = 'selected color';
 colors[1].setAttribute('style', 'background-color: green');
 colors[2].setAttribute('style', 'background-color: blue');
 colors[3].setAttribute('style', 'background-color: pink');
