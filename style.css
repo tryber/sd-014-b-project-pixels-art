@@ -17,11 +17,9 @@
 
 .color {
   display: inline-block;
-  width: 125px;
-  height: 100px;
-  border: 1px solid black;
-  
-  
+  width: 80px;
+  height: 80px;
+  border: 1.00000px solid black; 
 }
 
 #first {
@@ -42,4 +40,23 @@
 
 #fourth {
     background-color: tomato;
+}
+
+#pixel-board {
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.class {
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+}
+
+#div-table {
+    height: auto;
 }
