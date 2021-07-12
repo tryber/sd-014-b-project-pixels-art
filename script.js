@@ -30,11 +30,39 @@ function paintPixel(pixel) {
   pixel.setAttribute('style', selectColor);
 }
 
+function loadPixels() {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', () => { paintPixel(pixels[index]); });
+  }
+}
+
 function clearBoard() {
   const pixels = document.querySelectorAll('.pixel');
   pixels.forEach((pixel) => {
     pixel.setAttribute('style', 'background-color: white;');
   });
+}
+
+function generateBoard() {
+  const numberPixel = document.querySelector('#board-size').value;
+  const clearTable = document.querySelector('#table').children;
+  /**
+   * Source: https://stackoverflow.com/questions/35969974/foreach-is-not-a-function-error-with-javascript-array
+   * https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/from
+   * clearTable não é um array e sim um HTMLCollection e não possui o método forEach, então usei o Array.from para converter em uma array.
+   */
+  Array.from(clearTable).forEach((pixel) => {
+    pixel.parentElement.removeChild(pixel);
+  });
+  if (numberPixel > 0 && numberPixel < 50) {
+    createLine(numberPixel);
+    const lines = document.querySelectorAll('.tr');
+    fillCells(numberPixel, lines);
+    loadPixels();
+  } else {
+    alert(`O número ${numberPixel} não é permitido.`);
+  }
 }
 
 window.onload = function load() {
@@ -58,11 +86,10 @@ for (let index = 0; index < colors.length; index += 1) {
   colors[index].addEventListener('click', () => { select(colors[index]); });
 }
 
-const pixels = document.querySelectorAll('.pixel');
-
-for (let index = 0; index < pixels.length; index += 1) {
-  pixels[index].addEventListener('click', () => { paintPixel(pixels[index]); });
-}
+loadPixels();
 
 const buttonClear = document.querySelector('#clear-board');
 buttonClear.addEventListener('click', clearBoard);
+
+const buttonGenerateBoard = document.querySelector('#generate-board');
+buttonGenerateBoard.addEventListener('click', generateBoard);
