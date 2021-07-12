@@ -1,16 +1,3 @@
-// window.onload = function () {
-//   let numberOfBlocks = 4;
-//   createDivs();
-
-//   function createDivs() {
-//     for (let index = 0; index < numberOfBlocks; index += 1) {
-//       let divs = document.createElement('div');
-//       divs.className = 'color';
-//       divs.setAttribute('id', 'test');
-//       document.querySelector('#color-palette').appendChild(divs);
-//     }
-//   }
-// };
 let black = document.querySelector('#black');
 black.addEventListener('click', function () {
   let element = document.querySelector('.selected');
@@ -38,3 +25,18 @@ yellow.addEventListener('click', function () {
   element.classList.remove('selected');
   yellow.className = 'color selected';
 });
+
+function colorBlock() {
+  const selectedItem = document.querySelectorAll('.selected');
+  const selectedColor = document.querySelectorAll('.color');
+  const colorTable = document.querySelectorAll('#pixel-board .pixel');
+  colorTable.forEach((click) => {
+    click.addEventListener('click', (event) => {
+      let getColor = event.target.style;
+      getColor.backgroundColor = window
+        .getComputedStyle(document.querySelector('.selected'))
+        .getPropertyValue('background-color');
+    });
+  });
+}
+colorBlock();
