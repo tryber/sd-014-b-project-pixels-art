@@ -29,6 +29,14 @@ function paintPixel(pixel) {
   const selectColor = document.querySelector('.selected').getAttribute('style');
   pixel.setAttribute('style', selectColor);
 }
+
+function clearBoard() {
+  const pixels = document.querySelectorAll('.pixel');
+  pixels.forEach((pixel) => {
+    pixel.setAttribute('style', 'background-color: white;');
+  });
+}
+
 window.onload = function load() {
   const colors = document.querySelectorAll('.color');
 
@@ -47,11 +55,14 @@ createLine(lineUser);
 const lines = document.querySelectorAll('.tr');
 fillCells(columnUser, lines);
 for (let index = 0; index < colors.length; index += 1) {
-  colors[index].addEventListener('click', function selectColor() { select(colors[index]); });
+  colors[index].addEventListener('click', () => { select(colors[index]); });
 }
 
 const pixels = document.querySelectorAll('.pixel');
 
 for (let index = 0; index < pixels.length; index += 1) {
-  pixels[index].addEventListener('click', function pixelColor() { paintPixel(pixels[index]); });
+  pixels[index].addEventListener('click', () => { paintPixel(pixels[index]); });
 }
+
+const buttonClear = document.querySelector('#clear-board');
+buttonClear.addEventListener('click', clearBoard);
