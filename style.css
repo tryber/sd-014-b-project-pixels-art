@@ -1,0 +1,56 @@
+.color {
+  border: 1px solid black;
+}
+
+#black {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-color: black;
+}
+
+#yellow {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-color: yellow;
+}
+
+#magenta {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-color: magenta;
+}
+
+#cyan {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-color: cyan;
+}
+
+#pixel-board {
+  display: table;
+  background-color: black;
+  border: 1px solid black;
+}
+
+#clear-board {
+  width: 80px;
+  height: 20px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.pixels {
+  display: table-row;
+}
+
+.pixel {
+  display: table-cell;
+  border: 1px solid black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+}
