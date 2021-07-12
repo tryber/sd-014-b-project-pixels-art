@@ -1,4 +1,4 @@
-html, body {
+html , body {
   min-height: 100%;
   height: 100%;
 }
@@ -10,7 +10,6 @@ body {
 }
 
 /* LAYOUT DO SITE */
-
 #left-content {
   height: 100%;
   width: 80%;
@@ -41,7 +40,6 @@ aside {
 }
 
 /* ESTILO E ESTRUTURA DO ELEMENTOS A DIREITA */
-
 #title {
   margin: 10px 0;
   text-align: center;
@@ -65,7 +63,7 @@ h3 {
 }
 
 .selected {
-  box-shadow: 0px 0px 0px 4px rgb(182, 182, 182);
+  box-shadow: 0 0 0 4px rgb(182, 182, 182);
 }
 
 .toolsButton {
@@ -125,7 +123,6 @@ h4 {
 }
 
 /* ESTILO E ESTRUTURA DO ELEMENTOS A ESQUERDA */
-
 #pixel-board {
   border-collapse: collapse;
 }
@@ -133,7 +130,7 @@ h4 {
 .pixel {
   width: 40px;
   height: 40px;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   border: 1px solid black;
   box-sizing: border-box;
 }
