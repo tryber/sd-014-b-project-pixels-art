@@ -1,5 +1,54 @@
-let colorList = document.querySelectorAll(".color");
+
+
+// Requisito 9
+function emptyPixels(){
+   let divPai = document.getElementById("pixel-board");
+   divPai.innerHTML = ""
+}
+let getButton = document.getElementById("clear-button");
+getButton.addEventListener("click", emptyPixels);
+
+// Requisito 10
+let getButton2 = document.getElementById("generate-board");
+let getInput = document.getElementById("board-size");
+function generateBoard(){
+   let spanList = document.querySelectorAll(".pixel-line");
+   let divPai = document.getElementById("pixel-board");
+   let boardSize = getInput.value;
+   let pixelList = document.querySelectorAll(".pixel");
+   let getPixelline = document.querySelectorAll(".pixel-line");
+   
+
+   divPai.innerHTML = ""
+   divPai.style.maxWidth = "auto";
+
+   if(boardSize !== "" ){
+      if(boardSize < 5){
+         boardSize = 5;
+      } else if (boardSize > 50){
+         boardSize = 50;
+      }
+
+      for(let index2 = 0; index2 < boardSize; index2 +=1){
+         let newSpan = document.createElement(("span"));
+         newSpan.classList.add("pixel-line");
+         newSpan.style.display = "block"
+         divPai.appendChild(newSpan);
+      }
+
+      let spanList = document.querySelectorAll(".pixel-line");
+
+      for(let index = 0; index < spanList.length; index +=1){
+      for(let index3 = 0; index3 < boardSize ; index3 +=1){
+         let newDiv = document.createElement("div");
+         newDiv.classList.add("pixel");
+         spanList[index].appendChild(newDiv);
+         }
+      }  
+      let colorList = document.querySelectorAll(".color");
 let pixelList = document.querySelectorAll(".pixel");
+
+
 
 function addSelected(event){
    let getSelected = document.querySelector(".selected");
@@ -20,11 +69,9 @@ function addColor(event){
 for(let index = 0; index < pixelList.length; index +=1){
    pixelList[index].addEventListener("click", addColor);
 }
-
-function emptyPixels(){
-   for(let index = 0; index < pixelList.length; index +=1){
-      pixelList[index].style.backgroundColor = "white";
+      
+   } else {
+      alert("Board inválido!");
    }
 }
-let getButton = document.getElementById("clear-button");
-getButton.addEventListener("click", emptyPixels);
+getButton2.addEventListener("click",generateBoard);
