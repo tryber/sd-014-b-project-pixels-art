@@ -1,5 +1,5 @@
 // 1 - Adicione à página o título "Paleta de Cores". OK
-// 2 - Adicione à página uma paleta de quatro cores distintas. - OK?
+// 2 - Adicione à página uma paleta de quatro cores distintas. - OK
 
 function setBlackColorZero() {
   document.getElementsByClassName('color')[0].style.backgroundColor = 'black';
@@ -37,7 +37,7 @@ function clearBoard() {
   for (let i = 0; i < index; i += 1) {
     pixels[i].style.backgroundColor = 'white';
   }
-};
+}
 
 clearButton.addEventListener('click', clearBoard);
 
@@ -74,15 +74,50 @@ function createPixelBoard() {
 const generateBoard = document.querySelector('#generate-board'); // Atribuir à constante o botão com id 'generate-board'
 generateBoard.addEventListener('click', createPixelBoard);
 */
+
 window.onload = function start() {
   setBlackColorZero(); // 6 - Defina a cor preta como cor inicial.
   setRandomColors(); // 12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página.
   //createPixelBoard();
 };
 
-/*
-color.addEventListener('click', selectColor);
-selectColor(evento) */
+const color = document.getElementsByClassName('color');
+
+function selectColor(event) {
+  for (let i = 0; i < color.length; i += 1) {
+    color[i].classList.remove('selected'); // Remover classe 'selected'
+  }
+  event.target.classList.add('selected'); // Adicionar classe 'selected' no element clicado -> pickColor()
+  console.log(document.getElementsByClassName('selected')[0].style.backgroundColor);
+}
+
+function pickColor() {
+  for (let i = 0; i < color.length; i += 1) {
+    color[i].addEventListener('click', selectColor);
+  }
+}
+
+pickColor();
+
+function paint() {
+  const colorSelected = document.querySelector('.selected').style.backgroundColor;
+  this.style.backgroundColor = colorSelected;
+  console.log(this);
+  console.log(colorSelected);
+}
+
+function paintPixel() {
+  const pixels = document.getElementsByClassName('pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].addEventListener('click', paint);
+  }
+}
+
+paintPixel();
+
+//const colorPainter = document.querySelector('.selected').style.backgroundColor;
+//document.getElementsByClassName('pixel')[i].style.backgroundColor = colorPainter; 
+
 /*
 function createPixelBoard() {
     let size = document.getElementById('size-board');
