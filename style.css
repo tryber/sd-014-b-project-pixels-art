@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap') ;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url('/images/pixel-art-desert.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: VT323, monospace;
+  text-align: center;
+}
+
+header {
+  padding: 5% 0 0.5%;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+#color-palette {
+  background-color: white;
+  border: dashed;
+  border-radius: 15px;
+  margin: auto;
+  width: 200px;
+}
+
+.color {
+  border: black solid 1px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#black {
+  background-color: black;
+  margin: 10px 3px;
+  width: 30px;
+  height: 30px;
+}
+
+#orange {
+  background-color: #f14902;
+  margin: 10px 3px;
+  width: 30px;
+  height: 30px;
+}
+
+#cream {
+  background-color: #fffdd0;
+  margin: 10px 3px;
+  width: 30px;
+  height: 30px;
+}
+
+#yellow {
+  background-color: #fff547;
+  margin: 10px 3px;
+  width: 30px;
+  height: 30px;
+}
+
+#clear-board {
+  background-color: #efefef;
+  margin: 1% auto;
+  font-family: VT323, monospace;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100px;
+  height: 25px;
+  border: groove;
+  cursor: pointer;
+}
+
+#clear-board:active {
+  background-color: #fffdd0;
+  border: inset;
+}
+
+#pixel-board {
+  background-color: black;
+  border-radius: 5px;
+  margin: 1% auto;
+}
+
+.pixel {
+  background-color: white;
+  border: black solid 1px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#footer {
+  text-align: center;
+  text-transform: uppercase;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
