@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-condition */
 /* eslint-disable prefer-arrow-callback */
 // eslint-disable-next-line func-names
 window.onload = function () {
@@ -74,6 +75,20 @@ function empityPixels() {
   }
 }
 
+function valueBoard() {
+  const getButtonVqv = document.querySelector('#generate-board');
+  const getInput = document.querySelector('#board-size');
+  getButtonVqv.addEventListener('click', function () {
+    if (getInput.value < 5 && getInput.value !== '') {
+      getInput.value = 5;
+    } else if (getInput.value > 50 && getInput.value !== '') {
+      getInput.value = 50;
+    } else {
+      alert('Board inválido!');
+    }
+  });
+}
+valueBoard();
 // eslint-disable-next-line max-lines-per-function
 function newTable() {
   const getButtonVqv = document.querySelector('#generate-board');
@@ -93,8 +108,6 @@ function newTable() {
           createTr.appendChild(createTd);
         }
       }
-    } else {
-      alert('Board inválido!');
     }
   });
 }
