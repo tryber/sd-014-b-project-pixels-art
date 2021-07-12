@@ -18,25 +18,25 @@ function selectColorAndRemove(event){                    // Apartir da variavel 
     let color = document.querySelector('.' + cor);
     color.classList.add('selected');
     switch (cor) {
-        case 'preto':
-        document.querySelector('.vermelho').classList.remove('selected');   
-        document.querySelector('.azul').classList.remove('selected');   
-        document.querySelector('.roxo').classList.remove('selected');
+        case 'cor0':
+        document.querySelector('.cor1').classList.remove('selected');   
+        document.querySelector('.cor2').classList.remove('selected');   
+        document.querySelector('.cor3').classList.remove('selected');
         break; 
-        case 'vermelho':
-        document.querySelector('.preto').classList.remove('selected');   
-        document.querySelector('.azul').classList.remove('selected');   
-        document.querySelector('.roxo').classList.remove('selected');
+        case 'cor1':
+        document.querySelector('.cor0').classList.remove('selected');   
+        document.querySelector('.cor2').classList.remove('selected');   
+        document.querySelector('.cor3').classList.remove('selected');
         break;   
-        case 'roxo':
-        document.querySelector('.vermelho').classList.remove('selected');   
-        document.querySelector('.azul').classList.remove('selected');   
-        document.querySelector('.preto').classList.remove('selected');
+        case 'cor2':
+        document.querySelector('.cor0').classList.remove('selected');   
+        document.querySelector('.cor1').classList.remove('selected');   
+        document.querySelector('.cor3').classList.remove('selected');
         break;
-        case 'azul':
-        document.querySelector('.vermelho').classList.remove('selected');   
-        document.querySelector('.roxo').classList.remove('selected');   
-        document.querySelector('.preto').classList.remove('selected');
+        case 'cor3':
+        document.querySelector('.cor0').classList.remove('selected');   
+        document.querySelector('.cor1').classList.remove('selected');   
+        document.querySelector('.cor2').classList.remove('selected');
         break;      
 } 
 };
@@ -47,27 +47,34 @@ function criarEventosPaletaDeCores(){
     }; 
 }
 
-function addEventPixels(){
-    let div = document.querySelector('div');
-    let pixels = div.querySelectorAll('li');
-    // let cor = colors.
-    for(let pixel of pixels){
+function addEventPixels() {
+  let div = document.querySelector('div');
+  let pixels = div.querySelectorAll('li');
+  let color = document.querySelectorAll('.color');
+  let cor = [];
+  let colors = document.querySelectorAll('.color');
+  for(let index = 0; index <= color.length - 1; index += 1 ) {
+    cor.push(color[index].style.backgroundColor);
+    console.log(cor);
+    console.log(color[index].style.backgroundColor);
+  }
+    for(let pixel of pixels) {
         pixel.addEventListener('click', function () {
-        let corAtual = 'null'
+        let corAtual = 'null';
         for (let index = 0; index <= 3; index += 1){
             if (colors[index].classList[2] === "selected"){
                 let corAtual = colors[index].classList[1];
-                if (corAtual === 'preto'){
+                if (corAtual === 'cor0'){
                     pixel.style.backgroundColor = 'black';
                 }
-                if (corAtual === 'azul'){
-                    pixel.style.backgroundColor = 'blue';
+                if (corAtual === 'cor1'){
+                    pixel.style.backgroundColor = cor[1] ;
                 }
-                if (corAtual === 'roxo'){
-                    pixel.style.backgroundColor = 'purple';
+                if (corAtual === 'cor2'){
+                    pixel.style.backgroundColor = cor[2];
                 }
-                if (corAtual === 'vermelho'){
-                    pixel.style.backgroundColor = 'red';
+                if (corAtual === 'cor3'){
+                    pixel.style.backgroundColor = cor[3];
                 }
                 pixel.classList.remove('pixel')
                 pixel.classList.add(corAtual);
@@ -102,17 +109,33 @@ function recriaPixels() {
     return;
   }
   let input = parseInt(document.getElementById('board-size').value);
-  if (input < 5 || input > 50 ) {
-    alert('Digite um valor entre 5 e 50')
-  } else {
+  if (input < 5) {
+    removeTabela();
+    criaPixels(5, 5);
+  } 
+  else if (input > 50) {
+    removeTabela();
+    criaPixels(50, 50);
+  }
+  else {
     removeTabela();
     criaPixels(input, input);
     addEventPixels();
-   }      
+  }      
 }
 
+function sortColors() {
+  let color = document.querySelectorAll('li');
+  let value = [];
+  for (let index = 1; index <= 3; index += 1) {
+    value[index] = 'rgb(' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')';
+    color[index].style.backgroundColor = value[index];
+    }
+  }
+
+sortColors();
 const button = document.querySelector('#clear-board');
-const colors = document.querySelectorAll('.color');
+let colors = document.querySelectorAll('.color');
 criaPixels(5,5);
 colors[0].classList.add('selected'); // seleciona o preto.
 criarEventosPaletaDeCores();
@@ -120,3 +143,4 @@ addEventPixels();
 button.addEventListener('click', apagar);
 let buttonVqv = document.getElementById('generate-board');
 buttonVqv.addEventListener('click', recriaPixels);
+
