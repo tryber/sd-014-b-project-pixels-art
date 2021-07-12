@@ -40,12 +40,21 @@ function setColorInPixel() {
   }
 }
 
-
-
+function clearAllPixels() {
+  const pixel = document.querySelectorAll('.pixel');
+  const button = document.querySelector('#clear-board');
+  function pixelWhite() {
+    for (let index = 0; index < pixel.length; index += 1) {
+      pixel[index].style.backgroundColor = 'white';
+    }
+  } 
+  button.addEventListener('click', pixelWhite);
+}
 
 window.onload = function() {
   getDivsColor()
   creadPixelBoard()
   colorSelecte()
   setColorInPixel()
+  clearAllPixels()
 }
