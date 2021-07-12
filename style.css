@@ -7,7 +7,26 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: azure;
+  background-color: #ffe66d;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  display: inline-block;
+}
+
+/* Referência: https://pt.stackoverflow.com/questions/172075/remover-espa%C3%A7o-entre-item-de-lista-html */
+li {
+  float: left;
 }
 
 #title {
@@ -18,30 +37,47 @@ body {
 
 #color-palette {
   display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
+  justify-content: space-between;
+  padding: 30px;
+  width: 300px;
 }
 .color {
   border: black solid 1px;
   border-radius: 100%;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
 }
 
 #button-conteiner {
   display: flex;
   justify-content:flex-end;
-  width: 120%;
+  width: 100%;
 }
 
 #clear-board {
   color: aliceblue;
-  margin-bottom: 5px;
   border-radius: 10px;
   padding: 10px 20px;
-  border: solid 2px rgb(13, 139, 65);
-  background-color: rgb(178, 76, 236);
+  border: none;
+  background-color: #ff5400;
   margin-top: 5px;
+}
+
+#generate-board {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #007f5f;
+  color: aliceblue;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+#board-size {
+  width: 30px;
+  margin-left: 5px;
+  border-radius: 10px;
+  border: none;
 }
 
 #pixels-container {
@@ -50,9 +86,6 @@ body {
   justify-content: center;
 }
 
-/* #pixel-board {
-
-} */
 /* 5 - Faça com que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel. */
 .pixel {
   width: 40px;
