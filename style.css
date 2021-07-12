@@ -1,0 +1,24 @@
+.color {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.pixel {
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  background-color: white;
+  box-sizing: border-box;
+  display: table-cell;
+}
+
+#pixel-board {
+  line-height: 0px;
+  display: table;
+}
+
+.pixel-line {
+  display: table-row;
+}
