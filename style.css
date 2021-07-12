@@ -1,0 +1,46 @@
+#title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+}
+
+#palette-container {
+  text-align: center;
+}
+
+#color-palette {
+  list-style: none;
+  text-align: center;
+  padding-inline-start: 0;
+}
+
+.color {
+  display: inline-block;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+
+#pixel-board {
+  margin: auto;
+  display: table;
+  padding: 20px;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+#clear-board {
+  margin: 0 15px;
+}
