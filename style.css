@@ -39,11 +39,11 @@ body {
   resize: none;
 }
 
-#botao, #clear{
+#botao ,#clear {
   height: 21px;
 }
 
-.secao, #custom{
+.secao ,#custom {
   display: flex;
   align-items: center;
   justify-content: center;

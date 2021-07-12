@@ -68,7 +68,7 @@ buttonClear.addEventListener('click', () => {
 // -do-i-get-the-value-of-text-input-field-using-javascript
 
 const textValue = document.getElementById('board-size');
-const buttomResize = document.querySelector('#resize');
+const buttomResize = document.querySelector('#generate-board');
 
 buttomResize.addEventListener('click', () => {
   const textValueR = textValue.value;
@@ -80,6 +80,9 @@ buttomResize.addEventListener('click', () => {
     size(5);
   } else if (textValueR >= 50) {
     size(50);
+  } else if (textValue === null) {
+    alert('Board inválido!');
+    size(5);
   } else {
     size(textValueR);
   }
