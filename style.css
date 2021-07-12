@@ -17,8 +17,8 @@ body{
   box-shadow: 2px 2px 1px black;
 }
 #color-palette {
-  
- margin-left: 15%;
+  border-radius: 10px;
+  margin-left: 16%;
   gap: 10px;
 }
 
@@ -29,6 +29,8 @@ body{
   text-align: center;
   vertical-align: top;
   border: 1px solid black;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
 }
 .pixel {
   border: 1px solid black;
@@ -41,6 +43,16 @@ body{
   margin: 0 auto;
   border: 1px solid black;
 }
+
+#clear-board:hover {
+background-color: #7e7e2d
+}
+#clear-board:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+}
+
 #clear-board {
   margin-left: 37%;
   background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
