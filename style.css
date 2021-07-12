@@ -10,11 +10,16 @@
   width: 40px;
   display: inline-block;
   border: 1px solid black;
+  background-color: white;
   box-sizing: border-box;
+  display: table-cell;
 }
 
 #pixel-board {
-  height: 200px;
-  width: 200px;
   line-height: 0px;
+  display: table;
+}
+
+.pixel-line {
+  display: table-row;
 }

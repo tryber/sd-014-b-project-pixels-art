@@ -1,8 +1,10 @@
 const colorPalette = document.querySelector('#color-palette');
+// Section que contém a paleta de quatro cores do requisito 2
 const pixelBoard = document.querySelector('#pixel-board');
+// Section que contém o quadro de pixels que é gerado dinâmicamente
 const clearButton = document.querySelector('#clear-board');
-// const sizeInput = document.querySelector('#board-size');
-// const generateBoardButton = document.querySelector('#generate-board');
+
+const generateBoardButton = document.querySelector('#generate-board');
 
 function createColor(rgbString) {
   const createElement = document.createElement('div');
@@ -12,24 +14,63 @@ function createColor(rgbString) {
   color.setAttribute('class', 'color');
 }
 
-function createPixelBoard() {
-  const setBoardWidth = 5;
-  const setBoardHeight = 5;
-  for (let i = 0; i < setBoardHeight; i += 1) {
-    for (let i2 = 0; i2 < setBoardWidth; i2 += 1) {
+createColor('rgb(0, 0, 0)');
+
+// Chama a função que cria cores criando a cor preta como a primeira cor
+
+// Ajuda do Luiz Gustavo para utilizar o Math.floor e Math.random gerando um numero aleatorio e arredondando ele.
+
+createColor(`#${Math.floor(Math.random() * 999999)}`);
+
+createColor(`#${Math.floor(Math.random() * 999999)}`);
+
+createColor(`#${Math.floor(Math.random() * 999999)}`);
+
+// Dica do Luiz Gustavo 
+
+function createNewPixelBoard(value) {
+  for (let i = 0; i < value; i += 1) {
+    const createPixel = document.createElement('div');
+    createPixel.classList.add('pixel-line');
+    pixelBoard.appendChild(createPixel);
+  }
+  const line = document.querySelectorAll('.pixel-line');
+  for (let i2 = 0; i2 < line.length; i2 += 1) {
+    for (let i3 = 0; i3 < value; i3 += 1) {
       const createPixel = document.createElement('div');
-      const pixel = pixelBoard.appendChild(createPixel);
-      pixel.style.backgroundColor = 'white';
-      pixel.style.border = '1px solid black';
-      pixel.setAttribute('class', 'pixel');
+      createPixel.classList.add('pixel');
+      line[i3].appendChild(createPixel);
     }
   }
 }
 
+createNewPixelBoard(5);
+
+function deleteBoard() {
+  pixelBoard.innerHTML = '';
+}
+
+generateBoardButton.addEventListener('click', () => {
+  const sizeInput = document.querySelector('#board-size').value;
+  let a = parseInt(sizeInput, 10);
+  if (a > 50) {
+    a = 50;
+  } if (a < 5) {
+    a = 5;
+  } if (a >= 5) {
+    deleteBoard();
+    createNewPixelBoard(a);
+  } else {
+    alert('Board inválido!');
+  }
+});
+
 function defaultColor() {
   const colors = document.querySelectorAll('.color');
-  colors[0].classList.add('black', 'selected');
+  colors[0].classList.add('selected');
 }
+
+defaultColor();
 
 function selectColor(event) {
   const colors = document.querySelectorAll('.color');
@@ -39,11 +80,18 @@ function selectColor(event) {
   event.target.classList.add('selected');
 }
 
+colorPalette.addEventListener('click', selectColor);
+
 function paintPixel(event) {
   const selectedColor = document.querySelector('.selected').style.backgroundColor;
-  //  eslint-disable-next-line no-param-reassign
-  event.target.style.backgroundColor = selectedColor;
+  const evento = event;
+  evento.target.style.backgroundColor = selectedColor;
+  if (pixelBoard.style.backgroundColor !== 'white') {
+    pixelBoard.style.backgroundColor = 'white';
+  }
 }
+
+pixelBoard.addEventListener('click', paintPixel);
 
 function clearBoard() {
   const pixels = document.querySelectorAll('.pixel');
@@ -51,21 +99,5 @@ function clearBoard() {
     pixels[i].style.backgroundColor = 'white';
   }
 }
-
-createColor('rgb(0, 0, 0)');
-
-createColor('rgb(250, 0, 0)');
-
-createColor('rgb(10, 50, 149)');
-
-createColor('rgb(0, 250, 075)');
-
-createPixelBoard();
-
-defaultColor();
-
-colorPalette.addEventListener('click', selectColor);
-
-pixelBoard.addEventListener('click', paintPixel);
 
 clearButton.addEventListener('click', clearBoard);
