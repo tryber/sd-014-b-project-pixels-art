@@ -127,6 +127,18 @@ clearBoard.addEventListener('click', () => {
 
 // // 10 - Faça o quadro de pixels ter seu tamanho definido pela pessoa usuária.
 
+function createValueImput(buttonName) {
+  const newInput = document.createElement('input');
+
+  newInput.placeholder = buttonName;
+  newInput.id = 'board-size';
+  newInput.type = 'number';
+  buttonConteiner.appendChild(newInput);
+}
+createValueImput('5');
+
+const boardSize = document.querySelector('#board-size');
+
 function createValueButton(buttonName) {
   const newbutton = document.createElement('button');
 
@@ -138,33 +150,24 @@ createValueButton('VQV');
 
 const generateBoard = document.querySelector('#generate-board');
 
-function createValueImput(buttonName) {
-  const newInput = document.createElement('input');
-
-  newInput.placeholder = buttonName;
-  newInput.id = 'board-size';
-  newInput.value = '';
-  buttonConteiner.appendChild(newInput);
-}
-createValueImput('5');
-
-const boardSize = document.querySelector('#board-size');
-
 // Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 // Referência: https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
 // 11 - Limite o tamanho mínimo em 5 e máximo em 50 do board
 // pixelBoard.inerHTML = ''; => faz com que a cada interação o quadro de pixel anteriormente formado seja apagado e o novo seja posto em seu lugar.
 generateBoard.addEventListener('click', () => {
   const number = boardSize.value;
-
   if (number === '') {
     alert('Board inválido!');
   } else if (number < 5) {
     pixelBoard.innerHTML = '';
     createBoardColors(5);
+    alert('5 é o mínimo');
+    boardSize.value = '';
   } else if (number > 50) {
     pixelBoard.innerHTML = '';
     createBoardColors(50);
+    alert('50 é o limite');
+    boardSize.value = '';
   } else {
     pixelBoard.innerHTML = '';
     createBoardColors(number);

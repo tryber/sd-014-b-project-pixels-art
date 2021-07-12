@@ -32,7 +32,7 @@ li {
 #title {
   font-family:monospace;
   margin-top: 50px;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 #color-palette {
@@ -61,6 +61,7 @@ li {
   border: none;
   background-color: #ff5400;
   margin-top: 5px;
+  margin-right: 30px;
 }
 
 #generate-board {
@@ -70,7 +71,6 @@ li {
   background-color: #007f5f;
   color: aliceblue;
   margin-top: 5px;
-  margin-left: 20px;
 }
 
 #board-size {
