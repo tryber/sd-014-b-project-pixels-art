@@ -57,6 +57,16 @@ window.onload = function (){
       }    
   }
   selectedButton();
+  
+  let allPixels = document.getElementsByClassName('pixel')
+
+  for (let index = 0; index < allPixels.length; index += 1) {
+    allPixels[index].addEventListener('click', function (event) {
+      let pixelSelected = document.querySelector('.selected').style.backgroundColor;
+      event.target.style.backgroundColor = pixelSelected;
+      console.log(pixelSelected)
+    })
+  }
 }
   
   
