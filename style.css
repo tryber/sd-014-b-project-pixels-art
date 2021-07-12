@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #title {
 
 }
@@ -8,28 +13,27 @@
 }
 
 .color, .pixel {
-  border: 1px solid #000;
+  border: 1px solid black;
 }
 
-#black {
-  background-color: #000;
-}
+/* #black {
+  background-color:black;
+} */
 
 #purple {
-  background-color: #9932CC;
+  background-color: #9932cc;
 }
 
 #yellow {
-  background-color: #FFFF00;
+  background-color: #ffff00;
 }
 
 #blue {
-  background-color: #0000FF;
+  background-color: #0000ff;
 }
 
 .pixel {
-  background-color: #fff;
+  background-color: white;
   width: 40px;
   height: 40px;
 }
-
