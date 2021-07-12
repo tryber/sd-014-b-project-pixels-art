@@ -3,9 +3,12 @@ window.onload = function getBlackColor() {
   getBlack.classList.add('selected');
 };
 
+let pixelTableSize = 5;
+
+const buttonSection = document.createElement('section');
+document.querySelector('body').appendChild(buttonSection);
+
 function createClearButton() {
-  const buttonSection = document.createElement('section');
-  document.querySelector('body').appendChild(buttonSection);
   const button = document.createElement('button');
   button.type = 'button';
   button.id = 'clear-board';
@@ -16,7 +19,44 @@ function createClearButton() {
 
 createClearButton();
 
-const pixelTableSize = 5;
+function createInput() {
+  const input = document.createElement('input');
+  input.type = 'number';
+  input.id = 'board-size'
+  input.min = 1;
+  input.max = 50
+  input.value = 5;
+  buttonSection.appendChild(input);
+}
+
+createInput();
+
+function generateBoardButton() {
+  const boardButton = document.createElement('button');
+  boardButton.type = 'button';
+  boardButton.id = 'generate-board';
+  boardButton.innerText = 'VQV';
+  buttonSection.appendChild(boardButton);
+  boardButton.addEventListener('click', createPixelsAsk);
+}
+
+generateBoardButton();
+
+function createPixelsAsk() {
+  const inputValue = document.querySelector('input').value;
+  console.log (inputValue)
+  if (inputValue === '') {
+    alert ('Board Inválido')
+  } else {
+    pixelTableSize = inputValue;
+    const PixelBoardRemove = document.querySelector('#pixel-board');
+    PixelBoardRemove.remove();
+    createPixelBoard();
+    createPixels();
+    getPixel = document.querySelectorAll('.pixel');
+    addEventListenerPixel();
+  }
+}
 
 function createPixelBoard() {
   const getBody = document.querySelector('body');
@@ -59,15 +99,19 @@ function selectColor(color) {
   }
 }
 
-const getPixel = document.querySelectorAll('.pixel');
+let getPixel = document.querySelectorAll('.pixel');
+
+function addEventListenerPixel() {
+  for (let index = 0; index <= getPixel.length - 1; index += 1) {
+    const selected = getPixel[index].addEventListener('click', changeColor);
+  }
+}
+
+addEventListenerPixel();
 
 function changeColor(pixel) {
   const currentSelectedColor = document.querySelector('.selected');
   pixel.target.style.backgroundColor = currentSelectedColor.id;
-}
-
-for (let index = 0; index <= getPixel.length - 1; index += 1) {
-  const selected = getPixel[index].addEventListener('click', changeColor);
 }
 
 function clearPixelTable() {

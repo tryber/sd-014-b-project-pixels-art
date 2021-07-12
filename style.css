@@ -15,6 +15,20 @@ body {
   font-size: 20px;
 }
 
+#generate-board {
+  margin: 10px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+#board-size {
+  height: 30px;
+  width: 50px;
+  border: 1px solid black;
+  font-size: 20px;
+  text-align: center;
+}
+
 #black {
   background-color: black;
 }
