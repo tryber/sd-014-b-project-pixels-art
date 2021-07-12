@@ -71,5 +71,7 @@ function changeColor(pixel) {
 }
 
 function clearPixelTable(){
-  for (let index = 0; index <= getPixel.length-1;  )
+  for (let index = 0; index <= getPixel.length - 1;  index +=1 ) {
+    getPixel[index].style.backgroundColor = '';
+  }
 }
