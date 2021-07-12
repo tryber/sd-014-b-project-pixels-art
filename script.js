@@ -23,6 +23,7 @@ function paint() {
   }
 }
 
+paint();
 
 clearButton.addEventListener('click', function () {
   for (let pixel of pixels) {
