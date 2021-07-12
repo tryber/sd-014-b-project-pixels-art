@@ -4,8 +4,6 @@ function getDivsColor() {
   getDivs[1].classList.add('red');
   getDivs[2].classList.add('blue');
   getDivs[3].classList.add('green');
-
-  
 }
 
 function creadPixelBoard() {
@@ -31,8 +29,23 @@ function colorSelecte() {
   }
 }
 
+function setColorInPixel() {
+  const pixel = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixel.length; i++) {
+    pixel[i].addEventListener('click', function() {
+      const selection = document.querySelector('.selected')
+      const selectionColor = window.getComputedStyle(selection).getPropertyValue("background-color");
+      pixel[i].setAttribute("style", `background-color: ${selectionColor}`);
+    })
+  }
+}
+
+
+
+
 window.onload = function() {
   getDivsColor()
   creadPixelBoard()
   colorSelecte()
+  setColorInPixel()
 }
