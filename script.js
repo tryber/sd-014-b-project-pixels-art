@@ -50,13 +50,12 @@ function resetButton() {
   const button = document.createElement('button');
   buttonReset.appendChild(button);
   button.id = 'clear-board';
-  button.innerText = 'Reset button';
+  button.innerText = 'Limpar';
 }
 resetButton();
 
 function whiteBoard() {
   const pixel = document.querySelectorAll('.pixel');
-  console.log(pixel)
   for (index = 0; index < pixel.length; index += 1) {
     pixel[index].style.backgroundColor = 'white';
   }
