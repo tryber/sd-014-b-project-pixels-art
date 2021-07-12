@@ -22,7 +22,7 @@
     height: 400px;
 }
 .pixel {
-    border: 1px solid-black;
+    border: 1px black solid;
     background-color: white;
     display: inline-block;
     width: 40px;
