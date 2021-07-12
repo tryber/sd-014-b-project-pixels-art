@@ -2,28 +2,28 @@
   border: 1px solid black;
 }
 
-.black {
+#black {
   width: 40px;
   height: 40px;
   display: inline-block;
   background-color: black;
 }
 
-.yellow {
+#yellow {
   width: 40px;
   height: 40px;
   display: inline-block;
   background-color: yellow;
 }
 
-.magenta {
+#magenta {
   width: 40px;
   height: 40px;
   display: inline-block;
   background-color: magenta;
 }
 
-.cyan {
+#cyan {
   width: 40px;
   height: 40px;
   display: inline-block;
