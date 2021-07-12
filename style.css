@@ -52,6 +52,10 @@ b.header {
   background-color: red;
 }
 
+.color4{
+  background-color: pink;
+}
+
 .board {
   margin-top: 30px;
 }
