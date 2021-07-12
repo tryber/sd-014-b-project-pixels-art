@@ -16,9 +16,8 @@ for (const colors of colorPalette) {
 function paint() {
   for (const pixel of pixels) {
     pixel.addEventListener('click', function (event) {
-      const selectedColor = document.querySelector('.selected').classList[1];
-      event.target.classList.remove(event.target.classList[1]);
-      event.target.classList.add(selectedColor);
+      const selectedColor = getComputedStyle(document.querySelector('.selected')).backgroundColor;
+      event.target.style.backgroundColor = selectedColor;
     })
   }
 }
@@ -58,5 +57,16 @@ function createTable() {
   paint();
 }
 
+function randomColor() {
+  const cores = document.querySelectorAll('.color');
+  for (let index = 1; index < cores.length; index++) {
+    const r = Math.trunc(Math.random() * 255);
+    const g = Math.trunc(Math.random() * 255); 
+    const b = Math.trunc(Math.random() * 255);
+    cores[index].style.backgroundColor = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+  }
+}
+
+randomColor();
 
 sizeButton.addEventListener('click', createTable);
