@@ -28,7 +28,7 @@ ul {
 }
 
 #black {
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   transition: all 0.5s;
 }
 
@@ -78,4 +78,11 @@ ul {
   width: 41px;
   height: 41px;
   background-color: white;
+}
+
+#clear-board {
+  width: 9rem;
+  height: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
 }

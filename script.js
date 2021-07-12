@@ -1,5 +1,22 @@
 const colorPalette = document.querySelector('#color-palette ul');
 const tablePixels = document.querySelector('#pixel-board');
+const buttonClear = document.querySelector('#clear-board');
+const numberRowsTable = 5;
+const numberColumnTable = 5;
+
+function createTablePixels(numberRows, numberColumn) {
+  for (let i = 0; i < numberRows; i += 1) {
+    const tr = document.createElement('tr');
+    for (let j = 0; j < numberColumn; j += 1) {
+      const td = document.createElement('td');
+      td.classList.add('pixel');
+      tr.appendChild(td);
+    }
+    tablePixels.appendChild(tr);
+  }
+}
+
+createTablePixels(numberRowsTable, numberColumnTable);
 
 /**
  * essa função pega a lista das cores que estao na paleta e em seguida
@@ -66,4 +83,13 @@ function selectedColor() {
 tablePixels.addEventListener('click', (element) => {
   const pixel = element.target;
   pixel.style.backgroundColor = selectedColor();
+});
+
+buttonClear.addEventListener('click', () => {
+  removeSelectedColor();
+  const colorBlack = colorPalette.children[0];
+  colorBlack.classList.add('selected');
+
+  tablePixels.innerHTML = '';
+  createTablePixels(numberRowsTable, numberColumnTable);
 });
