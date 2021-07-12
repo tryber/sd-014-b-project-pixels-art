@@ -30,12 +30,9 @@
   background-color: yellow;
 }
 
-#pixel-board {
-  width: 400px;
-  height: 400px;
-}
-
 .pixel {
-  border: 1px solid black;
+  border: black solid 1px;
   background-color: white;
+  width: 40px;
+  height: 40px;
 }
