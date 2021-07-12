@@ -61,7 +61,7 @@ function generateBoard() {
     fillCells(numberPixel, lines);
     loadPixels();
   } else {
-    alert(`O número ${numberPixel} não é permitido.`);
+    alert('Board inválido!');
   }
 }
 
