@@ -106,10 +106,16 @@ function obterEntradaUsuario() {
 }
 
 function redimensionarPixels() {
-  const tamanhoPixel = obterEntradaUsuario();
+  let tamanhoPixel = obterEntradaUsuario();
 
   if (!tamanhoPixel) {
     alert('Board inválido!');
+  }
+
+  if (tamanhoPixel < 5) {
+    tamanhoPixel = 5;
+  } else if (tamanhoPixel > 50) {
+    tamanhoPixel = 50;
   }
 
   criarTabela(tamanhoPixel);
