@@ -1,13 +1,12 @@
 // Define a cor preta como cor inicial.
 document.querySelector('.color').classList.add('selected');
 // Clicar em uma das cores da paleta, faz com que ela seja selecionada e utilizada para preencher os pixels no quadro.
+// Help da Bel Alburquerque com a dica de tirar o loop.
 const palette = document.querySelector('#color-palette');
 palette.addEventListener('click', (event) => {
-  const pickColor = document.querySelectorAll('.color');
-  for (let key = 0; key <= pickColor.length; key += 1) {
-    pickColor[key].classList.remove('selected');
-    event.target.classList.add('selected');
-  }
+  const pickColor = document.querySelector('.selected');
+  pickColor.classList.remove('selected');
+  event.target.classList.add('selected');
 });
 // Clicar em um pixel dentro do quadro após selecionar uma cor na paleta, faz com que o pixel seja preenchido com a cor selecionada.
 const toColor = () => {

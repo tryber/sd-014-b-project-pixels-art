@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url('pixel-art-desert.jpg');
+  background: url('/images/pixel-art-desert.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   font-family: VT323, monospace;
@@ -31,6 +31,7 @@ header {
   border: black solid 1px;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 
 #black {
@@ -71,6 +72,7 @@ header {
   width: 100px;
   height: 25px;
   border: groove;
+  cursor: pointer;
 }
 
 #clear-board:active {
@@ -89,6 +91,7 @@ header {
   border: black solid 1px;
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 
 #footer {
