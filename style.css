@@ -4,11 +4,8 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #color-palette {
-  border: 1px solid black;
-
-}
-.color , .pixel {
-  border: 1px solid black;
+  width: 400px;
+  height: 80px;
 }
 #black {
   background-color: black;
@@ -27,24 +24,10 @@
   border: 1px solid black;
 }
 #pixel-board {
-  display: grid;
-  justify-content: center;
+  width: 400px;
+  height: 400px;
 }
 .pixel {
+  border: 1px solid black;
   background-color: white;
-}
-#linha-1 {
-
-}
-#linha-2 {
-    
-}
-#linha-3 {
-    
-}
-#linha-4 {
-    
-}
-#linha-5 {
-    
 }
