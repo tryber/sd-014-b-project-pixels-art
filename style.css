@@ -52,9 +52,13 @@ body {
 }
 
 .selected {
+  border: 2px solid rgb(43, 43, 43);
   width: 40px;
   height: 40px;
-  padding: 12px;
+}
+
+#clear-board {
+  border-radius: 5px;
 }
 
 /* Referências:  */
