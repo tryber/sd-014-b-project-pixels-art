@@ -77,13 +77,19 @@ function generateBoard() {
   loadPixels();
 }
 
+function randomColor() {
+  const numberOne = Math.floor(Math.random() * (255 - 0) + 0);
+  const numberTwo = Math.floor(Math.random() * (255 - 0) + 0);
+  const numberTrhee = Math.floor(Math.random() * (255 - 0) + 0);
+  return `background-color: rgb(${numberOne}, ${numberTwo}, ${numberTrhee});`;
+}
+
 window.onload = function load() {
   const colors = document.querySelectorAll('.color');
-
   colors[0].setAttribute('style', 'background-color: black');
-  colors[1].setAttribute('style', 'background-color: green');
-  colors[2].setAttribute('style', 'background-color: yellow');
-  colors[3].setAttribute('style', 'background-color: pink');
+  colors[1].setAttribute('style', randomColor());
+  colors[2].setAttribute('style', randomColor());
+  colors[3].setAttribute('style', randomColor());
   colors[0].className = 'selected color';
 };
 
