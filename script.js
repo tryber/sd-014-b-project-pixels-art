@@ -21,7 +21,16 @@ colorCyan.addEventListener('click', oneClick);
 
 function pixelPainting(event) {
   const colorSelected = document.querySelector('.selected');
-  event.target.style.backgroundColor = colorSelected.id ;
+  event.target.style.backgroundColor = colorSelected.id;
 }
 
 matrizPixels.addEventListener('click', pixelPainting);
+
+// Limpando Matriz:
+const clearButton = document.querySelector('#clear-board');
+function clearMatriz() {
+  const colorWhite = document.querySelectorAll('.pixel');
+  colorWhite.style.backgroundColor = 'white';
+}
+
+clearButton.addEventListener('click', clearMatriz);

@@ -36,6 +36,13 @@
   border: 1px solid black;
 }
 
+#clear-board {
+  width: 80px;
+  height: 20px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
 .pixels {
   display: table-row;
 }
