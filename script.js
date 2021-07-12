@@ -1,14 +1,12 @@
 function createTable() {
-  const pixelTable = document.getElementById('pixel-board'); //elemento pai
-  const table = document.createElement('table'); //criando a tabela
+  const pixelTable = document.getElementById('pixel-board');
+  const table = document.createElement('table');
   table.className = 'table';
 
   for (let index = 0; index < 5; index += 1) {
-    //cada interação aumenta uma linha
     const tr = document.createElement('tr');
     tr.className = 'tr';
     for (let index2 = 0; index2 < 5; index2 += 1) {
-      //alinha as colunas lado a lado formando uma linha ao final
       const td = document.createElement('td');
       td.className = 'pixel';
       tr.appendChild(td);
@@ -56,7 +54,7 @@ resetButton();
 
 function whiteBoard() {
   const pixel = document.querySelectorAll('.pixel');
-  for (index = 0; index < pixel.length; index += 1) {
+  for (let index = 0; index < pixel.length; index += 1) {
     pixel[index].style.backgroundColor = 'white';
   }
 }
