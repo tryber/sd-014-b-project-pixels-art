@@ -31,10 +31,58 @@ for(let index = 0; index < colorList.length; index +=1){
    colorList[index].addEventListener("click", addSelected);
 }
 
+// Requisito 12
+let black = document.getElementById("black");
+let orange = document.getElementById("orange");
+let green = document.getElementById("green");
+let blue = document.getElementById("blue");
+
+let z = Math.trunc(Math.random()* 10);
+let y = Math.trunc(Math.random()* 10);
+let x = Math.trunc(Math.random()* 10);
+
+if(x === 1) { x = "orange"}
+else if(x === 2) { x = "green"}
+else if(x === 3) { x = "blue"}
+else if(x === 4) { x = "purple"}
+else if(x === 5) { x = "brown"}
+else if(x === 6) { x = "pink"}
+else if(x === 7) { x = "cyan"}
+else if(x === 8) { x = "gray"}
+else if(x === 9) { x = "red"}
+else if(x === 0) { x = "yellow"}
+
+if(y === 1) { y = "orange"}
+else if(y === 2) { y = "green"}
+else if(y === 3) { y = "blue"}
+else if(y === 4) { y = "purple"}
+else if(y === 5) { y = "brown"}
+else if(y === 6) { y = "pink"}
+else if(y === 7) { y = "cyan"}
+else if(y === 8) { y = "gray"}
+else if(y === 9) { y = "red"}
+else if(y === 0) { y = "yellow"}
+
+if(z === 1) { z = "orange"}
+else if(z === 2) { z = "green"}
+else if(z === 3) { z = "blue"}
+else if(z === 4) { z = "purple"}
+else if(z === 5) { z = "brown"}
+else if(z === 6) { z = "pink"}
+else if(z === 7) { z = "cyan"}
+else if(z === 8) { z = "gray"}
+else if(z === 9) { z = "red"}
+else if(z === 0) { z = "yellow"}
+
+black.style.backgroundColor = "black";
+orange.style.backgroundColor = x;
+green.style.backgroundColor = y;
+blue.style.backgroundColor = z;
+
 // Requisito 8
 function addColor(event){
    let getSelected = document.querySelector(".selected");
-   let bgcSelected = getSelected.id
+   let bgcSelected = getSelected.style.backgroundColor;
    event.target.style.backgroundColor = bgcSelected;
 }
 
