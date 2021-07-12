@@ -1,0 +1,65 @@
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+#title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(20, 20, 20);
+}
+
+#color-palette {
+  display: flex;
+  padding: 5px;
+}
+
+.color {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: table-cell;
+}
+
+#box1 {
+  background-color: black;
+}
+
+#box2 {
+  background-color: #ee988e;
+}
+
+#box3 {
+  background-color: #f5bb95;
+}
+
+#box4 {
+  background-color: #f5d6a2;
+}
+
+#pixel-board {
+  display: table;
+}
+
+.pixel {
+  display: table-cell;
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.row {
+  display: table-row;
+}
+
+.selected {
+  /* border: 2px solid rgb(43, 43, 43); */
+  width: 40px;
+  height: 40px;
+}
+
+#clear-board {
+  border-radius: 5px;
+}
+
+/* Referências:  */
+/* https://stackoverflow.com/questions/29229523/how-and-why-to-use-display-table-cell-css */
