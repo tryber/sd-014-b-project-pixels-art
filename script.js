@@ -133,6 +133,7 @@ function createValueImput(buttonName) {
   newInput.placeholder = buttonName;
   newInput.id = 'board-size';
   newInput.type = 'number';
+  newInput.min = '0';
   buttonConteiner.appendChild(newInput);
 }
 createValueImput('5');
