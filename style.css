@@ -8,7 +8,6 @@
 .pixel {
   height: 40px;
   width: 40px;
-  display: inline-block;
   border: 1px solid black;
   background-color: white;
   box-sizing: border-box;

@@ -26,7 +26,7 @@ createColor(`#${Math.floor(Math.random() * 999999)}`);
 
 createColor(`#${Math.floor(Math.random() * 999999)}`);
 
-// Dica do Luiz Gustavo 
+// Dica do Luiz Gustavo que me ajudou a refatorar a função de criar o PixelBoard de forma dinâmica para se enquadrar nos requisitos 10 e 11.
 
 function createNewPixelBoard(value) {
   for (let i = 0; i < value; i += 1) {
