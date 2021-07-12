@@ -1,0 +1,46 @@
+body {
+  background: lightblue;
+}
+
+.color {
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  display: inline-block;
+  margin: 3px;
+}
+
+#clear-board {
+  margin: 10px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+#generate-board {
+  margin: 10px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+#board-size {
+  height: 30px;
+  width: 50px;
+  border: 1px solid black;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Os displays table-cell e table foram feitos com a ajuda da resposta no seguinte link https://stackoverflow.com/questions/29229523/how-and-why-to-use-display-table-cell-css  */
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  display: table-cell;
+  background-color: white;
+}
+
+#pixel-board {
+  display: table;
+  padding: 0;
+  border: 1px solid black;
+}
