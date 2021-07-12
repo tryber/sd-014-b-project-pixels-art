@@ -7,6 +7,7 @@ body {
   height: 60px;
   border: 1px solid black;
   display: inline-block;
+  margin: 3px;
 }
 
 #clear-board {
@@ -27,22 +28,6 @@ body {
   border: 1px solid black;
   font-size: 20px;
   text-align: center;
-}
-
-#black {
-  background-color: black;
-}
-
-#red {
-  background-color: red;
-}
-
-#blue {
-  background-color: blue;
-}
-
-#green {
-  background-color: green;
 }
 
 /* Os displays table-cell e table foram feitos com a ajuda da resposta no seguinte link https://stackoverflow.com/questions/29229523/how-and-why-to-use-display-table-cell-css  */

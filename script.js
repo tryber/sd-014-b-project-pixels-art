@@ -3,6 +3,39 @@ window.onload = function getBlackColor() {
   getBlack.classList.add('selected');
 };
 
+function colorGenerator() {
+  const red = Math.floor(Math.random() * 255);
+  const blue = Math.floor(Math.random() * 255);
+  const green = Math.floor(Math.random() * 255);
+  const finalColor = 'rgb(' + red + ', ' + blue + ', ' + green + ')';
+  return finalColor;
+}
+
+function colorPalete() {
+  const palete = document.createElement('section');
+  const black = document.createElement('div');
+  const color1 = document.createElement('div');
+  const color2 = document.createElement('div');
+  const color3 = document.createElement('div');
+  palete.id = 'color-palette';
+  document.querySelector('body').appendChild(palete);
+  black.className = 'color';
+  black.id = 'black';
+  black.style.backgroundColor = 'black';
+  color1.className = 'color';
+  color1.style.backgroundColor = colorGenerator();
+  color2.className = 'color';
+  color2.style.backgroundColor = colorGenerator();
+  color3.className = 'color';
+  color3.style.backgroundColor = colorGenerator();
+  document.querySelector('#color-palette').appendChild(black);
+  document.querySelector('#color-palette').appendChild(color1);
+  document.querySelector('#color-palette').appendChild(color2);
+  document.querySelector('#color-palette').appendChild(color3);
+}
+
+colorPalete();
+
 let pixelTableSize = 5;
 
 const buttonSection = document.createElement('section');
@@ -42,7 +75,6 @@ generateBoardButton();
 
 function createPixelsAsk() {
   const inputValue = document.querySelector('input').value;
-  console.log(inputValue);
   if (inputValue === '') {
     alert('Board Inválido!');
   } else {
@@ -107,7 +139,7 @@ let getPixel = document.querySelectorAll('.pixel');
 
 function addEventListenerPixel() {
   for (let index = 0; index <= getPixel.length - 1; index += 1) {
-    const selected = getPixel[index].addEventListener('click', changeColor);
+    getPixel[index].addEventListener('click', changeColor);
   }
 }
 
@@ -115,7 +147,7 @@ addEventListenerPixel();
 
 function changeColor(pixel) {
   const currentSelectedColor = document.querySelector('.selected');
-  pixel.target.style.backgroundColor = currentSelectedColor.id;
+  pixel.target.style.backgroundColor = currentSelectedColor.style.backgroundColor;
 }
 
 function clearPixelTable() {
