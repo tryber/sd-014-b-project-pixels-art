@@ -34,9 +34,8 @@ function selectedClass() {
   for (let i = 0; i < elementClass.length; i += 1) {
     elementClass[i].addEventListener('click', () => {
       for (let x = 0; x < elementClass.length; x += 1) {
-        const elementX = elementClass[x].classList;
-        if (elementX.contains('selected')) {
-          elementX.remove('selected');
+        if (elementClass[x].classList.contains('selected')) {
+          elementClass[x].classList.remove('selected');
         }
         elementClass[i].classList.add('selected');
       }
@@ -47,8 +46,8 @@ selectedClass();
 
 function paintPixel() {
   const pixels = document.querySelectorAll('.pixel');
-  for(let i = 0; i < pixels.length; i += 1) {
-    pixels[i].addEventListener('click', function () {
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].addEventListener('click', () => {
       const selectedBlock = document.querySelector('.selected');
       const colorBlock = window.getComputedStyle(selectedBlock, null).backgroundColor;
       pixels[i].style.backgroundColor = colorBlock;
@@ -56,3 +55,14 @@ function paintPixel() {
   }
 }
 paintPixel();
+
+function clearPixelsBtn() {
+  const button = document.querySelector('#clear-board');
+  button.addEventListener('click', () => {
+    const pixels = document.querySelectorAll('.pixel');
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].style.backgroundColor = 'white';
+    };
+  });
+}
+clearPixelsBtn();
