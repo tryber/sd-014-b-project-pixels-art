@@ -26,9 +26,8 @@ paint();
 
 clearButton.addEventListener('click', function () {
   for (let pixel of pixels) {
-    pixel.classList.remove(pixel.classList[1]);
-    pixel.classList.add('white')
-}
+    pixel.style.backgroundColor = 'white';
+  }
 });
 
 function createTable() {
