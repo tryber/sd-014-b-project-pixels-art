@@ -67,6 +67,20 @@ window.onload = function (){
       console.log(pixelSelected)
     })
   }
+
+  let newButton = document.getElementById('button');
+  
+  let clearPixel = document.createElement('button');
+  clearPixel.id = 'clear-board';
+  clearPixel.innerHTML = 'Limpar tudo';
+  newButton.appendChild(clearPixel);
+
+  clearPixel.addEventListener('click', function (event){
+    for (let index = 0; index < allPixels.length; index += 1) {
+      allPixels[index].style.backgroundColor = 'white';
+    }
+    
+  })
 }
   
   

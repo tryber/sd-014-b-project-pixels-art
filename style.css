@@ -33,18 +33,9 @@ body {
   background-color: white;
 }
 
-/* .color-black {
-  background-color: black;
+#clear-board {
+  border-radius: 8px;
+  background-color: #323232;
+  color: #E4E4E4;
+  padding: 5px;
 }
-
-.color-green {
-  background-color: #42883E;
-}
-
-.color-blue {
-  background-color: #282E62;
-}
-
-.color-yellow {
-  background-color: #E6BF5E;
-} */
