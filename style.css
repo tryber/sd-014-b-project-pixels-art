@@ -9,6 +9,12 @@ body {
   display: inline-block;
 }
 
+#clear-board {
+  margin: 10px;
+  padding: 5px;
+  font-size: 20px;
+}
+
 #black {
   background-color: black;
 }
