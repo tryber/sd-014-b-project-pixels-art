@@ -1,11 +1,9 @@
-html {
-  display: table;
-  margin: auto;
-}
 
 body{
-  display: table-cell;
+  display: center;
+  background-image: url('tetris.jpg');
   vertical-align: middle;
+  text-align: center;
 }
 
 #title {
@@ -18,9 +16,9 @@ body{
 }
 #color-palette {
   border-radius: 10px;
-  margin-left: 16%;
   gap: 10px;
 }
+
 
 .color {
   display: inline-block;
@@ -31,7 +29,9 @@ body{
   border: 1px solid black;
   box-shadow: 0 2px #666;
   transform: translateY(4px);
+  border-radius: 10px;
 }
+
 .pixel {
   border: 1px solid black;
   width: 41px;
@@ -47,20 +47,17 @@ body{
 #clear-board:hover {
 background-color: #7e7e2d
 }
+
 #clear-board:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-
 }
 
 #clear-board {
-  margin-left: 37%;
+  
   background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
     border: 1px solid #696969;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 1px black;
-}
-body {
- background-image: url('tetris.jpg');
 }
