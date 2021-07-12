@@ -4,8 +4,8 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #color-palette {
-  width: 400px;
-  height: 80px;
+  width: 300px;
+  height: 60px;
 }
 #black {
   background-color: black;
@@ -24,10 +24,12 @@
   border: 1px solid black;
 }
 #pixel-board {
-  width: 400px;
-  height: 400px;
+  width: 232px;
+  height: 40px;
 }
 .pixel {
   border: 1px solid black;
+  height: 40px;
+  width: 40px;
   background-color: white;
 }
