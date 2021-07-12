@@ -1,4 +1,4 @@
-.pixel {
+#collor-palette {
     border: 1px black solid;
     width: 150px;
     height: 150px;
@@ -20,4 +20,8 @@
 #pixel-board {
     width: 400px;
     height: 400px;
+}
+.pixel {
+    border: 1px solid-black;
+    background-color: white;
 }
