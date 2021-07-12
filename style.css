@@ -1,33 +1,44 @@
 body {
-  height: auto;
   padding: 10px;
   color: rgb(207, 206, 206);
-  font-size: 18px;
   text-align: center;
-  background-color: black;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.041), rgba(255, 255, 255, 0.185), rgba(255, 255, 255, 0.185), rgba(255, 255, 255, 0.041));
+  background-color: rgb(29, 28, 28);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.041), rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.041));
 }
 
 section {
   height: auto;
+  right: auto;
+  left: auto;
+  margin: 0px;
+}
+
+div {
+  height: 30px;
+}
+
+#color-palette {
   padding: 7px 0;
+}
+
+#board-size {
+  margin-bottom: 5px;
 }
 
 .color {
   display: inline-block;
-  width: 30px;
-  height: 20px;
-  padding: 20px;
-  margin: 1px;
+  width: 40px;
+  height: 40px;
+  margin: 0px;
   border: black solid 1px;
+  padding: 10px;
 }
 
 .pixel {
   display: inline-block;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 40px;
   height: 40px;
-  padding: 20px;
-  margin-right: 4px;
   border: black solid 1px;
+  margin-bottom: -5px;
 }

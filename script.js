@@ -1,8 +1,7 @@
 const containerPalhetas = document.querySelector('#color-palette');
 const color2 = `#${randomColor()}`;
 const color3 = `#${randomColor()}`;
-let color4 = `#${randomColor()}`;
-console.log(color2, color4);
+const color4 = `#${randomColor()}`;
 const boxColor = ['black', color2, color3, color4];
 let corSelecionada = '';
 let whiteBox = document.querySelector('#pixel-board');
@@ -33,17 +32,16 @@ for (let i = 0; i < 4; i += 1) {
 
 // Gerar Quadro branco
 function gerarQuadroBranco() {
-  console.log(n);
   const containerWhiteBoard = document.querySelector('#pixel-board');
   for (let i = 0; i < n; i += 1) {
-    const lineBox = document.createElement('div');
-    containerWhiteBoard.appendChild(lineBox);
     for (let ii = 0; ii < n; ii += 1) {
       const lineBox2 = document.createElement('div');
       lineBox2.className = 'pixel';
       lineBox2.style.color = 'white';
       containerWhiteBoard.appendChild(lineBox2);
     }
+    const lineBox = document.createElement('article');
+    containerWhiteBoard.appendChild(lineBox);
   }
   inputBoardSize.value = '';
 }
