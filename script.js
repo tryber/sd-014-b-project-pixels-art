@@ -44,6 +44,7 @@ addClickColors();
 function getColor(event) {
   const getSelected = document.querySelector('.selected');
   const color = window.getComputedStyle(getSelected, null).getPropertyValue('background-color');
+  // eslint-disable-next-line no-param-reassign
   event.target.style.backgroundColor = color;
 }
 
@@ -66,23 +67,34 @@ function clearPixels() {
 }
 clearPixels();
 
+function empityPixels() {
+  const getTablePixels = document.getElementById('pixel-board');
+  while (getTablePixels.firstChild) {
+    getTablePixels.removeChild(getTablePixels.firstChild);
+  }
+}
+
+// eslint-disable-next-line max-lines-per-function
 function newTable() {
-  const getPixels = document.querySelectorAll('.pixel');
   const getButtonVqv = document.querySelector('#generate-board');
-  const getAlterSquare = document.querySelector('#board-size');
+  const getInput = document.querySelector('#board-size');
+  const getTablePixels = document.getElementById('pixel-board');
   getButtonVqv.addEventListener('click', function () {
-    if (getAlterSquare.value !== '' && getAlterSquare.value < 5) {
-      getAlterSquare.value = 5;
-    }
-    for (let index = 0; index < getPixels.length; index += 1) {
-      if (getAlterSquare.value !== '') {
-        getPixels[index].style.width = `${getAlterSquare.value * getAlterSquare.value}px`;
-        getPixels[index].style.height = `${getAlterSquare.value * getAlterSquare.value}px`;
-        getPixels[index].style.backgroundColor = 'white';
-      } else {
-        alert('Board inválido!');
-        break;
+    if (getInput.value !== '') {
+      empityPixels();
+      for (let index = 1; index <= getInput.value; index += 1) {
+        const createTr = document.createElement('tr');
+        getTablePixels.appendChild(createTr);
+        for (let secondIndex = 1; secondIndex <= getInput.value; secondIndex += 1) {
+          const createTd = document.createElement('td');
+          createTd.className = 'pixel';
+          createTd.style.backgroundColor = 'rgb(255, 255, 255)';
+          createTd.addEventListener('click', getColor);
+          createTr.appendChild(createTd);
+        }
       }
+    } else {
+      alert('Board inválido!');
     }
   });
 }
