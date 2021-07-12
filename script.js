@@ -26,9 +26,11 @@ function addColor(colors) {
     }
   }
 }
-const color1 = `#${Math.floor(Math.random() * 777215)}`;
-const color2 = `#${Math.floor(Math.random() * 777215)}`;
-const color3 = `#${Math.floor(Math.random() * 777215)}`;
+// https://pt.stackoverflow.com/questions/493278/como-gerar-cores-hexadecimais-aleat%C3%B3rias-com-javascript
+// As cores sao geradas pelo o Math.random, usando o Math.floor para "arredondar" o numero gerado, usando o toString(16), colocamos o numero em base hexadecimal e o padStart, garante que sempre tenha 6numeros.
+const color1 = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+const color2 = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+const color3 = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
 
 addColor(['black', color1, color2, color3]);
 
@@ -115,19 +117,21 @@ clearButton.addEventListener('click', () => {
 });
 
 // Faça o quadro de pixels ter seu tamanho definido pela pessoa usuária.
-
+// Ajuda fornecida pelo Colega Glauco Lomenha
 function clearBoard() {
   pixelBoard.innerHTML = '';
 }
 
 const buttonSizeBoard = document.getElementById('generate-board');
 
+// Ajuda fornecida pelo Colega Igor Marinho.
+
 buttonSizeBoard.addEventListener('click', () => {
   const valueInput = document.getElementById('board-size').value;
   let inputNumber = parseInt(valueInput, 10);
-  if (inputNumber > 50) inputNumber = 50;
+  if (inputNumber >= 50) inputNumber = 50;
   if (inputNumber < 5) inputNumber = 5;
-  if (inputNumber > 0) {
+  if (inputNumber >= 5) {
     clearBoard();
     tablePixel(inputNumber);
     boxPixel = document.querySelectorAll('.pixel');
@@ -137,4 +141,3 @@ buttonSizeBoard.addEventListener('click', () => {
     alert('Board inválido!');
   }
 });
-
