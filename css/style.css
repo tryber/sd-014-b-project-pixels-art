@@ -1,6 +1,6 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -31,12 +31,12 @@ body {
 }
 
 .pixel {
-  background-color: #ffffff;
+  background-color: white;
   width: 40px;
   height: 40px;
   border: 1px solid black;
 }
 
 .selected {
-  box-shadow: 0px 0px 5px 2px rgb(117, 145, 236);
+  box-shadow: 0 0 5px 2px rgb(117, 145, 236);
 }

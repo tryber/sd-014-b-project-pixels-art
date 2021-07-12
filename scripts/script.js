@@ -1,11 +1,12 @@
-function criarTabela() {
+function criarTabela(tamanho = 5) {
   const table = document.getElementById('pixel-board');
+  table.innerHTML = '';
 
-  for (let i = 0; i < 5; i += 1) {
+  for (let i = 0; i < tamanho; i += 1) {
     const tr = document.createElement('tr');
     table.appendChild(tr);
 
-    for (let j = 0; j < 5; j += 1) {
+    for (let j = 0; j < tamanho; j += 1) {
       const td = document.createElement('td');
       td.setAttribute('class', 'pixel');
       tr.appendChild(td);
@@ -99,7 +100,24 @@ function resertarPixels() {
   }
 }
 
+function obterEntradaUsuario() {
+  const boardSize = document.getElementById('board-size');
+  return boardSize.value;
+}
+
+function redimensionarPixels() {
+  const tamanhoPixel = obterEntradaUsuario();
+
+  if (!tamanhoPixel) {
+    alert('Board inválido!');
+  }
+
+  criarTabela(tamanhoPixel);
+  adicionarClickNosPixels();
+}
+
 criarTabela();
 adicionarClickNasCores();
 adicionarClickNosPixels();
 document.getElementById('clear-board').addEventListener('click', resertarPixels);
+document.getElementById('generate-board').addEventListener('click', redimensionarPixels);
