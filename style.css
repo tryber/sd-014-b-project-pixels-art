@@ -31,11 +31,12 @@
     border: solid 1px;
     display: inline-block;
     background-color: white;
-    margin-right: 0px;
+    margin-right: px;
     float: left;
+    
 }
  div {
-     display: inline-block;
+     display: inline-block;  
  }
 #clear-board {
     display: block;
