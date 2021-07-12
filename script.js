@@ -78,12 +78,13 @@ function empityPixels() {
 function valueBoard() {
   const getButtonVqv = document.querySelector('#generate-board');
   const getInput = document.querySelector('#board-size');
+  // eslint-disable-next-line complexity
   getButtonVqv.addEventListener('click', function () {
     if (getInput.value < 5 && getInput.value !== '') {
       getInput.value = 5;
     } else if (getInput.value > 50 && getInput.value !== '') {
       getInput.value = 50;
-    } else {
+    } else if (getInput.value === '') {
       alert('Board inválido!');
     }
   });
