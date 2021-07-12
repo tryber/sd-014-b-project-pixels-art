@@ -4,7 +4,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #color-palette {
-  width: 300px;
+  width: 232px;
   height: 60px;
 }
 #black {
@@ -32,4 +32,7 @@
   height: 40px;
   width: 40px;
   background-color: white;
+}
+.selected{
+
 }
