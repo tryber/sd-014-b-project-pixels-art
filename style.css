@@ -75,9 +75,12 @@ ul {
 
 .pixel {
   border: 1px solid black;
+  background-color: white;
+}
+
+td {
   width: 41px;
   height: 41px;
-  background-color: white;
 }
 
 #clear-board {
