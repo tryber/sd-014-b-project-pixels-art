@@ -11,8 +11,8 @@ function numRandom() {
 window.onload = function start() {
   // 6 - Defina a cor preta como cor inicial.
   document.getElementsByClassName('color')[0].style.backgroundColor = 'black';
-  document.getElementsByClassName('color')[0].className.replace = 'selected';
-  // let colorZero = 'black';
+  document.getElementById('black').classList.add('selected'); // Referência: https://www.w3schools.com/howto/howto_js_add_class.asp
+  // const colorZero = 'black';
   const firstColor = `#${numRandom().toString(16)}`; // Sugestão ESLint: prefer-template
   const secondColor = `#${numRandom().toString(16)}`;
   const thirdColor = `#${numRandom().toString(16)}`;
@@ -28,7 +28,7 @@ window.onload = function start() {
 
 // 9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
 
-const clearButton = document.getElementById('clear-board'); // Atribuir elemento do botão clear-board à variável clearButton
+const clearButton = document.getElementById('clear-board'); // Atribuir elemento do botão clear-board à constante clearButton
 
 function clearBoard() { // Adicionar evento 'click' para botão acionar função anônima
   document.querySelectorAll('.pixel').forEach((element) => {
@@ -38,19 +38,22 @@ function clearBoard() { // Adicionar evento 'click' para botão acionar função
 }
 
 clearButton.addEventListener('click', clearBoard);
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
 /*
 if (size.value = '') {
   alert('Board inválido!');
 }
 if (size < 5) { size = 5;};
 if (size > 50) { size = 50;};
-// const size = document.getElementById('board-size'); // Atribuir valor do input 'board-size' à variável 'size'
+// const size = document.getElementById('board-size'); // Atribuir valor do input 'board-size' à constante 'size'
 // Abaixo: duplo loop para percorrer colunas (2o loop) em cada linha da tabela (1o loop)
 for (let i = 0; i < size; i += 1) { // Loop de rows, linhas, da tabela
-  const pixelRow = document.createElement('tr'); // Criar e atribuir elemento 'table row' à variável pixelRow
+  const pixelRow = document.createElement('tr'); // Criar e atribuir elemento 'table row' à constante pixelRow
   document.getElementById('pixel-board').appendChild(pixelRow); // Append do 'table-row' ao pixel-board
   for (let j = 0; j < size; j += 1) { //  Loop de colunas da tabela
-    const pixel = document.createElement('td'); // Criar e atribuir elemento 'td'(table cell) à variável pixel
+    const pixel = document.createElement('td'); // Criar e atribuir elemento 'td'(table cell) à constante pixel
     document.querySelector('tr')[i].appendChild(pixel); // Append do pixel à 'table row' de índice 'i'
   }
 } */
