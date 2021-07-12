@@ -23,8 +23,6 @@
   background-color: yellow;
 }
 
-
-
 .pixel {
   background: white;
   border: 1px black solid;
@@ -36,8 +34,4 @@
 #pixel-board {
   border: solid 1px black;
   width: 210px;
-}
-
-.selected {
-  background-color: ;
 }
