@@ -23,8 +23,7 @@ function createInput() {
   const input = document.createElement('input');
   input.type = 'number';
   input.id = 'board-size'
-  input.min = 1;
-  input.max = 50
+  input.min = 0;
   input.value = 5;
   buttonSection.appendChild(input);
 }
@@ -44,11 +43,17 @@ generateBoardButton();
 
 function createPixelsAsk() {
   const inputValue = document.querySelector('input').value;
-  console.log (inputValue)
+  console.log(inputValue);
   if (inputValue === '') {
-    alert ('Board Inválido')
+    alert('Board Inválido');
   } else {
-    pixelTableSize = inputValue;
+    if (inputValue < 5) {
+      pixelTableSize = 5;
+    } else if (inputValue > 50) {
+      pixelTableSize = 50;
+    } else {
+      pixelTableSize = inputValue;
+    }
     const PixelBoardRemove = document.querySelector('#pixel-board');
     PixelBoardRemove.remove();
     createPixelBoard();
