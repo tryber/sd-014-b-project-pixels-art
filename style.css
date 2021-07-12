@@ -1,0 +1,74 @@
+body {
+  background-image: url(pixel-rainbow.png);
+  background-size:cover ;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.color-palette {
+  display: flex;
+  justify-content: center;
+}
+
+.black {
+  background-color: black;
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+}
+
+.red {
+  background-color: rgb(165, 4, 18);
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+}
+
+.yellow {
+  background-color: rgb(250, 190, 78);
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+}
+
+.blue {
+  background-color: rgb(27, 70, 114);
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+}
+
+.pixel {
+  display: table-cell;
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#pixel-board {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.button {
+  text-align: center;
+  margin-top: 20px;
+}
