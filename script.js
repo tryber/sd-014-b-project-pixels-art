@@ -1,13 +1,14 @@
 const colorPalette = document.querySelector('#color-palette ul');
 const tablePixels = document.querySelector('#pixel-board');
 const buttonClear = document.querySelector('#clear-board');
-const numberRowsTable = 5;
-const numberColumnTable = 5;
+const buttonVqv = document.querySelector('#generate-board');
+const sizeTable = 5;
 
-function createTablePixels(numberRows, numberColumn) {
-  for (let i = 0; i < numberRows; i += 1) {
+function createTablePixels(boardSize) {
+  tablePixels.innerHTML = '';
+  for (let i = 0; i < boardSize; i += 1) {
     const tr = document.createElement('tr');
-    for (let j = 0; j < numberColumn; j += 1) {
+    for (let j = 0; j < boardSize; j += 1) {
       const td = document.createElement('td');
       td.classList.add('pixel');
       tr.appendChild(td);
@@ -16,7 +17,7 @@ function createTablePixels(numberRows, numberColumn) {
   }
 }
 
-createTablePixels(numberRowsTable, numberColumnTable);
+createTablePixels(sizeTable);
 
 /**
  * essa função pega a lista das cores que estao na paleta e em seguida
@@ -91,5 +92,27 @@ buttonClear.addEventListener('click', () => {
   colorBlack.classList.add('selected');
 
   tablePixels.innerHTML = '';
-  createTablePixels(numberRowsTable, numberColumnTable);
+  createTablePixels(sizeTable);
+});
+
+function boardValid(boardSize) {
+  if (boardSize < 6) {
+    return 5;
+  }
+
+  if (boardSize > 51) {
+    return 50;
+  }
+
+  return boardSize;
+}
+
+buttonVqv.addEventListener('click', () => {
+  let boardSize = document.getElementById('board-size').value;
+  if (boardSize.length < 1) {
+    alert('Board inválido!');
+  } else {
+    boardSize = boardValid(boardSize);
+    createTablePixels(boardSize);
+  }
 });
