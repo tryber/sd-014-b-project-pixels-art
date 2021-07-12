@@ -1,6 +1,12 @@
 // 1 - Adicione à página o título "Paleta de Cores". OK
 // 2 - Adicione à página uma paleta de quatro cores distintas. - OK?
 
+function setBlackColorZero() {
+  document.getElementsByClassName('color')[0].style.backgroundColor = 'black';
+  document.getElementById('black').classList.add('selected'); // Referência: https://www.w3schools.com/howto/howto_js_add_class.asp
+// const colorZero = 'black';
+}
+
 // 12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página.
 // Função abaixo baseada em: https://stackoverflow.com/questions/27406377/javascript-generate-random-number-except-some-values
 function numRandom() {
@@ -8,11 +14,7 @@ function numRandom() {
   return (num === 0 || num === 16777215) ? numRandom() : num; // 0 -> preto; 16777215-> branco
 }
 
-window.onload = function start() {
-  // 6 - Defina a cor preta como cor inicial.
-  document.getElementsByClassName('color')[0].style.backgroundColor = 'black';
-  document.getElementById('black').classList.add('selected'); // Referência: https://www.w3schools.com/howto/howto_js_add_class.asp
-  // const colorZero = 'black';
+function setRandomColors() {
   const firstColor = `#${numRandom().toString(16)}`; // Sugestão ESLint: prefer-template
   const secondColor = `#${numRandom().toString(16)}`;
   const thirdColor = `#${numRandom().toString(16)}`;
@@ -20,14 +22,13 @@ window.onload = function start() {
   // 16777215 <--> FFFFFF ; decimal <--> hexadecimal
   // https://www.w3schools.com/jsref/jsref_tostring_number.asp
   // https://www.rapidtables.com/convert/number/decimal-to-hex.html
-
   document.getElementById('color1').style.backgroundColor = firstColor;
   document.getElementById('color2').style.backgroundColor = secondColor;
   document.getElementById('color3').style.backgroundColor = thirdColor;
-};
+}
 
 // 9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
-
+/*
 const clearButton = document.getElementById('clear-board'); // Atribuir elemento do botão clear-board à constante clearButton
 
 function clearBoard() { // Adicionar evento 'click' para botão acionar função anônima
@@ -37,9 +38,17 @@ function clearBoard() { // Adicionar evento 'click' para botão acionar função
   });
 }
 
-clearButton.addEventListener('click', clearBoard);
+clearButton.addEventListener('click', clearBoard); */
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+window.onload = function start() {
+  setBlackColorZero(); // 6 - Defina a cor preta como cor inicial.
+  setRandomColors(); // 12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página.
+};
+/*
+color.addEventListener('click', selectColor);
+selectColor(evento) */
 
 /*
 if (size.value = '') {
