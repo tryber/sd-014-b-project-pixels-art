@@ -77,39 +77,6 @@ function changePixel() {
 }
 changePixel()
 
-function clearBoard() {
-    let button = document.getElementById('clear-board');
-    let pixels = document.querySelectorAll('.pixel')
-    button.addEventListener('click', function () {
-        for (let index = 0; index < pixels.length; index += 1) {
-            pixels[index].style.backgroundColor = 'white';
-        }
-    });
-}
-clearBoard()
-
-/* function changeBoard() {
-    let button = document.getElementById('generate-board');
-    button.addEventListener('click', function (){
-        let input = document.getElementById('board-size');
-        let pixBoard = document.getElementById('pixel-board');
-        let divsLine = document.querySelectorAll('.line')
-        let value = parseInt(input.value);
-        if (value >= 5 && value <= 50 && value > 0) {
-         for (let index = 0; index < divsLine.length; index += 1){
-             pixBoard.removeChild(divsLine[index])
-         }
-         base = value;
-         createPixBoard(base)
-         changePixel()
-         input.value = '';
-        } else if (input.value != Number){
-            alert("Board inválido!");
-        }
-    })
-}
-changeBoard() */
-
 function changeBoard() {
     let button = document.getElementById('generate-board');
     button.addEventListener('click', function () {
@@ -133,6 +100,18 @@ function changeBoard() {
     })
 }
 changeBoard()
+
+function clearBoard() {
+    let button = document.getElementById('clear-board');
+    button.addEventListener('click', function () {
+        let pixels = document.querySelectorAll('.pixel')
+        for (let index = 0; index < pixels.length; index += 1) {
+            pixels[index].style.backgroundColor = 'white';
+        }
+    });
+}
+clearBoard()
+
 
 
 
