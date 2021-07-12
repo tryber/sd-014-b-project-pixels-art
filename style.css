@@ -4,9 +4,9 @@
 .pixel {
   width: 40px;
   height: 40px;
+  border: black solid 1px;
   background-color: white;
-  outline: 1px solid black; /* border: 1px solid black; */
-  border-collapse: collapse;
+  display: inline-block; /* Referência: https://www.w3schools.com/css/css_inline-block.asp */
 }
 
 #pixel-board {
