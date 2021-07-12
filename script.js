@@ -13,6 +13,8 @@ const columnUser = 5;
 createLine(lineUser);
 const lines = document.querySelectorAll('.tr');
 fillCells(columnUser, lines);
+
+selectedColor(colors);
 }
 
 
@@ -33,3 +35,13 @@ function fillCells(cells, paramLines) {
     }
   }
 }
+
+function selectedColor(colors) {
+    for (let index = 0; index < colors.length; index += 1) {
+      colors[index].addEventListener('click', function () {
+        const oldSelected = document.querySelector('.selected');
+        oldSelected.className = 'color';
+        colors[index].className = 'selected color';
+      });
+    }
+  }
