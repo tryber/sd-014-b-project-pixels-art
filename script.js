@@ -69,7 +69,7 @@ window.onload = function () {
   color1.style.backgroundColor = generateColor();
   color2.style.backgroundColor = generateColor();
   color3.style.backgroundColor = generateColor();
-  color4.style.backgroundcolor = generateColor();
+  
 };
 //  Adicionando evento de clique nas cores da paleta
 divColors.addEventListener('click', function (event) {
