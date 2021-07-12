@@ -7,5 +7,12 @@
 }
 
 .pixel {
+  /* Inicializa os pixels como brancos, exceto o primeiro*/
   background-color: white;
 }
+
+#board-size {
+  /* Apesar do nome, altera o tamanho do quadro de input */
+  width: 120px;
+}
+
