@@ -6,6 +6,9 @@ window.onload = function initialBlack() {
 let base = 5;
 let pixBoard = document.getElementById('pixel-board');
 let divsWithColor = document.querySelectorAll('.color');
+let colorRandomOne = getRandomColor();
+let colorRandomTwo = getRandomColor();
+let colorRandomThree = getRandomColor();
 
 function createPixBoard(value1) {
     for (let index = 1; index <= value1; index += 1) {
@@ -21,7 +24,6 @@ function createPixBoard(value1) {
 }
 createPixBoard(base)
 
-
 function assignSelected(color) {
     let selected = document.querySelector('.selected');
     selected.classList.remove('selected');
@@ -35,16 +37,35 @@ function classSelected() {
 }
 classSelected()
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function randomColors() {
+    var colorTwo = document.querySelector('.colorTwo');
+    var colorThree = document.querySelector('.colorThree');
+    var colorFour = document.querySelector('.colorFour');
+    colorTwo.style.backgroundColor = colorRandomOne;
+    colorThree.style.backgroundColor = colorRandomTwo;
+    colorFour.style.backgroundColor = colorRandomThree;
+}
+randomColors()
+
 function changeColor(event) {
     let selected = document.querySelector('.selected')
     if (selected.classList.contains('black')) {
         event.target.style.backgroundColor = 'black';
-    } else if (selected.classList.contains('darkBlue')) {
-        event.target.style.backgroundColor = '#1b1f3b';
-    } else if (selected.classList.contains('purple')) {
-        event.target.style.backgroundColor = '#b14aed';
-    } else if (selected.classList.contains('pink')) {
-        event.target.style.backgroundColor = '#c874d9';
+    } else if (selected.classList.contains('colorTwo')) {
+        event.target.style.backgroundColor = colorRandomOne;
+    } else if (selected.classList.contains('colorThree')) {
+        event.target.style.backgroundColor = colorRandomTwo;
+    } else if (selected.classList.contains('colorFour')) {
+        event.target.style.backgroundColor = colorRandomThree;
     }
 }
 
@@ -67,19 +88,60 @@ function clearBoard() {
 }
 clearBoard()
 
-function changeBoard() {
+/* function changeBoard() {
     let button = document.getElementById('generate-board');
-    let input = document.getElementById('board-size');
     button.addEventListener('click', function (){
+        let input = document.getElementById('board-size');
+        let pixBoard = document.getElementById('pixel-board');
+        let divsLine = document.querySelectorAll('.line')
         let value = parseInt(input.value);
         if (value >= 5 && value <= 50 && value > 0) {
-            base = value;
-        } else {
+         for (let index = 0; index < divsLine.length; index += 1){
+             pixBoard.removeChild(divsLine[index])
+         }
+         base = value;
+         createPixBoard(base)
+         changePixel()
+         input.value = '';
+        } else if (input.value != Number){
             alert("Board inválido!");
         }
     })
 }
+changeBoard() */
+
+function changeBoard() {
+    let button = document.getElementById('generate-board');
+    button.addEventListener('click', function () {
+        let inputValue = document.getElementById('board-size').value;
+        let pixBoard = document.getElementById('pixel-board');
+        let divsLine = document.querySelectorAll('.line')
+        if (inputValue === '') {
+            alert("Board inválido!");
+        } else if (inputValue < 5) {
+            inputValue = 5;
+        } else if (inputValue > 50) {
+            inputValue = 50;
+        }
+        base = inputValue;
+        for (let index = 0; index < divsLine.length; index += 1) {
+            pixBoard.removeChild(divsLine[index]);
+        }
+        createPixBoard(base);
+        changePixel();
+        inputValue = '';
+    })
+}
 changeBoard()
+
+
+
+
+
+
+
+
+
 
 
 

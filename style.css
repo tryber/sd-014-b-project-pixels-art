@@ -9,22 +9,6 @@
  background-color: black;
 }
 
-.darkBlue {
- background-color: #1b1f3b;
-}
-
-.purple {
- background-color: #b14aed;
-}
-
-.pink {
- background-color: #c874d9;
-}
-
-#pixel-board {
- display: table;
-}
-
 .pixel {
  background-color: white;
  border: 1px solid black;
@@ -34,7 +18,5 @@
 }
 
 .line {
- margin: 0;
- padding: 0;
- height: 40px;
+height: 40px;
 }
