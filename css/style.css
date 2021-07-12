@@ -14,22 +14,6 @@ body {
   border: 1px solid black;
 }
 
-.black {
-  background-color: black;
-}
-
-.violet {
-  background-color: blueviolet;
-}
-
-.green {
-  background-color: green;
-}
-
-.pink {
-  background-color: palevioletred;
-}
-
 .pixel {
   background-color: white;
   width: 40px;

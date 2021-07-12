@@ -1,3 +1,5 @@
+let corSelecionada = '#000000';
+
 function criarTabela(tamanho = 5) {
   const table = document.getElementById('pixel-board');
   table.innerHTML = '';
@@ -19,7 +21,7 @@ function obterCores() {
   return paletaDeCores.children;
 }
 
-function removerClasse() {
+function removerClasseSelected() {
   const cores = obterCores();
 
   for (let i = 0; i < cores.length; i += 1) {
@@ -29,7 +31,8 @@ function removerClasse() {
 }
 
 function selecionarCor(elemento) {
-  removerClasse();
+  removerClasseSelected();
+  corSelecionada = elemento.style.backgroundColor;
   elemento.classList.add('selected');
 }
 
@@ -64,18 +67,6 @@ function obterPixels() {
 }
 
 function obterCorSelecionada() {
-  const cores = obterCores();
-  let corSelecionada;
-
-  for (let i = 0; i < cores.length; i += 1) {
-    const cor = cores[i];
-
-    if (cor.classList.contains('selected')) {
-      corSelecionada = window.getComputedStyle(cor, null)
-        .getPropertyValue('background-color');
-    }
-  }
-
   return corSelecionada;
 }
 
@@ -122,7 +113,29 @@ function redimensionarPixels() {
   adicionarClickNosPixels();
 }
 
+function gerarNumeroAleatoriamente() {
+  return Math.floor(Math.random() * 255);
+}
+
+function gerarCoresDaPaleta() {
+  const cores = obterCores();
+
+  for (let i = 0; i < cores.length; i += 1) {
+    const cor = cores[i];
+    const r = gerarNumeroAleatoriamente();
+    const g = gerarNumeroAleatoriamente();
+    const b = gerarNumeroAleatoriamente();
+
+    if (i === 0) {
+      cor.style.backgroundColor = '#000000';
+    } else {
+      cor.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    }
+  }
+}
+
 criarTabela();
+gerarCoresDaPaleta();
 adicionarClickNasCores();
 adicionarClickNosPixels();
 document.getElementById('clear-board').addEventListener('click', resertarPixels);
