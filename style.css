@@ -105,7 +105,6 @@ button, input {
   background-color: #22ad94;
   width: 40px;
   height: 40px;
-    
 }
 
 #color-palette {
@@ -115,10 +114,6 @@ button, input {
   padding: 20px;
 }
 
-.selected {
-  background-color: black;
-}
-  
 #pixel-board {
   display: flex;
   flex-wrap: wrap;

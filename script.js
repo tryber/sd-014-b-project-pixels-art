@@ -34,25 +34,13 @@ return `#${parseInt((Math.random() * 0xFFF))
 function initialColors() {
   const firstColor = palette.firstElementChild;
   firstColor.style.backgroundColor = 'black';
-  if (firstColor.style.backgroundColor !== 'black') {
-    firstColor.style.backgroundColor = palette.children[0];
-    firstColor.classList.add('selected');
-  }
+  firstColor.classList.add('selected');
   generateColor();
 }
 
-window.onload = function () {
-  initialColors();
-  generateBoard();
-  btnClean.addEventListener('click', erasePixelTable);
-  btnVQV.addEventListener('click', generateBoard);
-};
-
 function generateBoard(numero) {
   numero = inputBoard.value;
-  if (numero === '') {
-    numero = 5;
-  }
+  // numero = 5;
   if (numero < 5 && numero !== '') {
     numero = 5;
   } else if (numero > 50) {
@@ -70,6 +58,14 @@ function generateBoard(numero) {
   }
 }
 
+myBoard.addEventListener('click', clickSelectColor);
+
+palette.addEventListener('click', clickPaintColor);
+
+function clickSelectColor(event) {
+  event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+}
+
 function clickPaintColor(event) {
   const actualColor = document.querySelector('.selected');
   actualColor.classList.remove('selected');
@@ -82,3 +78,10 @@ function erasePixelTable() {
   childMyBoard.style.backgroundColor = 'white';
   console.log(childMyBoard);
 }
+
+window.onload = function () {
+  initialColors();
+  generateBoard();
+  btnClean.addEventListener('click', erasePixelTable);
+  btnVQV.addEventListener('click', generateBoard);
+};
