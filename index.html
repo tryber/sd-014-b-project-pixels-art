@@ -53,10 +53,7 @@
                 let createTd = document.createElement('td');
 
                 createTd.className = 'color';
-                
-                if (j === 0) {
-                    createTd.className = 'selected';
-                }
+               
                 addressTr.appendChild(createTd);
 
                 createTablePalet.rows[i].cells[j].style.backgroundColor = cores[j];
@@ -88,6 +85,67 @@
                 }
 
             }
+
+            let addressPalet = document.getElementById('color-palette');
+            for (let i = 0 ; i < 1 ; i += 1) {
+                for (let j = 0 ; j < 4 ; j += 1) {
+                    addressPalet.rows[i].cells[j].addEventListener('click', changeClass);
+                }
+            
+            }
+
+            
+            
+            function changeClass (evento) {
+
+                for (let i = 0 ; i < 1 ; i += 1) {
+                    for (let j = 0 ; j < 4 ; j += 1) {
+                        if (addressPalet.rows[i].cells[j].className === 'color selected') {
+                            addressPalet.rows[i].cells[j].className = 'color';
+                            
+                        }
+                            
+                            evento.target.classList.add('selected');
+                        }
+                    }
+            }
+
+            
+            //function para todos os pixels receberem o evento onclick:
+
+            function allPixelsOnClick () {
+                let addressAllPixels = document.querySelectorAll('.pixel');
+
+                for (let i = 0 ; i < 25 ; i += 1) {
+                    addressAllPixels[i].addEventListener('click', printPixel);
+                }
+
+            }
+              
+            function printPixel (event) {
+                let getTarget = document.querySelector('.selected');
+                event.target.style.backgroundColor = getTarget.style.backgroundColor;
+            }
+
+
+            allPixelsOnClick();
+
+
+            function printBlackInitial () { 
+                let getBlackColor = document.querySelector('.color');
+                getBlackColor.className = 'color selected';
+            }
+
+            window.onload = printBlackInitial
+
+            
+
+            
+
+            
+
+            
+
 
 
     </script>
