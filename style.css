@@ -1,0 +1,43 @@
+main {
+    max-width: 600px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.empty {
+    display: none !important;
+}
+.color {
+    display: table-cell;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+#black {
+    background-color: black;
+}
+#orange {
+    background-color: orange;
+}
+#red {
+    background-color: red;
+}
+#purple {
+    background-color: purple;
+}
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.pixel {
+    border: 1px solid black;
+    width: 41px;
+    height: 41px;
+    background-color: white;
+}
+#clear-board {
+    margin-top: 10px;
+    margin-left: 350px;
+}
