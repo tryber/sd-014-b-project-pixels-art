@@ -1,0 +1,44 @@
+body {
+  padding: 10px;
+  color: rgb(226, 226, 226);
+  text-align: center;
+  background-color: rgb(29, 28, 28);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.041), rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.041));
+}
+
+section {
+  height: auto;
+  right: auto;
+  left: auto;
+  margin: 0px;
+}
+
+div {
+  height: 30px;
+}
+
+#color-palette {
+  padding: 7px 0;
+}
+
+#board-size {
+  margin-bottom: 5px;
+}
+
+.color {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0px;
+  border: black solid 1px;
+  padding: 10px;
+}
+
+.pixel {
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  border: black solid 1px;
+  margin-bottom: -5px;
+}
