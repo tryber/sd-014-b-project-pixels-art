@@ -1,0 +1,35 @@
+.color {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border: solid black 1px;
+}
+
+#black {
+  background-color: black;
+}
+
+#red {
+  background-color: red;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#orange {
+  background-color: orange;
+}
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border: solid black 1px;
+}
+
+.pixelLine {
+  /* whitespace between inline elements determined by font-size */
+  font-size: 0;
+}
