@@ -27,6 +27,9 @@
   height: 40px;
   display: inline-block;
   border: solid black 1px;
-  margin: 0;
-  padding: 0;
+}
+
+.pixelLine {
+  /* whitespace between inline elements determined by font-size */
+  font-size: 0;
 }
