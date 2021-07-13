@@ -1,24 +1,24 @@
 window.onload=function(){
 let linha =document.querySelectorAll(".line");
-let cor='black'
-changedcor(cor);
-finalcor(cor);
-function changedcor(cor){
+let cr="black";
+
 document.querySelectorAll(".color").forEach(unit=>{
     unit.addEventListener('click',selecionaCor=>{
-        let cor= unit.id
-       
-    });
-})}
+        cr=unit.id;
+       console.log(cr);
+    });}
+)
 
 readline(linha);
 
-function finalcor(cor){
 document.querySelectorAll(".pixel").forEach(item=>{
-    item.addEventListener("click",mudacor=>{
-        item.styles.backgroundColor= cor
-    })
-})}
+    item.addEventListener("click",mudacor);}
+)
+
+function mudacor(event){
+    let itm= event.target;
+    itm.style.backgroundColor=cr;
+}
 
 function createPixel(className){
     let pixel=document.createElement("div");
@@ -37,5 +37,6 @@ function readline(linha){
         addpixel(linha[index]);      
     }
 }
+ 
 
 }
