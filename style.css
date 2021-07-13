@@ -12,12 +12,17 @@
 
 body {
   background-color: #FFF6EA;
+  display: flex;
+  
 }
 
 .body-container {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
   width: 80%;
-  margin-top: 20px;
+  height: auto;
+  margin: 0 30px;
   text-align: center;
   background-color: white;
   border-radius: 2%;
@@ -31,8 +36,12 @@ body {
 h1 {
   font-family: 'Crete Round', serif;
   font-size: 3em;
-  color: #84D182;
-  margin-top: 1em;
+  color: #579055;
+  margin-top: 0.5em;
+}
+
+section {
+  margin-top: 20px;
 }
 
 button, input {
@@ -123,6 +132,7 @@ button, input {
 }
 
 #board-size {
+  width: 100px;
   border-radius: 15px;
   border-color: rgb(161, 161, 161);
 }
@@ -138,17 +148,18 @@ button, input {
 #color-palette {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 15px;
   padding: 20px;
 }
 
 #pixel-board {
+  margin: 30px 20px 20px 0;
   display: block;
 }
 
 .pixel-line {
   display: block;
-  clear: both;
   width: auto;
 }
 
@@ -158,4 +169,5 @@ button, input {
   height: 40px;
   border: 1px solid black;
   background-color: white;
+  margin-left: 5px;
 }
