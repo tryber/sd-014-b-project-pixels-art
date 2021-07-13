@@ -19,7 +19,7 @@
   display: inline-block;
   width: 80px;
   height: 80px;
-  border: 1.00000px solid black; 
+  border: 1px solid black; 
 }
 
 #first {
@@ -42,7 +42,7 @@
     background-color: tomato;
 }
 
-#pixel-board {
+#oi {
     margin-top: 50px;
     width: 200px;
     height: 200px;
