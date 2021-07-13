@@ -36,3 +36,10 @@ margin-bottom: 20px;
     display: inline-block;
 
 }
+#clear-board {
+    margin: 10px;
+    display: inline-block;
+}
+#inputText{
+    display: inline-block;
+}
