@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable no-constant-condition */
 /* eslint-disable prefer-arrow-callback */
 // eslint-disable-next-line func-names
@@ -39,8 +40,18 @@ function addClickColors() {
     });
   }
 }
-
 addClickColors();
+
+function clearPixels() {
+  const buttonClear = document.querySelector('#clear-board');
+  const getPixels = document.querySelectorAll('.pixel');
+  buttonClear.addEventListener('click', function () {
+    for (let index = 0; index < getPixels.length; index += 1) {
+      getPixels[index].style.backgroundColor = 'white';
+    }
+  });
+}
+clearPixels();
 
 function getColor(event) {
   const getSelected = document.querySelector('.selected');
@@ -56,17 +67,6 @@ function setColor() {
   }
 }
 setColor();
-
-function clearPixels() {
-  const buttonClear = document.querySelector('#clear-board');
-  const getPixels = document.querySelectorAll('.pixel');
-  buttonClear.addEventListener('click', function () {
-    for (let index = 0; index < getPixels.length; index += 1) {
-      getPixels[index].style.backgroundColor = 'white';
-    }
-  });
-}
-clearPixels();
 
 function empityPixels() {
   const getTablePixels = document.getElementById('pixel-board');
@@ -107,9 +107,23 @@ function newTable() {
           createTd.style.backgroundColor = 'rgb(255, 255, 255)';
           createTd.addEventListener('click', getColor);
           createTr.appendChild(createTd);
+          clearPixels();
         }
       }
     }
   });
 }
 newTable();
+
+function setColorPalet() {
+  return Math.floor(Math.random() * 255);
+}
+
+function generateColors() {
+  const getPaleteColors = document.querySelectorAll('.color');
+  for (let index = 1; index < getPaleteColors.length; index += 1) {
+    // eslint-disable-next-line max-len
+    getPaleteColors[index].style.backgroundColor = `rgb(${setColorPalet()},${setColorPalet()},${setColorPalet()})`;
+  }
+}
+generateColors();
