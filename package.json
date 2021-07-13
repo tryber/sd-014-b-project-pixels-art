@@ -22,6 +22,7 @@
     "cypress:open": "cypress open"
   },
   "dependencies": {
+    "@material/button": "^11.0.0",
     "eslint-config-trybe-fundamentals": "1.1.0"
   }
 }

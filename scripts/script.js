@@ -1,5 +1,5 @@
 console.log('Hello, world!');
-
+// Referência: Usada para gerar um valor hexadecimal aleatoriamente e usar para aplciar cores no elemento.
 // src: https://css-tricks.com/snippets/javascript/random-hex-color/
 function setColors() {
   const colors = document.querySelectorAll('.color');
