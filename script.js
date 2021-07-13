@@ -1,6 +1,9 @@
 window.onload=function(){
 let linha =document.querySelectorAll(".line");
 let cr="black";
+let clearbut=document.querySelector("#clear-board");
+limpPixel();
+clearbut.addEventListener('click',limpPixel);
 
 document.querySelectorAll(".color").forEach(unit=>{
     unit.addEventListener('click',selecionaCor=>{
@@ -10,6 +13,7 @@ document.querySelectorAll(".color").forEach(unit=>{
 )
 
 readline(linha);
+limpPixel();
 
 document.querySelectorAll(".pixel").forEach(item=>{
     item.addEventListener("click",mudacor);}
@@ -37,6 +41,9 @@ function readline(linha){
         addpixel(linha[index]);      
     }
 }
- 
+
+function limpPixel(){
+    document.querySelectorAll(".pixel").forEach(item=>{item.style.backgroundColor='white'})
+}
 
 }
