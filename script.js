@@ -28,9 +28,9 @@ colorAllPixels.addEventListener("click", function e(event) {
   event.target.style.backgroundColor = colorSelection;
 })
 
-const clear = document.querySelector("#clear-board")
-clear.addEventListener("click", function clear() {
-  for (i = 0; i < colorAllPixels.length; i += 1) {
-    colorAllPixels[i].style.backgroundColor = 'white';
+const clearButton = document.querySelector("#clear-board")
+clearButton.addEventListener("click", function clearBtn() {
+  for (i = 0; i < allPixels.length; i += 1) {
+    allPixels[i].style.backgroundColor = 'white';
   }
 })
