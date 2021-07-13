@@ -16,11 +16,15 @@ function generateColor() {
       x -= 1;
       y -= 1;
       z -= 1;
+    } else if (x === 0 && y === 0 && z === 0) {
+      x += 1;
+      y += 1;
+      z += 1;
     }
-    palette.children[i].style.backgroundColor = `rgb(${x}, ${y}, ${z})`;
+  palette.children[i].style.backgroundColor = `rgb(${x}, ${y}, ${z})`;
   }
-// Math.round - verificar cor aleatoria
 }
+
 /*
 função antiga random colors
 return `#${parseInt((Math.random() * 0xFFF))
@@ -37,7 +41,6 @@ function initialColors() {
   generateColor();
 }
 
-
 window.onload = function () {
   initialColors();
   generateBoard();
@@ -48,14 +51,23 @@ window.onload = function () {
 function generateBoard(numero) {
   numero = inputBoard.value;
   if (numero === '') {
-
+    numero = 5;
   }
-}
-
-function generateBoardLine() {
-  const newPixel = document.createElement('div');
-  newPixel.classList.add('.pixel');
-  myBoard.appendChild(newPixel);
+  if (numero < 5 && numero !== '') {
+    numero = 5;
+  } else if (numero > 50) {
+    numero = 50;
+  }
+  for (let i = 0; i < numero; i += 1) {
+    const div = document.createElement('div');
+    div.classList.add('pixel-line');
+    myBoard.appendChild(div);
+    for (let i2 = 0; i2 < numero; i += 1) {
+      let divPixel = document.createElement('div');
+      divPixel.classList.add('pixel');
+      div.appendChild(divPixel);
+    }
+  }
 }
 
 function clickPaintColor(event) {
