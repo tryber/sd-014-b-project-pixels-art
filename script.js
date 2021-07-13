@@ -2,7 +2,9 @@ const selectColorBlack = document.querySelector('#black');
 const selectColorPurple = document.querySelector('#purple');
 const selectColorYellow = document.querySelector('#yellow');
 const selectColorBlue = document.querySelector('#blue');
-const allColors = document.querySelectorAll('.color');
+const colorAllPixels = document.querySelector('#pixel-board');
+const allPixels = document.querySelectorAll(".pixel");
+
 
 
 function selectBlack() {
@@ -11,17 +13,21 @@ function selectBlack() {
 }
 selectBlack();
 
-function selectColors() {
+selectColorBlack.addEventListener('click', selectColor);
+selectColorPurple.addEventListener('click', selectColor);
+selectColorYellow.addEventListener('click', selectColor);
+selectColorBlue.addEventListener('click', selectColor);
 
-  function selectColor(event) {
-    const selected = document.querySelector('.selected');
-    selected.classList.remove('selected');
-    event.target.classList.add('selected');
-  }
-
-  selectColorBlack.addEventListener('click', selectColor);
-  selectColorPurple.addEventListener('click', selectColor);
-  selectColorYellow.addEventListener('click', selectColor);
-  selectColorBlue.addEventListener('click', selectColor);
+function selectColor(event) {
+  const selected = document.querySelector('.selected');
+  selected.classList.remove('selected');
+  event.target.classList.add('selected');
 }
-selectColors();
+
+
+const clear = document.querySelector("#clear-board")
+clear.addEventListener("click", function clear() {
+  for (i = 0; i < colorAllPixels.length; i += 1) {
+    colorAllPixels[i].style.backgroundColor = 'white';
+  }
+})

@@ -16,7 +16,7 @@
   border: 1px solid black;
 }
 
-#black {
+#colorblack {
   background-color:black;
 }
 
@@ -32,8 +32,17 @@
   background-color: #0000ff;
 }
 
+
+
 .pixel {
   background-color: white;
   width: 40px;
   height: 40px;
+}
+
+#clear-board {
+  padding: 5px;
+  width: 100px;
+  cursor: pointer;
+  font-size: 1.2em;
 }
