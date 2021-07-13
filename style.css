@@ -19,18 +19,22 @@
 }
 
 
+#pixel-board{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+
 
 .pixel {
   background-color: white;
-  width: 40px;
-  height: 40px;
+  width: 39px;
+  height: 39px;
   border: solid 1px;
-  display: table-cell;
-  margin-bottom: 1px;
+  display: inline-block;
 }
 
 #clear-board {
-  background-color: whitesmoke;
   width: 60px;
   height: 20px;
   border: solid 1px;
