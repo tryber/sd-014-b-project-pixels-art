@@ -5,8 +5,6 @@ const selectColorBlue = document.querySelector('#blue');
 const colorAllPixels = document.querySelector('#pixel-board');
 const allPixels = document.querySelectorAll(".pixel");
 
-
-
 function selectBlack() {
   const colorBlack = document.querySelector('.selected');
   colorBlack.style.backgroundColor = 'black';
@@ -24,6 +22,11 @@ function selectColor(event) {
   event.target.classList.add('selected');
 }
 
+colorAllPixels.addEventListener("click", function e(event) {
+  const selection = document.querySelector('.selected');
+  const colorSelection = window.getComputedStyle(selection).getPropertyValue("background-color");
+  event.target.style.backgroundColor = colorSelection;
+})
 
 const clear = document.querySelector("#clear-board")
 clear.addEventListener("click", function clear() {
