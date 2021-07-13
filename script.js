@@ -44,8 +44,9 @@ function paint(evento) {
 }
 
 // Req 9 - Apagando os pixels
-const resetButton = document.querySelector('#clear-board')
-resetButton.addEventListener('click', clearBoard)
+// Corrigir botão de Limpar quando board for maior que 5
+const resetButton = document.querySelector('#clear-board');
+resetButton.addEventListener('click', clearBoard);
 
 function clearBoard() {
   for (let index = 0; index < pixels.length; index += 1) {
@@ -57,12 +58,12 @@ function clearBoard() {
 const boardSize = document.querySelector('#board-size'); // elemento input
 const boardGenerator = document.querySelector('#generate-board'); // button VQV
 
-boardGenerator.addEventListener('click', verifySize)
+boardGenerator.addEventListener('click', verifySize);
 
 function verifySize () {
   boardSize.value
   if (boardSize.value === '') {
-    alert('Board inválido!')
+    alert('Board inválido!');
   } if (boardSize.value < 5) {
     boardSize.value = 5;
   } if (boardSize.value > 50) {
@@ -71,9 +72,8 @@ function verifySize () {
   createBoard();
 }
 
-
 function createBoard () {
-  let board = document.querySelector('#pixel-board') // elemento table
+  let board = document.querySelector('#pixel-board')// elemento table
   board.innerHTML = '';
   for (let index = 0; index < boardSize.value; index += 1) {
     let newTr = document.createElement('tr');
