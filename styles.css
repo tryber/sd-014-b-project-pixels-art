@@ -1,3 +1,6 @@
+body{
+  background-color: coral ;
+}
 .color {
     width: 80px;
     height: 80px;
@@ -9,23 +12,27 @@
 #pixel-board{
   width: 250px;
   height: 250px;
-  margin: 0px;
-  border-color: black;
-  border: solid;
   display: inline-block;
-  border-width: 1px;
-
+  box-sizing: border-box;
+  overflow: visible;
+  text-align: center;
 }
 .pixel{
-  margin: 0px;
+  
   width:40px;
   height:40px;
-  background-color:green;
-  border-color: black;
-  border-width: 1px;
   border: solid;
+  background-color:white;
+  border-color:black;
+  border-width: 1px;  
+  display: inline-block;
 }
-#preto{background-color: black;}
-#verde{background-color: #76EB23;}
-#roxo{background-color: #A566F2;}
-#laranja{background-color: #DB8A01;}
+.line{
+  margin-bottom: 0px;
+}
+
+#black{background-color: black;}
+#green{background-color: green;}
+#purple{background-color: purple;}
+#yellow{background-color: yellow;}
+#title{color: black;}
