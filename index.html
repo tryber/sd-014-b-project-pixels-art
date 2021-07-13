@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pr-bt">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,5 +14,19 @@
     <script src="scripts/script.js" async></script>
     <title>Pixel Art</title>
   </head>
-  <body></body>
+  <body>
+    <h1 id="title">Paleta de Cores</h1>
+    <div id="color-palette">
+      <div id="color-black" class="color selected"></div>
+      <div id="firts-color" class="color"></div>
+      <div id="second-color" class="color"></div>
+      <div id="third-color" class="color"></div>
+    </div>
+    <div id="buttons">
+      <input id="board-size" type="number" min="1" max="50" step="1" />
+      <button id="generate-board">VQV</button>
+      <button id="clear-board">Limpar</button>
+    </div>
+    <div id="pixel-board"></div>
+  </body>
 </html>

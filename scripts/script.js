@@ -1,93 +1,106 @@
-// Referência: como adicionar o mesmo evento em vários elementos
-// src: https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
+console.log('Hello, world!');
 
-// [Requisito 1]
-// Adiciona à página o título 'Paleta de Cores'
-const title = document.createElement('h1');
-title.id = 'title';
-title.innerHTML = 'Paleta de Cores';
-document.querySelector('body').appendChild(title);
-
-// [Requisito 2 e 3]
-// Adiciona à página uma paleta de quatro cores distintas
-// Cria paleta de cores
-const colorPalette = document.createElement('div');
-colorPalette.id = 'color-palette';
-document.querySelector('body').appendChild(colorPalette);
-
-// Cria cores
-for (let index = 0; index < 4; index += 1) {
-  const color = document.createElement('div');
-  color.classList.add('color');
-  colorPalette.appendChild(color);
+// src: https://css-tricks.com/snippets/javascript/random-hex-color/
+function setColors() {
+  const colors = document.querySelectorAll('.color');
+  colors.forEach((element) => {
+    const color = element;
+    const randomColor = Math.floor(Math.random() * 16777209).toString(16);
+    color.style.backgroundColor = `#${randomColor}`;
+  });
+  colors[0].style.backgroundColor = 'black';
 }
 
-// Adiciona estilo de backgroundColor para as cores
-const colors = document.querySelectorAll('.color');
-const black = colors[0];
-const cyan = colors[1];
-const magenta = colors[2];
-const yellow = colors[3];
-black.style.backgroundColor = 'black';
-cyan.style.backgroundColor = 'cyan';
-magenta.style.backgroundColor = 'magenta';
-yellow.style.backgroundColor = 'yellow';
-
-// [Requisito 9]
-// Cria um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
-const clearButton = document.createElement('button');
-clearButton.id = 'clear-board';
-clearButton.innerHTML = 'Limpar';
-document.querySelector('body').appendChild(clearButton);
-
-clearButton.addEventListener('click', () => {
-  document.querySelectorAll('.pixel').forEach((element) => {
-    const pixel = element;
-    pixel.style.backgroundColor = 'white';
-  });
-});
-
-// [Requisito 4]
-// Adiciona à página um quadro de pixels, com 25 pixels.
-// Cria quadro de pixel
-const board = document.createElement('div');
-board.id = 'pixel-board';
-document.querySelector('body').appendChild(board);
-
-for (let indexLine = 0; indexLine < 5; indexLine += 1) {
-  // Cria uma linha
-  const line = document.createElement('div');
-  line.id = 'line';
-  board.appendChild(line);
-  // Cria pixel
-  for (let index = 0; index < 5; index += 1) {
-    const pixel = document.createElement('div');
-    pixel.classList.add('pixel');
-    line.appendChild(pixel);
+function setBoard(length) {
+  const board = document.querySelector('#pixel-board');
+  while (board.firstChild) {
+    board.removeChild(board.lastChild);
+  }
+  for (let indexLine = 0; indexLine < length; indexLine += 1) {
+    const line = document.createElement('div');
+    line.id = 'line';
+    board.appendChild(line);
+    for (let index = 0; index < length; index += 1) {
+      const pixel = document.createElement('div');
+      pixel.classList.add('pixel');
+      line.appendChild(pixel);
+    }
   }
 }
 
-// [Requisito 6]
-// Define a cor preta como cor inicial.
-black.classList.add('selected');
-let selectedColor = black;
+// function setBoardRows(length) {
+//   for (let index = 0; index < length; index += 1) {
+//     const row = document.createElement('div');
+//     row.classList.add('row');
+//     document.querySelector('#pixel-board').appendChild(row);
+//   }
+// }
 
-// [Requisito 7]
-// Clicar em uma das cores da paleta faz com que ela seja selecionada e utilizada para preencher os pixels no quadro.
-colors.forEach((color) => {
-  color.addEventListener('click', (event) => {
-    selectedColor.classList.remove('selected');
-    event.target.classList.add('selected');
-    selectedColor = event.target;
+// function setPixels() {
+//   const rows = document.querySelectorAll('.row');
+//   rows.forEach((element) => {
+//     const row = element;
+//     for (let index = 0; index < rows.length; index += 1) {
+//       const pixel = document.createElement('div');
+//       pixel.classList.add('pixel');
+//       row.appendChild(pixel);
+//     }
+//   });
+// }
+function pickColor() {
+  document.querySelectorAll('.color').forEach((element) => {
+    element.addEventListener('click', (event) => {
+      document.querySelector('.selected').classList.remove('selected');
+      event.target.classList.add('selected');
+    });
   });
-});
+}
 
-// [Requisito 8]
-// Clicar em um pixel dentro do quadro após selecionar uma cor na paleta faz com que o pixel seja preenchido com a cor selecionada.
-document.querySelectorAll('.pixel').forEach((element) => {
-  element.addEventListener('click', (event) => {
-    const pixel = event.target;
-    console.log(pixel);
-    pixel.style.backgroundColor = selectedColor.style.backgroundColor;
+function fillPixel() {
+  document.querySelectorAll('.pixel').forEach((element) => {
+    element.addEventListener('click', (event) => {
+      const pixel = event.target;
+      const color = document.querySelector('.selected').style.backgroundColor;
+      pixel.style.backgroundColor = color;
+    });
   });
-});
+}
+
+function clearBoard() {
+  document.querySelector('#clear-board').addEventListener('click', () => {
+    document.querySelectorAll('.pixel').forEach((element) => {
+      const pixel = element;
+      pixel.style.backgroundColor = 'white';
+    });
+  });
+}
+
+function getBoardSize() {
+  const genBoardBtn = document.querySelector('#generate-board');
+  genBoardBtn.addEventListener('click', () => {
+    const boardSize = document.querySelector('#board-size').value;
+    if (boardSize === '') {
+      alert('Board inválido!');
+      return;
+    }
+    if (boardSize < 5) {
+      setBoard(5);
+    } else if (boardSize > 50) {
+      setBoard(50);
+    } else {
+      setBoard(boardSize);
+      fillPixel();
+    }
+  });
+}
+
+window.onload = () => {
+  setColors();
+  setBoard(5);
+  getBoardSize();
+  // setBoardRows(5);
+  // setPixels();
+  pickColor();
+  fillPixel();
+  clearBoard();
+};
