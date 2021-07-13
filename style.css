@@ -11,6 +11,22 @@
   height: 246px
 }
 
+#first-color{
+  background-color: black;
+}
+
+#second-color{
+  background-color: #AB4E68;
+}
+
+#third-color{
+  background-color: #533745;
+}
+
+#fourth-color{
+  background-color: #9D9171;
+}
+
 .pixel{
   border: 1px solid black;
   height: 40px;
