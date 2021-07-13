@@ -32,12 +32,21 @@ for (let i = 0; i < 4; i += 1) {
 
 // Gerar Quadro branco
 function gerarQuadroBranco() {
+  const larguraPagina = window.innerWidth;
+  console.log(larguraPagina);
   const containerWhiteBoard = document.querySelector('#pixel-board');
   for (let i = 0; i < n; i += 1) {
     for (let ii = 0; ii < n; ii += 1) {
       const lineBox2 = document.createElement('div');
       lineBox2.className = 'pixel';
       lineBox2.style.color = 'white';
+      if (n > 40) {
+        lineBox2.style.width = '21px';
+        lineBox2.style.height = '21px';
+      } else if (n > 30) {
+        lineBox2.style.width = '32px';
+        lineBox2.style.height = '32px';
+      }
       containerWhiteBoard.appendChild(lineBox2);
     }
     const lineBox = document.createElement('article');
