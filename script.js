@@ -42,12 +42,15 @@ function makeBoard() {
   if (size <= 0) {
     alert('Board inválido!');
   } else {
+    if (size < 5) { size = 5; }
+    if (size > 50) { size = 50;}
+    console.log(size);
     allPixelLine = document.querySelectorAll('.pixelLine');
     for (let index = 0; index < allPixelLine.length; index += 1) {
       allPixelLine[index].remove('div');
     }
   }
-  
+
   for (let x = 0; x < size; x += 1) {
     const div = document.createElement('div');
     div.className = 'pixelLine';
@@ -57,7 +60,7 @@ function makeBoard() {
 
   allPixelLine = document.querySelectorAll('.pixelLine');
   for (let index = 0; index < allPixelLine.length; index += 1) {
-    for (i = 0; i < size; i++) {
+    for (let i = 0; i < size; i+= 1) {
       const div = document.createElement('div');
       div.className = 'pixel';
       allPixelLine[index].appendChild(div);
