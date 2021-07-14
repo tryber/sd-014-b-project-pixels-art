@@ -1,0 +1,37 @@
+body{
+  background-color: coral ;
+}
+.color {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    border-color:black ;
+    border: solid;
+    border-width: 1px;
+  }
+#pixel-board{
+  width: 250px;
+  height: 250px;
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: visible;
+  text-align: center;
+}
+.pixel{  
+  width:40px;
+  height:40px;
+  border: solid;
+  background-color:white;
+  border-color:black;
+  border-width: 1px;  
+  display: inline-block;
+}
+.line{
+  margin-bottom: 0px;
+}
+
+#black{background-color: black;}
+#green{background-color: green;}
+#purple{background-color: purple;}
+#yellow{background-color: yellow;}
+#title{color: black;}
