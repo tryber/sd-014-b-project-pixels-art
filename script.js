@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const initialColor = document.querySelector('#black');
 initialColor.classList.add('selected');
 
@@ -22,3 +23,14 @@ function toColor(event) {
 for (let index = 0; index < pixels.length; index += 1) {
   pixels[index].addEventListener('click', toColor);
 }
+
+const button = document.getElementById('clear-board');
+
+function clearBoard() {
+  const pixelBoard = document.querySelectorAll('.pixel');
+  for (const key of pixelBoard) {
+    key.style.backgroundColor = 'white';
+  };
+}
+
+button.addEventListener('click', clearBoard);
