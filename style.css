@@ -1,0 +1,62 @@
+#title {
+  background-color: black;
+  color: whitesmoke;
+  padding-top: 40px;
+  padding-left: 250px;
+  height: 120px;
+  margin-top: 0px;
+  font-size: 3em;
+  
+}
+
+#color-palette {
+  margin-top: 15px;    
+  text-align: center;
+  height: 110px;
+} 
+
+.color {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 1px solid black; 
+}
+
+#first {
+   
+    margin-right: 12px;
+
+}
+
+#secund {
+    
+    margin-right: 12px;
+}
+
+#third {
+   
+    margin-right: 12px;
+}
+
+#fourth {
+    
+}
+
+#oi {
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+#pixel-board {
+border: 1px solid black;
+}
