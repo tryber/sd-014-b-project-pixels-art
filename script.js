@@ -8,7 +8,7 @@ let selecionado=document.querySelector('.selected');
 document.querySelectorAll(".color").forEach(unit=>{
     unit.addEventListener('click',selecionaCor=>{
         selecionado.classList.remove('selected');
-        unit.target.classList.add('selected');
+        unit.classList.add('selected');
         selecionado = document.querySelector('.selected');
        
     });}
