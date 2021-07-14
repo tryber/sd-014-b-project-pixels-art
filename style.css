@@ -33,6 +33,13 @@
   width: 40px;
   background-color: white;
 }
-.selected{
+#clear-board{
+  margin-block: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.selected {
 
+}
+.allCollors {
+  background-color: white;
 }
