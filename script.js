@@ -99,11 +99,9 @@ function boardValid(boardSize) {
   if (boardSize < 6) {
     return 5;
   }
-
-  if (boardSize > 51) {
+  if (boardSize > 50) {
     return 50;
   }
-
   return boardSize;
 }
 
