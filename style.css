@@ -9,6 +9,7 @@ body {
     height: 85px;
     margin-right: 10px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .color:hover {
@@ -43,4 +44,8 @@ button:hover {
     background-color: rgb(116, 154, 194);
     color: white;
     border: 2px solid rgb(116, 154, 194);
+}
+
+#clear-board {
+    cursor: pointer;
 }
