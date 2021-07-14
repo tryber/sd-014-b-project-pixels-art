@@ -1,4 +1,4 @@
-body{
+body {
   display: center;
   background-image: url('tetris.jpg');
   vertical-align: middle;
@@ -13,6 +13,7 @@ body{
   border-radius: 10px;
   box-shadow: 2px 2px 1px black;
 }
+
 #color-palette {
   border-radius: 10px;
   gap: 10px;
@@ -45,14 +46,14 @@ body{
 
 #clear-board {
   background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
-  border: 1px solid #696969;
+  border: 1px solid dimgray;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 2px 2px 1px black;
 }
 
 #clear-board:hover {
-background-color: #7e7e2d
+  background-color: #7e7e2d;
 }
 
 #clear-board:active {
