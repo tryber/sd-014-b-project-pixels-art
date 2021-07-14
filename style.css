@@ -1,0 +1,62 @@
+body {
+  display: center;
+  background-image: url('tetris.jpg');
+  vertical-align: middle;
+  text-align: center;
+}
+
+#title {
+  text-align: center;
+  background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
+  border: 1px solid dimgray;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px black;
+}
+
+#color-palette {
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.color {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  vertical-align: top;
+  border: 1px solid black;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+  border-radius: 10px;
+}
+
+.pixel {
+  border: 1px solid black;
+  width: 41px;
+  height: 41px;
+  background-color: white;
+}
+
+#pixel-board {
+  border-collapse: collapse;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+#clear-board {
+  background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
+  border: 1px solid dimgray;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px black;
+}
+
+#clear-board:hover {
+  background-color: #7e7e2d;
+}
+
+#clear-board:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
