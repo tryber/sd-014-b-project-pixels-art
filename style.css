@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   vertical-align: middle;
-  width: 80%;
+  /* width: 80%; */
   height: auto;
   margin: 0 30px;
   text-align: center;
@@ -156,6 +156,7 @@ button, input {
 #pixel-board {
   margin: 30px 20px 20px 0;
   display: block;
+  background-color: white;
 }
 
 .pixel-line {
