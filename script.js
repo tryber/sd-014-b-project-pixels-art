@@ -1,14 +1,16 @@
 window.onload=function(){
 let linha =document.querySelectorAll(".line");
-let cr="black";
 let clearbut=document.querySelector("#clear-board");
 limpPixel();
 clearbut.addEventListener('click',limpPixel);
+let selecionado=document.querySelector('.selected');
 
 document.querySelectorAll(".color").forEach(unit=>{
     unit.addEventListener('click',selecionaCor=>{
-        cr=unit.id;
-       console.log(cr);
+        selecionado.classList.remove('selected');
+        unit.target.classList.add('selected');
+        selecionado = document.querySelector('.selected');
+       
     });}
 )
 
@@ -21,7 +23,7 @@ document.querySelectorAll(".pixel").forEach(item=>{
 
 function mudacor(event){
     let itm= event.target;
-    itm.style.backgroundColor=cr;
+    itm.style.backgroundColor=selecionado.id;
 }
 
 function createPixel(className){
