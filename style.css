@@ -50,13 +50,14 @@
     margin-right: auto;
 }
 
-.class {
-    background-color: white;
-    height: 40px;
-    width: 40px;
-    border: 1px solid black;
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
 }
 
-#div-table {
-    height: auto;
+#pixel-board {
+border: 1px solid black;
 }
