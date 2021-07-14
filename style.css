@@ -1,10 +1,10 @@
-.color{
+.color {
   width: 50px;
   height: 50px;
-  border: solid 1px;
-  margin: 5px;
+  border: 1px solid rgb(0, 0, 0);
   display: inline-block;
 }
+
 #black {
   background-color: black;
 }
@@ -18,28 +18,22 @@
   background-color: yellow;
 }
 
-
 #pixel-board{
-  margin-left: auto;
-  margin-right: auto;
   background-color: white;
 }
 
 
 .pixel {
   background-color: white;
-  width: 39px;
-  height: 39px;
+  width: 40px;
+  height: 40px;
   border: solid 1px;
   display: inline-block;
 }
 
-#clear-board {
-  width: 60px;
-  height: 20px;
-  border: solid 1px;
-  margin-bottom: 1px;
-  text-align: center;
-  left: auto;
-  right: auto;
+.pixelLine {
+  background-color: white;
+  width: 40px;
+  height: 40px; 
+  display: inline-block;
 }
