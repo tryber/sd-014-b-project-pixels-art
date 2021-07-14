@@ -29,7 +29,7 @@ function randomColor() {
 function checkPallet(array) {
   const colorArray = array;
   colorArray[0].style.backgroundColor = 'black';
-  for (let index = 1; index <= array.length; index += 1) {
+  for (let index = 1; index < array.length; index += 1) {
     if (array[index] === palletColors[index]) {
       colorArray[index].style.backgroundColor = randomColor();
     }
