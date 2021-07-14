@@ -17,8 +17,7 @@ body{
   overflow: visible;
   text-align: center;
 }
-.pixel{
-  
+.pixel{  
   width:40px;
   height:40px;
   border: solid;
