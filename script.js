@@ -24,7 +24,7 @@
     let clickThird = document.getElementById('third');
     let clickFourth = document.getElementById('fourth');
 
-    function changeColor(event) {
+    const changeColor = (event) => {
         let valueSelect = document.querySelector('.selected');
         valueSelect.classList.remove('selected'); //procura e remove quem tiver com selected
         event.target.classList.add('selected');
@@ -35,13 +35,20 @@
     clickThird.addEventListener("click", changeColor);
     clickFourth.addEventListener("click", changeColor);
 
-    let matriz = document.querySelectorAll('.pixel');
-    
-   // function choiceColor(event) {
-        //let valueSel = document.querySelector('.selected');
-        //console.log(valueSel.style);
-      //  event.target.style.backgroundColor = valueSel.style.backgroundColor; // faz o link entre a cor pelo id da variavel 
-    //} 
+
+    const fill = () => {
+      document.querySelector('#pixel-board').addEventListener('click', (e) =>
+    e .target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor); 
+    }
+   fill();
+
+    // const choiceColor = () => {
+    //    for (const p of document.querySelectorAll('.pixel')) p.style.backgroundColor = 'white';  // faz o link entre a cor pelo id da variavel 
+    // } 
+    // const constClear = () => {
+    //   document.querySelector('#clear-board').addEventListener("click", choiceColor);
+    // }
+    // constClear();  //ctrl k c --- ctrl k u 
 
     //for (let index = 0; index < matriz.length; index =+1){
      // matriz[index].addEventListener("click", choiceColor);  
@@ -53,9 +60,9 @@
     let btnElement = document.querySelector('#clear-board');
     btnElement.addEventListener("click", clearAll);
 
-    function clearAll(){
-      table.style.background = 'white';   
-    }
+     function clearAll(){
+       table.style.background = 'white';   
+     }
 
 
 

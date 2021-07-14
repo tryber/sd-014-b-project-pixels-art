@@ -23,23 +23,23 @@
 }
 
 #first {
-    background-color: black;
+   
     margin-right: 12px;
 
 }
 
 #secund {
-    background-color: violet;
+    
     margin-right: 12px;
 }
 
 #third {
-    background-color: yellow;
+   
     margin-right: 12px;
 }
 
 #fourth {
-    background-color: tomato;
+    
 }
 
 #oi {
@@ -49,7 +49,6 @@
     margin-left: auto;
     margin-right: auto;
 }
-
 
 .pixel {
   background-color: white;
