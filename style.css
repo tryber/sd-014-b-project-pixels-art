@@ -44,7 +44,7 @@ header {
 table {
   display: table;
   margin: auto;
-  width: 200px;
+  width: auto;
   border-spacing: 0;
 }
 
@@ -63,4 +63,8 @@ td {
 
 .pixel {
   background-color: white;
+}
+
+input {
+  width: 50px;
 }

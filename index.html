@@ -20,46 +20,16 @@
       <ol class="color" id="red"></ol>
       <ol class="color" id="yellow"></ol>
     </ul>
-    <div class="box"><button id="clear-board">Limpar</button></div>
+    <div class="box">
+      <button id="clear-board">Limpar</button>
+      <input type="number" id="board-size" nome="numeroPixels" size="12" min="1" maxlength="2" oninput="validity.valid || 
+      (value='')">
+      <button id="generate-board">VQV</button>
+    </div>
     <table id="pixel-board">
-      <tr>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-      </tr>
-      <tr>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-      </tr>
-      <tr>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-      </tr>
-      <tr>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-      </tr>
-      <tr>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-      </tr>
     </table>
   </section>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
