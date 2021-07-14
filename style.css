@@ -1,0 +1,40 @@
+body {
+  background-image: url('pixel.jpg');/* fonte-imagem: https://cdn.shopify.com/s/files/1/0024/2627/3903/articles/AdobeStock_221277099_1_2_1400x.progressive.jpg?v=1556625762 */
+}
+
+.color {
+  border-radius: 50%;
+}
+
+main {
+  text-align: center;
+}
+
+table {
+  width: auto;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.color {
+  display: inline-block;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  height: 40px;
+  width: 40px;
+  padding: 20px;
+}
+
+#pixel-board {
+  border: solid 1px;
+}
+
+.pixel {
+  border: solid 1px;
+  padding: 20px;
+  background-color: white;
+  border-color: black;
+  height: 40px;
+  width: 40px;
+}
