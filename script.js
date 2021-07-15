@@ -12,17 +12,17 @@ function afterColor(evento) {
   evento.target.classList.add('selected');
 }
 
-const blackColor = document.querySelector('#black');
+let blackColor = document.querySelector('#black');
 blackColor.addEventListener('click', afterColor);
-const blueColor = document.querySelector('#blue');
+let blueColor = document.querySelector('#blue');
 blueColor.addEventListener('click', afterColor);
-const orangeColor = document.querySelector('#orange');
+let orangeColor = document.querySelector('#orange');
 orangeColor.addEventListener('click', afterColor);
-const pinkColor = document.querySelector('#pink');
+let pinkColor = document.querySelector('#pink');
 pinkColor.addEventListener('click', afterColor);
 
 //pintando os pixels
-const pixelPaint = document.querySelectorAll('.pixel');
+let pixelPaint = document.querySelectorAll('.pixel');
 for (let i = 0; i < pixelPaint.length; i++) {
   pixelPaint[i].addEventListener('click', paint);
 }
@@ -33,7 +33,7 @@ function paint(evento) {
 }
 
 //limpando o quadro
-const oneDelete = document.querySelector('#clear-board');
+let oneDelete = document.querySelector('#clear-board');
 oneDelete.addEventListener('click', deleteAll);
 
 function deleteAll() {
