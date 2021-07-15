@@ -36,19 +36,63 @@ let tabelPixel = document.getElementById('pixel-board');
 
 /* VERIFICA SE O NUMERO É MAIOR QUE 50 MENOR QUE 5 */
 
+
+function verificarNada(){
+  if (inputPixel.value == ""){
+    alert('Board inválido!')
+  }
+}
+
+
+document.getElementById('generate-board').addEventListener('click', verificarNada)
+
+
 inputPixel.addEventListener('change', verificar)
 
 function verificar(){
 
-    if (inputPixel.value < 5){
-      inputPixel.value = 5
-      alert('Board inválido!')
-    }
-    else if (inputPixel.value > 50){
-      inputPixel.value = 50
-      alert('Board inválido!')
+  if (pixels.length > 0){
+    for (let index = 0; index < pixels.length; index += 1){
+      document.getElementsByClassName('pixel')[0].remove()
+      document.getElementsByClassName('pixeline')[0].remove()
     }
   }
+
+
+  if (inputPixel.value < 5 && inputPixel.value != ""){
+    inputPixel.value = 5
+    for (let index = 0; index < 5; index += 1){
+      let line = document.createElement('tr');
+      line.className = 'pixeline';
+      line.addEventListener('click', paintColor)
+      tabelPixel.appendChild(line);
+      
+      for (let index = 0; index < 5; index +=1){
+        let header = document.createElement('td');
+        header.className = 'pixel';
+        header.addEventListener('click', paintColor);
+        line.appendChild(header);
+        }
+      }
+    }
+    if (inputPixel.value > 50){
+      inputPixel.value = 50
+      for (let index = 0; index < 50; index += 1){
+        let line = document.createElement('td');
+        line.className = 'pixeline';
+        line.addEventListener('click', paintColor)
+        tabelPixel.appendChild(line);
+      
+        for (let index = 0; index < 50; index +=1){
+        let header = document.createElement('tr');
+        header.className = 'pixel';
+        header.addEventListener('click', paintColor);
+        line.appendChild(header);
+        }
+      }
+    }
+  }
+
 
 
 
@@ -61,71 +105,34 @@ function generatePixels(){
 
   if (pixels.length > 0){
     for (let index = 0; index < pixels.length; index += 1){
-      document.getElementsByClassName('pixel')[0].remove() 
-      document.getElementsByClassName('pixelLine')[0].remove() 
+      document.getElementsByClassName('pixel')[0].remove()
+      document.getElementsByClassName('pixeline')[0].remove()
     }
   }
-
-  /* VERIFICAÇÃO SE É MAIOR QUE 5 OU MENOR QUE 50 */
-
-
 
   /* GERAÇÃO DA NOVA TABELA */
-  if (inputPixel.value >= 5 || inputPixel <= 50){
     for (let index = 0; index < inputPixel.value; index += 1){
       let line = document.createElement('tr');
-      line.classList.add('pixelLine');
-    line.addEventListener('click', paintColor)
-    tabelPixel.appendChild(line);
-    
+      line.className = 'pixeline';
+      tabelPixel.appendChild(line);
+
       for (let index = 0; index < inputPixel.value; index +=1){
       let header = document.createElement('td');
-      header.classList.add('pixel')
+      header.className = 'pixel';
       header.addEventListener('click', paintColor);
       line.appendChild(header);
- 
       }
     }
   }
-  else if (inputPixel.value < 5) {
-    for (let index = 0; index < 5; index += 1){
-      let line = document.createElement('tr');
-      line.classList.add('pixelLine');
-    line.addEventListener('click', paintColor)
-    tabelPixel.appendChild(line);
-    
-      for (let index = 0; index < 5; index +=1){
-      let header = document.createElement('td');
-      header.classList.add('pixel')
-      header.addEventListener('click', paintColor);
-      line.appendChild(header);
- 
-      }
-    }
-  }
-  else if (inputPixel.value > 50) {
-    for (let index = 0; index < 50; index += 1){
-      let line = document.createElement('tr');
-      line.classList.add('pixelLine');
-    line.addEventListener('click', paintColor)
-    tabelPixel.appendChild(line);
-    
-      for (let index = 0; index < 50; index +=1){
-      let header = document.createElement('td');
-      header.classList.add('pixel')
-      header.addEventListener('click', paintColor);
-      line.appendChild(header);
- 
-      }
-    }
-  }
-}
+
 generatePixels()
+
 document.getElementById('pixel-board').style.width = (pixels.length * 5)
 function addSelected(event) {
   document.querySelector('.selected').classList.remove('selected');
   event.target.classList.add('selected');
 }
+
 /* 
 4) Verifica se ao carregar a página deve ser possível pintar os pixels de preto
 5) Verifica se após selecionar uma outra cor na paleta, é possível pintar os pixels com essa cor
