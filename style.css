@@ -42,6 +42,7 @@ body {
 #pixel-board {
   border-spacing: 0;
   margin: auto;
+  background-color: white;
 }
 
 #clear-board {
@@ -50,8 +51,4 @@ body {
   height: 20px;
   background-color: white;
   border: 1px solid black;
-}
-
-td.pixel {
-  background-color: white;
 }
