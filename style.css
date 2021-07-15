@@ -1,11 +1,8 @@
 html , body {
   margin: 0;
   text-align: center;
-  background-image: url('art-button/blue-background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   font-family: Yomogi, cursive;
+  background-color: cadetblue;
 }
 
 .color {
