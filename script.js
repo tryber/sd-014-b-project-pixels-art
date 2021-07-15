@@ -1,3 +1,7 @@
+
+ //clicarParaPintar
+ 
+
 //BotãoLimpar
 let buttonClear = document.getElementById('clear-board');
 buttonClear.addEventListener('click', function() {
@@ -11,6 +15,3 @@ buttonClear.addEventListener('click', function() {
     }
 
 });
- //clicarParaPintar
-
- 
