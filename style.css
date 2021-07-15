@@ -2,9 +2,15 @@ h1 {
     color: black;
 }
 
-#button {
+#clear-board {
     background-color: teal;
     color: yellow;
+    width: 100px;
+    height: 20px;
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
 }
 
 .color {
