@@ -36,7 +36,7 @@ header {
   padding: 10px;
   margin: auto;
   background-color: #eddcd2;
-  width: 25%;
+  width: 12%;
   border-radius: 20px;
   margin-bottom: 20px;
 }
@@ -67,4 +67,18 @@ td {
 
 input {
   width: 50px;
+  background-color: ghostwhite;
+  padding: 5px;
+  font-size: 18px;
+}
+
+#clear-board {
+  margin-right: 25px;
+}
+
+button {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: ghostwhite;
 }
