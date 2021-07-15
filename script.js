@@ -21,7 +21,7 @@ createTable(5);
 function randomColor() {
   let color = '';
   while (color.length < 6) {
-    color += (Math.random()).toString(16).substr(-6).substr(-1);
+    color += (Math.random().toString(16).substr(-6).substr(-1));
   }
   return `#${color}`;
 }
@@ -48,18 +48,23 @@ for (let index = 0; index < palletColors.length; index += 1) {
   palletColors[index].addEventListener('click', selectColor);
 }
 
-const pixels = document.querySelectorAll('.pixel');
 function paintPixel(event) {
   const evento = event;
   const selectedColor = document.querySelector('.selected').style.backgroundColor;
   evento.target.style.backgroundColor = selectedColor;
 }
 
-for (let index = 0; index < pixels.length; index += 1) {
-  pixels[index].addEventListener('click', paintPixel);
+function checkPixel() {
+  const pixel = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixel.length; index += 1) {
+    pixel[index].addEventListener('click', paintPixel);
+  }
 }
 
+checkPixel();
+
 function clearBoard() {
+  const pixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].style.backgroundColor = 'white';
   }
@@ -97,6 +102,7 @@ function newTable() {
     formatInput();
     createTable(formatedInput);
   }
+  checkPixel();
 }
 
 const generateButton = document.getElementById('generate-board');
