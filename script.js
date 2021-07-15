@@ -1,9 +1,3 @@
-let paint = 'black';
-
-function setPen(color) {
-    paint = color;
-}
-
 const colors = document.querySelectorAll('.color');
 colors[0].className = 'color selected';
 

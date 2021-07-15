@@ -1,15 +1,11 @@
-html, body {
+html , body {
   margin: 0;
   text-align: center;
   background-image: url('art-button/blue-background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'Yomogi', cursive;
-}
-
-.button {
-  margin: 10px;
+  font-family: Yomogi, cursive;
 }
 
 .color {
@@ -24,10 +20,10 @@ div {
   margin-right: auto;
 }
 
-input[type=color] {
+.button {
   border: 1px solid black;
   border-radius: 2px;
-  background-color: black;
+  margin: 10px;
 }
 
 .pixel-board {
