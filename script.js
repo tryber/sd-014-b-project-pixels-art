@@ -34,22 +34,21 @@ function resetColor(){
 }
 
 clearButton.addEventListener("click",resetColor);
-generateButton.addEventListener("click",creatPixels);
+generateButton.addEventListener("click",validate);
 
-function creatPixels(){
-    let n = document.getElementById('board-size').value;
-    if (n >= 5 && n <= 50){
+function creatPixels(n){
+
+        pixelBoard.innerHTML = ''
         for (let line=0; line < n; line+=1){
           let div = document.createElement('div')
             pixelBoard.appendChild(div);
-            div.classList.add('pixel');
+            div.classList.add('linha');
             
             
             for (let colun = 0; colun < n; colun+=1){
               let div2 = document.createElement('div')
-              let ultimaDiv = document.querySelector('#pixel-board').lastElementChild
-                ultimaDiv.appendChild(div2);
-                div2.classList.add('pixel');
+                div.appendChild(div2);
+                div2.className = 'pixel';
             }
             
         }    
@@ -59,10 +58,6 @@ function creatPixels(){
                 box[cont].addEventListener("click",printColor);
             }
     
-    }else{
-        alert('Board inválido!')
-    
-    }
 }
 
 function creatDefault(){
@@ -70,14 +65,13 @@ function creatDefault(){
     for (let line=0; line < n; line+=1){
         let div = document.createElement('div')
           pixelBoard.appendChild(div);
-          div.classList.add('pixel');
+          div.classList.add('linha');
           
           
     
           for (let colun = 0; colun < n; colun+=1){
             let div2 = document.createElement('div')
-            let ultimaDiv = document.querySelector('#pixel-board').lastElementChild
-              ultimaDiv.appendChild(div2);
+              div.appendChild(div2);
               div2.classList.add('pixel');
           }
       }
@@ -86,6 +80,27 @@ function creatDefault(){
           let box = document.querySelectorAll('.pixel');
               box[cont].addEventListener("click",printColor);
           }
+}
+
+function validate(){
+    
+    let n = document.getElementById('board-size').value;
+   
+    if (n > 0 && n < 5){
+
+       return creatPixels(5);
+    
+    }else if (n > 50){
+
+        return creatPixels(50);
+        
+    }else if(n >= 5 && n <=50 ){
+        creatPixels(n)
+    
+    }else if(n == ""){
+        alert('Board inválido!');
+    }
+    
 }
 
 creatDefault();
