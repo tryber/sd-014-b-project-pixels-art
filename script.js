@@ -1,7 +1,5 @@
-
 function paletteColor() {
   const getPalette = document.getElementsByClassName('color');
-  
   for (let index of getPalette) {
     if (index === getPalette[0]) {
       index.style.background = 'black';
@@ -16,7 +14,6 @@ function paletteColor() {
 }
 
 paletteColor();
-
 
 function creatPixilsBoard() {
   const pixelsBoard = document.querySelector('#pixel-board');
