@@ -1,0 +1,26 @@
+.color
+{
+    border: 1px solid black;
+    margin: 30px;
+    padding: 10px 20px;
+}
+
+#black
+{
+    background-color: black;
+}
+
+#green
+{
+    background-color: green;
+}
+
+#yellow
+{
+    background-color: yellow;
+}
+
+#blue
+{
+    background-color: blue;
+}
