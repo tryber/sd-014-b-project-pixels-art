@@ -4,6 +4,7 @@ function beginColor() {
     let color = document.getElementById('black');
     color.classList.add('selected');
 }
+beginColor;
 
 
 
