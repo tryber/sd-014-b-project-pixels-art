@@ -20,4 +20,21 @@ clickGreen.addEventListener('click', clickColor);
 const clickBlack = document.querySelector('#black');
 clickBlack.addEventListener('click', clickColor);
 
+const pixels = document.querySelectorAll('.pixel');
+for (let i = 0; i < pixels.length; i++) {
+  pixels[i].addEventListener('click', painting);
+}
 
+function painting(evento) {
+  let color = document.querySelector('.selected');
+  evento.target.style.backgroundColor = color.id;
+};
+
+const clean = document.querySelector('#clear-board');
+clean.addEventListener('click', cleaning);
+
+function cleaning() {
+  for (let i = 0; i < pixels.length; i++) {
+    pixels[i].style.backgroundColor = 'white';
+  }
+};
