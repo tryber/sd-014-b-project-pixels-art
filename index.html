@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Project Pixel Arts</title>
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Paleta de Cores</h1>
+  </header>
+  <section>
+    <ul id="color-palette">
+      <ol class="color" id="black"></ol>
+      <ol class="color" id="blue"></ol>
+      <ol class="color" id="red"></ol>
+      <ol class="color" id="yellow"></ol>
+    </ul>
+    <div class="box">
+      <button id="clear-board">Limpar</button>
+      <input type="number" id="board-size" nome="numeroPixels" size="12" min="1" maxlength="2" oninput="validity.valid || 
+      (value='')">
+      <button id="generate-board">VQV</button>
+    </div>
+    <table id="pixel-board">
+    </table>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
