@@ -1,0 +1,56 @@
+html , body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Yomogi, cursive;
+  background-color: cadetblue;
+}
+
+.color {
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+}
+
+div {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: 2px;
+  margin: 10px;
+}
+
+#board-size {
+  width: 20%;
+  margin: 3px;
+}
+
+.pixel-board {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 210px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
+}
