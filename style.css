@@ -1,8 +1,15 @@
+body {
+  background-image: url(https://opinioescertificadas.com.br/wp-content/uploads/2021/05/pintura-por-numeros-capa.jpg);
+  text-align:center;
+}
+
+
 .color {
   width: 50px;
   height: 50px;
   border: 1px solid rgb(0, 0, 0);
   display: inline-block;
+  margin: 5px;
 }
 
 #black {
@@ -11,6 +18,11 @@
 
 #pixel-board{
   background-color: white;
+  border:solid gainsboro;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  margin: 50px auto;
 }
 
 
@@ -27,4 +39,19 @@
   width: 40px;
   height: 40px; 
   display: inline-block;
+}
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  -webkit-text-stroke-color: #000;
+  -webkit-text-stroke-width: 1px;
+}
+input{
+  margin: 5px;
+  margin-top: 20px;
+}
+button{
+  margin-top: 20px;
+  margin: 5px;
 }
