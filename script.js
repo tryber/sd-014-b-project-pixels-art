@@ -49,11 +49,11 @@ function initialColors() {
 function generateBoard(value) {
   myBoard.innerHTML = '';
   for (let line = 0; line < value; line += 1) {
-    let div = document.createElement('div');
+    const div = document.createElement('div');
     div.classList.add('pixel-line');
     myBoard.appendChild(div);
     for (let element = 0; element < value; element += 1) {
-      let divPixel = document.createElement('div');
+      const divPixel = document.createElement('div');
       divPixel.classList.add('pixel');
       div.appendChild(divPixel);
     }
@@ -67,25 +67,14 @@ function verifyInput() {
   if (inputBoard.value > 50) {
     alert('Board inválido!'); // retirar
     generateBoard(50);
-  } 
+  }
   if (inputBoard.value < 5) {
     alert('Board inválido!');
     generateBoard(5);
   } else {
     generateBoard(inputBoard.value);
   }
-  
 }
-
-myBoard.addEventListener('click', clickSelectColor);
-
-palette.addEventListener('click', clickPaintColor);
-
-btnVQV.addEventListener('click', verifyInput);
-
-btnLucky.addEventListener('click', generateColor);
-
-btnClean.addEventListener('click', erasePixelTable);
 
 function clickSelectColor(event) {
   if (event.target.classList.contains('pixel')) {
@@ -106,6 +95,16 @@ function erasePixelTable() {
     lineDefault[i].style.backgroundColor = 'white';
   }
 }
+
+myBoard.addEventListener('click', clickSelectColor);
+
+palette.addEventListener('click', clickPaintColor);
+
+btnVQV.addEventListener('click', verifyInput);
+
+btnLucky.addEventListener('click', generateColor);
+
+btnClean.addEventListener('click', erasePixelTable);
 
 inputBoard.addEventListener('keyup', (enter) => {
   const key = enter.wich || enter.key;
