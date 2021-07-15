@@ -1,0 +1,54 @@
+body {
+  text-align: center;
+  text-justify: auto;
+  width: 300px;
+  border: 1px solid rgb(57, 253, 155);
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(232, 232, 255);
+}
+
+.color {
+  border: black solid 1px;
+  width: 40px;
+  height: 40px;
+}
+
+#red {
+  background-color: red;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#black {
+  background-color: black;
+}
+
+#green {
+  background-color: green;
+}
+
+.pixel {
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+#pixel-board {
+  border-spacing: 0;
+  margin: auto;
+  background-color: white;
+}
+
+#clear-board {
+  text-align: center;
+  width: 60px;
+  height: 20px;
+  background-color: white;
+  border: 1px solid black;
+}
