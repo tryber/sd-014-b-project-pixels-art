@@ -13,7 +13,7 @@ function criaPixels(x, y) { // cria a tabela de pixel art com o tamanho x de lag
   }
 }
 
-function selectColorAndRemove(event){                    // Apartir da variavel 'color' adiciona a classe selected
+function selectColorAndRemove(event) {                    // Apartir da variavel 'color' adiciona a classe selected
     let cor = event.target.classList[1];
     let color = document.querySelector('.' + cor);
     color.classList.add('selected');
@@ -41,10 +41,10 @@ function selectColorAndRemove(event){                    // Apartir da variavel 
 } 
 };
 
-function criarEventosPaletaDeCores(){
-    for (let index = 0; index <= 3; index += 1){
-        colors[index].addEventListener('click', selectColorAndRemove);
-    }; 
+function criarEventosPaletaDeCores() {  
+  for (let index = 0; index <= 3; index += 1) {
+    colors[index].addEventListener('click', selectColorAndRemove);
+  }
 }
 
 function addEventPixels() {
@@ -59,30 +59,30 @@ function addEventPixels() {
     console.log(color[index].style.backgroundColor);
   }
     for(let pixel of pixels) {
-        pixel.addEventListener('click', function () {
-        let corAtual = 'null';
-        for (let index = 0; index <= 3; index += 1){
-            if (colors[index].classList[2] === "selected"){
-                let corAtual = colors[index].classList[1];
-                if (corAtual === 'cor0'){
-                    pixel.style.backgroundColor = 'black';
-                }
-                if (corAtual === 'cor1'){
-                    pixel.style.backgroundColor = cor[1] ;
-                }
-                if (corAtual === 'cor2'){
-                    pixel.style.backgroundColor = cor[2];
-                }
-                if (corAtual === 'cor3'){
-                    pixel.style.backgroundColor = cor[3];
-                }
-                pixel.classList.remove('pixel')
-                pixel.classList.add(corAtual);
-                pixel.classList.add('pixel');
-                console.log(colors[index].classList[1]);
-            }  
+      pixel.addEventListener('click', function () {
+      let corAtual = 'null';
+      for (let index = 0; index <= 3; index += 1){
+        if (colors[index].classList[2] === "selected"){
+        let corAtual = colors[index].classList[1];
+        if (corAtual === 'cor0') {
+          pixel.style.backgroundColor = 'black';
+       }
+        if (corAtual === 'cor1') {
+          pixel.style.backgroundColor = cor[1] ;
         }
-        });
+        if (corAtual === 'cor2') {
+          pixel.style.backgroundColor = cor[2];
+        }
+        if (corAtual === 'cor3') {
+          pixel.style.backgroundColor = cor[3];
+        }
+          pixel.classList.remove('pixel')
+          pixel.classList.add(corAtual);
+          pixel.classList.add('pixel');
+          console.log(colors[index].classList[1]);
+        }  
+      }
+      });
     }
 }
 
@@ -99,7 +99,7 @@ function removeTabela() {
   let tabela = document.getElementById('pixel-board');
   let ul = document.querySelectorAll('ul');
   for (let index = 1; index <= ul.length - 1; index += 1) {
-    tabela.removeChild(ul[index]);  
+    tabela.removeChild(ul[index]); 
   }
 }
 
@@ -112,12 +112,10 @@ function recriaPixels() {
   if (input < 5) {
     removeTabela();
     criaPixels(5, 5);
-  } 
-  else if (input > 50) {
+  } else if (input > 50) {
     removeTabela();
     criaPixels(50, 50);
-  }
-  else {
+  } else {
     removeTabela();
     criaPixels(input, input);
     addEventPixels();
@@ -130,8 +128,8 @@ function sortColors() {
   for (let index = 1; index <= 3; index += 1) {
     value[index] = 'rgb(' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')';
     color[index].style.backgroundColor = value[index];
-    }
   }
+}
 
 sortColors();
 const button = document.querySelector('#clear-board');
@@ -143,4 +141,3 @@ addEventPixels();
 button.addEventListener('click', apagar);
 let buttonVqv = document.getElementById('generate-board');
 buttonVqv.addEventListener('click', recriaPixels);
-
