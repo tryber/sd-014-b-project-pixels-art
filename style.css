@@ -1,26 +1,33 @@
-.color
-{
-    border: 1px solid black;
-    margin: 30px;
-    padding: 10px 20px;
+.color {
+  border: 1px solid black;
+  margin: 30px;
+  padding: 10px 20px;
 }
 
-#black
-{
-    background-color: black;
+#black {
+  background-color: black;
 }
 
-#green
-{
-    background-color: green;
+#green {
+  background-color: green;
 }
 
-#yellow
-{
-    background-color: yellow;
+#yellow {
+  background-color: yellow;
 }
 
-#blue
+#blue {
+  background-color: blue;
+}
+
+.pixel
 {
-    background-color: blue;
+  background-color: white;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 20px 30px
+}
+
+div{
+  margin-top: 60px;
 }
