@@ -1,11 +1,19 @@
-const paletteOne = document.getElementsByClassName('color')[0];
-paletteOne.style.background = 'black';
 
-const paletteTwo = document.getElementsByClassName('color')[1];
-paletteTwo.style.background = 'yellow';
+function paletteColor() {
+  const getPalette = document.getElementsByClassName('color');
+  
+  for (let index of getPalette) {
+    if (index === getPalette[0]) {
+      index.style.background = 'black';
+    } else if (index === getPalette[1]) {
+      index.style.background = 'green';
+    } else if (index === getPalette[2]) {
+      index.style.background = 'blue';
+    } else if (index === getPalette[3]) {
+      index.style.background = 'yellow';
+    }
+  }
+}
 
-const paletteTree = document.getElementsByClassName('color')[2];
-paletteTree.style.background = 'red';
+paletteColor();
 
-const paletteFour = document.getElementsByClassName('color')[3];
-paletteFour.style.background = 'blue';
