@@ -14,18 +14,6 @@
     <header>
         <h1 id="title">Paleta de Cores</h1>
     </header>
-    <!-- Determina o tamanho do quadro de pixel art-->
-    <form id="size" name="sizeGride">
-        <span class="size">Table size:</span>
-        <input type="number" id="inputSize" min="1">
-        <br>
-        <!-- Cria os botões de criar e limpar o quadro de pixel-->
-        <div class="creatAndClear">
-            <button id="creat">Creat</button>
-            <button class="button" type="button" id="clear" value="Clear" title="Clear the colors">Clear</button>
-        </div>
-    </form>
-    <br>
     <!-- Cria a paleta de cor a ser escolhida  -->
     <section id="color-palette" class="color-palette">
         <div class="color" style="background-color: black;"></div>
@@ -71,6 +59,9 @@
           <div class="pixel td"></div>
         </div>
       </section>
+      <div class="creatAndClear">
+        <button class="button" type="button" id="clear" value="Clear" title="Clear the colors">Clear</button>
+      </div>
     <script src="script.js"></script>
 </body>
 </html>
