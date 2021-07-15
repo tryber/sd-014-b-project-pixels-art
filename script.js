@@ -1,13 +1,21 @@
+window.onload = function() {
+//cor inicial
+function beginColor() {
+    let color = document.getElementById('color-palette').firstElementChild;
+    color.style.backgroundColor = 'black';
+    color.classList.add('selected');
+}
+
+
+
+
 //BotãoLimpar
 
 const btclear = document.getElementById('clear-board');
 btclear.addEventListener('click', clearAll);
 
 function clearAll () {
-
-    let clean = document.querySelectorAll('.pixel');
-    for (let index = 0; index < clean.length; index =+ 1) {
-        clean[index].style.background = 'white';
+  document.querySelector('#pixel-board').style.backgroundColor = 'white';
+        
     }
-
 }
