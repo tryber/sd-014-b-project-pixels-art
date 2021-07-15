@@ -38,7 +38,9 @@ function clickGreen() {
 const pixels = document.querySelectorAll('.pixel');
 
 function painting() {
-  
+  for (let index = 0; index < pixels.length; index++) {
+    pixels[index].style.backgroundColor = 'white';
+  }
 }
 
 function cleaning() {
@@ -46,6 +48,7 @@ function cleaning() {
     pixels[index].style.backgroundColor = 'white';
   }
 }
+
 
 const clickB = document.getElementById('black');
 clickB.addEventListener('click', clickBlack);
@@ -58,9 +61,6 @@ clickBlu.addEventListener('click', clickBlue);
 
 const clickG = document.getElementById('green');
 clickG.addEventListener('click', clickGreen);
-
-const paint = document.getElementById('pixel-board');
-paint.addEventListener('click', painting);
 
 const clean = document.getElementById('clear-board');
 clean.addEventListener('click', cleaning);
