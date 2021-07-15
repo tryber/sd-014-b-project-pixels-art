@@ -139,23 +139,38 @@ function addSelected(event) {
 6) Verifica se somente o pixel que foi clicado foi preenchido com a cor selecionada, sem influenciar na cor dos demais pixels. */
 
 document.querySelector('#black').addEventListener('click', addSelected);
-document.querySelector('#red').addEventListener('click', addSelected);
-document.querySelector('#blue').addEventListener('click', addSelected);
-document.querySelector('#yellow').addEventListener('click', addSelected);
+document.querySelector('#cor1').addEventListener('click', addSelected);
+document.querySelector('#cor2').addEventListener('click', addSelected);
+document.querySelector('#cor3').addEventListener('click', addSelected);
+
+function gerar_cor() {
+  let r = Math.random() * 255;
+  let g = Math.random() * 255;
+  let b = Math.random() * 255;
+  
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+/* Referencia https://wallacemaxters.com.br/blog/2021/02/20/como-gerar-cores-aleatorias-no-javascript
+ */
+
+document.querySelector('#cor1').style.backgroundColor = gerar_cor()
+document.querySelector('#cor2').style.backgroundColor = gerar_cor()
+document.querySelector('#cor3').style.backgroundColor = gerar_cor()
 
 function paintColor(event) {
   for (index = 0; index < pixels.length; index += 1) {
     if (document.getElementsByClassName('selected')[0] === document.querySelector('#black')) {
-      event.target.style.backgroundColor = 'black';
+      event.target.style.backgroundColor = 'black'
     }
-    if (document.getElementsByClassName('selected')[0] === document.querySelector('#red')) {
-      event.target.style.backgroundColor = 'red';
+    if (document.getElementsByClassName('selected')[0] === document.querySelector('#cor1')) {
+      event.target.style.backgroundColor = document.querySelector('#cor1').style.backgroundColor;
     }
-    if (document.getElementsByClassName('selected')[0] === document.querySelector('#blue')) {
-      event.target.style.backgroundColor = 'blue';
+    if (document.getElementsByClassName('selected')[0] === document.querySelector('#cor2')) {
+      event.target.style.backgroundColor = document.querySelector('#cor2').style.backgroundColor;
     }
-    if (document.getElementsByClassName('selected')[0] === document.querySelector('#yellow')) {
-      event.target.style.backgroundColor = 'yellow';
+    if (document.getElementsByClassName('selected')[0] === document.querySelector('#cor3')) {
+      event.target.style.backgroundColor = document.querySelector('#cor3').style.backgroundColor;
       
     }
     }
