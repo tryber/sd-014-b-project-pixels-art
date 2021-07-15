@@ -20,7 +20,7 @@ paletteColor();
 
 function creatPixilsBoard() {
   const pixelsBoard = document.querySelector('#pixel-board');
-  for (let index = 0; index <= 25; index += 1) {
+  for (let index = 1; index <= 25; index += 1) {
     const creatPixel = document.createElement('div');
     creatPixel.classList.add('pixel');
     pixelsBoard.appendChild(creatPixel);
