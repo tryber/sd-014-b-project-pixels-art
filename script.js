@@ -13,7 +13,7 @@ for (let i = 0; i < containerSize; i++)
     for (let index = 0; index < containerSize; index++) 
     {
         let pixel = document.createElement('span');
-        pixel.className = 'pixel';
+        pixel.className = 'pixel border';
         containerLines[i].appendChild(pixel);
     }
 }
