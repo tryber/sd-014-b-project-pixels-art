@@ -16,10 +16,11 @@ function criaPixels(x, y) { // cria a tabela de pixel art com o tamanho x de lag
 function selectColorAndRemove(event) { // Apartir da variavel 'color' adiciona a classe selected
   let ul = document.querySelector('ul');
   let listOfColors = ul.querySelectorAll('li');
+  // eslint-disable-next-line no-restricted-syntax
   for (let cor of listOfColors) {
     cor.classList.remove('selected');
   }
-  cor = event.target.classList[1];
+  let cor = event.target.classList[1];
   const color = document.querySelector('.' + cor);
   color.classList.add('selected');
 }
