@@ -54,7 +54,7 @@ function generateBoard(value) {
     myBoard.appendChild(div);
     for (let element = 0; element < value; element += 1) {
       const divPixel = document.createElement('div');
-      divPixel.classList.add('pixel');
+      divPixel.className = 'pixel';
       div.appendChild(divPixel);
     }
   }

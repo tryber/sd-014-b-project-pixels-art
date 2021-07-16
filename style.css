@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0; 1&family=Prompt:wght@200;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0; 1&family=Prompt:wght@200; 300; 400; 500; 700&display=swap');
 
 /* Ajustes iniciais */
 
@@ -19,11 +19,12 @@ body {
   display: flex;
   flex-direction: column;
   vertical-align: middle;
-  height: auto;
+  max-width: 3000px;
   margin: 0 30px;
   text-align: center;
   background-color: white;
-  border-radius: 2%;
+  border-radius: 2px;
+  border: 1px solid;
 }
 
 .center {
@@ -144,7 +145,7 @@ button, input {
 }
 
 .selected {
-  border: 1px solid black);
+  border: 1px solid black;
 }
 
 #color-palette {
