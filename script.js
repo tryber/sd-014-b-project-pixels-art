@@ -47,3 +47,15 @@ getTdPixels.addEventListener('click', function(event) {
   const selected = document.querySelector('.selected').style.background;
   event.target.style.backgroundColor  = selected;
 });
+
+//Requesito 09 - Faz o button limpar as cores do quadro de pixels com um loop que redefine o backgrandColor para white.
+
+const clearButton = document.querySelector('#clear-board');
+
+const getPixels = document.querySelectorAll('.pixel');
+
+clearButton.addEventListener('click', function() {
+  for  (let index = 0; index <getPixels.length; index += 1) {
+    getPixels[index].style.backgroundColor = 'white';
+  }
+});
