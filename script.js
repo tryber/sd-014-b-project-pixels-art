@@ -13,33 +13,16 @@ function criaPixels(x, y) { // cria a tabela de pixel art com o tamanho x de lag
   }
 }
 
-function selectColorAndRemove(event) {                    // Apartir da variavel 'color' adiciona a classe selected
-    let cor = event.target.classList[1];
-    let color = document.querySelector('.' + cor);
-    color.classList.add('selected');
-    switch (cor) {
-        case 'cor0':
-        document.querySelector('.cor1').classList.remove('selected');   
-        document.querySelector('.cor2').classList.remove('selected');   
-        document.querySelector('.cor3').classList.remove('selected');
-        break; 
-        case 'cor1':
-        document.querySelector('.cor0').classList.remove('selected');   
-        document.querySelector('.cor2').classList.remove('selected');   
-        document.querySelector('.cor3').classList.remove('selected');
-        break;   
-        case 'cor2':
-        document.querySelector('.cor0').classList.remove('selected');   
-        document.querySelector('.cor1').classList.remove('selected');   
-        document.querySelector('.cor3').classList.remove('selected');
-        break;
-        case 'cor3':
-        document.querySelector('.cor0').classList.remove('selected');   
-        document.querySelector('.cor1').classList.remove('selected');   
-        document.querySelector('.cor2').classList.remove('selected');
-        break;      
-} 
-};
+function selectColorAndRemove(event) { // Apartir da variavel 'color' adiciona a classe selected
+  let ul = document.querySelector('ul');
+  let listOfColors = ul.querySelectorAll('li');
+  for (let cor of listOfColors) {
+    cor.classList.remove('selected');
+  }
+  cor = event.target.classList[1];
+  const color = document.querySelector('.' + cor);
+  color.classList.add('selected');
+}
 
 function criarEventosPaletaDeCores() {  
   for (let index = 0; index <= 3; index += 1) {
@@ -55,8 +38,6 @@ function addEventPixels() {
   let colors = document.querySelectorAll('.color');
   for(let index = 0; index <= color.length - 1; index += 1 ) {
     cor.push(color[index].style.backgroundColor);
-    console.log(cor);
-    console.log(color[index].style.backgroundColor);
   }
     for(let pixel of pixels) {
       pixel.addEventListener('click', function () {
@@ -79,7 +60,6 @@ function addEventPixels() {
           pixel.classList.remove('pixel')
           pixel.classList.add(corAtual);
           pixel.classList.add('pixel');
-          console.log(colors[index].classList[1]);
         }  
       }
       });
@@ -108,13 +88,15 @@ function recriaPixels() {
     alert('Board inválido!');
     return;
   }
-  let input = parseInt(document.getElementById('board-size').value);
+  const input = parseInt(document.getElementById('board-size').value);
   if (input < 5) {
     removeTabela();
     criaPixels(5, 5);
+    addEventPixels();
   } else if (input > 50) {
     removeTabela();
     criaPixels(50, 50);
+    addEventPixels();
   } else {
     removeTabela();
     criaPixels(input, input);
