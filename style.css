@@ -28,18 +28,12 @@ body {
 
 .pixel {
   background-color: white;
-  width: 40px;
-  height: 40px;
   border: solid 1px;
-  display: inline-block;
-}
+  column-width: 40px;
+  height: 40px;
+  }
 
-.pixelLine {
-  background-color: white;
-  width: 40px;
-  height: 40px; 
-  display: inline-block;
-}
+
 h1 {
   text-align: center;
   color: white;

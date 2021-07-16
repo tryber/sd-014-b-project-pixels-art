@@ -3,12 +3,11 @@ let inputPixel = document.getElementById('board-size');
 let tabelPixel = document.getElementById('pixel-board');
 let size = document.getElementById('board-size').value;
 
-generatePixels()
 
 /* VERIFICA SE O NUMERO É MAIOR QUE 50 MENOR QUE 5 */
 
 function verificar(){
-  if (inputPixel.value < 5 && inputPixel.value != ""){
+  if (inputPixel.value < 5){
     inputPixel.value = 5
   }
   else if (inputPixel.value > 50){
@@ -23,7 +22,6 @@ inputPixel.addEventListener('change', verificar)
 function generatePixels(){
   if (inputPixel.value == ""){
     alert("Board inválido!")
-    inputPixel.value = 5
   }
     /* EXÇLUSÃO DA TABELA ANTERIOR */
   if (pixels.length > 0){
@@ -38,6 +36,7 @@ function generatePixels(){
       let line = document.createElement('tr');
       line.className = 'pixeline';
       tabelPixel.appendChild(line);
+      
       for (let index = 0; index < inputPixel.value; index +=1){
       let header = document.createElement('td');
       header.className = 'pixel';
@@ -89,8 +88,12 @@ function paintColor(event) {
       event.target.style.backgroundColor = document.querySelector('#cor3').style.backgroundColor;
       
     }
-    }
+    
   }
+}
+for (index = 0; index < pixels.length; index += 1){
+document.getElementsByClassName('pixel')[index].addEventListener('click', paintColor);
+}
 
 const resetBtn = document.querySelector('#clear-board');
 
