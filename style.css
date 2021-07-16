@@ -7,19 +7,15 @@
 }
 
 .cor1 {
-    background-color:
 }
 
-.cor2 {
-    background-color: 
+.cor2 { 
 }
 
 .cor3 {
-    background-color: 
 }
 
 .cor4 {
-    background-color:
 }
 
 .cor0 {
@@ -36,14 +32,16 @@
     
 }
  div {
-     display: inline-block;  
+     display: inline-block;
+       
  }
 #clear-board {
     display: block;
 }
 
 #color-palette {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 #title {
@@ -71,3 +69,4 @@
   text-align: center;
   color: blue;
 }
+
