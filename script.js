@@ -1,31 +1,65 @@
+let clearButton = document.getElementById("clear-board");
+let sizeButton = document.getElementById('generate-board');
+
 let container = document.getElementById('pixel-board');
 let containerLines = container.children;
 let containerSize = 5;
-let button = document.getElementsByTagName('button')[0];
-
-window.onload = AddColorListeners;
-button.addEventListener('click', ClearAll);
-
-for (let i = 0; i < containerSize; i++)
-{
-    let line = document.createElement('div');
-    container.appendChild(line);
-}
-
-for (let i = 0; i < containerSize; i++)
-{
-    for (let index = 0; index < containerSize; index++) 
-    {
-        let pixel = document.createElement('span');
-        pixel.className = 'pixel border white';
-        containerLines[i].appendChild(pixel);
-        pixel.addEventListener('click', ChangeColor);
-    }
-}
 
 let colorPalette = document.getElementById('color-palette');
 let colorSize = colorPalette.children.length;
 let color = colorPalette.children;
+
+window.onload = Render;
+clearButton.addEventListener('click', ClearAll);
+sizeButton.addEventListener('click', UpdateBoard);
+
+function GenerateBoard(params)
+{
+    for (let i = 0; i < containerSize; i++)
+    {
+        let line = document.createElement('div');
+        container.appendChild(line);
+    }
+    
+    for (let i = 0; i < containerSize; i++)
+    {
+        for (let index = 0; index < containerSize; index++) 
+        {
+            let pixel = document.createElement('span');
+            pixel.className = 'pixel border white';
+            containerLines[i].appendChild(pixel);
+            pixel.addEventListener('click', ChangeColor);
+        }
+    }
+}
+
+function UpdateBoard(params) 
+{
+    containerSize = document.getElementById('board-size').value;
+
+    if (containerSize < 5 || containerSize > 50) 
+    {
+        return;
+    }
+    else (containerSize != Number)
+    {
+        window.alert('Board inválido!');
+    }
+
+    DeleteBoard();
+}
+
+function DeleteBoard(params) 
+{
+    let size = document.getElementById('pixel-board').children.length;
+
+    if (size <= 0 || size == containerSize) return;
+    for (let i = 0; i < size; i++)
+    {
+        container.removeChild(container.firstChild);
+    }
+    GenerateBoard();
+}
 
 function AddColorListeners() 
 {
@@ -76,4 +110,10 @@ function ChangeColorClass(targetList, newColor)
 
     targetList.toggle(targetList[2]);
     targetList.toggle(newColor);
+}
+
+function Render(params) 
+{
+    AddColorListeners();
+    GenerateBoard();    
 }

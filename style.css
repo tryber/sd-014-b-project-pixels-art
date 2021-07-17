@@ -11,6 +11,23 @@ header{
   padding: 15px;
 }
 
+#UI{
+  height: 60px;
+}
+
+#board-size{
+  width: 120px;
+  margin: 15px 0px;
+}
+
+#generate-board{
+  margin-left: 0px;
+}
+
+button{
+  margin: 10px;
+}
+
 #pixel-board{
   display: block;
 }
@@ -22,10 +39,6 @@ div{
 .pixel
 {
   padding: 20px;
-}
-
-button{
-  margin: 10px 77px;
 }
 
 .border{
