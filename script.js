@@ -1,5 +1,5 @@
 // Black as default selected color
-const colorDivs = document.getElementsByClassName('color');
+const colorDivs = document.getElementsByClassName('color'); // <divs> color palette
 colorDivs[0].classList.add('selected');
 
 // Coloring <divs> #1~#4
@@ -13,25 +13,17 @@ function coloringPalette() {
 
 window.onload = coloringPalette();
 
-// naming each color-div:
-const setBlack = document.getElementsByClassName('color')[0];
-const setColor1 = document.getElementsByClassName('color')[1];
-const setColor2 = document.getElementsByClassName('color')[2];
-const setColor3 = document.getElementsByClassName('color')[3];
-
 // Select your color:
 function selectColor(evento) {
-  const colorPalette = document.getElementsByClassName('color'); // <divs> com cores
-  for (let index = 0; index < colorPalette.length; index += 1) {
-    colorPalette[index].classList.remove('selected');
+  for (let index = 0; index < colorDivs.length; index += 1) {
+    colorDivs[index].classList.remove('selected');
   }
   evento.target.classList.add('selected');
 }
 
-setBlack.addEventListener('click', selectColor);
-setColor1.addEventListener('click', selectColor);
-setColor2.addEventListener('click', selectColor);
-setColor3.addEventListener('click', selectColor);
+for (let index = 0; index < colorDivs.length; index += 1) {
+  colorDivs[index].addEventListener('click', selectColor);
+}
 
 // Feature: painting pixels
 let pixels = document.querySelectorAll('.pixel');
@@ -93,7 +85,7 @@ function verifySize() {
 
 boardGenerator.addEventListener('click', verifySize);
 
-// Random color at each load:
+// Random colors:
 function randomPrimaryColor() {
   return Math.floor(Math.random() * 256);
 }
@@ -111,7 +103,7 @@ function randomPalette() {
   }
 }
 
-window.onload = randomPalette();
+/* window.onload = randomPalette(); // Random colors at each window load */
 
 let randomizeColors = document.querySelector('#randomize-palette'); // <button> 'random colors'
 randomizeColors.addEventListener('click', randomPalette);
