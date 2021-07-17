@@ -1,5 +1,17 @@
+* {
+    font-family: 'Amatic SC', cursive;
+/*     font-style: bold;
+    font-weight: 1100; */
+}
+
+body {
+   background-color: rgb(255, 254, 236);
+}
+
 #title {
     text-align: center;
+    font-size: 4em;
+    margin: 0;
 }
 
 #color-palette {
@@ -9,9 +21,12 @@
 }
 
 #color-palette div {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
 }
 
 .black {
@@ -19,7 +34,7 @@
     width: 40px;
     height: 40px;
     border: 1px solid black;
-    display: inline-block;
+/*     display: inline-block; */
     margin: 0 auto;
 }
 
@@ -87,17 +102,20 @@
     background-color: white;
 }
 
-#reset-div {
-    margin-top: 30px;
+#board-setup {
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
     display: flex;
 }
 
-#board-size {
-    margin: 0 20px;
+#board-setup button {
+  font-size: large;
+  margin: 0 20px;
 }
 
-#generate-board {
-    margin: 0 20px;
+#board-setup input {
+  font-size: large;
+  margin: 0 20px;  
+
 }
