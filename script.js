@@ -19,19 +19,48 @@ function selectedPallet(event) {
 
 divColors.addEventListener('click', selectedPallet);
 
+// A função de randomizar cores foi retirada do seguinte site: https://wallacemaxters.com.br/blog/2021/02/20/como-gerar-cores-aleatorias-no-javascript; Publicado em 20/02/2021.
+function gerar_cor1(opacidade = 1) {
+  let r = Math.random() * 255;
+  let g = Math.random() * 255;
+  let b = Math.random() * 255;
+  
+  document.querySelector('.pink').style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${opacidade})`;
+}
+
+function gerar_cor2(opacidade = 1) {
+  let r = Math.random() * 255;
+  let g = Math.random() * 255;
+  let b = Math.random() * 255;
+  
+  document.querySelector('.purple').style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${opacidade})`;
+}
+
+function gerar_cor3(opacidade = 1) {
+  let r = Math.random() * 255;
+  let g = Math.random() * 255;
+  let b = Math.random() * 255;
+  
+  document.querySelector('.skyBlue').style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${opacidade})`;
+}
+
+gerar_cor1();
+gerar_cor2();
+gerar_cor3();
+
 const table = document.querySelector('#pixel-board');
 function copySelectedColor(event) {
   if (colors[0].classList.length === 3) {
     event.target.style.backgroundColor = 'black';
   }
   if (colors[1].classList.length === 3) {
-    event.target.style.backgroundColor = 'rgb(255, 198, 255)';
+    event.target.style.backgroundColor = document.querySelector('.pink').style.backgroundColor;
   }
   if (colors[2].classList.length === 3) {
-    event.target.style.backgroundColor = 'rgb(189, 178, 255)';
+    event.target.style.backgroundColor = document.querySelector('.purple').style.backgroundColor;
   }
   if (colors[3].classList.length === 3) {
-    event.target.style.backgroundColor = 'rgb(155, 246, 255)';
+    event.target.style.backgroundColor = document.querySelector('.skyBlue').style.backgroundColor;
   }
 }
 

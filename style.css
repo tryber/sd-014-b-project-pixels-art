@@ -43,8 +43,7 @@ td {
 }
 
 .backgroundImg {
-  background-image: url(https://cdn.mos.cms.futurecdn.net/sv9Bmvzmrnq8eJMgMZHezA.jpg);
-  background-size: 1700px;
+  background-color: aliceblue;
 }
 
 #principal {
