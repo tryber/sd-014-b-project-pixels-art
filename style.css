@@ -1,0 +1,9 @@
+.color {
+border: 1px;
+width: 100px;
+height: 100px;
+border-color: black;
+border-style: solid;
+display: inline-block;
+margin-left: 25px;
+}
