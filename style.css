@@ -10,17 +10,17 @@
 .pixel{
     border:  1px solid black;
     display: inline-block;
-    padding: 20px;
+    padding: 5px;
     background-color: rgb(255, 255, 255);
-    height: 40px;
-    width: 40px;
+    height: 10px;
+    width: 10px;
 }
 
 /* #pixel-board{
-    max-width: 410px;
-    max-height: 425px;
+    width: auto; 
+    margin: auto;
     
-}  */
+} */
 #clear-board{
     margin-bottom: 20px;
 }
