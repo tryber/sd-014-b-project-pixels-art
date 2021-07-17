@@ -21,7 +21,6 @@ div{
 
 .pixel
 {
-  background-color: white;
   padding: 20px;
 }
 
@@ -29,18 +28,22 @@ div{
   border: 1px solid black;
 }
 
-#black {
+#black, .black {
   background-color: black;
 }
 
-#green {
+#green, .green {
   background-color: green;
 }
 
-#yellow {
-  background-color: yellow;
+#red, .red {
+  background-color: red;
 }
 
-#blue {
+#blue, .blue {
   background-color: blue;
+}
+
+#white, .white {
+  background-color: white;
 }

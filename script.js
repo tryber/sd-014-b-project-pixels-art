@@ -15,8 +15,9 @@ for (let i = 0; i < containerSize; i++)
     for (let index = 0; index < containerSize; index++) 
     {
         let pixel = document.createElement('span');
-        pixel.className = 'pixel border';
+        pixel.className = 'pixel border white';
         containerLines[i].appendChild(pixel);
+        pixel.addEventListener('click', ChangeColor);
     }
 }
 
@@ -28,7 +29,6 @@ function AddColorListeners()
 {
     for (let i = 0; i < colorSize; i++)
     {
-        console.log(color[i]);
         color[i].addEventListener('click', ChangeSelect);
     }    
 }
@@ -48,4 +48,17 @@ function ChangeSelect(param)
 
         color[i].classList.remove('selected')
     }
+}
+
+function ChangeColor(params) 
+{
+    let color = document.querySelector('.selected').id;
+    let paramsClass = params.target.classList;
+
+    if (paramsClass.contains(color)) return
+
+    paramsClass.toggle(paramsClass[2]);
+    paramsClass.toggle(color);
+
+    console.log(color);
 }
