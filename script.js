@@ -49,7 +49,12 @@ clearButton.addEventListener('click', clearBoard);
 const takeInput = document.querySelector('#board-size');
 const takeGenerateButton = document.querySelector('#generate-board');
 function createBoard() {
-  if (takeInput.value === '') {
+if (takeInput.value < 5 && takeInput.value > 0) {
+  takeInput.value = 5;
+} else if (takeInput.value > 50) {
+  takeInput.value = 50;
+}
+if (takeInput.value === '') {
     window.alert('Board inválido!');
   } else {
     for (let index = table.children.length - 1; index >= 0; index -= 1) {
