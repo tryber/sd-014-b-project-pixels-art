@@ -83,36 +83,34 @@ function createPixelBoard() {
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
-const boardSize = document.getElementById('board-size').value;
 function generatePixelBoard() {
-const boardSize = document.getElementById('board-size');
-  // Atribuir à constante o elemento input com id 'board-size'
+  const boardSize = document.getElementById('board-size').value; // Atribuir à constante o elemento input com id 'board-size'
   // const size = boardSize.value;
-  let pixelBoard = document.querySelector('#pixel-board');
+  const pixelBoard = document.getElementById('pixel-board');
   pixelBoard.innerHTML = ''; // 'Zerar' elemento do board antes de popular com os pixels
   let aux = boardSize;
-  if (aux < 5) { aux = 5;}; // Requisito 11 - Valor menor que 5, considerar 5 como padrão
-  if (aux > 50) { aux = 50;}; // Requisito 11 - Valor maior que 50, considerar 50 como padrão
-  // Abaixo: duplo loop para percorrer colunas (2o loop) em cada linha da tabela (1o loop)
+  if (aux < 5) { aux = 5; } // Requisito 11 - Valor menor que 5, considerar 5 como padrão
+  if (aux > 50) { aux = 50; } // Requisito 11 - Valor maior que 50, considerar 50 como padrão
   for (let i = 0; i < aux; i += 1) { // Loop de rows, linhas, da tabela
     const pixelRow = document.createElement('tr'); // Criar e atribuir elemento 'table row' à constante pixelRow
+    pixelRow.className = 'pixel-rows';
     document.getElementById('pixel-board').appendChild(pixelRow); // Append do 'table-row' ao pixel-board
-    for (let j = 0; j < boardSize; j += 1) { //  Loop de colunas da tabela
+    for (let j = 0; j < aux; j += 1) { //  Loop de colunas da tabela
       const pixel = document.createElement('td'); // Criar e atribuir elemento 'td'(table cell) à constante pixel
       pixel.className = 'pixel';
-      document.querySelector('tr')[i].appendChild(pixel); // Append do pixel à 'table row' de índice 'i'
+      document.querySelectorAll('.pixel-rows')[i].appendChild(pixel); // Append do pixel à 'table row' de índice 'i'
     }
   }
 }
 
 function createPixelBoard() {
-  if (document.querySelector('#generate-board').length === 0) { // Input vazio
+  if (document.getElementById('board-size').value === '') { // Input vazio
     alert('Board inválido!');
   }
   generatePixelBoard();
 }
 
-const generateBoard = document.querySelector('#generate-board'); // Atribuir à constante o botão com id 'generate-board'
+const generateBoard = document.getElementById('generate-board'); // Atribuir à constante o botão com id 'generate-board'
 generateBoard.addEventListener('click', createPixelBoard);
 
 // 12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página.
