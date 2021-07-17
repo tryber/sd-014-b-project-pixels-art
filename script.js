@@ -1,11 +1,10 @@
-let blackColor = document.querySelector('.black');
+const blackColor = document.querySelector('.black');
 window.addEventListener('load', function() {
   blackColor.classList.add('selected');
-})
+});
 
-let colors = document.querySelectorAll('.color');
-let divColors = document.body.children[0].children[1];
-let selectColor = document.querySelector('.selected');
+const colors = document.querySelectorAll('.color');
+const divColors = document.body.children[0].children[1];
 
 function selectedPallet(event) {
   for (let index = 0; index < colors.length; index += 1) {
@@ -20,7 +19,7 @@ function selectedPallet(event) {
 
 divColors.addEventListener('click', selectedPallet);
 
-let table = document.querySelector('#pixel-board');
+const table = document.querySelector('#pixel-board');
 function copySelectedColor(event) {
   if (colors[0].classList.length === 3) {
     event.target.style.backgroundColor = 'black';
@@ -38,12 +37,31 @@ function copySelectedColor(event) {
 
 table.addEventListener('click', copySelectedColor);
 
-let clearButton = document.querySelector('#clear-board');
-let cells = document.querySelectorAll('td');
-function clearBoard () {
-  for (let index = 0; index < cells.length; index += 1) {
-    cells[index].style.backgroundColor = 'white';
+const clearButton = document.querySelector('#clear-board');
+function clearBoard() {
+  for (let index = 0; index < document.querySelectorAll('.pixel').length; index += 1) {
+    document.querySelectorAll('.pixel')[index].style.backgroundColor = 'white';
   }
 }
 
 clearButton.addEventListener('click', clearBoard);
+
+const takeInput = document.querySelector('#board-size');
+const takeGenerateButton = document.querySelector('#generate-board');
+function createBoard() {
+  if (takeInput.value === '') {
+    window.alert('Board inválido!');
+  } else {
+    for (let index = table.children.length - 1; index >= 0; index -= 1) {
+      table.children[index].remove();
+    }
+    for (let index = 0; index < takeInput.value; index += 1) {
+      const trs = table.appendChild(document.createElement('tr'));
+      for (let index2 = 0; index2 < takeInput.value; index2 += 1) {
+        trs.appendChild(document.createElement('td')).className = 'pixel';
+      }
+    }
+  }
+}
+
+takeGenerateButton.addEventListener('click', createBoard);

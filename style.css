@@ -32,21 +32,13 @@ td {
   background-color: rgb(155, 246, 255);
 }
 
-button {
-  padding: 15px;
-  background-color: rgb(247, 241, 247);
-  border-radius: 50%;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 15px;
-}
-
 .center {
   text-align: center;
 }
 
 #pixel-board {
-  height: 233px;
-  width: 233px;
+  height: auto;
+  width: auto;
   background-color: black;
 }
 
@@ -56,9 +48,5 @@ button {
 }
 
 #principal {
-  padding: 50px;
-  border: 1px solid black;
-  width: 250px;
-  margin-left: 40%;
-  margin-top: 5%;
+  text-align: center;
 }

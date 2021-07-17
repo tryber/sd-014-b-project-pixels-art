@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body class="backgroundImg">
-  <div id="principal" class="center">
+  <div id="principal" class="flex-div">
     <header class="center">
       <h1 id="title">Paleta de Cores</h1>
     </header>
@@ -23,11 +23,13 @@
     </div>
     <br>
     <div class="center">
+      <input type="number" id="board-size" min="1" max="50">
+      <button id="generate-board">VQV</button>
       <button id="clear-board">Limpar</button>
     </div>
     <br>
-    <div class="center">
-      <table id="pixel-board">
+    <div>
+      <table id="pixel-board" class="flex">
         <tr>
           <td class="pixel"></td>
           <td class="pixel"></td>
@@ -65,6 +67,8 @@
         </tr>
       </table>
     </div>
+    <br>
+    
     <script src="script.js"></script>
   </div>
 </body>
