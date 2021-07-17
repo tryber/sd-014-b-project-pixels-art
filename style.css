@@ -1,0 +1,46 @@
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: black solid 1px;
+  background-color: white;
+  display: inline-block; /* Referência: https://www.w3schools.com/css/css_inline-block.asp */
+}
+
+#pixel-board {
+  border: 1px solid black;
+  margin: auto;
+  margin-block-end: 50px;
+  margin-block-start: 50px;
+  border-collapse: collapse;
+}
+
+.color{
+  border: 1px solid black;
+}
+
+#color-palette {
+  border: 1px solid black;
+  width: 100%;
+  border-collapse: collapse;
+  width:160px;
+  height:40px;
+  margin: auto;
+  margin-block-end: 50px;
+  margin-block-start: 50px;
+}
+
+button {
+  background-color: whitesmoke;
+  border-color: black;
+  border-radius: 4px;
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  cursor: pointer; /* Altera cursor para a "mãozinha" */
+}
+
+#board-size {
+  margin-right: 10px;
+  width: 120px;
+  height: 20px;
+}
