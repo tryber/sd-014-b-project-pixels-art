@@ -6,6 +6,20 @@ const clearButton = document.getElementById('clear-board');
 const generateButton = document.getElementById('generate-board');
 const pixelBoard = document.getElementById('pixel-board');
 
+// window.onload = function() {
+//     let cores = ["#540D6E","#EE4266","#FFD23F","#3BCEAC","#0EAD69"];
+    
+//     for (let cont=0; cont < 3; cont+=1){
+//     //  cores[cont] = Math.floor(Math.random() * 10);
+//        secondDiv.style.backgroundColor = cores[cont]
+//        thirdDiv.style.backgroundColor = cores[cont+Math.floor(Math.random() * 10)]
+//        fourthDiv.style.backgroundColor = cores[cont+Math.floor(Math.random() * 10)]
+//        //    secondDiv.style.backgroundColor = "rgb("+cores[cont]+","+ cores[cont]+","+cores[cont]+")"
+//     //    thirdDiv.style.backgroundColor = "rgb("+cores[cont]+","+ cores[cont]+","+cores[cont]+")"
+//     //    fourthDiv.style.backgroundColor = "rgb("+cores[cont]+","+ cores[cont]+","+cores[cont]+")"
+//     }
+   
+//   };
 
 function selectColor(event){
     let color = document.querySelector('.selected');

@@ -1,36 +1,32 @@
 #title {
-    color: black;
+    font-family: 'Press Start 2P', cursive;
+    color:  #1B1B1E;
     text-align: center;
 }
-
 
 body {
-    text-align: center;
-    background-color: #3a86ff;
-    /* background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5b26f629-d2a7-4f81-8d77-bc8b9dbbc64c/ddqf93w-796508f5-f0d2-4f6a-8337-5d6ba1249426.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzViMjZmNjI5LWQyYTctNGY4MS04ZDc3LWJjOGI5ZGJiYzY0Y1wvZGRxZjkzdy03OTY1MDhmNS1mMGQyLTRmNmEtODMzNy01ZDZiYTEyNDk0MjYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yeHk1Z05qtckgMdmA0WOuYkBOi0S8El0fYBaIHLAiS4");
-    background-size: 1920px 1080px; */
+    background-color: #6D676E;
+    background-image: url("https://p4.wallpaperbetter.com/wallpaper/877/196/900/mountains-pixel-art-wallpaper-preview.jpg");
+    background-size: cover;
     
 }
-.color-palette{
-    width: 220px;
-    align-items: center;
-    margin: 10px;
-    padding: 10px;
-    
-    
-     
+#color-palette{
+    display: flex;
+    justify-content: center;
 }
 
+.input-container {
+    display: flex;
+    justify-content: center;
 
+}
 .color {
     border: 1px solid black;
-    display: inline-block;
+    padding: 24px;
+    /* border-radius: 10%; */
+    /* display: inline-block; */
     
 }
-
-/* .selected { */
-/* transform: translateY(-5px); */
-/* }  */
 
 .pixel {
     width: 40px;
@@ -38,10 +34,12 @@ body {
     display: inline-block;
     border: 1px solid black;
     background-color: white;
+    /* margin: 1px; */
    
 }
 #pixel-board {
     margin: 20px;
+    text-align: center;
 }
 
 #clear-board {
@@ -56,23 +54,17 @@ body {
 
 #blue {
     background-color: blue;
-    padding: 16px;
-    border-radius: 10%;
+
 }
 #red {
     background-color: red;
-    padding: 16px;
-    border-radius: 10%;
+    
 
 }
-#yellow {
+#yellow{
     background-color: yellow;
-    padding: 16px;
-    border-radius: 10%;
-
+    
 }
 #black {
     background-color: black;
-    padding: 16px;
-    border-radius: 10%;
 }
