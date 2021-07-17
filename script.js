@@ -1,8 +1,10 @@
 let container = document.getElementById('pixel-board');
 let containerLines = container.children;
 let containerSize = 5;
+let button = document.getElementsByTagName('button')[0];
 
 window.onload = AddColorListeners;
+button.addEventListener('click', ClearAll);
 
 for (let i = 0; i < containerSize; i++)
 {
@@ -53,12 +55,25 @@ function ChangeSelect(param)
 function ChangeColor(params) 
 {
     let color = document.querySelector('.selected').id;
-    let paramsClass = params.target.classList;
+    let paramsClassList = params.target.classList;
+    ChangeColorClass(paramsClassList, color);
+}
 
-    if (paramsClass.contains(color)) return
+function ClearAll(params) 
+{
+    let pixels = document.getElementsByClassName('pixel');
+    let pixelsLenght = pixels.length;
+    
+    for (let i = 0; i < pixelsLenght; i++)
+    {
+        ChangeColorClass(pixels[i].classList, 'white');
+    }
+}
 
-    paramsClass.toggle(paramsClass[2]);
-    paramsClass.toggle(color);
+function ChangeColorClass(targetList, newColor) 
+{
+    if (targetList.contains(newColor)) return;
 
-    console.log(color);
+    targetList.toggle(targetList[2]);
+    targetList.toggle(newColor);
 }
