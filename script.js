@@ -8,5 +8,6 @@ getRed.style.background = "red";
 getGreen.style.background = "green";
 getYellow.style.background = "yellow";
 
+getBlack.classList.add("selected");
 
 
