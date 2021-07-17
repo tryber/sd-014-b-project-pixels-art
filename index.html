@@ -10,41 +10,17 @@
     </head>
   <body>
     <h1 id="title">Paleta de Cores</h1>
-    <div id="color-palette">
-      <div class="color selected" id="black"></div>
-      <div class="color" id="orange"></div>
-      <div class="color" id="yellow"></div>
-      <div class="color" id="red"></div>
-    </div>
-    <section id="pixel-board">
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-  </section>
+    <table id="color-palette">
+      <td class="color"></td>
+      <td class="color"></td>
+      <td class="color"></td>
+      <td class="color"></td>
+    </table>
+    <label for="board-size">Tamanho da grade: </label><br>
+    <input type="number" id="board-size" placeholder="Digite um número entre 5 e 50" min="1">
+    <button id="generate-board">VQV</button><br>
     <button id="clear-board">Limpar</button>
-    <section id="pixel-board"></section>
+    <table id="pixel-board"></table>
     <script src="script.js"></script>
   </body>
 </html>
