@@ -10,4 +10,9 @@
 
 .pixel {
   background-color: white;
+  border: 1px;
+  width: 40px;
+  height: 40px;
+  border-color: black;
+  border-style: solid;
 }
