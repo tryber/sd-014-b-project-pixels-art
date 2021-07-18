@@ -35,3 +35,5 @@ function clear() {
   }
 }
 botao.addEventListener('click', clear);
+
+// deixando o quadro com o tamanho escolhido

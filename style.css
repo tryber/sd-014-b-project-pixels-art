@@ -48,8 +48,8 @@ button {
 .header {
   display: flex;
   justify-content: center;
-  padding: 1em;
-  background-color: rgb(182, 248, 248);
+  padding: 0.5em;
+  background-color: rgba(221, 255, 255, 0.363);
 }
 
 h1 {
@@ -72,18 +72,16 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  
+  width: 100%;  
 }
 
 .container {
-  
   margin: 0.1em auto;
-  padding: 0.4em;
+  padding: 0.2em;
 }
 
 body {
-  background-image: url(https://cdn.pixabay.com/photo/2018/02/04/09/09/brushes-3129361__340.jpg);
+  background-image: url(https://media.istockphoto.com/vectors/sky-pixel-background-gradient-seamless-pattern-retro-8bit-game-vector-id1273917373?k=6&m=1273917373&s=612x612&w=0&h=uqkfwVWM26IbzH9eE0zHr_TSFcJSQjoM6vMM5CWTS84=);
   background-size: cover;
 }
 
