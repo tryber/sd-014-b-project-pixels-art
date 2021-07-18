@@ -1,0 +1,70 @@
+#title {
+    font-family: 'Press Start 2P', cursive;
+    color:  #1B1B1E;
+    text-align: center;
+}
+
+body {
+    background-color: #6D676E;
+    background-image: url("https://p4.wallpaperbetter.com/wallpaper/877/196/900/mountains-pixel-art-wallpaper-preview.jpg");
+    background-size: cover;
+    
+}
+#color-palette{
+    display: flex;
+    justify-content: center;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+
+}
+.color {
+    border: 1px solid black;
+    padding: 25px;
+    /* border-radius: 10%; */
+    /* display: inline-block; */
+    
+}
+
+.pixel {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid black;
+    background-color: white;
+    /* margin: 1px; */
+   
+}
+#pixel-board {
+    margin: 20px;
+    text-align: center;
+}
+
+#clear-board {
+    padding: 10px;
+    
+}
+
+#generate-board {
+    padding: 10px;
+    
+}
+
+#blue {
+    background-color: blue;
+
+}
+#red {
+    background-color: red;
+    
+
+}
+#yellow{
+    background-color: yellow;
+    
+}
+#black {
+    background-color: black;
+}
