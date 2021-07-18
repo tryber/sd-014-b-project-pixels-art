@@ -1,7 +1,8 @@
 window.onload = function colorsPalet(){
-    let board = document.getElementById('pixel-board');
-    let clearButton = document.getElementById('clear-board');
-    let generateBoardButton = document.getElementById("generate-board");
+    const board = document.getElementById('pixel-board');
+    const clearButton = document.getElementById('clear-board');
+    const generateBoardButton = document.getElementById("generate-board");
+    let clicado = false;
 
 function generatePalet(){     
     let palet = document.getElementById('color-palette'); 
@@ -23,26 +24,28 @@ function generatePalet(){
 }    
 
 function generateFirstBoard(){
-    for(index = 1; index <= 25; index += 1){
-        let line = document.createElement('div');
-        line.className = "pixel";
-        board.appendChild(line);
-        board.style.maxWidth = '410px';
-        board.style.maxHeight = '425px';
-        } 
+    boardForInputNumber(5);
 }    
 
-function boardForInputNumber(input){
-    for(index = 1; index <= input * input; index += 1){
-        let board = document.getElementById('pixel-board');
-        let line = document.createElement('div');
-        line.className = "pixel";
-        board.appendChild(line);
-        board.addEventListener('click', paintingBoard);
-        board.style.maxWidth = '410px';
-        board.style.maxHeight = '425px';
-    }
-}
+
+
+ function boardForInputNumber(input){
+        for(indexColumn = 1; indexColumn  <= input; indexColumn  += 1){
+            const board = document.getElementById('pixel-board');
+            let column = document.createElement('div');
+            board.appendChild(column);
+            column.className = 'col';
+            column.addEventListener('mousedown', paintingBoard);
+            for(indexRow = 1; indexRow <= input; indexRow += 1){
+                let row = document.createElement('div');
+                row.className = "pixel";
+                column.appendChild(row);
+                board.addEventListener('click', paintingBoard);
+            }   
+        }   
+} 
+ 
+
 function deleteBoard(){
     let deleteBoard = document.querySelector('main');
     let aBoard = document.getElementById('pixel-board');  
@@ -100,9 +103,22 @@ function selectColor(){
 }     
 function paintingBoard(event){        
     let colorSelected = document.querySelector('.selected');
-    event.target.style.backgroundColor = colorSelected.id;        
-        
-    }
+    event.target.style.backgroundColor = colorSelected.id; 
+     clicado = true;   
+ /*    let pix = document.querySelectorAll('.pixel');
+    for(let key of pix){
+    key.addEventListener('mouseup', function () {
+        clicado = false;
+      });
+      key.addEventListener('mouseover', function () {
+        if (clicado) {
+          key.backgroundColor = 'yellow';
+        }
+      }); 
+                
+    } */
+}    
+    
 
 function clearBoard(){
     let boardItems = document.querySelectorAll('.pixel');
@@ -113,13 +129,12 @@ function clearBoard(){
     }
 }       
 
-board.addEventListener('click', paintingBoard);
+
+/* board.addEventListener('mousedown', paintingBoard); */
 clearButton.addEventListener('click', clearBoard);        
 generateBoardButton.addEventListener('click', generateBoard);
 generateFirstBoard();
 generatePalet();    
 selectColor();
-
-
 
 }
