@@ -1,33 +1,33 @@
-.color{
+.color {
   width: 80px;
   height: 80px;
   border: 1px solid black;
   display: inline-block;
 }
 
-#pixel-board{
+#pixel-board {
   border: 1px solid black;
   width: 230px;
-  height: 246px
+  height: 246px;
 }
 
-#first-color{
+#first-color {
   background-color: black;
 }
 
-#second-color{
-  background-color: #AB4E68;
+#second-color {
+  background-color: #ab4e68;
 }
 
-#third-color{
+#third-color {
   background-color: #533745;
 }
 
-#fourth-color{
-  background-color: #9D9171;
+#fourth-color {
+  background-color: #9d9171;
 }
 
-.pixel{
+.pixel {
   border: 1px solid black;
   height: 40px;
   width: 40px;
