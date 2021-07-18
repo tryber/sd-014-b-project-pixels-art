@@ -1,7 +1,8 @@
 * {
     font-family: 'Amatic SC', cursive;
 /*     font-style: bold;
-    font-weight: 1100; */
+    font-weight: 1100;
+    font-style: bold; */
 }
 
 body {
@@ -12,6 +13,7 @@ body {
     text-align: center;
     font-size: 4em;
     margin: 0;
+    text-shadow: 2px 2px grey;
 }
 
 #color-palette {
@@ -65,9 +67,9 @@ body {
 }
 
 #clear-board {
-/*     display: flex;
-    position: center; */
     margin: 0 20px;
+    color: black;
+    text-shadow: 1px 1px grey;
 }
 
 #canvas {
@@ -117,4 +119,16 @@ body {
   font-size: large;
   margin: 0 20px;  
 
+}
+
+#randomize-palette {
+    text-shadow: 1px 1px grey;
+}
+
+#generate-board {
+    text-shadow: 1px 1px grey;
+}
+
+#board-size {
+    text-shadow: 1px 1px grey;
 }
