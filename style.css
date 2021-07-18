@@ -1,5 +1,6 @@
 header {
   height: 50px;
+  width: auto;
 }
 
 #color-palette {
@@ -9,7 +10,8 @@ header {
 
 .color {
   margin: 10px;
-  padding: 15px;
+  height: 30px;
+  width: 30px;
 }
 
 #UI {
@@ -18,11 +20,15 @@ header {
 
 #board-size {
   width: 120px;
+<<<<<<< HEAD
   margin: 15px 0px;
 }
 
 #generate-board {
   margin-left: 0px;
+=======
+  margin: 15px;
+>>>>>>> add lint:styles fixes
 }
 
 button {
@@ -38,7 +44,12 @@ div {
 }
 
 .pixel {
+<<<<<<< HEAD
   padding: 20px;
+=======
+  width: 40px;
+  height: 40px;
+>>>>>>> add lint:styles fixes
 }
 
 .border {
