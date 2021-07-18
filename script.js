@@ -1,8 +1,8 @@
 const palette = document.querySelectorAll('.color');
-const black = document.querySelector('.black');
-const red = document.querySelector('.red');
-const orange = document.querySelector('.orange');
-const teal = document.querySelector('.teal');
+const black = document.querySelector('#black');
+const red = document.querySelector('#red');
+const orange = document.querySelector('#orange');
+const teal = document.querySelector('#teal');
 const mosaic = document.querySelector('#pixel-board');
 const btnContainer = document.querySelector('#button-container');
 let selected = document.querySelector('.selected');
@@ -23,7 +23,7 @@ function takeColor(event) {
 }
 
 function paintBox(event) {
-  event.target.style.backgroundColor = document.querySelector('.selected').id;
+  event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
 
 function clearBoard() {
@@ -72,6 +72,13 @@ function createInteractibleBoard(){
         }
     }
 }
+
+function createRandomColors(){
+    red.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    orange.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    teal.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+}
+createRandomColors();
 
 black.addEventListener('click', takeColor);
 red.addEventListener('click', takeColor);
