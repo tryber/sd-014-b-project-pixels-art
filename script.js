@@ -37,14 +37,20 @@ function UpdateBoard(params)
 {
     containerSize = document.getElementById('board-size').value;
 
-    if (containerSize < 5 || containerSize > 50) 
+    if (containerSize < 5 || containerSize > 50)
     {
-        return;
+        containerSize = (containerSize < 5)?5:50;
     }
-    else (containerSize != Number)
-    {
-        window.alert('Board inválido!');
-    }
+
+    //todo
+    // #11 - don't know exactly what it whants and what is means
+    // thus i can't proceed
+
+    // if (containerSize != Number)
+    // {
+    //     window.alert('board invalido!');
+    //     return;
+    // }
 
     DeleteBoard();
 }
