@@ -23,8 +23,8 @@ getColor[i].addEventListener('click',function(){
 }
 
 let getPixel = document.getElementsByClassName("pixel");
-for(i = 0; i < getPixel.length; i += 1) {
-    getPixel[i].style.backgroundColor = "white";
+for (i3 = 0; i3 < getPixel.length; i3 +=1) {
+    getPixel[i3].style.backgroundColor = "white";
 }
 
 for (i = 0; i < getPixel.length; i += 1) {
@@ -37,3 +37,10 @@ for (i = 0; i < getPixel.length; i += 1) {
         }
     })
 }
+
+let botao = document.querySelector("#clear-board");
+botao.addEventListener('click',function(){
+    for (i = 0; i < getPixel.length; i += 1) {
+        getPixel[i].style.backgroundColor = "white";
+    }
+})
