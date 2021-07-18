@@ -10,6 +10,7 @@ getYellow.style.background = "yellow";
 
 getBlack.classList.add("selected");
 
+
 let getColor = document.getElementsByClassName("color");
 
 for (i = 0; i < getColor.length; i += 1) {
@@ -18,5 +19,21 @@ getColor[i].addEventListener('click',function(){
         getColor[i2].classList.remove('selected');
     }
     event.target.classList.add('selected');
+    })
+}
+
+let getPixel = document.getElementsByClassName("pixel");
+for(i = 0; i < getPixel.length; i += 1) {
+    getPixel[i].style.backgroundColor = "white";
+}
+
+for (i = 0; i < getPixel.length; i += 1) {
+    getPixel[i].addEventListener('click',function(){
+        for (i2 = 0; i2 < getPixel.length; i2 += 1) {
+            let pinturinha = document.querySelector('.selected');
+            if (getPixel[i].style.backgroundColor !== pinturinha.style.backgroundColor) {
+                event.target.style.backgroundColor = pinturinha.style.backgroundColor;
+            }
+        }
     })
 }
