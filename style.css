@@ -32,3 +32,12 @@ body {
     font-weight: normal;
     font-style: normal;
   }
+
+  #clear-board {
+ padding: 10px;
+ text-align: center;
+ margint-top: 10px;
+ margin-bottom: 10px;
+ margin-left: 150px;
+  }
+  

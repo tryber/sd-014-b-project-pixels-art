@@ -12,9 +12,15 @@ function paintPixel(clickEvent) {
     const colorSelected = document.querySelector('.selected').getAttribute('style');
     clickEvent.target.style = colorSelected;
 }
-const pixel = document.querySelectorAll('.pixel');
-for (let index = 0; index < pixel.length; index += 1) {
-    pixel[index].addEventListener('click', paintPixel);
+const pixels = document.querySelectorAll('.pixel');
+for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', paintPixel);
 }
+// Referências: https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute e https://developer.mozilla.org/en-US/docs/Web/API/Event/target
 
-  
+function clearBoard() {
+    const pixels = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixels.length; index += 1) {
+        pixels[index].style.backgroundColor = 'white';
+}
+}
