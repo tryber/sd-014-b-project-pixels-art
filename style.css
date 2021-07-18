@@ -18,6 +18,7 @@
   height: 40px;
   border: 1px solid black;
   display: inline-block;
+  
 }
 
 .fundo-branco {
@@ -42,4 +43,50 @@
 
 button {
   margin: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  background-color: rgb(182, 248, 248);
+}
+
+h1 {
+  font-family: fantasy;
+  font-weight: 900;
+  font-size: 3em;
+  text-shadow: 1px 1px 2px blue;
+  color: pink;
+}
+
+.instruction {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 600;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+.container {
+  
+  margin: 0.1em auto;
+  padding: 0.4em;
+}
+
+body {
+  background-image: url(https://cdn.pixabay.com/photo/2018/02/04/09/09/brushes-3129361__340.jpg);
+  background-size: cover;
+}
+
+table {
+  border-collapse: collapse;
 }

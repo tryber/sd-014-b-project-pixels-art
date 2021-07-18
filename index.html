@@ -10,54 +10,70 @@
 </head>
 
 <body>
-  <h1 id="title">Paleta de Cores</h1>
+  <header class="header">
+    <h1 id="title">Paleta de Cores</h1>
+  </header>
+  <main class="main">
+    <p class="container instruction"><em>Click nas cores abaixo para selecinar e solte a criatividade com PixelsArt! </em></p>
+    <section id="color-palette" class="container">
+      <div class="color selected" id="black" style="background-color: black;"></div>
+      <div class="color" id="pink"></div>
+      <div class="color" id="green"></div>
+      <div class="color" id="purple"></div>
+    </section>
+    <p class="container instruction">Defina o tamaho de sua tela!!! quanto mais pixels mais criativo será!</p>
+    <section id="buttom-box" class="container">
+      <button id="clear-board">Limpar</button>
+      <input id="board-size" type="number" min="5" max="50" value="5">
+      <button id="generate-board" type="submit">VQV</button>
+    </section>
 
-  <section id="color-palette">
-    <div class="color selected" id="black" style="background-color: black;"></div>
-    <div class="color" id="pink"></div>
-    <div class="color" id="green"></div>
-    <div class="color" id="purple"></div>
-  </section>
+    <section id="pixel-board" class="container">
 
-  <section id="buttom-box">
-    <button id="clear-board">Limpar</button>
-    <input id="board-size" type="number" min="5" max="50" value="5">
-    <button id="generate-board" type="submit">VQV</button>
-  </section>
-
-  <section id="pixel-board">
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <br>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <br>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <br>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <br>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <br>
-
-  </section>
+      <table>
+        <tr>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+        </tr>
+        <tr>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+        </tr>
+        <tr>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+        </tr>
+        <tr>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+        </tr>
+        <tr>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+        </tr>
+      </table>
+           
+      
+     
+      
+    </section>
+  
+  </main>
 
 
 
