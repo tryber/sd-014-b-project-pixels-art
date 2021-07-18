@@ -6,20 +6,26 @@ const clearButton = document.getElementById('clear-board');
 const generateButton = document.getElementById('generate-board');
 const pixelBoard = document.getElementById('pixel-board');
 
-// window.onload = function() {
-//     let cores = ["#540D6E","#EE4266","#FFD23F","#3BCEAC","#0EAD69"];
-    
-//     for (let cont=0; cont < 3; cont+=1){
-//     //  cores[cont] = Math.floor(Math.random() * 10);
-//        secondDiv.style.backgroundColor = cores[cont]
-//        thirdDiv.style.backgroundColor = cores[cont+Math.floor(Math.random() * 10)]
-//        fourthDiv.style.backgroundColor = cores[cont+Math.floor(Math.random() * 10)]
-//        //    secondDiv.style.backgroundColor = "rgb("+cores[cont]+","+ cores[cont]+","+cores[cont]+")"
-//     //    thirdDiv.style.backgroundColor = "rgb("+cores[cont]+","+ cores[cont]+","+cores[cont]+")"
-//     //    fourthDiv.style.backgroundColor = "rgb("+cores[cont]+","+ cores[cont]+","+cores[cont]+")"
-//     }
+window.onload = function() {
+    //Para fazer o requisito 12 utilizei uma function deste site, para gerar as coreas aleatorias.
+    //https://wallacemaxters.com.br/blog/2021/02/20/como-gerar-cores-aleatorias-no-javascript
+    function gerar_cor(opacidade = 1) {
+
+        let r = (Math.random() * 255);
+     
+        let g = (Math.random() * 255);
+     
+        let b = (Math.random() * 255);
+     
+        return `rgba(${r}, ${g}, ${b}, ${opacidade})`;
+     
+     }
+     document.querySelector("#black").style.backgroundColor = "black";
+     document.querySelector("#blue").style.backgroundColor = gerar_cor();
+     document.querySelector("#yellow").style.backgroundColor = gerar_cor();
+     document.querySelector("#red").style.backgroundColor = gerar_cor();
    
-//   };
+  };
 
 function selectColor(event){
     let color = document.querySelector('.selected');
@@ -36,7 +42,7 @@ fourthDiv.addEventListener("click",selectColor)
 function printColor(event){
     let box = document.querySelector('.selected')
         
-    event.target.style.backgroundColor = box.id;
+    event.target.style.backgroundColor = box.style.backgroundColor;
 }
 
 function resetColor(){
