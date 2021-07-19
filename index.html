@@ -11,10 +11,20 @@
         <!-- Tabela de 1 linha e 4 colunas criado dinamicamente no javascript -->
     </div>
 
+    <div id='teste'>
+        <button id='clear-board'>Limpar quadro</button>
+        <div>
+            <input type='number' id='board-size' min='1' max='50'>
+            <button id='generate-board'>VQV</button> 
+        </div>  
+    </div>
+
     <div class='quadro-pixel'>
 
     </div>
 
+   
+    
     <script>
 
                    
@@ -86,6 +96,54 @@
 
             }
 
+            let addButtonInp = document.getElementById('generate-board');
+
+            addButtonInp.addEventListener('click', changeSize);
+
+            function changeSize () {
+                let addInput = document.getElementById('board-size').value;
+                
+
+                if (addInput === '') {
+                    alert('Board inválido!')
+                }
+
+                if (addInput > 50) {
+                    addInput = 50;
+                }
+
+                let difColumn = addInput - 5;
+
+                let addressTr = document.getElementsByTagName('tr');
+                
+                for (let j = 1 ; j < 6 ; j += 1) {
+
+
+                for (let i = 0 ; i < difColumn ; i += 1) {
+                    let createTd = document.createElement('td');
+                        createTd.className = 'pixel';
+                        addressTr[j].appendChild(createTd);
+                }
+            }
+
+                for (let i = 5; i < addInput ; i+= 1) {
+                    let createTr = document.createElement('tr');
+
+                    addressTable.appendChild(createTr);
+
+                    for (let j = 0 ; j < addInput ; j += 1) {
+                        let createTd = document.createElement('td');
+                        createTd.className = 'pixel';
+                        createTr.appendChild(createTd);
+                    }
+
+                }
+            }
+
+
+
+
+
             let addressPalet = document.getElementById('color-palette');
             for (let i = 0 ; i < 1 ; i += 1) {
                 for (let j = 0 ; j < 4 ; j += 1) {
@@ -136,16 +194,22 @@
                 getBlackColor.className = 'color selected';
             }
 
+            let addButton = document.getElementById('clear-board');
+
+            addButton.addEventListener('click', clearBoard);
+
+
+            function clearBoard () {
+                let addPixels = document.querySelectorAll('.pixel');
+
+                for (let i = 0 ; i < addPixels.length ; i+= 1) {
+                    addPixels[i].style.backgroundColor = 'white';
+                }
+
+
+            }
+
             window.onload = printBlackInitial
-
-            
-
-            
-
-            
-
-            
-
 
 
     </script>
