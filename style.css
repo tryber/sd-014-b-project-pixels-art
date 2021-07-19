@@ -1,0 +1,63 @@
+#title {
+  font-family: monospace;
+  color: forestgreen;
+}
+
+body {
+  background-color: gainsboro;
+  text-align: center;
+  background-image: url(pixelArt.png);
+  background-position: 1300px 635px;
+}
+
+#color-palette {
+  padding: 10px;
+  display: flexbox;
+}
+
+.color {
+  border: black solid 1px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+
+#pixel-board {
+  display: table;
+  border-spacing: unset;
+  margin: 0 auto;
+}
+
+.pixel {
+  display: table-cell;
+  background-color: white;
+  border: black solid 1px;
+  width: 40px;
+  height: 40px;
+}
+
+#clear-board {
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+#table {
+  margin-top: 10px;
+}
+
+.button {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  border-radius: 4px;
+  background-color: grey;
+  font-size: 15px;
+  color: white;
+}
+
+#board-size {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  border-radius: 4px;
+  background-color: grey;
+  font-size: 15px;
+  color: white;
+}

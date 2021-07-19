@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="script.js" async></script>
+</head>
+<body>
+  <header>
+    <h1 id="title">Paleta de Cores</h1>
+  </header>
+  <main>
+    <section id="color-palette">
+      <div class="color selected"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+    </section>
+    <section>
+      <input type="number" id="board-size" min="1" max="50">
+      <button class="button" id="generate-board">VQV</button>
+      <button class="button" id="clear-board">Limpar</button>
+    </section>
+    <table id="pixel-board"></table>
+  </main>
+</body>
+</html>
