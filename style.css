@@ -1,0 +1,17 @@
+
+.color {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  padding: 60px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.pixel {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  height: 40px;
+  width: 40px;
+}
