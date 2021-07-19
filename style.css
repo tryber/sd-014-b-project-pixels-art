@@ -4,8 +4,7 @@
     width: 50px;
     display: inline-block;
   }
-  #Preto{background-color: black;
-
+#Preto{background-color: black
   }
 #Vermelho{
 background-color: red;
@@ -14,15 +13,16 @@ background-color: red;
 
 }
 #Amarelo{background-color: yellow;
-
 }
-  #pixel-board {
-    border: 2px solid black;
+.pixel {
+  background-color: white;
+  border: black solid 1px;
+  width: 40px;
+  height: 40px;
 }
-
-.pixel{
-    background-color: white;
-    border: 1 px solid black;
-    width: 40 px;
-    height: 40 ps;
+#pixel-board {
+  border: black solid 5px;
+  border-radius: 5px;
+  margin: 5% auto;
+  width: 90%;
 }

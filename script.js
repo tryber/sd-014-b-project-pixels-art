@@ -1,12 +1,25 @@
 document.querySelector('.color').classList.add('selected');
-const palette = document.querySelector('color-palette');
-palette.addEventListener('click', (pickColor) => {
-  const selectColor = document.querySelector('.selected');
-  selectColor.classList.remove('selected');
-  pickColor.target.classList.add('selected');
+const palette = document.querySelector('#color-palette');
+palette.addEventListener('click', (event) => {
+  const pickColor = document.querySelector('.selected');
+  pickColor.classList.remove('selected');
+  event.target.classList.add('selected');
 });
-function clearBoard () {
+const Colorir = () => {
+  const coloringBoard = document.querySelector('#pixel-board');
+
+  coloringBoard.addEventListener('click', (event) => {
+    const selectColor = document.querySelector('.selected');
+    const currentColor = window.getComputedStyle(selectColor).getPropertyValue('background-color');
+    event.target.style.backgroundColor = currentColor;
+  });
+};
+Colorir();
+const Limpar = () => {
   const pixels = document.querySelectorAll('.pixel');
-  for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].style.backgorundColor = 'white';
+
+  for (let key = 0; key < pixels.length; key += 1) {
+    pixels[key].style.backgroundColor = 'white';
   }
+};
+Limpar();
