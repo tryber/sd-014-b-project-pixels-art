@@ -1,0 +1,59 @@
+body{
+    width: 800px;
+    height: 600px;
+    margin: auto;
+}
+#tela{
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    background-color: azure;
+}
+
+.color{
+    display: flex;
+    border: 1px,solid, black;
+    margin: 1px;
+    width: 80px;
+    height: 80px;
+}
+#color-palette{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.linha{
+    display: table-row;
+    padding: 0;
+}
+
+.coluna{
+    display: table-column;
+    padding: 0;
+}
+
+#pixel-board{
+    display: block;
+    padding: 5px;
+}
+
+.pixel{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid black;
+}
+#black{
+    background-color: black;
+}
+#purple{
+    background-color: purple;
+}
+#yellow{
+    background-color: yellow;
+}
+#blue{
+    background-color: blue;
+}
