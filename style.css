@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+}
+
+.color, .selected {
+    padding: 10px;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+
+}
+
+
+#title {
+    text-align: center;
+}
+
+#color-palette {
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+
+.pixel {
+    border: 1px solid black;
+    height: 42px;
+    width: 40px;
+    background-color: white;
+
+    
+}
+
+#pixel-board {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#clear-board {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#board-size {
+    border: 1px solid black
+}
+
+#teste {
+    display: flex;
+    text-justify: center;
+}
