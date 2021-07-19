@@ -1,8 +1,8 @@
 document.querySelector('.color').classList.add('selected');
 const palette = document.querySelector('#color-palette');
 palette.addEventListener('click', (event) => {
-  const pickColor = document.querySelector('.selected');
-  pickColor.classList.remove('selected');
+  const choseColor = document.querySelector('.selected');
+  choseColor.classList.remove('selected');
   event.target.classList.add('selected');
 });
 const Colorir = () => {
