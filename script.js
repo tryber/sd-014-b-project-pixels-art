@@ -5,11 +5,11 @@ window.onload = function() {
       if (index === getPalette[0]) {
         index.style.background = 'black';
       } else if (index === getPalette[1]) {
-        index.style.background = 'green';
+        index.style.background = 'rgb('+ Math.floor(Math.random() * 1000) + ','+ Math.floor(Math.random() * 1000) + ',' +Math.floor(Math.random() * 1000) +')';
       } else if (index === getPalette[2]) {
-        index.style.background = 'blue';
+        index.style.background = 'rgb('+ Math.floor(Math.random() * 1000) + ','+ Math.floor(Math.random() * 1000) + ',' +Math.floor(Math.random() * 1000) +')';
       } else if (index === getPalette[3]) {
-        index.style.background = 'yellow';
+        index.style.background = 'rgb('+ Math.floor(Math.random() * 1000) + ','+ Math.floor(Math.random() * 1000) + ',' +Math.floor(Math.random() * 1000) +')';
       }
      
       index.addEventListener('click', function(event) {
@@ -53,9 +53,8 @@ getTdPixels.addEventListener('click', function(event) {
 
 const clearButton = document.querySelector('#clear-board');
 
-const getPixels = document.querySelectorAll('.pixel');
-
 clearButton.addEventListener('click', function() {
+  const getPixels = document.querySelectorAll('.pixel');
   for  (let index = 0; index < getPixels.length; index += 1) {
     getPixels[index].style.backgroundColor = 'white';
   }
@@ -63,9 +62,11 @@ clearButton.addEventListener('click', function() {
 
 function verifyNumberUser(boardSize) {
   if (boardSize < 6) {
+    alert('Digite um valor maior que 5!');
     return 5;
   }  
   if (boardSize > 50) {
+    alert('Digite um número entre 5 e 50!')
     return 50;
   }
   return boardSize;
@@ -83,4 +84,3 @@ buttonVqv.addEventListener('click', function() {
     creatPixilsBoard(boardSize);
   }
 });
-
