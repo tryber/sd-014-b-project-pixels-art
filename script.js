@@ -5,11 +5,11 @@ window.onload = function() {
       if (index === getPalette[0]) {
         index.style.background = 'black';
       } else if (index === getPalette[1]) {
-        index.style.background = 'rgb('+ Math.floor(Math.random() * 1000) + ','+ Math.floor(Math.random() * 1000) + ',' +Math.floor(Math.random() * 1000) +')';
+        index.style.background = 'rgb(255,'+ Math.floor(Math.random() * 255) + ',' +Math.floor(Math.random() * 255) +')';
       } else if (index === getPalette[2]) {
-        index.style.background = 'rgb('+ Math.floor(Math.random() * 1000) + ','+ Math.floor(Math.random() * 1000) + ',' +Math.floor(Math.random() * 1000) +')';
+        index.style.background = 'rgb(99,'+ Math.floor(Math.random() * 255) + ',' +Math.floor(Math.random() * 255) +')';
       } else if (index === getPalette[3]) {
-        index.style.background = 'rgb('+ Math.floor(Math.random() * 1000) + ','+ Math.floor(Math.random() * 1000) + ',' +Math.floor(Math.random() * 1000) +')';
+        index.style.background = 'rgb('+ Math.floor(Math.random() * 255) + ','+ Math.floor(Math.random() * 255) + ',' +Math.floor(Math.random() * 255) +')';
       }
      
       index.addEventListener('click', function(event) {
@@ -41,15 +41,12 @@ function creatPixilsBoard(boardSize) {
 
 creatPixilsBoard(tableSize);
 
-//Requesito 08 onde adiciona o evento de click a tabela de pixel e a função faz com que eles recebam a cor da paleta.
 const getTdPixels = document.querySelector('#pixel-board');
   
 getTdPixels.addEventListener('click', function(event) {
   const selected = document.querySelector('.selected').style.background;
   event.target.style.backgroundColor  = selected;
 });
-
-//Requesito 09 - Faz o button limpar as cores do quadro de pixels com um loop que redefine o backgrandColor para white.
 
 const clearButton = document.querySelector('#clear-board');
 
