@@ -1,0 +1,77 @@
+header {
+  height: 50px;
+  width: auto;
+}
+
+#color-palette {
+  display: flex;
+  height: fit-content;
+}
+
+.color {
+  margin: 10px;
+  height: 30px;
+  width: 30px;
+}
+
+#UI {
+  height: 60px;
+}
+
+#board-size {
+  width: 120px;
+<<<<<<< HEAD
+  margin: 15px 0px;
+}
+
+#generate-board {
+  margin-left: 0px;
+=======
+  margin: 15px;
+>>>>>>> add lint:styles fixes
+}
+
+button {
+  margin: 10px;
+}
+
+#pixel-board {
+  display: block;
+}
+
+div {
+  display: flex;
+}
+
+.pixel {
+<<<<<<< HEAD
+  padding: 20px;
+=======
+  width: 40px;
+  height: 40px;
+>>>>>>> add lint:styles fixes
+}
+
+.border {
+  border: 1px solid black;
+}
+
+#black , .black {
+  background-color: black;
+}
+
+#green , .green {
+  background-color: green;
+}
+
+#red , .red {
+  background-color: red;
+}
+
+#blue , .blue {
+  background-color: blue;
+}
+
+#white , .white {
+  background-color: white;
+}
