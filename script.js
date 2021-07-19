@@ -5,9 +5,8 @@ palette.addEventListener('click', (pickColor) => {
   selectColor.classList.remove('selected');
   pickColor.target.classList.add('selected');
 });
-const clearBoard = () => {
+function clearBoard () {
   const pixels = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].style.backgorundColor = 'white';
   }
-};
