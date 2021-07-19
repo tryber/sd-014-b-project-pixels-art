@@ -74,6 +74,7 @@ function createInteractibleBoard(){
 }
 
 function createRandomColors(){
+    black.style.backgroundColor = '#000000';
     red.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
     orange.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
     teal.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
