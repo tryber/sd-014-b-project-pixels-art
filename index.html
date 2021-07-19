@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pixels Art</title>
     <link rel="stylesheet" type="text/CSS" href="style.css">
     <script src="script.js" async></script>
     <style>
@@ -13,14 +13,17 @@
   <body>
       <header>
           <h1 id="title">Paleta de Cores</h1>
+      </header>
+      <section>
           <div id="color palette">
               <div id="Preto" class="color"></div>
               <div id="Vermelho" class="color"></div>
               <div id="Laranja" class="color"></div>
               <div id="Amarelo" class="color"></div>
           </div>
-          <button id="clear-board">Limpar</button>
-      </header>
+          <button id="clear-board" onclick="clearBoard();">Limpar</button>
+          <br>
+      </section>
       <section>
           <table id="pixel-board">
             <tr>
