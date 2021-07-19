@@ -1,66 +1,60 @@
+#title {
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  margin: auto;
+}
+
+#clear-board {
+  border-radius: 10px;
+}
+
 #color-palette { 
+  padding: 4px;
   display: flex;
 }
+
 .color {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
+  width: 40px;
+  height: 40px;
+  display: table-cell;
+  border: black solid 1px;
 }
 #green {
   background-color: green;
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
+  border: 1px solid black;
 }
-#blue {
-  background-color: blue;
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
+
+#grey {
+  background-color: grey;
+  border: 1px solid black;
 }
-#red {
-  background-color: red; 
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
+
+#purple {
+  background-color: purple;
+  border: 1px solid black;
 }
-.selected, .black {
+
+#black, #selected {
   background-color: black;
+  border: 1px solid black;
 }
-#pixel-board {
-  grid: auto-flow / repeat(5, auto);
-  justify-content: center;
-  display: table;
-  padding: 5px;
-}
-.h1 {
-  text-align: center;
-}
+
 .td {
-  display:table-cell;
-  padding:5px;
+  display: table-cell;
+  padding: 5px;
   width: 150px;
   border: black solid 1px;
   margin: 5px;
 }
+
 .pixel {
   width: 40px;
   height: 40px;
   background-color: white;
-  display: inline-block;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
+  display: table-cell;
+  border: black solid 1px;
 } 
+
+body {
+background-color: aliceblue;
+}

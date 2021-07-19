@@ -5,25 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css" href="text/css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+
   <h1 id="title">Paleta de Cores</h1>
-  </header>
-  </p>
-  <button id="clear board">limpar</button>
-  <br>
-  <br>
-    <section class="color-palette" id="color-palette">
-      <div class="color black selected"></div>
-      <div class="color" id="blue"></div>
-      <div class="color" id="red"></div>
-      <div class="color" id="green"></div>
-    </div>
-    </section>
+  <div id="color-palette">
+    <div class="color selected" id=black ></div> 
+    <!-- somente black tem selected -->
+    <div class="color" id=green ></div>
+    <div class="color" id=purple ></div>
+    <div class="color"id=grey></div>
+  </div>
+
     <table id="pixel-board">
-      <tr id="line">
+      <tr>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+      </tr>
+      <tr>
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
@@ -31,7 +34,7 @@
         <td class="pixel"></td>
       </tr>
       <br>
-      <tr id="line">
+      <tr>
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
@@ -39,7 +42,7 @@
         <td class="pixel"></td>
       </tr>
       <br>
-      <tr id="line">
+      <tr>
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
@@ -47,21 +50,15 @@
         <td class="pixel"></td>
       </tr>
       <br>
-      <tr id="line">
+      <tr>
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
         <td class="pixel"></td>
       </tr>
-      <br>
-      <tr  id="line">
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-      </tr>
-      <script src="script.js"></script>
+    </table>
+  <button type="reset" id="clear-board">Limpar</button>
+<script src="script.js"></script>
 </body>
 </html>
