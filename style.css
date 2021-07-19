@@ -1,11 +1,13 @@
 #title {
-  text-align: center;
   font-family: monospace;
   color: forestgreen;
 }
 
 body {
   background-color: gainsboro;
+  text-align: center;
+  background-image: url(pixelArt.png);
+  background-position: 1300px 635px;
 }
 
 #color-palette {
@@ -22,8 +24,9 @@ body {
 }
 
 #pixel-board {
-  display: table-row;
+  display: table;
   border-spacing: unset;
+  margin: 0 auto;
 }
 
 .pixel {
