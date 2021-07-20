@@ -24,3 +24,16 @@ function colorPixel(event) {
 boxPixels.addEventListener('click', colorPixel);
 
 //botão Limpar (9)//
+function apagarTudo() {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
+    //ao ser clicado deixa a tela branca (que é a união mágica de vermelho 255, verde 255 e azul 255//
+  }
+}
+
+function adicionarApagarEvento() {
+  document.getElementById('clear-board').addEventListener('click', apagarTudo);
+}
+
+adicionarApagarEvento();

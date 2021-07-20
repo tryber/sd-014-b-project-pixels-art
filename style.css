@@ -56,5 +56,10 @@
 } 
 
 body {
-background-color: aliceblue;
+  background-color: aliceblue;
+}
+
+#board-size {
+ padding: 5px;
+ width: 100px;
 }
