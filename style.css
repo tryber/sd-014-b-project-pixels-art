@@ -1,0 +1,43 @@
+#color-palette {
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.color {
+  border: black solid 1px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+#black {
+  background-color: black;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#gray {
+  background-color: gray;
+}
+
+#red {
+  background-color: red;
+}
+
+#pixel-board {
+  display: inline-table;
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.pixel {
+  display: table-cell;
+  background-color: white;
+  border: black solid 1px;
+  width: 50px;
+  height: 50px;
+}
