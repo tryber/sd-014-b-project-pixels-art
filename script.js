@@ -23,10 +23,11 @@ pinkColor.addEventListener('click', afterColor);
 
 //pintando os pixels
 let pixelPaint = document.querySelectorAll('.pixel');
-for (let i = 0; i < pixelPaint.length; i++) {
-  pixelPaint[i].addEventListener('click', paint);
+for (let index = 0; index < pixelPaint.length; index++) {
+  pixelPaint[index].addEventListener('click', paint);
 }
 
+//https://stackoverflow.com/questions/60559793/changing-the-background-color-with-click-using-queryselector-js
 function paint(evento) {
   let color = document.querySelector('.selected');
   evento.target.style.backgroundColor = color.id;
@@ -37,7 +38,8 @@ let oneDelete = document.querySelector('#clear-board');
 oneDelete.addEventListener('click', deleteAll);
 
 function deleteAll() {
-  for (let i = 0; i < pixels.length; i++) {
-    pixelPaint[i].style.backgroundColor = 'white';
+  let pixelPainting = querySelector('.pixel')
+  for (let index = 0; index < pixels.length; index++) {
+    pixelPainting[index].style.backgroundColor = 'white';
   }
 }
