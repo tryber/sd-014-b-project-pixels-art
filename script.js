@@ -8,6 +8,7 @@ function getColors(evt) {
       getColor[index].className = 'color';
     }
   }
+  // eslint-disable-next-line no-param-reassign
   evt.target.className = 'color selected';
 }
 
@@ -25,7 +26,8 @@ const getSelected = document.getElementsByClassName('color selected');
 
 function switchC(evt) {
   for (let index = 0; index < getPixel.length; index += 1) {
-    evt.target.style.backgroundColor = getSelected[0].style.backgroundColor; 
+    // eslint-disable-next-line no-param-reassign
+    evt.target.style.backgroundColor = getSelected[0].style.backgroundColor;
   }
 }
 

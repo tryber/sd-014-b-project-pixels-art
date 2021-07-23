@@ -28,11 +28,12 @@ const isOnTheRightOf = (_chai, utils) => {
   function assertIsOnTheRightOf(leftElement) {
     const rightElement = this._obj;
     this.assert(
-      cy.$$(rightElement).offset().left >= cy.$$(leftElement).offset().left + cy.$$(leftElement).width(),
+      cy.$$(rightElement).offset().left >=
+        cy.$$(leftElement).offset().left + cy.$$(leftElement).width(),
       'expected #{this} to be on the right of #{act}',
       'expected #{this} not to be on the right of #{act}',
       rightElement,
-      leftElement,
+      leftElement
     );
   }
 
@@ -50,11 +51,14 @@ const isHorizontallyAlignedWith = (_chai, utils) => {
       'expected #{this} to be horizontally aligned with #{act}',
       'expected #{this} not to be horizontally aligned with #{act}',
       rightElement,
-      leftElement,
+      leftElement
     );
   }
 
-  _chai.Assertion.addMethod('horizontallyAlignedWith', assertIsHorizontallyAlignedWith);
+  _chai.Assertion.addMethod(
+    'horizontallyAlignedWith',
+    assertIsHorizontallyAlignedWith
+  );
 };
 
 // registers our assertion function "isHorizontallyAlignedWith" with Chai
@@ -63,11 +67,12 @@ chai.use(isHorizontallyAlignedWith);
 const isBelowOf = (_chai, utils) => {
   function assertIsBelowOf(element) {
     this.assert(
-      cy.$$(this._obj).offset().top >= cy.$$(element).offset().top + cy.$$(element).height(),
+      cy.$$(this._obj).offset().top >=
+        cy.$$(element).offset().top + cy.$$(element).height(),
       'expected #{this} to be below of #{act}',
       'expected #{this} not to be below of #{act}',
       this._obj,
-      element,
+      element
     );
   }
 

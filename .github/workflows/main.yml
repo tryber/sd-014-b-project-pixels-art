@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1.4.4
         with:
-          node-version: '12'
+          node-version: "12"
       - name: ESLint
         uses: betrybe/eslint-linter-action@v2.2
         with:
@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1.4.4
         with:
-          node-version: '12'
+          node-version: "12"
       - name: Stylelint
         uses: betrybe/stylelint-linter-action@v1
         with:
@@ -36,8 +36,8 @@ jobs:
         id: cypress
         uses: betrybe/cypress-evaluator-action@v5
         with:
-          repository-test-name: 'betrybe/sd-0x-block5-project-pixels-art-tests'
-          repository-test-branch: 'master'
+          repository-test-name: "betrybe/sd-0x-block5-project-pixels-art-tests"
+          repository-test-branch: "master"
       - name: Store evaluation step
         uses: betrybe/store-evaluation-action@v2
         with:
