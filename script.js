@@ -1,3 +1,4 @@
+//usando hugo como referência
 //Estabelecendo preto como principal
 window.onload = function () {
   let firstColor = document.getElementById('black');
