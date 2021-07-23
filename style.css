@@ -1,0 +1,77 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./imgs/img.jpg');
+  background-size: 100%;
+}
+#color-palette {
+  width: 220px;
+  margin: auto;
+}
+
+.color {
+  width: 51px;
+  height: 50px;
+  margin: auto;
+  display: inline-block;
+  border: solid 1px black;
+}
+
+#pixel-board {
+  height: 230px;
+  margin: auto;
+  width: 300px;
+}
+
+h1 {
+  text-align: center;
+  margin: .5rem auto;
+  font-size: 2rem;
+}
+
+.pixel-align {
+  width: 100%;
+  display: inline-block;
+  margin-top: 5%;
+}
+
+.pixel {
+  margin: 0;
+  width: 20px;
+  display: inline-block;
+  height: 20px;
+  border: solid 1px black;
+  background-color: white;
+}
+
+button {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.middle {
+  width: 70px;
+  margin: 1px auto 7px;
+}
+
+.main {
+  width: 25%;
+  margin: 4rem auto;
+  background-color: rgba(128, 128, 128, 0.322);
+  padding: 1rem 1rem 1.5rem;
+  border-radius: 20px;
+}
+
+#color-palette {
+  background-color: rgba(128, 128, 128, 0.514);
+  padding: .5rem 1.5rem .3rem;
+  box-sizing: content-box;
+  border-radius: 20px;
+  margin: .7rem auto;
+}
+
+#color-palette > * {
+  border-radius: 50%;
+}
