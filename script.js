@@ -23,7 +23,7 @@ pinkColor.addEventListener('click', afterColor);
 
 //pintando os pixels
 let pixelPaint = document.querySelectorAll('.pixel');
-for (let index = 0; index < pixelPaint.length; index++) {
+for (let index = 0; index < pixelPaint.length; index += 1) {
   pixelPaint[index].addEventListener('click', paint);
 }
 
@@ -38,8 +38,7 @@ let oneDelete = document.querySelector('#clear-board');
 oneDelete.addEventListener('click', deleteAll);
 
 function deleteAll() {
-  let pixelPainting = querySelector('.pixel')
-  for (let index = 0; index < pixels.length; index++) {
-    pixelPainting[index].style.backgroundColor = 'white';
+  for (let index = 0; index < pixelPaint.length; index += 1) {
+    pixelPaint[index].style.backgroundColor = 'white';
   }
 }
