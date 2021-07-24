@@ -1,5 +1,5 @@
 #title {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Courier, monospace;
   color: black;
   margin: auto;
 }
@@ -8,7 +8,7 @@
   border-radius: 10px;
 }
 
-#color-palette { 
+#color-palette {
   padding: 4px;
   display: flex;
 }
@@ -19,6 +19,7 @@
   display: table-cell;
   border: black solid 1px;
 }
+
 #green {
   background-color: green;
   border: 1px solid black;
@@ -34,7 +35,7 @@
   border: 1px solid black;
 }
 
-#black, #selected {
+#black , #selected {
   background-color: black;
   border: 1px solid black;
 }
@@ -53,13 +54,13 @@
   background-color: white;
   display: table-cell;
   border: black solid 1px;
-} 
+}
 
 body {
   background-color: aliceblue;
 }
 
 #board-size {
- padding: 5px;
- width: 100px;
+  padding: 5px;
+  width: 100px;
 }

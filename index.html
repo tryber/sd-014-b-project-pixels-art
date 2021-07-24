@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pixel Art - Ana Alice</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" async></script>
 </head>
-<body>
 
+<body>
+  
   <h1 id="title">Paleta de Cores</h1>
   <div id="color-palette">
     <div class="color selected" id=black ></div> 
@@ -17,8 +19,8 @@
     <div class="color" id=purple ></div>
     <div class="color"id=grey></div>
   </div>
-  <button type="reset" id="clear-board" value="Limpar">Limpar</button>
-  <input id="board-size" >
+  <button id="clear-board">Limpar</button>
+  <input  type="number" name="" min="1" max="50" id="board-size">
   <button id="generate-board">VQV</button>
     <table id="pixel-board">
       <tr>
@@ -60,6 +62,5 @@
         <td class="pixel"></td>
       </tr>
     </table>
-<script src="script.js"></script>
 </body>
 </html>
