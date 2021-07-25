@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixels Art</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>    
+    <h1 id="title">Paleta de Cores</h1>
+  </header>   
+  <section class='input-menu'>
+    <button id='clear-board'>Limpar</button>
+    <input id="board-size" type="number" placeholder="Digite o tamanho da mesa" name="geradorDeMesa">
+       <!--   oninput="validity.valid||(value='');" impede que seja inserido manualmente valores que não estejam enter min e max. 
+        Visto em: https://pt.stackoverflow.com/questions/305012/como-impedir-que-o-numero-seja-menor-ou-igual-a-0-num-input-type-number -->
+    <button id="generate-board">VQV</button>
+  </section>   
+  <div id='color-palette'></div>
+  <main>
+    <div id='pixel-board'></div>   
+    
+  </main>  
+    <script src="script.js"></script>
+</body>
+</html>
+

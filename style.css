@@ -1,13 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+}
+@font-face {
+    font-family: undertale;
+    src: url(DTM/DTM-Sans.otf);
+ }
+
+@font-face {
+    font-family: undertale-fight;
+    src: url(Undertale-Fight/MERCY.otf)
+}
+
 .color{
     border:  1px solid black;
     display: inline-block;
     padding: 20px;
     margin-right: 10px;
 }
+header {
+    text-align: center;
+}
+
+#logo {
+    width: 650px;
+}
 h1{
     text-align: center;
     font-size: 50px;
+    font-family: undertale;
+    color: white;
+    background-color: black;
 }
+
 main{
     display: flex;
     justify-content: center;
@@ -17,9 +45,31 @@ main{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
     margin-bottom: 50px;
 }
 #clear-board{
+    font-family: undertale-fight;
+    font-size: 25px;
+    padding: 10px;
+    color: chocolate;
+    background-color: black;
+    border: 2px solid chocolate;
+    margin-right: 30px;
+}
+
+#container-audio {
+    display: flex;
+    justify-content: center; 
+}
+
+#generate-board {
+    font-family: undertale-fight;
+    font-size: 25px;
+    padding: 10px;
+    color: chocolate;
+    background-color: black;
+    border: 2px solid chocolate;
     margin-right: 30px;
 }
 #color-palette{
@@ -37,13 +87,14 @@ main{
 }
 .col{
     height: 16px;
-
-  
+}
+.main-image {
+    width: 150px;
+    align-self: flex-start;
 }
 
 
 #pixel-board{
-
    border: 5px groove gray; 
  
 } 
