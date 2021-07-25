@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undertale Pixel Art</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href='sans-icon.jpg'>
+</head>
+<body>
+  <header>    
+    <img src="Undertale-Logo.png" id='logo'>
+    <h1 id="title">Pixel Art</h1>
+  </header>   
+  <div id='container-audio'>
+    <audio autoplay loop id="audio">
+      <source src="megalovania.mp3">
+        Your browser does not support the audio element.
+    </audio>  
+  </div>
+  <section class='input-menu'>
+    <button id='clear-board'>Clear Board</button>
+    <input id="board-size" type="range" name="geradorDeMesa" min='20' max='40'>
+       <!--   oninput="validity.valid||(value='');" impede que seja inserido manualmente valores que não estejam enter min e max. 
+        Visto em: https://pt.stackoverflow.com/questions/305012/como-impedir-que-o-numero-seja-menor-ou-igual-a-0-num-input-type-number -->  
+    <input type="color" id='new-input-color' class='selected'>
+    <button id="generate-board">Generate Board</button>
+  </section>   
+  <main>
+    
+    <img src='sans.gif' class="main-image">
+    <div id='pixel-board'></div>     
+  </main>  
+    <script src="script.js"></script>
+</body>
+</html>
+
