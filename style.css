@@ -5,18 +5,20 @@
   display: inline-block;
 }
 
-#Preto {background-color: black;
+#Preto {
+  background-color: black;
 }
 
 #Vermelho {
   background-color: red;
 }
 
-#Laranja {background-color: orange;
-
+#Laranja {
+  background-color: orange;
 }
 
-#Amarelo {background-color: yellow;
+#Amarelo {
+  background-color: yellow;
 }
 
 .pixel {
