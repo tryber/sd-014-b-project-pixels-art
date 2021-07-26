@@ -1,5 +1,4 @@
 let colorSelected = 'black';
-let pintarTudo = false;
 
 function setColors() {
   const botoesCores = document.querySelectorAll('.color');
@@ -33,63 +32,37 @@ function resetPalette() {
   }
 }
 
-function defineSizeBoard() {
-  const valueInput = document.getElementById('board-size').value;
+function eventPixels() {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].addEventListener('click', colorPixel);
+  }
+}
+
+function defineSizeBoard(valueInput) {
   const paitingArea = document.getElementById('painting-area');
-  if (valueInput !== '') {
-    const valueInput = parseInt(document.getElementById('board-size').value);
-    if (valueInput >= 5 && valueInput <= 50) {
-      if (document.getElementById('pixel-board') !== null) {
-        document.getElementById('pixel-board').remove();
-      }
-
-      const tablePaint = document.createElement('table');
-      tablePaint.id = 'pixel-board';
-
-      const linhaBoard = document.createElement('tr');
-      const pixel = '<td></td>';
-
-      for (let i = 1; i <= valueInput; i += 1) {
-        linhaBoard.innerHTML += pixel;
-        linhaBoard.children[i - 1].classList.add('pixel');
-      }
-      for (let i = 1; i <= valueInput; i += 1) {
-        tablePaint.innerHTML += linhaBoard.innerHTML;
-      }
-      paitingArea.appendChild(tablePaint);
-      const pixels = document.querySelectorAll('.pixel');
-      for (let i = 0; i < pixels.length; i += 1) {
-        pixels[i].addEventListener('click', colorPixel);
-      }
-    } else if (valueInput > 50) {
-      if (document.getElementById('pixel-board') !== null) {
-        document.getElementById('pixel-board').remove();
-      }
-
-      let tablePaint = document.createElement('table');
-      tablePaint.id = 'pixel-board';
-  
-      let linhaBoard = document.createElement('tr');
-      let pixel = '<td></td>';
-  
-      for (let i = 1; i <= 50; i += 1) {
-  
-        linhaBoard.innerHTML += pixel;
-        linhaBoard.children[i - 1].classList.add('pixel');
-  
-      }
-  
-      for (let i = 1; i <= 50; i += 1) {
-        tablePaint.innerHTML += linhaBoard.innerHTML;
-      }
-  
-      paitingArea.appendChild(tablePaint);
-  
-      let pixels = document.querySelectorAll('.pixel');
-      for (let i = 0; i < pixels.length; i += 1) {
-        pixels[i].addEventListener('click', colorPixel);
-      }
+  const tableElement = document.createElement('table');
+  tableElement.id = 'pixel-board';
+  paitingArea.innerHTML = '';
+  for (let i = 1; i <= valueInput; i += 1) {
+    const linhaPixels = document.createElement('tr');
+    for (let k = 1; k <= valueInput; k += 1) {
+      const pixelElement = document.createElement('td');
+      pixelElement.classList.add('pixel');
+      linhaPixels.appendChild(pixelElement);
     }
+    tableElement.appendChild(linhaPixels);
+    paitingArea.appendChild(tableElement);
+  }
+  eventPixels();
+}
+
+function boardCheck() {
+  const valueInput = document.getElementById('board-size').value;
+  if (valueInput >= 5 && valueInput <= 50) {
+    defineSizeBoard(valueInput);
+  } else if (valueInput > 50) {
+    defineSizeBoard(50);
   } else {
     alert('Board inválido!');
   }
@@ -114,75 +87,27 @@ function eraserTool() {
   colorSelected = 'white';
 }
 
-function baldeDeTinta() {
-  if (pintarTudo == false) {
-    pintarTudo = true;
-  } else {
-    pintarTudo = false;
-  }
-}
-
 function eventAdd() {
   const botoesCores = document.querySelectorAll('.color');
-  const pixels = document.querySelectorAll('.pixel');
   const botaoReset = document.getElementById('clear-board');
   const botaoResize = document.getElementById('generate-board');
   const botaoBorder = document.getElementById('border');
   const botaoRemoveBorder = document.getElementById('noBorder');
   const botaoEraser = document.getElementById('eraser');
-  const botaoBaldeTinta = document.getElementById('fill');
-
   for (let i = 0; i < botoesCores.length; i += 1) {
     botoesCores[i].addEventListener('click', selectColor);
   }
-  for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].addEventListener('click', colorPixel);
-  }
-
   botaoReset.addEventListener('click', resetPalette);
-  botaoResize.addEventListener('click', defineSizeBoard);
+  botaoResize.addEventListener('click', boardCheck);
   botaoBorder.addEventListener('click', addBorders);
   botaoRemoveBorder.addEventListener('click', removeBorders);
   botaoEraser.addEventListener('click', eraserTool);
-  botaoBaldeTinta.addEventListener('click', baldeDeTinta);
-}
-
-function initialBoard() {
-
-  let valueInput = document.getElementById('board-size').value;
-
-  if (valueInput === '') {
-
-    let paitingArea = document.getElementById('painting-area');
-    
-    let tablePaint = document.createElement('table');
-    tablePaint.id = 'pixel-board';
-  
-    let linhaBoard = document.createElement('tr');
-    const pixel = '<td></td>';
-
-    for (let i = 1; i <= 5; i += 1) {
-      linhaBoard.innerHTML += pixel;
-      linhaBoard.children[i - 1].classList.add('pixel');
-    }
-
-    for (let i = 1; i <= 5; i += 1) {
-      tablePaint.innerHTML += linhaBoard.innerHTML;
-    }
-
-    paitingArea.appendChild(tablePaint);
-
-    const pixels = document.querySelectorAll('.pixel');
-    for (let i = 0; i < pixels.length; i += 1) {
-      pixels[i].addEventListener('click', colorPixel);
-    }
-  }
 }
 
 window.onload = () => {
   setColors();
   eventAdd();
-  initialBoard();
+  defineSizeBoard(5);
   const colorBlack = document.querySelector('.color');
   colorBlack.classList.add('selected');
 };
