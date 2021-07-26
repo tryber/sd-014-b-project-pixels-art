@@ -11,6 +11,7 @@ const Colorir = () => {
   coloringBoard.addEventListener('click', (event) => {
     const selectColor = document.querySelector('.selected');
     const currentColor = window.getComputedStyle(selectColor).getPropertyValue('background-color');
+    // eslint-disable-next-line no-param-reassign
     event.target.style.backgroundColor = currentColor;
   });
 };
