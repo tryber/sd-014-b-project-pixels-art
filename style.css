@@ -1,0 +1,136 @@
+html , body {
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: rgb(241, 241, 241);
+  margin: 0;
+  font-family: monospace;
+}
+
+/* LAYOUT DO SITE */
+#left-content {
+  height: 100%;
+  width: 80%;
+  background-color: rgb(235, 235, 235);
+  display: flex;
+}
+
+#painting-area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+aside {
+  background-color: rgb(223, 223, 223);
+  color: rgb(85, 85, 85);
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+}
+
+.sections-right {
+  padding: 10px;
+  text-align: center;
+}
+
+/* ESTILO E ESTRUTURA DO ELEMENTOS A DIREITA */
+#title {
+  margin: 10px 0;
+  text-align: center;
+}
+
+h3 {
+  margin: 0;
+  padding: 5px 0;
+  text-align: center;
+  border-top: 1px solid rgb(212, 212, 212);
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  display: inline-block;
+  border-radius: 50%;
+  transition: 0.5s box-shadow;
+  cursor: pointer;
+}
+
+.selected {
+  box-shadow: 0 0 0 4px rgb(182, 182, 182);
+}
+
+.toolsButton {
+  border: none;
+  background-color: rgb(200, 200, 200);
+  border-radius: 5px;
+  width: 75%;
+  font-size: 16px;
+  padding: 10px;
+  color: rgb(92, 92, 92);
+  cursor: pointer;
+  font-family: monospace;
+  margin-bottom: 5px;
+  transition: 0.2s background-color;
+  text-align: left;
+}
+
+.toolsButton:hover {
+  background-color: rgb(165, 165, 165);
+}
+
+.option-config {
+  background-color: white;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  padding: 10px;
+  text-align: left;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+h4 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+#board-size {
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 5px 10px;
+  background-color: rgb(223, 223, 223);
+}
+
+#generate-board {
+  border: none;
+  border-radius: 5px;
+  padding: 7px 10px;
+  font-family: monospace;
+  color: inherit;
+  cursor: pointer;
+}
+
+#generate-board:hover {
+  background-color: rgb(223, 223, 223);
+}
+
+/* ESTILO E ESTRUTURA DO ELEMENTOS A ESQUERDA */
+#pixel-board {
+  border-collapse: collapse;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid black;
+  box-sizing: border-box;
+}

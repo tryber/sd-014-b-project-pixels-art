@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixels Art</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/967089a46f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <aside>
+    
+    <h1 id="title"><i class="fas fa-palette"></i> Paleta de Cores</h1>
+
+    <h3>Cores</h3>
+    <section id="color-palette" class="sections-right">
+
+      <div class="color selected" id="black" style="background-color: black;"></div>
+      <div class="color" id="blue"></div>
+      <div class="color" id="red"></div>
+      <div class="color" id="yellow"></div>
+
+    </section>
+
+    <h3>Ferramentas</h3>
+
+    <section id="tools" class="sections-right">
+
+      <div class="option-config">
+        <h4>Tamanho do quadro</h4>
+        <input type="number" name="board-size" id="board-size" min="1" max="50">
+        <button id="generate-board">VQV</button>
+      </div>
+
+      <button class="toolsButton" id="clear-board">
+        <i class="fas fa-file"></i> Limpar
+      </button>
+      
+      <button class="toolsButton" id="eraser">
+        <i class="fas fa-eraser"></i> Borracha
+      </button>
+
+      <button class="toolsButton" id="border">
+        <i class="fas fa-border-all"></i> Mostrar grade
+      </button>
+
+      <button class="toolsButton" id="noBorder">
+        <i class="fas fa-border-none"></i> Ocultar grade
+      </button>
+    
+    </section>
+
+  </aside>
+
+  <div id="left-content">
+
+    <section id="painting-area">
+    </section>
+
+  </div>
+  
+</body>
+</html>
