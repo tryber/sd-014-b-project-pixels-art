@@ -8,11 +8,10 @@ palette.addEventListener('click', (event) => {
 const Colorir = () => {
   const coloringBoard = document.querySelector('#pixel-board');
 
-  coloringBoard.addEventListener('click', (event) => {
+  coloringBoard.addEventListener('click', () => {
     const selectColor = document.querySelector('.selected');
     const currentColor = window.getComputedStyle(selectColor).getPropertyValue('background-color');
-    // eslint-disable-next-line no-param-reassign
-    event.target.style.backgroundColor = currentColor;
+    Event.target.style.backgroundColor = currentColor;
   });
 };
 Colorir();
