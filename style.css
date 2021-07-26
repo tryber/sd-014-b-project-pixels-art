@@ -1,0 +1,40 @@
+.color {
+  width: 60px;
+  border: solid 1px black;
+  display: inline-block;
+  height: 60px;
+  color: white;
+  text-align: center;
+}
+
+#black {
+  background-color: black;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#pink {
+  background-color: pink;
+}
+
+#red {
+  background-color: red;
+}
+
+.pixel {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: solid thin black;
+}
+
+.pixelart {
+  line-height: 0;
+  display: flex;
+}
+
+#pixel-board {
+  
+}
