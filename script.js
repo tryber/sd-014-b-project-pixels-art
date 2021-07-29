@@ -1,10 +1,5 @@
 window.onload = function(){
 
-const one = document.querySelector('.um')
-const two = document.querySelector('.dois');
-const three = document.querySelector('.tres');
-const four = document.querySelector('.quatro');
-
 // Requesito 4
   function createPixels(number = 5 * 5){
     for(let index = 0; index < number; index += 1){
@@ -18,6 +13,10 @@ const four = document.querySelector('.quatro');
  createPixels();
 
 // Requesito 7
+const one = document.querySelector('.um')
+const two = document.querySelector('.dois');
+const three = document.querySelector('.tres');
+const four = document.querySelector('.quatro');
 
 one.addEventListener('click', selectedColor);
 two.addEventListener('click', selectedColor);
@@ -26,8 +25,10 @@ four.addEventListener('click', selectedColor);
 
 function selectedColor(event){
   const selectedClass = document.querySelector('.selected');
-  selectedClass.classList.remove('selected');
-  event.target.classList.add('.selected');
+  if(selectedClass.classList.contains('selected')){
+    selectedClass.classList.remove('selected');
+  }
+  event.target.classList.add('selected');
 };
 
 
