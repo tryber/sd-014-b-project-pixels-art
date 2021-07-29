@@ -34,10 +34,19 @@ function selectedColor(event){
 
 
 // Requesito 8
-const pixelColor = document.querySelector('.pixel');
-pixelColor.addEventListener('click', function(event){
-  event.target.classList.contains('.selected');
-})
+// Documentação - https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
+const pixelColor = document.querySelectorAll('.pixel');
+for(let pixel of pixelColor){
+  //console.log(pixelColor);
+  pixel.addEventListener('click', function(event){
+    const evento = event.target;
+    const selected = document.querySelector('.selected');
+    const styleBackground = window.getComputedStyle(selected);
+    const style = styleBackground.backgroundColor;
+    evento.style.backgroundColor = style;
+  })
+};
+
 
 // Requesito 9
 const button = document.createElement('button');
