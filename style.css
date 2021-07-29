@@ -10,7 +10,7 @@
 
 #color-palette {
   padding: 4px;
-  display: flex;
+  display: table-cell;
 }
 
 .color {
@@ -20,7 +20,7 @@
   border: black solid 1px;
 }
 
-#green {
+/* #green {
   background-color: green;
   border: 1px solid black;
 }
@@ -33,7 +33,7 @@
 #purple {
   background-color: purple;
   border: 1px solid black;
-}
+} */
 
 #black , #selected {
   background-color: black;
@@ -41,7 +41,6 @@
 }
 
 .td {
-  display: table-cell;
   padding: 5px;
   width: 150px;
   border: black solid 1px;
@@ -52,7 +51,6 @@
   width: 40px;
   height: 40px;
   background-color: white;
-  display: table-cell;
   border: black solid 1px;
 }
 

@@ -3,6 +3,7 @@ const colorGreen = document.querySelector('#green');
 const colorPurple = document.querySelector('#purple');
 const colorGrey = document.querySelector('#grey');
 const boxPixels = document.querySelector('#pixel-board');
+const rainbow = document.querySelector('.color');
 
 //selected (7)//
 function clickPixel (event) {
@@ -11,14 +12,15 @@ function clickPixel (event) {
   event.target.classList.add('selected');
 }
 //preenchendo pixel-board (8)//
-colorBlack.addEventListener('click', clickPixel);
+rainbow.addEventListener('click', clickPixel);
 colorGreen.addEventListener('click', clickPixel);
 colorPurple.addEventListener('click', clickPixel);
 colorGrey.addEventListener('click', clickPixel);
+colorBlack.addEventListener('click' , clickPixel);
 
 function colorPixel(event) {
   const selectedColor = document.querySelector('.selected');
-  event.target.style.backgroundColor = selectedColor.id;
+  event.target.style.backgroundColor = selectedColor.style.backgroundColor;
 }
 
 boxPixels.addEventListener('click', colorPixel);
@@ -70,5 +72,5 @@ gerarButton.addEventListener ('click' , createBoard);
 //aula da semana, uso do ${//
     }
   }
-  
+
   generatorColor();
