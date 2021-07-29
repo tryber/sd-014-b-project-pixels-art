@@ -37,7 +37,6 @@ function selectedColor(event){
 // Documentação - https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
 const pixelColor = document.querySelectorAll('.pixel');
 for(let pixel of pixelColor){
-  //console.log(pixelColor);
   pixel.addEventListener('click', function(event){
     const evento = event.target;
     const selected = document.querySelector('.selected');
@@ -49,17 +48,21 @@ for(let pixel of pixelColor){
 
 
 // Requesito 9
-const button = document.createElement('button');
-button.id = 'clear-board';
-button.innerText = 'Limpar';
-const div = document.querySelector('.button-limpar');
-div.appendChild(button);
+const buttonClear = document.createElement('button');
+buttonClear.id = 'clear-board';
+buttonClear.innerText = 'Limpar';
+buttonClear.type = 'submit';
+const form = document.querySelector('form');
+form.appendChild(buttonClear);
 
-button.addEventListener('click', function(event){
-  const button = document.querySelector('clear-board');
-  const selected = document.querySelector('.selected');
-
-})
+buttonClear.addEventListener('click', function(){
+  const pixelWhite = document.querySelectorAll('.pixel');
+  const button = document.querySelector('#clear-board');
+  for(let pixel of pixelWhite){
+  pixel.style.backgroundColor = 'white';
+  button.reset.classList(selected);
+  }
+});
 
 // Requesito 10
 const input = document.createElement('input');
