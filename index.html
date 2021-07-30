@@ -9,18 +9,73 @@
 </head>
 <body>
   <header>
-    <h1 id="title">Paleta de Cores</h1>
+    <h1 id="title">
+      Paleta de Cores
+    </h1>
   </header>
-  <div class="visit">Visitas: <span id="count"></span></div>
-  <div class="container center">
-    <div class="triangle">
-      <!-- Cada uma dessas divs representa uma das 5 linhas da piramide -->
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-  </div>
+ 
+      Paletas:
+      
+      <div id="color-palette">        
+        <div id="black" class="color" selected></div>
+        <div id="red" class="color"></div>
+        <div id="blue" class="color"></div>
+        <div id="green" class="color"></div>
+      </div>
+      <br>
+      <button id="clear-board">Limpar</button>
+      <br>
+      <br>
+
+      
+
+      <div id="pixel-board"> 
+        <div id="qq" class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </div>
+      <div id="pixel-board"> 
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </div>
+      <div id="pixel-board"> 
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </div>
+      <div id="pixel-board"> 
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </div>
+      <div id="pixel-board"> 
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </div>
+      
+      
+      
+      <script src="script.js">
+        let clickp = document.getElementById("qq");
+
+        clickp.addEventListener("click", recebeClick);
+
+        function recebeClick(eventoDeOrigem) {
+          
+        }
+
+      </script>
 </body>
 </html>
