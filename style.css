@@ -45,7 +45,12 @@
   border: 1px solid black;
   margin: auto;
   display: inline-block;
+  background-color: white
 };
+
+.pixel-line {
+  text-align: center;
+}
 
 #pixel-board {
   text-align: center;

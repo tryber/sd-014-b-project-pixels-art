@@ -1,15 +1,20 @@
 window.onload = function(){
 
 // Requesito 4
-  function createPixels(number = 5 * 5){
-    for(let index = 0; index < number; index += 1){
-     const pixelBoard = document.querySelector('#pixel-board');
-     const quadrado = document.createElement('div');
-     quadrado.classList = 'pixel';
-     pixelBoard.appendChild(quadrado);
-     quadrado.style.backgroundColor = 'white';
-   }
+function createPixels(){
+    for(let index = 0; index < 5; index += 1){
+      const section = document.querySelector('#pixel-board');
+      const div = document.createElement('div');
+      div.className = 'pixel-line';
+      section.appendChild(div);
+      for(let i = 0; i < 5; i += 1){
+        const quadradinho = document.createElement('div');
+        quadradinho.className = 'pixel';
+        div.appendChild(quadradinho);
+      }
+    }
  }
+
  createPixels();
 
 // Requesito 7
@@ -54,13 +59,11 @@ buttonClear.innerText = 'Limpar';
 buttonClear.type = 'submit';
 const form = document.querySelector('form');
 form.appendChild(buttonClear);
-
 buttonClear.addEventListener('click', function(){
-  const pixelWhite = document.querySelectorAll('.pixel');
-  const button = document.querySelector('#clear-board');
-  for(let pixel of pixelWhite){
-  pixel.style.backgroundColor = 'white';
-  button.reset.classList(selected);
+  const pixelAll = document.querySelectorAll('.pixel');
+  for(let index = 0; index < pixelAll.length; index += 1){
+    pixel = pixelAll[index];
+    pixel.style.backgroundColor = 'white';
   }
 });
 
