@@ -1,5 +1,4 @@
 window.onload = function(){
-
 // Requesito 4
 function createPixels(){
     for(let index = 0; index < 5; index += 1){
@@ -84,6 +83,26 @@ buttonInput.addEventListener('click', function(){
 
 });
 
-};
+// Requesito 11
 
+
+
+//Requesito 12
+// Documentação - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+// Documentação - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
+function corRandom(){
+  let colorB = Math.random() * 255;
+  let colorC = Math.random() * 255;
+  let colorD = Math.random() * 255;
+
+  const dois = document.querySelector('.dois');
+  dois.style.backgroundColor = `rgb(${colorB}, ${colorC}, ${colorD})`;
+  const three = document.querySelector('.tres');
+  three.style.backgroundColor = `rgb(${colorC}, ${colorD}, ${colorB})`;
+  const four = document.querySelector('.quatro');
+  four.style.backgroundColor = `rgb(${colorD}, ${colorC}, ${colorB})`;
+}
+corRandom();
+
+}
 
