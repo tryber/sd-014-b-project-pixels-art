@@ -30,7 +30,7 @@ function createPaletteColors() {
 }
 createPaletteColors();
 
-// // 4 - Adicione à página um quadro de pixels, com 25 pixels.
+// 4 - Adicione à página um quadro de pixels, com 25 pixels.
 const pixelBoard = document.querySelector('#pixel-board');
 
 function createLis() {
@@ -53,56 +53,66 @@ createBoardColors(5);
 
 // 7 - Clicar em uma das cores da paleta faz com que ela seja selecionada e utilizada para preencher os pixels no quadro.
 // Adiciona a classe selected no elemento clicado e retira do anterior que a possuia
-const color = document.querySelectorAll('.color');
+// const color = document.querySelectorAll('.color');
+// function addClass(event) {
+//   for (let i = 0; i < color.length; i += 1) {
+//     color[i].classList.remove('selected');
+//   }
+//   event.target.classList.add('selected');
+// }
+// function addClassSelected() {
+//   for (let j = 0; j < color.length; j += 1) {
+//     color[j].addEventListener('click', addClass);
+//   }
+// }
+// addClassSelected();
+const colorPalette = document.querySelector('#color-palette');
 
-function addClass(event) {
-  for (let i = 0; i < color.length; i += 1) {
-    color[i].classList.remove('selected');
+colorPalette.addEventListener('click', (event) => {
+  const selected = event.target;
+  const sons = colorPalette.childNodes;
+  // em sons foram capturados os nós filhos de colorPalette.
+  for (let i = 0; i < sons.length; i += 1) {
+    const colorClass = sons[i];
+    if (colorClass.classList.contains('selected')) {
+      colorClass.classList.remove('selected');
+    }
   }
-  event.target.classList.add('selected');
-}
-
-function addClassSelected() {
-  for (let j = 0; j < color.length; j += 1) {
-    color[j].addEventListener('click', addClass);
-  }
-}
-addClassSelected();
+  selected.classList.add('selected');
+});
 
 // 8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta faz com que o pixel seja preenchido com a cor selecionada.
 // O método 'window.getComputedStyle(element), permite pegar do element (elemento o qual será obtido o estilo, no caso os botões coloridos da paleta de cores) por meio do evento click da funcão addClassSelected, é aplicado a classe selected a um dos botões coloridos, e com a função setColor se pode pegar as a cor do botão que está com a classe selected e ao clicar nos pixels aplicar a eles a mesma cor.
-
-const pixelScreeam = document.querySelectorAll('.pixel');
-
-function colorPalette() {
-  for (let i = 0; color.length; i += 1) {
-    if (color[i].classList.contains('selected')) {
-      return color[i].style.backgroundColor;
-    }
-  }
-}
-
-function setColor() {
-  for (let i = 0; i < pixelScreeam.length; i += 1) {
-    pixelScreeam[i].addEventListener('click', () => {
-      const setColorBoard = colorPalette();
-      pixelScreeam[i].style.backgroundColor = setColorBoard;
-    });
-  }
-}
-setColor();
+// function colorPalette() {
+//   for (let i = 0; color.length; i += 1) {
+//     if (color[i].classList.contains('selected')) {
+//       return color[i].style.backgroundColor;
+//     }
+//   }
+// }
 
 // function setColor() {
-//   for (let i = 0; i < pixelScreeam.length; i += 1) {
-//     pixelScreeam[i].addEventListener('click', (event) => {
-//       const classSelected = document.querySelector('.selected');
-//       const colorSelected = window.getComputedStyle(classSelected).backgroundColor;
-//       const clickedPixel = event.target;
-//       clickedPixel.style.backgroundColor = colorSelected;
+//   for (let i = 0; i < pixelScream.length; i += 1) {
+//     pixelScream[i].addEventListener('click', () => {
+//       const setColorBoard = colorPalette();
+//       pixelScream[i].style.backgroundColor = setColorBoard;
 //     });
 //   }
 // }
 // setColor();
+
+function setColor() {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].addEventListener('click', (event) => {
+      const classSelected = document.querySelector('.selected');
+      const colorSelected = window.getComputedStyle(classSelected).backgroundColor;
+      const clickedPixel = event.target;
+      clickedPixel.style.backgroundColor = colorSelected;
+    });
+  }
+}
+setColor();
 
 // 9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
 // Função que cria o botão de limpar cores.
@@ -120,12 +130,15 @@ createClearButton('Limpar');
 const clearBoard = document.querySelector('#clear-board');
 
 clearBoard.addEventListener('click', () => {
-  for (let i = 0; i < pixelScreeam.length; i += 1) {
-    pixelScreeam[i].style.backgroundColor = 'white';
+  const pixels = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    console.log('chegou aqui');
+    pixels[i].style.backgroundColor = 'white';
   }
 });
 
-// // 10 - Faça o quadro de pixels ter seu tamanho definido pela pessoa usuária.
+// 10 - Faça o quadro de pixels ter seu tamanho definido pela pessoa usuária.
+// Referencia: https://pt.stackoverflow.com/questions/305012/como-impedir-que-o-numero-seja-menor-ou-igual-a-0-num-input-type-number
 
 function createValueImput(buttonName) {
   const newInput = document.createElement('input');
@@ -155,6 +168,28 @@ const generateBoard = document.querySelector('#generate-board');
 // Referência: https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
 // 11 - Limite o tamanho mínimo em 5 e máximo em 50 do board
 // pixelBoard.inerHTML = ''; => faz com que a cada interação o quadro de pixel anteriormente formado seja apagado e o novo seja posto em seu lugar.
+// generateBoard.addEventListener('click', () => {
+//   const number = boardSize.value;
+//   if (number === '') {
+//     alert('Board inválido!');
+//   } else if (number < 5) {
+//     pixelBoard.innerHTML = '';
+//     createBoardColors(5);
+//     alert('5 é o mínimo');
+//     boardSize.value = '';
+//   } else if (number > 50) {
+//     pixelBoard.innerHTML = '';
+//     createBoardColors(50);
+//     alert('50 é o limite');
+//     boardSize.value = '';
+//   } else {
+//     pixelBoard.innerHTML = '';
+//     createBoardColors(number);
+//     boardSize.value = '';
+//   }
+//   setColor();
+// });
+
 generateBoard.addEventListener('click', () => {
   const number = boardSize.value;
   if (number === '') {
@@ -162,16 +197,15 @@ generateBoard.addEventListener('click', () => {
   } else if (number < 5) {
     pixelBoard.innerHTML = '';
     createBoardColors(5);
-    alert('5 é o mínimo');
     boardSize.value = '';
   } else if (number > 50) {
     pixelBoard.innerHTML = '';
     createBoardColors(50);
-    alert('50 é o limite');
     boardSize.value = '';
   } else {
     pixelBoard.innerHTML = '';
     createBoardColors(number);
     boardSize.value = '';
   }
+  setColor();
 });
