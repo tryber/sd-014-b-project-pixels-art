@@ -6,12 +6,12 @@ function createPixels(){
       const div = document.createElement('div');
       div.className = 'pixel-line';
       section.appendChild(div);
-      for(let i = 0; i < 5; i += 1){
+     for(let i = 0; i < 5; i += 1){
         const quadradinho = document.createElement('div');
         quadradinho.className = 'pixel';
         div.appendChild(quadradinho);
       }
-    }
+  }
  }
 
  createPixels();
@@ -21,11 +21,14 @@ const one = document.querySelector('.um')
 const two = document.querySelector('.dois');
 const three = document.querySelector('.tres');
 const four = document.querySelector('.quatro');
+//const pixelAdd = document.querySelectorAll('.pixel-add');
+
 
 one.addEventListener('click', selectedColor);
 two.addEventListener('click', selectedColor);
 three.addEventListener('click', selectedColor);
 four.addEventListener('click', selectedColor);
+//pixelAdd.addEventListener('click', selectedColor);
 
 function selectedColor(event){
   const selectedClass = document.querySelector('.selected');
@@ -39,6 +42,7 @@ function selectedColor(event){
 
 // Requesito 8
 // Documentação - https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
+//const pixelAdd = document.querySelectorAll('.pixel-add');
 const pixelColor = document.querySelectorAll('.pixel');
 for(let pixel of pixelColor){
   pixel.addEventListener('click', function(event){
@@ -49,6 +53,7 @@ for(let pixel of pixelColor){
     evento.style.backgroundColor = style;
   })
 };
+
 
 
 // Requesito 9
@@ -70,18 +75,41 @@ buttonClear.addEventListener('click', function(){
 const input = document.createElement('input');
 const buttonInput = document.createElement('button');
 const divInput = document.querySelector('.input-button');
-input.minLength = '5';
-input.maxLength = '50';
+input.type = 'number';
+input.min = '1';
+input.max = '50';
 input.id = 'board-size';
-input.placeholder = 'Defina';
+input.placeholder = '';
 buttonInput.id = 'generate-board';
 buttonInput.innerText = 'VQV';
 divInput.appendChild(input);
 divInput.appendChild(buttonInput);
 
+buttonInput.addEventListener('click', inputCreate);
 buttonInput.addEventListener('click', function(){
-
+  const input = document.querySelector('#board-size');
+  if(input.value === ""){
+    alert('Board Inválido!');
+  }
 });
+
+  function inputCreate(){
+    const board = document.querySelector('#pixel-board');
+    board.remove();
+    const valueInput = input.value;
+    for(let index = 0; index < valueInput; index += 1){
+      const sectionAdd = document.createElement('section');
+      document.body.appendChild(sectionAdd);
+      const divFilho = document.createElement('div');
+      divFilho.className = 'pixel-line';
+      sectionAdd.appendChild(divFilho);
+    for(let index = 0; index < valueInput; index += 1){
+        const divBoard = document.createElement('div');
+        divBoard.className = 'pixel';
+        divFilho.appendChild(divBoard);
+    }
+  }
+}
 
 // Requesito 11
 

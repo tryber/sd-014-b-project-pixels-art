@@ -24,7 +24,7 @@
   margin: 20px;
 }
 
-.input-button {
+body {
   text-align: center;
 }
 
@@ -34,15 +34,18 @@
   border: 1px solid black;
   margin: auto;
   display: inline-block;
-  background-color: white
+  background-color: white;
 };
 
 .pixel-line {
-  text-align: center;
+  background-color: white;
 }
 
-#pixel-board {
-  text-align: center;
+.pixel-add {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  margin: auto;
+  display: inline-block;
+  background-color: white;
 }
-
-
