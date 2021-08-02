@@ -1,0 +1,51 @@
+
+#title {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#color-palette {
+ text-align: center;
+ padding-top: 20px;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.um {
+  background-color: black;
+}
+.button-limpar {
+  text-align: center;
+  margin: 20px;
+}
+
+body {
+  text-align: center;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  margin: auto;
+  display: inline-block;
+  background-color: white;
+};
+
+.pixel-line {
+  background-color: white;
+}
+
+.pixel-add {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  margin: auto;
+  display: inline-block;
+  background-color: white;
+}
