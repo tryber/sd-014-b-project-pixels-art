@@ -1,76 +1,60 @@
-const colorBlack = document.querySelector('#black');
-const colorGreen = document.querySelector('#green');
-const colorPurple = document.querySelector('#purple');
-const colorGrey = document.querySelector('#grey');
-const boxPixels = document.querySelector('#pixel-board');
-const rainbow = document.querySelector('.color');
+const rainbow = document.getElementById('color-palette');
+const boxPixels = document.getElementById('pixel-board');
+const buttonClear = document.getElementById('clear-board');
+const pixels = document.querySelectorAll('.pixel');
+const boardSize = document.getElementById('board-size');
+const gerarButton = document.getElementById('generate-board');
 
-//selected (7)//
-function clickPixel (event) {
-  const classSelect = document.querySelector('.selected');
-  classSelect.classList.remove('selected');
-  event.target.classList.add('selected');
-}
-//preenchendo pixel-board (8)//
-rainbow.addEventListener('click', clickPixel);
-colorGreen.addEventListener('click', clickPixel);
-colorPurple.addEventListener('click', clickPixel);
-colorGrey.addEventListener('click', clickPixel);
-colorBlack.addEventListener('click' , clickPixel);
+//selected (7) e meio do 10 :( 
+gerarButton.addEventListener('click', () => {
+  const boxSize = parseInt(boardSize.value, 10);
+  if (boardSize.value.length === 0) {
+    window.alert('Board inválido!');
+  } else {
+    console.log(boxSize);
+  }
+});
+// rainbow.addEventListener('click', colorPixel);
+// boxPixels.addEventListener('click', rainbowBoard);
 
+// requisito 8
 function colorPixel(event) {
-  const selectedColor = document.querySelector('.selected');
-  event.target.style.backgroundColor = selectedColor.style.backgroundColor;
+  const pixColor = document.getElementById('color-palette').childNodes;
+  for (let index = 1; index < pixColor.length; index++) {
+      pixColor[index].className = 'color';
+  }
+  event.target.className = 'color selected';
 }
+rainbow.addEventListener('click', colorPixel);
 
-boxPixels.addEventListener('click', colorPixel);
+function rainbowBoard(event) {
+  const colorSelected = document.getElementsByClassName('selected')[0];
+  const selectedColor = window.getComputedStyle(colorSelected).backgroundColor;
+  event.target.style.backgroundColor = selectedColor;
+}
+boxPixels.addEventListener('click', rainbowBoard);
 
-//botão Limpar (9)//
-function apagarTudo() {
-  const pixels = document.querySelectorAll('.pixel');
-  for (let index = 0; index < pixels.length; index += 1) {
-    pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
-    //ao ser clicado deixa a tela branca//
+// buttonClear.addEventListener('click', backgroundWhite)
+
+// requisito 9
+function backgroundWhite() {
+  for (let index = 0; index < pixels.length; index++ ) {
+    pixels[index].style.backgroundColor = 'white';
   }
 }
-
-function adicionarApagarEvento() {
-  document.getElementById('clear-board').addEventListener('click', apagarTudo);
-}
-
-adicionarApagarEvento();
-
-//questões 10//  
-const gerarButton= document.querySelector('#generate-board');
-function createBoard() {
-  const media = document.querySelector('#board-size').value;
-
-    if (media === '') {
-    window.alert('Board inválido!');
-    return false;
-}
- if (media <= 5){
-  media = 5;
-  } else if (media >= 50){
-    media = 50;
- }
-   return true;
-
-};
-
-gerarButton.addEventListener ('click' , createBoard);
-
+buttonClear.addEventListener('click', backgroundWhite);
 
 // questão 12// referências: https://www.youtube.com/watch?v=mys7LGIlEf8&ab_channel=TECHNOLOGYFAQ
-  function generatorColor() {
-    const newColor = document.getElementsByClassName('color');
-    for (let index = 1; index < newColor.length; index += 1) {
-      const index1 = Math.floor(Math.random() * (255));
-      const index2 = Math.floor(Math.random() * (255));
-      const index3 = Math.floor(Math.random() * (255));
-      newColor[index].style.backgroundColor = `rgb(${index1}, ${index2},${index3})`; 
-//aula da semana, uso do ${//
-    }
+function generatorColor() {
+  const newColor = document.getElementsByClassName('color');
+  for (let index = 1; index < newColor.length; index += 1) {
+    const index1 = Math.floor(Math.random() * (255));
+    const index2 = Math.floor(Math.random() * (255));
+    const index3 = Math.floor(Math.random() * (255));
+    newColor[index].style.backgroundColor = `rgb(${index1}, ${index2},${index3})`; 
   }
+}
 
-  generatorColor();
+generatorColor();
+
+//questões 10
