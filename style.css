@@ -12,7 +12,7 @@ body{
 
 .color{
     display: flex;
-    border: 1px,solid, black;
+    border: 1px solid black;
     margin: 1px;
     width: 80px;
     height: 80px;

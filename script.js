@@ -1,25 +1,39 @@
-botaoGenerateBoard = document.getElementById('generate-board');
-pixelBoard = document.getElementById('pixel-board');
-paleta = document.getElementById('color-palette');
-cores = document.querySelectorAll('.color');
-let defaultColor = cores[0];
-botaoLimpa  = document.getElementById('clear-board');
+const botaoGenerateBoard = document.getElementById('generate-board');
+const pixelBoard = document.getElementById('pixel-board');
+const paleta = document.getElementById('color-palette');
+const cores = document.querySelectorAll('.color');
+let defaultColor;
+const botaoLimpa  = document.getElementById('clear-board');
 
 
 //REQ5
-botaoGenerateBoard.addEventListener('click',function criaTabela(){
-    for (let index = 0; index < 4; index++) {
+function criaTabela(size){
+    pixelBoard.innerHTML='';
+    for (let index = 0; index < size; index++) {
         const linha = document.createElement('div');
-        linha.className = "linha";
-        
-        for (let i = 0; i < 4; i++) {
+        linha.classList.add('linha');
+        for (let i = 0; i < size; i++) {
             const coluna = document.createElement('div');
-            coluna.className = "pixel";   
+            coluna.classList.add('pixel');   
             linha.appendChild(coluna);
         }
         pixelBoard.appendChild(linha);
     }
-})
+};
+//tabela botao
+botaoGenerateBoard.addEventListener('click', () =>{
+    const size = document.querySelector('#board-size').value; 
+    if(size === '' || size < 0){
+        alert('Board inválido!');
+        return;
+    }else if(size < 5){
+        criaTabela(5);
+    }else if(size > 50){
+        criaTabela(50);
+    }else{
+        criaTabela(size);
+    }
+});
 
 //REQ7  
 paleta.addEventListener('click', function selecionaCor(event){
@@ -45,3 +59,9 @@ botaoLimpa.addEventListener('click',function limpaPixel(){
         p[index].removeAttribute('style');
     }
 }) 
+
+window.onload = function(){
+    defaultColor = document.getElementById('black');
+    defaultColor.classList.add('selected');
+    criaTabela(5);    
+};
