@@ -6,41 +6,28 @@
  main {
   padding-top: 200px;
   padding-left: 800px;
- }
+}
 
-.color{
+.color {
   border: 1px solid black;
-  }
-  
-#color-palette {
-  border: 1px solid black;
-  width: 100%;
-  border-collapse: collapse;
-  width:220px;
-  height:60px;
-  }
+  width: 40px;
+  height: 40px;
+}
 
-#preto {
+#black {
   background-color: black;
-  }
+}
 
-#vermelho {
+#red {
   background-color: red;
 }
 
-#azul {
+#blue {
   background-color: blue;
 }
 
-#verde {
+#green {
   background-color: green;
-}
-
-#pixel-board {
-  margin-top: 5px;
-  margin-left: 4px;
-  border: 1px solid black;
-  border-collapse: collapse;
 }
 
 .pixel {
@@ -48,5 +35,13 @@
   height: 40px;
   border: 1px solid black;
   background-color: white;
-  display: inline-block;
-  }
+}
+
+#clear-board {
+  margin-top: 10px;
+  margin-left: 88px;
+}
+
+#color-palette {
+  margin-left: 20px;
+}

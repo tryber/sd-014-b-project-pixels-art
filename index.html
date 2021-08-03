@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
     <title>Paleta de Cores</title>
 </head>
 <body>
@@ -12,51 +14,51 @@
       <!-- Documentação table - https://www.w3schools.com/tags/tag_th.asp // https://www.w3schools.com/css/css_table.asp -->
       <table id="color-palette">
         <tr>
-            <td class="color selected" id="preto"></td>
-            <td class="color" id="vermelho"></td>
-            <td class="color" id="azul"></td>
-            <td class="color" id="verde"></td>
+            <td class="color selected" id="black"></td>
+            <td class="color" id="red"></td>
+            <td class="color" id="blue"></td>
+            <td class="color" id="green"></td>
         </tr>
     </table>
-    <table id='pixel-board'>
-      <tr>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>            
+    <table id="pixel-board">
+      <tr class="cores">
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>            
       </tr>
-      <tr>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>            
+      <tr class="cores">
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>            
       </tr>
-      <tr>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>            
+      <tr class="cores"> 
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>            
       </tr>
-      <tr>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>            
+      <tr class="cores">
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>            
       </tr>
-      <tr>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>            
+      <tr class="cores">
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>            
       </tr>
   </table>
+  <button id="clear-board">Limpar</button>
   </main>
-<script src="script.js"></script>
- 
+
 </body>
 </html>
