@@ -1,27 +1,16 @@
+// me perdoem os nomes de algumas const mas só assim pra me achar na lógica (por enquanto)
 const rainbow = document.getElementById('color-palette');
-const boxPixels = document.getElementById('pixel-board');
-const buttonClear = document.getElementById('clear-board');
-const pixels = document.querySelectorAll('.pixel');
+const judasPriest = document.getElementById('pixel-board');
+const metallica = document.getElementById('clear-board');
+const kingDiamond = document.querySelectorAll('.pixel');
 const boardSize = document.getElementById('board-size');
 const gerarButton = document.getElementById('generate-board');
 
-//selected (7) e meio do 10 :( 
-gerarButton.addEventListener('click', () => {
-  const boxSize = parseInt(boardSize.value, 10);
-  if (boardSize.value.length === 0) {
-    window.alert('Board inválido!');
-  } else {
-    console.log(boxSize);
-  }
-});
-// rainbow.addEventListener('click', colorPixel);
-// boxPixels.addEventListener('click', rainbowBoard);
-
-// requisito 8
+// requisitos 7 e 8
 function colorPixel(event) {
   const pixColor = document.getElementById('color-palette').childNodes;
   for (let index = 1; index < pixColor.length; index++) {
-      pixColor[index].className = 'color';
+    pixColor[index].className = 'color';
   }
   event.target.className = 'color selected';
 }
@@ -32,19 +21,50 @@ function rainbowBoard(event) {
   const selectedColor = window.getComputedStyle(colorSelected).backgroundColor;
   event.target.style.backgroundColor = selectedColor;
 }
-boxPixels.addEventListener('click', rainbowBoard);
+judasPriest.addEventListener('click', rainbowBoard);
 
-// buttonClear.addEventListener('click', backgroundWhite)
 
 // requisito 9
 function backgroundWhite() {
-  for (let index = 0; index < pixels.length; index++ ) {
-    pixels[index].style.backgroundColor = 'white';
+  for (let index = 0; index < kingDiamond.length; index++ ) {
+    kingDiamond[index].style.backgroundColor = 'white';
   }
 }
-buttonClear.addEventListener('click', backgroundWhite);
+metallica.addEventListener('click', backgroundWhite);
 
-// questão 12// referências: https://www.youtube.com/watch?v=mys7LGIlEf8&ab_channel=TECHNOLOGYFAQ
+// requisitos 10 e 11
+function createBoard(a) {
+  for (let i = 0; i < a; i += 1) {
+    const celineDion = document.createElement('div');
+    judasPriest.appendChild(celineDion);
+    celineDion.classList.add('coluna');
+
+    for (let b = 0; b < a; b += 1) {
+    const shaniaTwain = document.createElement('div');
+      shaniaTwain.classList.add('pixel');
+    celineDion.appendChild(shaniaTwain);
+    }
+  }
+}
+createBoard();
+
+function buttonNumberInput() {
+  if (boardSize.value === '') {
+    alert('Board inválido!');
+  }
+  if (boardSize.value < 5) {
+    boardSize.value = 5;
+  }
+  if (boardSize.value >= 50) {
+    boardSize.value = 50;
+  }
+  document.getElementById('pixel-board').innerHTML = '';
+  createBoard(boardSize.value);
+}
+gerarButton.addEventListener('click', buttonNumberInput);
+
+
+// requisito 12//
 function generatorColor() {
   const newColor = document.getElementsByClassName('color');
   for (let index = 1; index < newColor.length; index += 1) {
@@ -57,4 +77,8 @@ function generatorColor() {
 
 generatorColor();
 
-//questões 10
+// referências:
+// https://github.com/susanschen/Pixel-Art-Maker.git
+// https://www.youtube.com/watch?v=mys7LGIlEf8&ab_channel=TECHNOLOGYFAQ para o generatorColor
+// https://codeguppy.com/site/tutorials/color-blocky.html
+// https://github.com/tryber/sd-07-block5-project-pixels-art/pull/137 me baseei para o button clear 
