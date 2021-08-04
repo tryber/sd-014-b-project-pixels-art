@@ -1,100 +1,90 @@
-// const colorPalette = document.querySelector('#color-palette');
-const pixelBoard = document.querySelector('#pixel-board');
-//const firstColor = document.querySelector('.first-color');
-//const secondColor = document.querySelector('.second-color');
-//const thirdColor = document.querySelector('.third-color');
-//const fourColor = document.querySelector('.four-color');
-const colorPaletteAll = document.querySelectorAll('.color');
-let pixelsSelected = document.querySelectorAll('.pixel');
+const setColorDiv = document.getElementsByClassName('color');
+setColorDiv[0].classList.add('selected');
+let targetColors = ['black', 'yellow', 'brown', 'blue']; // seta as cores iniciais
+let pixels = document.querySelectorAll('.pixel');
 
-let boardSize = 5;
 
-function addSelectedClass(colorSelected) {
-    const lastColorSelected = document.querySelector('.selected');
-    lastColorSelected.classList.remove('selected');
 
-    colorSelected.target.classList.add('selected');
-
-    getSelectColor();
+// Referencia do colega Thales Lima da mesma turma
+function coloringPalette() {
+  for (let index = 0; index < setColorDiv.length; index += 1) {
+    setColorDiv[index].style.backgroundColor = targetColors[index];
+  }
 }
 
-function addColorOnPixel(applyColor) {
-    applyColor.target.style.backgroundcolor = 'getSelectColor';
+function selectColor(event) {
+  for (let index = 0; index < setColorDiv.length; index += 1) {
+    setColorDiv[index].classList.remove('selected');
+  }
+  event.target.classList.add('selected');
 }
 
-
-function getSelectColor() {
-    const colorPaletteCurrent = document.querySelector('.selected');
-    // lógica para o uso vi nesse site: https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
-    // método: getComputedStyle() retorna um objeto com os valores de propriedade css de um dado elemento
-    // método: getPropertyValue() fax uso da propriedade escolhida
-    const lastColor = window.getComputedStyle(colorPaletteCurrent).getPropertyValue('background-color');
-
-    return lastColor;
+function colorPaintPixel(pixel) {
+  const selectedColor = document.querySelector('.selected').style.backgroundColor;
+  pixel.target.style.backgroundColor = selectedColor;
 }
 
-function eventCurrentpixel() {
-    boardSize = document.querySelector('#board-size').value;
-    pixelsSelected.forEach((valuePixel) => {
-        valuePixel.addEventListener('click', (eventTarget) => {
-            eventTarget.target.style.backgroundColor = getSelectColor()
-        });
-    });
-}
-
+// função que recebe o valor de clear-board para aplicar white quando invocada!
 function clearBoard() {
-    for (let index = 0; index < pixelsSelected.length; index += 1) {
-        pixelsSelected[index].style.backgroundColor = 'white';
+  const allPixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < allPixels.length; index += 1) {
+    allPixels[index].style.backgroundColor = 'white';
+  }
+}
+
+// ajuda do matheus kaffka com a criação
+// função que cria elementos tr, e, dentro deeles os elementos td, tendo como referencia o tamanho da board de pixel
+function createBoard() {
+  const createBoard = document.querySelector('#pixel-board');
+  createBoard.innerHTML = '';
+  for (let index = 0; index < boardSize.value; index += 1) {
+    const createTr = document.createElement('tr');
+    createTr.classList.add('tr');
+    createBoard.appendChild(createTr);
+    const tableLine = document.getElementsByClassName('tr')[index];
+    for (let index2 = 0; index2 < boardSize.value; index2 += 1) {
+      const createPixel = document.createElement('td');
+      createPixel.classList.add('pixel');
+      tableLine.appendChild(createPixel);
     }
+  }
+  const allPixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < allPixels.length; index += 1) {
+    allPixels[index].addEventListener('click', colorPaintPixel);
+  }
 }
 
-
-function createOnBoard(valueInput) {
-    for (let increment = 0; increment < valueInput; increment += 1) {
-        let createLine = document.createElement('div');
-        createLine.classList.add('line');
-        pixelBoard.appendChild(createLine);
-
-        for(let increment2 = 0; increment2 < valueInput; increment2 += 1) {
-            let createPixel = document.createElement('div');
-            createPixel.classList.add('pixel');
-            pixelBoard.appendChild(createPixel);
-        }
-    }
-
-    pixelsSelected = document.querySelectorAll('.pixel');
-    eventCurrentpixel();
+// função que verifica se, o valor recebido é inválido, menor que 5 ou maior que 50
+function verifySize() {
+  if (boardSize.value === '') {
+    alert('Board inválido!');
+  } if (boardSize.value < 5) {
+    boardSize.value = 5;
+  } if (boardSize.value > 50) {
+    boardSize.value = 50;
+  }
+  createBoard();
 }
 
-function verifierValueInputSize() {
-    pixelsSelected = document.querySelectorAll('.pixel');
-    boardSize = document.querySelector('#board-size').value;
-    if(boardSize >= 5 && boardSize <= 50) {
-        pixelsSelected.forEach((valueItem) => {
-            valueItem.remove();
-        });
-        createOnBoard(boardSize);
-    } else {
-        alert('Board inválido!');
-    }
+for (let index = 0; index < setColorDiv.length; index += 1) {
+    setColorDiv[index].addEventListener('click', selectColor);
 }
 
-document.querySelector('#generate-board').addEventListener('click', verifierValueInputSize);
-
-document.querySelectorAll('.pixel').forEach((value) => {
-    value.addEventListener('click', (eventClicked) => {
-        eventClicked.target.style.backgroundColor = getSelectColor();
-    });
-});
-
-
-
-for (let index = 0; index < colorPaletteAll.length; index += 1) {
-    colorPaletteAll[index].addEventListener('click', addSelectedClass);
+for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', colorPaintPixel);
 }
 
-window.onload = function createBoarMin() {
-    createOnBoard(5)
-}
+const resetButton = document.querySelector('#clear-board');
+resetButton.addEventListener('click', clearBoard);
 
-document.querySelector('#clear-board').addEventListener('click', clearBoard);
+const boardSize = document.querySelector('#board-size');
+const boardGenerator = document.querySelector('#generate-board');
+
+
+
+boardGenerator.addEventListener('click', verifySize);
+
+window.onload = coloringPalette();
+
+
+//  OBS: DIRIGIR APLAUSOS PARA AMBOS OS COLEGAS DEPOIS!

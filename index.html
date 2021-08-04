@@ -7,25 +7,61 @@
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<title>TRYBE - Projeto: Pixels Art</title>
+	<title>TRYBE: Pixels Art</title>
 </head>
 <body>
-	<h1 id="title">Paleta de Cores</h1>
-
-	<div id="color-palette">
-		<div class="color first-color selected"></div>
-		<div class="color second-color"></div>
-		<div class="color third-color"></div>
-		<div class="color four-color"></div>
-	</div>
-
-	<button id="clear-board">Limpar</button>
-	<input id="board-size" type="number" min="5" max="50" placeholder="5">
-	<button id="generate-board">VQV</button>
-
-	<div id="pixel-board">
-		
-	</div>
-	<script src="script.js"></script>
+	<h1 id ='title'>Paleta de Cores</h1>
+    <section id = 'color-palette'>
+        <div class = 'color black selected'></div>
+        <div class = 'color color1'></div>
+        <div class = 'color color2'></div>
+        <div class = 'color color3'></div>
+    </section>
+    <div id = 'board-setup'>
+        <button type="button" id = 'clear-board'>Limpar</button>
+        <input id='board-size' type = 'number' min="1" max="50" placeholder="5">
+        <button type = "button" id = 'generate-board'>VQV</button>
+    </div>
+    <section id = 'canvas'>
+        <table id = 'pixel-board'>
+            <tr class = 'tr'>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+            </tr>
+            <tr class = 'tr'>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+            </tr>
+            <tr class = 'tr'>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+            </tr>
+            <tr class = 'tr'>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+            </tr>
+            <tr class = 'tr'>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+                <td class = 'pixel'></td>
+            </tr>
+        </table>
+    </section>
+    <script src ="script.js"></script>
+</body>
 </body>
 </html>
