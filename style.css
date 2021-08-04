@@ -32,7 +32,5 @@
   width: 40px;
   height: 40px;
   background-color: white;
-  border style: solid;
-  border color: black;
-  border width: 1px;
+  border: 1px solid black;
 }
