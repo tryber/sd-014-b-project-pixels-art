@@ -1,0 +1,49 @@
+#title {
+  font-family: Courier, monospace;
+  color: black;
+  margin: auto;
+}
+
+#clear-board {
+  border-radius: 10px;
+}
+
+#color-palette {
+  padding: 4px;
+  display: table-cell;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  display: table-cell;
+  border: black solid 1px;
+}
+
+#black , #selected {
+  background-color: black;
+  border: 1px solid black;
+}
+
+.td {
+  padding: 5px;
+  width: 150px;
+  border: black solid 1px;
+  margin: 5px;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: black solid 1px;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+#board-size {
+  padding: 5px;
+  width: 100px;
+}
