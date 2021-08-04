@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .color {
   display: inline-block;
   width: 40px;
@@ -30,5 +35,5 @@
 }
 
 .pixel-collum {
-  display: inline-block;
+  float: left;
 }
