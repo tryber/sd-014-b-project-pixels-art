@@ -1,0 +1,22 @@
+.color {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.first-color {
+    background-color: black;
+}
+
+.second-color {
+    background-color: brown;
+}
+
+.third-color {
+    background-color: blue;
+}
+
+.four-color {
+    background-color: chartreuse;
+}
