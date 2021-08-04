@@ -1,0 +1,43 @@
+#title {
+  color: black;
+  font-size: 20;
+  font-family: Lucida Sans, Lucida Sans Unicode, sans-serif;
+}
+
+#color-palette {
+  width: 220px;
+  height: 40px;
+}
+
+#black {
+  background-color: black;
+  border: 1px solid black;
+}
+
+#red {
+  background-color: red;
+  border: 1px solid black;
+}
+
+#blue {
+  background-color: blue;
+  border: 1px solid black;
+}
+
+#green {
+  background-color: green;
+  border: 1px solid black;
+}
+
+#pixel-board {
+  width: 250px;
+  height: 40px;
+}
+
+.pixel {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid black;
+}
