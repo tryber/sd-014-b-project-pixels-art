@@ -1,0 +1,133 @@
+* {
+    font-family: 'Amatic SC', cursive;
+/*     font-style: bold; */
+    font-weight: 700;
+}
+
+body {
+   background-color: rgb(255, 254, 236);
+}
+
+#title {
+    text-align: center;
+    font-size: 4em;
+    margin: 0;
+    text-shadow: 2px 2px grey;
+}
+
+#color-palette {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#color-palette div {
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+}
+
+.black {
+    background-color: '';
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.color1 {
+    background-color: '';
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.color2 {
+    background-color: '';
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.color3 {
+    background-color: '';
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#clear-board {
+    margin: 0 20px;
+    color: black;
+    text-shadow: 1px 1px grey;
+}
+
+#canvas {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+#pixel-board {
+    display: table;
+    padding: 0px;
+    margin: 0px;
+    border-collapse: collapse;
+    width: 40px 40px;
+}
+
+.tr {
+    display: table-row;
+    padding: 0px;
+}
+
+.pixel {
+    display: table-cell;
+    padding: 0px;
+    height: 40px;
+    width: 40px;
+    border: #000000 solid 1px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+#board-setup {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#board-setup button {
+  font-size: large;
+  margin: 0 20px;
+}
+
+#board-setup input {
+  font-size: large;
+  margin: 0 20px;  
+
+}
+
+#randomize-palette {
+    text-shadow: 1px 1px grey;
+}
+
+#generate-board {
+    text-shadow: 1px 1px grey;
+}
+
+#board-size {
+    text-shadow: 1px 1px grey;
+}
