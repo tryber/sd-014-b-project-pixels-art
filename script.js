@@ -3,15 +3,15 @@ const colorDivs = document.getElementsByClassName('color'); // <divs> color pale
 colorDivs[0].classList.add('selected');
 
 // Coloring <divs> #1~#4
-let targetColors = ['black', '#315F1C', '#298E46', '#90DFA7'];
+const defaultColors = ['black', '#315F1C', '#298E46', '#90DFA7'];
 
 function coloringPalette() {
   for (let index = 0; index < colorDivs.length; index += 1) {
-    colorDivs[index].style.backgroundColor = targetColors[index];
+    colorDivs[index].style.backgroundColor = defaultColors[index];
   }
 }
 
-window.onload = coloringPalette();
+window.onload = coloringPalette;
 
 // Select your color:
 function selectColor(evento) {
@@ -26,11 +26,12 @@ for (let index = 0; index < colorDivs.length; index += 1) {
 }
 
 // Feature: painting pixels
-let pixels = document.querySelectorAll('.pixel');
+const pixels = document.querySelectorAll('.pixel');
 
 function paint(pixel) {
   const selectedColor = document.querySelector('.selected').style.backgroundColor;
-  pixel.target.style.backgroundColor = selectedColor;
+  const clickedPixel = pixel.target;
+  clickedPixel.style.backgroundColor = selectedColor;
 }
 
 for (let index = 0; index < pixels.length; index += 1) {
@@ -94,7 +95,7 @@ function randomColor() {
   const red = randomPrimaryColor();
   const green = randomPrimaryColor();
   const blue = randomPrimaryColor();
-  return 'rgb('+ red + ', ' + green + ', ' + blue + ')';
+  return `rgb(${red}, ${green}, ${blue})`;
 }
 
 function randomPalette() {
@@ -105,5 +106,5 @@ function randomPalette() {
 
 /* window.onload = randomPalette(); // Random colors at each window load */
 
-let randomizeColors = document.querySelector('#randomize-palette'); // <button> 'random colors'
+const randomizeColors = document.querySelector('#randomize-palette'); // <button> 'random colors'
 randomizeColors.addEventListener('click', randomPalette);
