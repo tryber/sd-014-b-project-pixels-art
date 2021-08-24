@@ -1,6 +1,8 @@
 const getTableColors = document.querySelectorAll('.color');
 const getTable = document.querySelector('#pixel-board');
 const buttonClear = document.querySelector('#clear-board');
+const getButtonVqv = document.querySelector('#generate-board');
+const getInput = document.querySelector('#board-size');
 
 function getColor(event) {
   const element = event;
@@ -53,17 +55,17 @@ function empityPixels() {
   }
 }
 
+function verifyInput() {
+  if (getInput.value < 5 && getInput.value !== '') getInput.value = 5;
+  if (getInput.value > 50 && getInput.value !== '') getInput.value = 50;
+}
+
 function valueBoard() {
-  const getButtonVqv = document.querySelector('#generate-board');
-  const getInput = document.querySelector('#board-size');
-  // eslint-disable-next-line complexity
   getButtonVqv.addEventListener('click', () => {
-    if (getInput.value < 5 && getInput.value !== '') {
-      getInput.value = 5;
-    } else if (getInput.value > 50 && getInput.value !== '') {
-      getInput.value = 50;
-    } else if (getInput.value === '') {
+    if (getInput.value === '') {
       alert('Board inválido!');
+    } else {
+      verifyInput();
     }
   });
 }
