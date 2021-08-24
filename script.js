@@ -1,8 +1,4 @@
-/* eslint-disable func-names */
-/* eslint-disable no-constant-condition */
-/* eslint-disable prefer-arrow-callback */
-// eslint-disable-next-line func-names
-window.onload = function () {
+window.onload = () => {
   const getPixelBlack = document.querySelectorAll('.color')[0];
   getPixelBlack.classList.add('selected');
   const setPixelsWhite = document.querySelectorAll('.pixel');
@@ -45,7 +41,7 @@ addClickColors();
 function clearPixels() {
   const buttonClear = document.querySelector('#clear-board');
   const getPixels = document.querySelectorAll('.pixel');
-  buttonClear.addEventListener('click', function () {
+  buttonClear.addEventListener('click', () => {
     for (let index = 0; index < getPixels.length; index += 1) {
       getPixels[index].style.backgroundColor = 'white';
     }
@@ -79,7 +75,7 @@ function valueBoard() {
   const getButtonVqv = document.querySelector('#generate-board');
   const getInput = document.querySelector('#board-size');
   // eslint-disable-next-line complexity
-  getButtonVqv.addEventListener('click', function () {
+  getButtonVqv.addEventListener('click', () => {
     if (getInput.value < 5 && getInput.value !== '') {
       getInput.value = 5;
     } else if (getInput.value > 50 && getInput.value !== '') {
@@ -95,7 +91,7 @@ function newTable() {
   const getButtonVqv = document.querySelector('#generate-board');
   const getInput = document.querySelector('#board-size');
   const getTablePixels = document.getElementById('pixel-board');
-  getButtonVqv.addEventListener('click', function () {
+  getButtonVqv.addEventListener('click', () => {
     if (getInput.value !== '') {
       empityPixels();
       for (let index = 1; index <= getInput.value; index += 1) {
@@ -122,8 +118,8 @@ function setColorPalet() {
 function generateColors() {
   const getPaleteColors = document.querySelectorAll('.color');
   for (let index = 1; index < getPaleteColors.length; index += 1) {
-    // eslint-disable-next-line max-len
-    getPaleteColors[index].style.backgroundColor = `rgb(${setColorPalet()},${setColorPalet()},${setColorPalet()})`;
+    getPaleteColors[index]
+      .style.backgroundColor = `rgb(${setColorPalet()},${setColorPalet()},${setColorPalet()})`;
   }
 }
 generateColors();
