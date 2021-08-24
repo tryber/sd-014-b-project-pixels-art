@@ -1,19 +1,16 @@
 // Adiciona as cores da paleta de cores;
 const colors = ['background: rgb(0, 0, 0)'];
 
+const generationsNumber = () => {
+  const number = Math.floor(Math.random() * 256);
+  return number;
+};
+
 for (let index = 0; index < 3; index += 1) {
-  let color = '';
-  for (let count = 0; count < 3; count += 1) {
-    let generationNumber = Math.floor(Math.random() * 256);
-    if (count === 0) {
-      color += 'background: rgb(' + generationNumber.toString();
-    } else if (count === 2) {
-      color += ',' + generationNumber.toString() + ')';
-    } else {
-      color += ',' + generationNumber.toString();
-    }
-  }
-  colors.push(color);
+  colors.push(`background: rgb(
+    ${generationsNumber()},
+    ${generationsNumber()},
+    ${generationsNumber()})`);
 }
 
 // Criação da tabela #pixel-board dinâmicamente;
@@ -53,11 +50,11 @@ color.classList.add('selected');
 function pintaPixel() {
   const pixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixels.length; index += 1) {
-    pixels[index].addEventListener('click', function (event) {
+    pixels[index].addEventListener('click', (event) => {
       const colorSelect = document.querySelector('.selected').style.background;
-      event.target.setAttribute('style', 'background:' + colorSelect);
+      event.target.setAttribute('style', `background: ${colorSelect}`);
     });
-}
+  }
 }
 pintaPixel();
 
@@ -110,16 +107,9 @@ selectDivInput.appendChild(inputCreate);
 function changeSizeBoardPixel() {
   const inputSelect = document.querySelector('#board-size');
   let valueInput = inputSelect.value;
-  if (inputSelect.value.length === 0) {
-    alert('Board inválido!');
-  } else {
-    if (inputSelect.value < 5) {
-      valueInput = 5;
-    }
-    if (inputSelect.value > 50) {
-      valueInput = 50;
-    }
-  }
+  if (inputSelect.value.length === 0) alert('Board inválido!');
+  if (inputSelect.value < 5) valueInput = 5;
+  if (inputSelect.value > 22) valueInput = 22;
   return valueInput;
 }
 
@@ -128,14 +118,6 @@ const createButton = document.createElement('button');
 createButton.setAttribute('id', 'generate-board');
 createButton.innerText = 'VQV';
 selectDivInput.appendChild(createButton);
-
-// function generetaionBorad() {
-//   const sizeBoard = changeSizeBoardPixel();
-//   if (sizeBoard !== undefined) {
-//     removeBoardPixel();
-//     createTable(sizeBoard);
-//   }
-// }
 
 function generetaionBorad() {
   const sizeBoard = changeSizeBoardPixel();
