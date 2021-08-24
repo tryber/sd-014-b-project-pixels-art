@@ -2,18 +2,26 @@ const getTableColors = document.querySelectorAll('.color');
 const getTable = document.querySelector('#pixel-board');
 const buttonClear = document.querySelector('#clear-board');
 
+function getColor(event) {
+  const element = event;
+  const getSelected = document.querySelector('.selected');
+  const color = window.getComputedStyle(getSelected, null)
+    .getPropertyValue('background-color');
+  element.target.style.backgroundColor = color;
+}
+
 function createPixels() {
   for (let index = 1; index <= 5; index += 1) {
     const createTr = document.createElement('tr');
     getTable.appendChild(createTr);
     for (let secondIndex = 1; secondIndex <= 5; secondIndex += 1) {
       const createTd = document.createElement('td');
+      createTd.addEventListener('click', getColor);
       createTr.appendChild(createTd);
       createTd.className = 'pixel';
     }
   }
 }
-createPixels();
 
 function addClickColors() {
   getTableColors.forEach((element) => {
@@ -23,7 +31,6 @@ function addClickColors() {
     });
   });
 }
-addClickColors();
 
 function clearPixels() {
   buttonClear.addEventListener('click', () => {
@@ -34,28 +41,15 @@ function clearPixels() {
     });
   });
 }
-clearPixels();
 
-function getColor(event) {
-  const element = event;
-  const getSelected = document.querySelector('.selected');
-  const color = window.getComputedStyle(getSelected, null)
-    .getPropertyValue('background-color');
-  element.target.style.backgroundColor = color;
-}
-
-function setColor() {
-  const getPixels = document.querySelectorAll('.pixel');
-  for (let index = 0; index < getPixels.length; index += 1) {
-    getPixels[index].addEventListener('click', getColor);
-  }
-}
-setColor();
+// function setColor() {
+//   const getPixels = document.querySelectorAll('.pixel');
+//   getPixels.forEach((pixel) => pixel.addEventListener('click', getColor));
+// }
 
 function empityPixels() {
-  const getTablePixels = document.getElementById('pixel-board');
-  while (getTablePixels.firstChild) {
-    getTablePixels.removeChild(getTablePixels.firstChild);
+  while (getTable.firstChild) {
+    getTable.removeChild(getTable.firstChild);
   }
 }
 
@@ -113,6 +107,10 @@ function generateColors() {
 generateColors();
 
 window.onload = () => {
+  createPixels();
+  addClickColors();
+  // setColor();
+  clearPixels();
   const getPixelBlack = document.querySelectorAll('.color')[0];
   getPixelBlack.classList.add('selected');
   const setPixelsWhite = document.querySelectorAll('.pixel');
