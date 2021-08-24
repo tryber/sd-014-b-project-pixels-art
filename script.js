@@ -75,7 +75,11 @@ for (let index = 0; index < divColors.length; index += 1) {
 }
 
 const button = document.createElement('button');
-button.innerText = 'Limpar';
+const img = document.createElement('img');
+img.setAttribute('class', 'button-clear');
+img.src = '/img/clear-icon.png';
+button.innerText = 'LIMPAR';
+button.appendChild(img);
 button.setAttribute('id', 'clear-board');
 const selectDiv = document.querySelector('#button');
 selectDiv.appendChild(button);
