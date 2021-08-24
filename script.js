@@ -1,7 +1,8 @@
 const getTableColors = document.querySelectorAll('.color');
+const getTable = document.querySelector('#pixel-board');
+const buttonClear = document.querySelector('#clear-board');
 
 function createPixels() {
-  const getTable = document.querySelector('#pixel-board');
   for (let index = 1; index <= 5; index += 1) {
     const createTr = document.createElement('tr');
     getTable.appendChild(createTr);
@@ -25,12 +26,12 @@ function addClickColors() {
 addClickColors();
 
 function clearPixels() {
-  const buttonClear = document.querySelector('#clear-board');
-  const getPixels = document.querySelectorAll('.pixel');
   buttonClear.addEventListener('click', () => {
-    for (let index = 0; index < getPixels.length; index += 1) {
-      getPixels[index].style.backgroundColor = 'white';
-    }
+    const getPixels = document.querySelectorAll('.pixel');
+    getPixels.forEach((pixel) => {
+      const element = pixel;
+      element.style.backgroundColor = 'white';
+    });
   });
 }
 clearPixels();
