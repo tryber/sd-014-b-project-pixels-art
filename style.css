@@ -58,7 +58,7 @@
   background-image: url('/img/pallete-cores.jpeg');
   background-size: cover;
   margin-top: 20px;
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
 }
 
@@ -101,23 +101,48 @@
 }
 
 #input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5px;
-  margin: 6px;
-  display: inline;
+  margin: 4px;
+  width: 50%;
 }
 
 #board-size {
   width: 10rem;
   margin: 5px;
-  height: 1rem;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 20px;
 }
 
 #generate-board {
-  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
   margin: 2px;
+  background-color: white;
+  font-weight: 700;
+  border-radius: 5px;
+  height: 80%;
+}
+
+#generate-board:hover {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 #pixel-board {
   margin-left: 5px;
   margin-top: 20px;
+}
+
+.button-icon-vqv {
+  width: 25%;
+  padding: 5px;
+  margin-left: 2px;
 }

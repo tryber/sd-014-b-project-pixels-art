@@ -109,7 +109,7 @@ function changeSizeBoardPixel() {
   let valueInput = inputSelect.value;
   if (inputSelect.value.length === 0) alert('Board inválido!');
   if (inputSelect.value < 5) valueInput = 5;
-  if (inputSelect.value > 22) valueInput = 22;
+  if (inputSelect.value > 25) valueInput = 25;
   return valueInput;
 }
 
@@ -128,6 +128,12 @@ function generetaionBorad() {
   pintaPixel();
   selectButton.addEventListener('click', pixelClear);
 }
+
+const newImg = document.createElement('img');
+newImg.setAttribute('class', 'button-icon-vqv');
+newImg.src = '/img/vqv-icon.png';
+document.querySelector('#generate-board')
+  .appendChild(newImg);
 
 const buttonPixel = document.querySelector('#generate-board');
 buttonPixel.addEventListener('click', generetaionBorad);
