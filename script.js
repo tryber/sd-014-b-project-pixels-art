@@ -37,10 +37,11 @@ function clearPixels() {
 clearPixels();
 
 function getColor(event) {
+  const element = event;
   const getSelected = document.querySelector('.selected');
-  const color = window.getComputedStyle(getSelected, null).getPropertyValue('background-color');
-  // eslint-disable-next-line no-param-reassign
-  event.target.style.backgroundColor = color;
+  const color = window.getComputedStyle(getSelected, null)
+    .getPropertyValue('background-color');
+  element.target.style.backgroundColor = color;
 }
 
 function setColor() {
