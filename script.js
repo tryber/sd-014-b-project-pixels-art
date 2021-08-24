@@ -12,15 +12,16 @@ function getColor(event) {
   element.target.style.backgroundColor = color;
 }
 
-function createPixels() {
-  for (let index = 1; index <= 5; index += 1) {
+function createPixels(tr, td) {
+  for (let index = 1; index <= tr; index += 1) {
     const createTr = document.createElement('tr');
     getTable.appendChild(createTr);
-    for (let secondIndex = 1; secondIndex <= 5; secondIndex += 1) {
+    for (let secondIndex = 1; secondIndex <= td; secondIndex += 1) {
       const createTd = document.createElement('td');
+      createTd.style.backgroundColor = 'rgb(255, 255, 255)';
       createTd.addEventListener('click', getColor);
-      createTr.appendChild(createTd);
       createTd.className = 'pixel';
+      createTr.appendChild(createTd);
     }
   }
 }
@@ -44,11 +45,6 @@ function clearPixels() {
   });
 }
 
-// function setColor() {
-//   const getPixels = document.querySelectorAll('.pixel');
-//   getPixels.forEach((pixel) => pixel.addEventListener('click', getColor));
-// }
-
 function empityPixels() {
   while (getTable.firstChild) {
     getTable.removeChild(getTable.firstChild);
@@ -60,40 +56,19 @@ function verifyInput() {
   if (getInput.value > 50 && getInput.value !== '') getInput.value = 50;
 }
 
-function valueBoard() {
-  getButtonVqv.addEventListener('click', () => {
-    if (getInput.value === '') {
-      alert('Board inválido!');
-    } else {
-      verifyInput();
-    }
-  });
-}
-valueBoard();
-// eslint-disable-next-line max-lines-per-function
 function newTable() {
-  const getButtonVqv = document.querySelector('#generate-board');
-  const getInput = document.querySelector('#board-size');
-  const getTablePixels = document.getElementById('pixel-board');
-  getButtonVqv.addEventListener('click', () => {
-    if (getInput.value !== '') {
-      empityPixels();
-      for (let index = 1; index <= getInput.value; index += 1) {
-        const createTr = document.createElement('tr');
-        getTablePixels.appendChild(createTr);
-        for (let secondIndex = 1; secondIndex <= getInput.value; secondIndex += 1) {
-          const createTd = document.createElement('td');
-          createTd.className = 'pixel';
-          createTd.style.backgroundColor = 'rgb(255, 255, 255)';
-          createTd.addEventListener('click', getColor);
-          createTr.appendChild(createTd);
-          clearPixels();
-        }
-      }
-    }
-  });
+  if (getInput.value === '') {
+    alert('Board inválido!');
+  } else {
+    verifyInput();
+    empityPixels();
+    createPixels(getInput.value, getInput.value);
+  }
 }
-newTable();
+
+function valueBoard() {
+  getButtonVqv.addEventListener('click', newTable);
+}
 
 function setColorPalet() {
   return Math.floor(Math.random() * 255);
@@ -109,10 +84,10 @@ function generateColors() {
 generateColors();
 
 window.onload = () => {
-  createPixels();
+  createPixels(5, 5);
   addClickColors();
-  // setColor();
   clearPixels();
+  valueBoard();
   const getPixelBlack = document.querySelectorAll('.color')[0];
   getPixelBlack.classList.add('selected');
   const setPixelsWhite = document.querySelectorAll('.pixel');
