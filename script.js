@@ -75,23 +75,24 @@ function setColorPalet() {
 }
 
 function generateColors() {
-  const getPaleteColors = document.querySelectorAll('.color');
-  for (let index = 1; index < getPaleteColors.length; index += 1) {
-    getPaleteColors[index]
-      .style.backgroundColor = `rgb(${setColorPalet()},${setColorPalet()},${setColorPalet()})`;
-  }
+  getTableColors.forEach((pixel) => {
+    const element = pixel;
+    element.style
+      .backgroundColor = `rgb(${setColorPalet()},${setColorPalet()},${setColorPalet()})`;
+  });
 }
-generateColors();
 
 window.onload = () => {
   createPixels(5, 5);
   addClickColors();
   clearPixels();
   valueBoard();
+  generateColors();
   const getPixelBlack = document.querySelectorAll('.color')[0];
   getPixelBlack.classList.add('selected');
   const setPixelsWhite = document.querySelectorAll('.pixel');
-  for (let index = 0; index < setPixelsWhite.length; index += 1) {
-    setPixelsWhite[index].style.backgroundColor = 'white';
-  }
+  setPixelsWhite.forEach((pixel) => {
+    const element = pixel;
+    element.style.backgroundColor = 'white';
+  });
 };
