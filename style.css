@@ -10,7 +10,6 @@
   background-color: gainsboro;
   height: 5rem;
   text-align: center;
-  margin-bottom: 30px;
 }
 
 .logo {
@@ -44,11 +43,30 @@
   width: 33%;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url('/img/background-img.jpg');
+  background-size: cover;
+  background-position: center top;
+  height: 200vh;
+}
+
+#color-palette {
+  background-image: url('/img/pallete-cores.jpeg');
+  background-size: cover;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 .color {
-  border: 1px solid black;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  box-shadow: 2px 5px 10px gray;
 }
 
 .pixel {
@@ -92,7 +110,6 @@
   width: 10rem;
   margin: 5px;
   height: 1rem;
-  margin-left: 0;
 }
 
 #generate-board {
@@ -101,6 +118,6 @@
 }
 
 #pixel-board {
-  margin-left: 5%;
+  margin-left: 5px;
   margin-top: 20px;
 }
