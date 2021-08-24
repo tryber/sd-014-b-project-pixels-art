@@ -1,7 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  background-color: gainsboro;
+  height: 5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+#title {
+  padding: 8px;
+  font-size: 30px;
+  font-family: 'Rock Salt', cursive;
+}
+
+.header-logo {
+  display: flex;
+  padding: 5px;
+  width: 25%;
+}
+
+.header-title {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 40%;
+}
+
+.header-clear {
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+  width: 33%;
+}
+
 .color {
   border: 1px solid black;
   width: 50px;
   height: 50px;
+  border-radius: 50%;
 }
 
 .pixel {
@@ -12,17 +59,20 @@
 }
 
 #clear-board {
-  padding: 5px;
+  padding: 10px;
   margin: 8px;
-  font-weight: bold;
-  border-radius: 25%;
-  background-color: lime;
+  border-radius: 5px;
+  background-color: white;
+  border: 0;
+  font-weight: 700;
+  box-shadow: 3px 5px 8px grey;
 }
 
 #clear-board:hover {
-  background-color: green;
+  background-color: black;
   color: white;
-  font-weight: bold;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 #input {
@@ -41,4 +91,9 @@
 #generate-board {
   padding: 2px;
   margin: 2px;
+}
+
+#pixel-board {
+  margin-left: 5%;
+  margin-top: 20px;
 }
