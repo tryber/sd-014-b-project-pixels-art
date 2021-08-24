@@ -1,11 +1,4 @@
-window.onload = () => {
-  const getPixelBlack = document.querySelectorAll('.color')[0];
-  getPixelBlack.classList.add('selected');
-  const setPixelsWhite = document.querySelectorAll('.pixel');
-  for (let index = 0; index < setPixelsWhite.length; index += 1) {
-    setPixelsWhite[index].style.backgroundColor = 'white';
-  }
-};
+const getTableColors = document.querySelectorAll('.color');
 
 function createPixels() {
   const getTable = document.querySelector('#pixel-board');
@@ -21,20 +14,13 @@ function createPixels() {
 }
 createPixels();
 
-// eslint-disable-next-line sonarjs/cognitive-complexity
 function addClickColors() {
-  const getTableColors = document.querySelectorAll('.color');
-  for (let index = 0; index < getTableColors.length; index += 1) {
-    getTableColors[index].addEventListener('click', (event) => {
+  getTableColors.forEach((element) => {
+    element.addEventListener('click', (event) => {
+      document.querySelector('.selected').classList.remove('selected');
       event.target.classList.add('selected');
-      const itemSelected = getTableColors[index];
-      for (let secondIndex = 0; secondIndex < getTableColors.length; secondIndex += 1) {
-        if (getTableColors[secondIndex] !== itemSelected) {
-          getTableColors[secondIndex].classList.remove('selected');
-        }
-      }
     });
-  }
+  });
 }
 addClickColors();
 
@@ -123,3 +109,12 @@ function generateColors() {
   }
 }
 generateColors();
+
+window.onload = () => {
+  const getPixelBlack = document.querySelectorAll('.color')[0];
+  getPixelBlack.classList.add('selected');
+  const setPixelsWhite = document.querySelectorAll('.pixel');
+  for (let index = 0; index < setPixelsWhite.length; index += 1) {
+    setPixelsWhite[index].style.backgroundColor = 'white';
+  }
+};
