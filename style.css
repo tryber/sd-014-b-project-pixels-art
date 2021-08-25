@@ -51,15 +51,17 @@
   background-image: url('/img/background-img.jpg');
   background-size: cover;
   background-position: center top;
-  height: 200vh;
+  height: 100vh;
 }
 
 #color-palette {
-  background-image: url('/img/pallete-cores.jpeg');
+  background-image: url('/img/pallete-cores.jpg');
   background-size: cover;
+  background-position: top;
   margin-top: 20px;
-  padding: 25px;
+  padding: 20px;
   border-radius: 10px;
+  box-shadow: 1px 4px 8px black;
 }
 
 .color {
