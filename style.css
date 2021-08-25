@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  background-color: gainsboro;
+  height: 5rem;
+  text-align: center;
+}
+
+.logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+#title {
+  padding: 8px;
+  font-size: 30px;
+  font-family: Rock Salt, cursive;
+}
+
+.header-logo {
+  display: flex;
+  padding: 5px;
+  width: 25%;
+}
+
+.header-title {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 40%;
+}
+
+.header-clear {
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+  width: 33%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url('/img/background-img.jpg');
+  background-size: cover;
+  background-position: center top;
+  height: 100vh;
+}
+
+#color-palette {
+  background-image: url('/img/pallete-cores.jpg');
+  background-size: cover;
+  background-position: top;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 4px 8px black;
+}
+
+.color {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 2px 5px 10px gray;
+}
+
+.pixel {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+}
+
+#clear-board {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  background-color: white;
+  border: 0;
+  font-weight: 700;
+  box-shadow: 3px 5px 8px grey;
+}
+
+.button-clear {
+  width: 2rem;
+  margin-left: 8px;
+}
+
+#clear-board:hover {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 4px;
+  width: 50%;
+}
+
+#board-size {
+  width: 10rem;
+  margin: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+#generate-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  margin: 2px;
+  background-color: white;
+  font-weight: 700;
+  border-radius: 5px;
+  height: 80%;
+}
+
+#generate-board:hover {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#pixel-board {
+  margin-left: 5px;
+  margin-top: 20px;
+}
+
+.button-icon-vqv {
+  width: 25%;
+  padding: 5px;
+  margin-left: 2px;
+}
