@@ -13,20 +13,6 @@ palete2.style.backgroundColor = `rgb(${color()}, ${color()}, ${color()})`;
 palete3.style.backgroundColor = `rgb(${color()}, ${color()}, ${color()})`;
 palete4.style.backgroundColor = `rgb(${color()}, ${color()}, ${color()})`;
 
-for (let i = 1; i <= 5; i += 1) {
-  const div = document.createElement('div');
-  pixelBoard.appendChild(div);
-  div.className = 'pixel-line';
-}
-const pixelLine = document.querySelectorAll('.pixel-line');
-for (let i = 0; i < pixelLine.length; i += 1) {
-  for (let i2 = 0; i2 < pixelLine.length; i2 += 1) {
-    const pixel = document.createElement('span');
-    pixelLine[i].appendChild(pixel);
-    pixel.className = 'pixel';
-  }
-}
-
 function createPixelBoard(n) {
   document.body.appendChild(pixelBoard);
   for (let i = 1; i <= n; i += 1) {
@@ -37,14 +23,12 @@ function createPixelBoard(n) {
 }
 
 function createPixels() {
-  const pixelLine1 = document.querySelectorAll('.pixel-line');
-  for (let i = 0; i < pixelLine1.length; i += 1) {
-    for (let i2 = 0; i2 < pixelLine1.length; i2 += 1) {
-      const pixel = document.createElement('span');
-      pixelLine1[i].appendChild(pixel);
-      pixel.className = 'pixel';
-    }
-  }
+  const pixelLine = document.querySelectorAll('.pixel-line');
+  pixelLine.forEach((lines) => pixelLine.forEach(() => {
+    const pixel = document.createElement('span');
+    lines.appendChild(pixel);
+    pixel.className = 'pixel';
+  }));
 }
 
 function createLine() {
@@ -107,12 +91,15 @@ pixelBoard.addEventListener('click', colorPixel);
 
 function clearPixels() {
   const pixels = document.querySelectorAll('.pixel');
-  for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].style.backgroundColor = 'white';
-  }
+  pixels.forEach((pixel) => {
+    const p = pixel;
+    p.style.backgroundColor = 'white';
+  });
 }
 clearButton.addEventListener('click', clearPixels);
 
 window.onload = () => {
   blackPalete.classList.add('selected');
+  createPixelBoard(5);
+  createPixels();
 };
