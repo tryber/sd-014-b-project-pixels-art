@@ -1,14 +1,21 @@
-window.onload = function () {
-  const blackPixel = document.getElementById('black');
-  blackPixel.classList.add('selected');
-};
-
 const pixelBoard = document.getElementById('pixel-board');
 const input = document.querySelector('input');
 const generateBoard = document.getElementById('generate-board');
+const colorsPalete2 = ['yellow', 'blue', 'brown', 'green'];
+const colorsPalte3 = ['orange', 'red', 'gray', 'pink'];
+const colorsPalete4 = ['chartreuse', 'purple', 'crimson', 'cyan'];
+const blackPalete = document.querySelector('#black');
+const palete2 = document.querySelector('#palete2');
+const palete3 = document.querySelector('#palete3');
+const palete4 = document.querySelector('#palete4');
+const clearButton = document.getElementById('clear-board');
 
-const n = 5;
-for (let i = 1; i <= n; i += 1) {
+blackPalete.style.backgroundColor = 'black';
+palete2.style.backgroundColor = colorsPalete2[Math.floor(Math.random() * 3)];
+palete3.style.backgroundColor = colorsPalte3[Math.floor(Math.random() * 3)];
+palete4.style.backgroundColor = colorsPalete4[Math.floor(Math.random() * 3)];
+
+for (let i = 1; i <= 5; i += 1) {
   const div = document.createElement('div');
   pixelBoard.appendChild(div);
   div.className = 'pixel-line';
@@ -21,6 +28,27 @@ for (let i = 0; i < pixelLine.length; i += 1) {
     pixel.className = 'pixel';
   }
 }
+
+function createPixelBoard(n1) {
+  document.body.appendChild(pixelBoard);
+  for (let i = 1; i <= n1; i += 1) {
+    const div = document.createElement('div');
+    pixelBoard.appendChild(div);
+    div.className = 'pixel-line';
+  }
+}
+
+function createPixels() {
+  const pixelLine1 = document.querySelectorAll('.pixel-line');
+  for (let i = 0; i < pixelLine1.length; i += 1) {
+    for (let i2 = 0; i2 < pixelLine1.length; i2 += 1) {
+      const pixel = document.createElement('span');
+      pixelLine1[i].appendChild(pixel);
+      pixel.className = 'pixel';
+    }
+  }
+}
+
 function createLine() {
   let n = input.value;
   document.querySelector('#pixel-board').innerHTML = '';
@@ -29,40 +57,14 @@ function createLine() {
       n = 5;
     } else if (n > 50) {
       n = 50;
-    } else {
-      n = n;
     }
-    document.body.appendChild(pixelBoard);
-    for (let i = 1; i <= n; i += 1) {
-      const div = document.createElement('div');
-      pixelBoard.appendChild(div);
-      div.className = 'pixel-line';
-    }
-    const pixelLine = document.querySelectorAll('.pixel-line');
-    for (let i = 0; i < pixelLine.length; i += 1) {
-      for (let i2 = 0; i2 < pixelLine.length; i2 += 1) {
-        const pixel = document.createElement('span');
-        pixelLine[i].appendChild(pixel);
-        pixel.className = 'pixel';
-      }
-    }
+    createPixelBoard(n);
+    createPixels();
   } else {
     alert('Board inválido!');
   }
 }
 generateBoard.addEventListener('click', createLine);
-
-const colorsPalete2 = ['yellow', 'blue', 'brown', 'green'];
-const colorsPalte3 = ['orange', 'red', 'gray', 'pink'];
-const colorsPalete4 = ['chartreuse', 'purple', 'crimson', 'cyan'];
-const blackPalete = document.querySelector('#black');
-const palete2 = document.querySelector('#palete2');
-const palete3 = document.querySelector('#palete3');
-const palete4 = document.querySelector('#palete4');
-blackPalete.style.backgroundColor = 'black';
-palete2.style.backgroundColor = colorsPalete2[Math.floor(Math.random() * 3)];
-palete3.style.backgroundColor = colorsPalte3[Math.floor(Math.random() * 3)];
-palete4.style.backgroundColor = colorsPalete4[Math.floor(Math.random() * 3)];
 
 function changeSelectRed() {
   blackPalete.classList.remove('selected');
@@ -96,19 +98,24 @@ function changeSelectYellow() {
 }
 palete4.addEventListener('click', changeSelectYellow);
 
-const pixel = document.querySelector('#pixel-board');
 function colorPixel(event) {
   const paleteColor = document.querySelector('.selected').style.backgroundColor;
-  event.target.style.backgroundColor = paleteColor;
+  if (event.target.className === 'pixel') {
+    const p = event.target;
+    p.style.backgroundColor = paleteColor;
+  }
 }
-pixel.addEventListener('click', colorPixel);
-
-const clearButton = document.getElementById('clear-board');
-const whitePixels = document.querySelectorAll('.pixel');
+pixelBoard.addEventListener('click', colorPixel);
 
 function clearPixels() {
-  for (let i = 0; i < whitePixels.length; i += 1) {
-    whitePixels[i].style.backgroundColor = 'white';
+  const pixels = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = 'white';
   }
 }
 clearButton.addEventListener('click', clearPixels);
+
+window.onload = () => {
+  const blackPixel = document.getElementById('black');
+  blackPixel.classList.add('selected');
+};
