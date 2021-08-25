@@ -1,19 +1,17 @@
 const pixelBoard = document.getElementById('pixel-board');
 const input = document.querySelector('input');
 const generateBoard = document.getElementById('generate-board');
-const colorsPalete2 = ['yellow', 'blue', 'brown', 'green'];
-const colorsPalte3 = ['orange', 'red', 'gray', 'pink'];
-const colorsPalete4 = ['chartreuse', 'purple', 'crimson', 'cyan'];
 const blackPalete = document.querySelector('#black');
 const palete2 = document.querySelector('#palete2');
 const palete3 = document.querySelector('#palete3');
 const palete4 = document.querySelector('#palete4');
 const clearButton = document.getElementById('clear-board');
 
+const color = () => Math.floor(Math.random() * 255);
 blackPalete.style.backgroundColor = 'black';
-palete2.style.backgroundColor = colorsPalete2[Math.floor(Math.random() * 3)];
-palete3.style.backgroundColor = colorsPalte3[Math.floor(Math.random() * 3)];
-palete4.style.backgroundColor = colorsPalete4[Math.floor(Math.random() * 3)];
+palete2.style.backgroundColor = `rgb(${color()}, ${color()}, ${color()})`;
+palete3.style.backgroundColor = `rgb(${color()}, ${color()}, ${color()})`;
+palete4.style.backgroundColor = `rgb(${color()}, ${color()}, ${color()})`;
 
 for (let i = 1; i <= 5; i += 1) {
   const div = document.createElement('div');
@@ -29,9 +27,9 @@ for (let i = 0; i < pixelLine.length; i += 1) {
   }
 }
 
-function createPixelBoard(n1) {
+function createPixelBoard(n) {
   document.body.appendChild(pixelBoard);
-  for (let i = 1; i <= n1; i += 1) {
+  for (let i = 1; i <= n; i += 1) {
     const div = document.createElement('div');
     pixelBoard.appendChild(div);
     div.className = 'pixel-line';
@@ -100,9 +98,9 @@ palete4.addEventListener('click', changeSelectYellow);
 
 function colorPixel(event) {
   const paleteColor = document.querySelector('.selected').style.backgroundColor;
-  if (event.target.className === 'pixel') {
-    const p = event.target;
-    p.style.backgroundColor = paleteColor;
+  const pixel = event.target;
+  if (pixel.className === 'pixel') {
+    pixel.style.backgroundColor = paleteColor;
   }
 }
 pixelBoard.addEventListener('click', colorPixel);
@@ -116,6 +114,5 @@ function clearPixels() {
 clearButton.addEventListener('click', clearPixels);
 
 window.onload = () => {
-  const blackPixel = document.getElementById('black');
-  blackPixel.classList.add('selected');
+  blackPalete.classList.add('selected');
 };
