@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,9 +16,14 @@
         <div class="color" id="palete3"></div>
         <div class="color" id="palete4"></div>
     </div>
-    <button id="clear-board">Limpar</button>
-    <input type="number" name="" id="board-size" min="1" max="7">
-    <button type="submit" id="generate-board">VQV</button>
+    <div>
+        <div class="input-group mb-3">
+            <button class="btn btn-outline-primary" id="refresh" >Refresh</button>
+            <button class="btn btn-outline-danger" id="clear-board">Limpar</button>
+            <input type="number" name="" id="board-size" min="1" max="7">
+            <button class="btn btn-outline-success" type="submit" id="generate-board">VQV</button>
+        </div>
+    </div>
     <div id="pixel-board">
     </div>
     <script src="/script.js"></script>

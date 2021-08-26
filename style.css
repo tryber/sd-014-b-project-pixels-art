@@ -1,10 +1,13 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 body {
-text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./img/wp1933975-pixel-art-wallpapers.png);
 }
 
-#color-palette {
-  border: solid black 1px;
+header {
+  display: flex;
+  align-content: space-between;
 }
 
 #black {
@@ -28,4 +31,10 @@ text-align: center;
   width: 40px;
   display: inline-block;
   background-color: white;
+  margin: 2px;
+}
+
+.abc {
+  display: flex;
+  align-items: center;
 }

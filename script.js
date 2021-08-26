@@ -5,13 +5,17 @@ const blackPalete = document.querySelector('#black');
 const palete2 = document.querySelector('#palete2');
 const palete3 = document.querySelector('#palete3');
 const palete4 = document.querySelector('#palete4');
+const refreshButton = document.querySelector('#refresh');
 const clearButton = document.getElementById('clear-board');
 
 const color = () => Math.floor(Math.random() * 255);
 blackPalete.style.backgroundColor = 'black';
-palete2.style.backgroundColor = `rgb(${color()}, ${color()}, ${color()})`;
-palete3.style.backgroundColor = `rgb(${color()}, ${color()}, ${color()})`;
-palete4.style.backgroundColor = `rgb(${color()}, ${color()}, ${color()})`;
+function generatePalete() {
+  palete2.style.backgroundColor = `rgb(${color()}, ${color()}, ${color()})`;
+  palete3.style.backgroundColor = `rgb(${color()}, ${color()}, ${color()})`;
+  palete4.style.backgroundColor = `rgb(${color()}, ${color()}, ${color()})`;
+}
+refreshButton.addEventListener('click', generatePalete);
 
 function createPixelBoard(n) {
   document.body.appendChild(pixelBoard);
@@ -100,6 +104,7 @@ clearButton.addEventListener('click', clearPixels);
 
 window.onload = () => {
   blackPalete.classList.add('selected');
+  generatePalete();
   createPixelBoard(5);
   createPixels();
 };
