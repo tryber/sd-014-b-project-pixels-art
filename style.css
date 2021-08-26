@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./img/wp1933975-pixel-art-wallpapers.png);
+}
+
+header {
+  display: flex;
+  align-content: space-between;
+}
+
+#black {
+  border: solid black 1px;
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  display: inline-block;
+}
+
+#palete2 , #palete3 , #palete4 {
+  border: solid black 1px;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+}
+
+.pixel {
+  border: solid black 1px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background-color: white;
+  margin: 2px;
+}
+
+.abc {
+  display: flex;
+  align-items: center;
+}
