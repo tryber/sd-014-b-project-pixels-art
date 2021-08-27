@@ -1,5 +1,15 @@
+body {
+    display: block;
+    text-align: center;
+}
+
 h1 {
     color: black;
+}
+
+#color-palette {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #clear-board {
@@ -17,6 +27,12 @@ h1 {
 
 }
 
+#pixel-board {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 .color {
 
     width: 40px;
@@ -24,6 +40,7 @@ h1 {
     border: black;
     border-width: 1px;
     border-style: solid;
+    align-items: center;
 
 }
 
