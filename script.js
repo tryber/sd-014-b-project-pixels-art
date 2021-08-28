@@ -19,7 +19,7 @@ let blueColor = document.querySelector('#blue');
 blueColor.addEventListener('click', afterColor);
 let orangeColor = document.querySelector('#orange');
 orangeColor.addEventListener('click', afterColor);
-let pinkColor = document.querySelector('#pink');
+let pinkColor = document.querySelector('#red');
 pinkColor.addEventListener('click', afterColor);
 
 //pintando os pixels

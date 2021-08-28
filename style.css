@@ -1,13 +1,19 @@
+@font-face {
+    font-family: cartoon;
+    src: url(Fontes/kartoon/Kartoon.ttf);
+}
 body {
     text-align: center;
-    background-image: url(imagens/FB_IMG_1614773469944.jpg);
-    background-size:  50%;
+    background-image: url(imagens/backgroundImage.jpg);
+    background-size:  100%;
+    font-family: cartoon;
 }
 
 h1 {
-    color:blanchedalmond;
-    margin-top: 1cm;
-font-size: 45px;}
+    color:#250266;
+    font-size: 60px;
+    background-color: #FE05FE;
+}
 
 #color-palette {
     margin-left: auto;
@@ -17,9 +23,10 @@ font-size: 45px;}
 #clear-board {
     background-color: teal;
     text-align: center;
+    font-size: larger;
     color: yellow;
     width: 100px;
-    height: 20px;
+    height: 25px;
     border: black;
     border-width: 1px;
     border-style: solid;
@@ -40,7 +47,7 @@ font-size: 45px;}
 
     width: 40px;
     height: 40px;
-    border: white;
+    border: black;
     border-width: 1px;
     border-style: solid;
     align-items: center;
@@ -56,8 +63,8 @@ font-size: 45px;}
 #blue{
     background-color: blue;
 }
-#pink{
-    background-color: pink;
+#red{
+    background-color: red;
 }
 
 .pixel {
