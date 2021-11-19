@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="Images/pixel2.gif">
+  <title>Pixel Arts</title>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1 id="title">Paleta de Cores</h1>
+    <!-- Create color palette to choose colors -->
+    <div id="color-palette">
+      <div class="color black selected"></div>
+      <div class="color second"></div>
+      <div class="color third"></div>
+      <div class="color fourth"></div>
+    </div>
+  </header>
+  <section>
+    <button id='clear-board'>Limpar</button>
+    <input id="board-size" type="number" min="1" placeholder="5 a 50" name="board-generator">
+    <button id="generate-board">VQV</button>
+  </section>
+  <main>
+    <!-- Create pixel board with individual pixels inside-->
+    <div id="pixel-board"></div>
+  </main>
+</body>
+</html> 

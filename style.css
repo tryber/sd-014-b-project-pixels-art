@@ -1,0 +1,67 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('Images/background5.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#title {
+  color: white;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  margin: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+}
+
+.selected, .black{
+  background-color: black;
+}
+
+#pixel-board {
+  margin-top: 10px;
+}
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  display: inline-block;
+  margin: 2px;
+}
+
+#clear-board {
+  padding: 10px;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#board-size {
+  width: 60px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#generate-board {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+  margin-left: 10px;
+}
+
+@media screen and (min-height: 1250px) {
+  #title {
+    margin-top: 80px;
+  }
+}
