@@ -1,0 +1,93 @@
+main {
+  text-align: center;
+  margin: 50px 130px;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 1px solid rgb(60, 133, 192);
+  border-radius: 13px;
+  box-shadow: 5px 10px blueviolet;
+
+}
+
+body {
+  background-image: linear-gradient(purple, orange, blue);
+  height: 900px;
+  font-family: VT323, monospace;
+
+}
+
+input {
+  height: 33px;
+  width: 25%;
+  border-radius: 0;
+  border: 1px solid white;
+  font-family: VT323, monospace;
+}
+
+.comands {
+  margin: 30px auto;
+
+
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+#black {
+  background-color: black;
+}
+
+#red {
+  background-color: red;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#green {
+  background-color: green;
+}
+
+#pixel-board {
+  margin: 20px auto;
+  display: table;
+  padding: 0;
+}
+
+.row {
+  display: table-row;
+}
+
+.pixel {
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+#clear-board {
+  margin-top: 20px;
+  padding: 8px 18px 10px;
+  border: 1px solid white;
+  font-family: monospace;
+  background-color: red;
+  font-size: 16px;
+  color: whitesmoke;
+}
+
+#generate-board {
+  margin-top: 20px;
+  padding: 8px 18px 10px;
+  font-family: monospace;
+  border: 1px solid white;
+  background-color: green;
+  font-size: 16px;
+  color: whitesmoke;
+}
