@@ -73,6 +73,7 @@ const generate = () => {
 const generateButton = () => {
   boardButton.addEventListener('click', generate);
 };
+
 createColor();
 createPixel(5);
 clear();
